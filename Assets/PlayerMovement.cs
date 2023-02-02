@@ -27,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        
+
         if(other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
-            
+
             //Analytics event - used JumpTile
             analyticsManager.SendEvent("LEVEL1 JUMPTILE");
 
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground")){
             isJumping = false;
         }
-      
+
          //Analytics : Temp END GAME for Analytics
          if (other.gameObject.name == ("ENDGAME"))
          {
@@ -47,8 +47,10 @@ public class PlayerMovement : MonoBehaviour
 
              //Analytics event - key Collected
              analyticsManager.SendEvent("LEVEL1 GAMEEND");
+             //Desctroying end block so player can pass
+              Destroy(GameObject.Find("ENDGAME"));
 
          }
     }
-    
+
 }
