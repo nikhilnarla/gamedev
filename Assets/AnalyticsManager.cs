@@ -1,4 +1,4 @@
-// 
+//
 
 using System.Collections;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ public class AnalyticsManager : MonoBehaviour
     void Start()
     {
         currTime = 0;
-        SendEvent("Game Start");
+        SendEvent("LEVEL1 GAMESTART");
     }
 
     // Update is called once per frame
