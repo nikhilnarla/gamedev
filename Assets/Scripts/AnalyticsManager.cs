@@ -1,11 +1,7 @@
-//
-
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -13,14 +9,6 @@ public class AnalyticsManager : MonoBehaviour
     private static string _url;
     private static string _sessionID;
     private static float currTime;
-
-    //public GameObject redPlatform;
-    //public GameObject bluePlatform;
-
-    //public int redCube;
-    //public int blueCube;
-    //public int redPlatform;
-    //public int bluePlatform;
 
     private void Awake()
     {
