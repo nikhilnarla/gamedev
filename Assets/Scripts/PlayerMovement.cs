@@ -41,14 +41,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
          //Analytics : Temp END GAME for Analytics
-         if (other.gameObject.name == ("ENDGAME"))
+         if (other.gameObject.name == ("EndGame"))
          {
              Debug.Log("Level 1 End");
 
              //Analytics event - key Collected
              analyticsManager.SendEvent("LEVEL1 GAMEEND");
              //Desctroying end block so player can pass
-              Destroy(GameObject.Find("ENDGAME"));
+              Destroy(GameObject.Find("EndGame"));
 
          }
     }
