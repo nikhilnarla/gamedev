@@ -15,7 +15,7 @@ public class Movableblock : MonoBehaviour
         {
             Debug.Log("collision!");
             key.SetActive(true);
-            GameObject.Find("diamond").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("Diamond").GetComponent<SpriteRenderer>().enabled = true;
 
             if(!keyFound)
             {

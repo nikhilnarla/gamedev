@@ -595,7 +595,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 354045562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea4d7834dc404b35b24b505bd25df7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d1abf348aa414f35a878892bf6d1b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 395417367}
   - component: {fileID: 395417366}
   m_Layer: 0
-  m_Name: gate
+  m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 1178488326}
   - component: {fileID: 1178488325}
   m_Layer: 0
-  m_Name: gate1
+  m_Name: Gate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2543,7 +2543,7 @@ GameObject:
   - component: {fileID: 1488465843}
   - component: {fileID: 1488465844}
   m_Layer: 0
-  m_Name: diamond
+  m_Name: Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488465840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39c38d4f63044c3c9dabb8fe6cc5296, type: 3}
+  m_Script: {fileID: 11500000, guid: 83837458474e043a1921b6b9e5972964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1488465840}
@@ -3198,7 +3198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894180888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3b98df144d34471a7a72cf9549a139, type: 3}
+  m_Script: {fileID: 11500000, guid: e160caeac548c4f7397d7945d5cdc693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1488465840}

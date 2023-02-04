@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class gateopeneningkey : MonoBehaviour
+public class GateOpeningKey : MonoBehaviour
 {
     public GameObject key;
     public AnalyticsManager analyticsManager;
@@ -15,8 +15,8 @@ public class gateopeneningkey : MonoBehaviour
             analyticsManager.SendEvent("LEVEL1 KEYCOLLECTED");
 
             Debug.Log("collision key!");
-            Destroy(GameObject.Find("gate"));
-            Destroy(GameObject.Find("diamond"));   
+            Destroy(GameObject.Find("Gate"));
+            Destroy(GameObject.Find("Diamond"));   
         }
     }    
 }
