@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -43,12 +44,13 @@ public class PlayerMovement : MonoBehaviour
          //Analytics : Temp END GAME for Analytics
          if (other.gameObject.name == ("EndGame"))
          {
-             Debug.Log("Level 1 End");
+            Debug.Log("Level 1 End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
-             //Analytics event - key Collected
-             analyticsManager.SendEvent("LEVEL1 GAMEEND");
+            //Analytics event - key Collected
+            analyticsManager.SendEvent("LEVEL1 GAMEEND");
              //Desctroying end block so player can pass
-              Destroy(GameObject.Find("EndGame"));
+            Destroy(GameObject.Find("EndGame"));
 
          }
     }
