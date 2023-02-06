@@ -52,7 +52,7 @@ public class Movableblock : MonoBehaviour
         {
             Debug.Log("collision right wall!");
             
-            rb.velocity = new Vector2(-1,0);
+            rb.velocity = new Vector2(-2,0);
         }
 
         else if (col.gameObject.name == "Square")
