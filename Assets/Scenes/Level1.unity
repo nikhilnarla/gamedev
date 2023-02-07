@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 251375509}
   - component: {fileID: 251375508}
   - component: {fileID: 251375511}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,6 +603,11 @@ MonoBehaviour:
   move: 0
   isJumping: 0
   analyticsManager: {fileID: 253234996}
+  rb: {fileID: 354045564}
+  groundCheck: {fileID: 1118482514}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!50 &354045564
 Rigidbody2D:
   serializedVersion: 4
@@ -687,7 +692,8 @@ Transform:
   m_LocalPosition: {x: -8.1, y: 0.62, z: 0}
   m_LocalScale: {x: 0.4992, y: 0.4158, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1118482514}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1079,7 +1085,7 @@ GameObject:
   - component: {fileID: 602645253}
   - component: {fileID: 602645252}
   - component: {fileID: 602645251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1212,7 +1218,7 @@ GameObject:
   - component: {fileID: 655322157}
   - component: {fileID: 655322156}
   - component: {fileID: 655322159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1478,7 +1484,7 @@ GameObject:
   - component: {fileID: 992092510}
   - component: {fileID: 992092509}
   - component: {fileID: 992092508}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1611,7 +1617,7 @@ GameObject:
   - component: {fileID: 1041798275}
   - component: {fileID: 1041798274}
   - component: {fileID: 1041798277}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1732,6 +1738,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1118482513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118482514}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1118482514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118482513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12, y: -1.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 354045566}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178488324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +1914,7 @@ GameObject:
   - component: {fileID: 1227364040}
   - component: {fileID: 1227364039}
   - component: {fileID: 1227364042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2143,7 +2180,7 @@ GameObject:
   - component: {fileID: 1373363409}
   - component: {fileID: 1373363408}
   - component: {fileID: 1373363411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2276,7 +2313,7 @@ GameObject:
   - component: {fileID: 1375607464}
   - component: {fileID: 1375607463}
   - component: {fileID: 1375607466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rightcollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,7 +2446,7 @@ GameObject:
   - component: {fileID: 1396151152}
   - component: {fileID: 1396151151}
   - component: {fileID: 1396151154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2801,7 +2838,7 @@ GameObject:
   - component: {fileID: 1565083865}
   - component: {fileID: 1565083864}
   - component: {fileID: 1565083867}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3068,7 +3105,7 @@ GameObject:
   - component: {fileID: 1894180889}
   - component: {fileID: 1894180892}
   - component: {fileID: 1894180893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
