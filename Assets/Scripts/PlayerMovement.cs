@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
+    public GameObject key;
 
     public AnalyticsManager analyticsManager;
 
@@ -29,7 +30,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Jumpingtile")){
+        //if (other.gameObject.tag == "KeyFinder")
+
+        //{
+        //    Debug.Log("keyfinder");
+        //    //key.SetActive(true);
+        //    GameObject.Find("Diamond").GetComponent<SpriteRenderer>().enabled = true;
+
+        //    Invoke("setKeyActive", 3.0f);
+        //}
+
+
+        if (other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
 
             //Analytics event - used JumpTile
@@ -54,5 +66,11 @@ public class PlayerMovement : MonoBehaviour
 
          }
     }
+
+    //public void setKeyActive()
+    //{
+    //    //key.SetActive(false);
+    //    GameObject.Find("Diamond").GetComponent<SpriteRenderer>().enabled = false;
+    //}
 
 }

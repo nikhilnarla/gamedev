@@ -10,9 +10,11 @@ public class Movableblock : MonoBehaviour
     public float move;
     public float speed;
     public Vector3 startPosition;
-    public bool onFloor = false;    
+    public bool onFloor = false;
 
-   void Start()
+    private Renderer rend;
+
+    void Start()
     {
          rb = GetComponent<Rigidbody2D>();
          startPosition = transform.position;
@@ -35,6 +37,13 @@ public class Movableblock : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         
+
+        if (col.gameObject.tag == "Ground")
+        {
+            GetComponent<Renderer>().material.color = Color.blue;
+            GameObject.Find("Collidertile").GetComponent<Renderer>().material.color = Color.blue;
+        }
+        
         if (col.gameObject.name == "Collidertile")
         {
             Debug.Log("collision!");
@@ -43,9 +52,9 @@ public class Movableblock : MonoBehaviour
 
             if(!keyFound)
             {
-            //Analytics event - found key
-            analyticsManager.SendEvent("LEVEL1 KEYFOUND");
-            keyFound = true;
+                //Analytics event - found key
+                analyticsManager.SendEvent("LEVEL1 KEYFOUND");
+                keyFound = true;
             }
         }
         else if (col.gameObject.name == "rightcollider")
@@ -60,5 +69,7 @@ public class Movableblock : MonoBehaviour
             onFloor = true;
         }
     }
+
+    
 
 }
