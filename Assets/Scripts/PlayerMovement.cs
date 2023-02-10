@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
-
-    public AnalyticsManager analyticsManager;
+    public bool blockPushed = false;
+    public bool green = true;
 
     private Rigidbody2D rb;
     void Start()
@@ -27,32 +27,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D other){
 
         if(other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
-
-            //Analytics event - used JumpTile
-            analyticsManager.SendEvent("LEVEL1 JUMPTILE");
-
         }
 
         if(other.gameObject.CompareTag("Ground")){
             isJumping = false;
         }
 
-         //Analytics : Temp END GAME for Analytics
-         if (other.gameObject.name == ("EndGame"))
-         {
-            Debug.Log("Level 1 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if(other.gameObject.name == "GreenBlock"){
+           var objRenderer = GameObject.Find("GreenBlock").GetComponent<Renderer>();
+           objRenderer.material.SetColor("_Color", Color.green);
 
-            //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GAMEEND");
-             //Desctroying end block so player can pass
-            Destroy(GameObject.Find("EndGame"));
+           var Block = other.gameObject.GetComponent<Rigidbody2D>();
+           Block.mass = 5.0F;
+           Block.angularDrag = 0.05F;
+           Block.gravityScale = 1.0f;
 
-         }
+           var objRenderer2 = GameObject.Find("Collidertile").GetComponent<Renderer>();
+           objRenderer2.material.SetColor("_Color", Color.green);
+        }
     }
+
+
 
 }

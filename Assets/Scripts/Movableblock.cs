@@ -4,13 +4,12 @@ public class Movableblock : MonoBehaviour
 {
 
     public GameObject key;
-    public AnalyticsManager analyticsManager;
     bool keyFound = false;
     private Rigidbody2D rb;
     public float move;
     public float speed;
     public Vector3 startPosition;
-    public bool onFloor = false;    
+    public bool onFloor = false;
 
    void Start()
     {
@@ -34,7 +33,7 @@ public class Movableblock : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        
+
         if (col.gameObject.name == "Collidertile")
         {
             Debug.Log("collision!");
@@ -43,16 +42,14 @@ public class Movableblock : MonoBehaviour
 
             if(!keyFound)
             {
-            //Analytics event - found key
-            analyticsManager.SendEvent("LEVEL1 KEYFOUND");
             keyFound = true;
             }
         }
         else if (col.gameObject.name == "rightcollider")
         {
             Debug.Log("collision right wall!");
-            
-            rb.velocity = new Vector2(-2,0);
+
+            rb.velocity = new Vector2(-1,0);
         }
 
         else if (col.gameObject.name == "Square")
