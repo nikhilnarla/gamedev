@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GateOpeningKey : MonoBehaviour
+public class GateOpeningKey4 : MonoBehaviour
 {
     public GameObject key;
     public AnalyticsManager analyticsManager;
