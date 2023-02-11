@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - GateKey
+  - KeyFinder
+  - Sharp
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2855655295
     locked: 0

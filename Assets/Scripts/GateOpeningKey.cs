@@ -8,7 +8,7 @@ public class GateOpeningKey : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         
-        if (col.gameObject.name == "Capsule" && key.activeSelf)
+        if (col.gameObject.tag == "Player" && key.activeSelf)
         {
 
             //Analytics event - key Collected

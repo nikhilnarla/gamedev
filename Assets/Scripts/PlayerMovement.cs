@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
+    public GameObject key;
 
     public AnalyticsManager analyticsManager;
 
@@ -29,7 +30,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Jumpingtile")){
+        if (other.gameObject.tag == "Sharp")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if(other.gameObject.name == "Tile")
+        {
+            GameObject.Find("Tile").GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        if (other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
 
             //Analytics event - used JumpTile
@@ -54,5 +64,6 @@ public class PlayerMovement : MonoBehaviour
 
          }
     }
+
 
 }
