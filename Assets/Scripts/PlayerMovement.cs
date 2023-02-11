@@ -29,7 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Jumpingtile")){
+        if (other.gameObject.tag == "Trap")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
 
             //Analytics event - used JumpTile
@@ -53,6 +58,25 @@ public class PlayerMovement : MonoBehaviour
             Destroy(GameObject.Find("EndGame"));
 
          }
+
+         if(other.gameObject.name == "BlackPortal1")
+        {
+            rb.transform.position = new Vector2( 6.5f, -1.77f);
+        }
+
+        if (other.gameObject.name == "BlackPortal2")
+        {
+            rb.transform.position = new Vector2(-6.5f, 3.33f);
+        }
+        if (other.gameObject.name == "OrangePortal1")
+        {
+            rb.transform.position = new Vector2(6.5f, 2.68f);
+                
+        }
+        if (other.gameObject.name == "OrangePortal2")
+        {
+            rb.transform.position = new Vector2(-6.5f, -1.59f);
+        }
     }
 
 }
