@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
+    public GameObject key;
+
     public bool blockPushed = false;
     public bool green = true;
     public bool fandetected = false;
@@ -32,7 +34,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Jumpingtile")){
+        if (other.gameObject.tag == "Sharp")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if(other.gameObject.name == "Tile")
+        {
+            GameObject.Find("Tile").GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        if (other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
               GameObject.Find("Jumpingtile").GetComponent<SpriteRenderer>().enabled = true;
               analyticsManager.SendEvent("LEVEL1 JUMPTILE");
@@ -56,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
            objRenderer2.material.SetColor("_Color", Color.green);
         }
     }
-
 
 
 }

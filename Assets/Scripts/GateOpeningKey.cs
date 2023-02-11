@@ -8,8 +8,8 @@ public class GateOpeningKey : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
-        if (col.gameObject.name == "Capsule" && key.activeSelf)
+        
+        if ((col.gameObject.name == "Capsule" || col.gameObject.name == "Player"  ) && key.activeSelf)
         {
             Debug.Log("collision key!");
             analyticsManager.SendEvent("LEVEL1 KEYCOLLECTED");
