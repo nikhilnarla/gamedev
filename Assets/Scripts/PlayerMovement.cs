@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping = false;
     public bool blockPushed = false;
     public bool green = true;
+    public bool fandetected = false;
     public AnalyticsManager analyticsManager;
 
     private Rigidbody2D rb;
@@ -33,8 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
         if(other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
-            //Analytics event - used JumpTile
-            analyticsManager.SendEvent("LEVEL1 JUMPTILE");
+              GameObject.Find("Jumpingtile").GetComponent<SpriteRenderer>().enabled = true;
+              analyticsManager.SendEvent("LEVEL1 JUMPTILE");
 
         }
 

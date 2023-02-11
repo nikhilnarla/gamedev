@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Movableblock : MonoBehaviour
 {
-    public AnalyticsManager analyticsManager;
+
     public GameObject key;
     bool keyFound = false;
     private Rigidbody2D rb;
@@ -42,8 +42,6 @@ public class Movableblock : MonoBehaviour
 
             if(!keyFound)
             {
-            //Analytics event - found key
-            analyticsManager.SendEvent("LEVEL1 KEYFOUND");
             keyFound = true;
             }
         }
