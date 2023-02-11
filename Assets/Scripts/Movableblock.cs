@@ -12,8 +12,6 @@ public class Movableblock : MonoBehaviour
     public Vector3 startPosition;
     public bool onFloor = false;
 
-    private Renderer rend;
-
     void Start()
     {
          rb = GetComponent<Rigidbody2D>();
@@ -40,8 +38,8 @@ public class Movableblock : MonoBehaviour
 
         if (col.gameObject.tag == "Ground")
         {
-            GetComponent<Renderer>().material.color = Color.blue;
-            GameObject.Find("Collidertile").GetComponent<Renderer>().material.color = Color.blue;
+            GetComponent<Renderer>().material.color = Color.green;
+            GameObject.Find("Collidertile").GetComponent<Renderer>().material.color = Color.green;
         }
         
         if (col.gameObject.name == "Collidertile")
@@ -57,14 +55,7 @@ public class Movableblock : MonoBehaviour
                 keyFound = true;
             }
         }
-        else if (col.gameObject.name == "rightcollider")
-        {
-            Debug.Log("collision right wall!");
-            
-            rb.velocity = new Vector2(-2,0);
-        }
-
-        else if (col.gameObject.name == "Square")
+        else if (col.gameObject.name == "Tile13")
         {
             onFloor = true;
         }

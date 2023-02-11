@@ -30,16 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        //if (other.gameObject.tag == "KeyFinder")
-
-        //{
-        //    Debug.Log("keyfinder");
-        //    //key.SetActive(true);
-        //    GameObject.Find("Diamond").GetComponent<SpriteRenderer>().enabled = true;
-
-        //    Invoke("setKeyActive", 3.0f);
-        //}
-
+        if (other.gameObject.tag == "Sharp")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if(other.gameObject.name == "Tile")
+        {
+            GameObject.Find("Tile").GetComponent<SpriteRenderer>().enabled = true;
+        }
 
         if (other.gameObject.name == ("Jumpingtile")){
             rb.velocity = new Vector2(rb.velocity.x,jump*3);
@@ -67,10 +65,5 @@ public class PlayerMovement : MonoBehaviour
          }
     }
 
-    //public void setKeyActive()
-    //{
-    //    //key.SetActive(false);
-    //    GameObject.Find("Diamond").GetComponent<SpriteRenderer>().enabled = false;
-    //}
 
 }
