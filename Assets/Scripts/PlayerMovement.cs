@@ -42,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if(other.gameObject.CompareTag("Ground")){
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("MovingPlatform"))
+        {
             isJumping = false;
         }
 

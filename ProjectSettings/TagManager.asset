@@ -8,6 +8,7 @@ TagManager:
   - GateKey
   - Trap
   - BlackPortal
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
