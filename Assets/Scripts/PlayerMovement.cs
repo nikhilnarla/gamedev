@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
+        if (other.gameObject.tag == "Trap")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         if (other.gameObject.tag == "Sharp")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -47,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if(other.gameObject.CompareTag("Ground")){
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("MovingPlatform")){
             isJumping = false;
         }
 
@@ -63,6 +67,24 @@ public class PlayerMovement : MonoBehaviour
             Destroy(GameObject.Find("EndGame"));
 
          }
+         if(other.gameObject.name == "BlackPortal1")
+        {
+            rb.transform.position = new Vector2( 6.5f, -1.77f);
+        }
+
+        if (other.gameObject.name == "BlackPortal2")
+        {
+            rb.transform.position = new Vector2(-6.5f, 3.33f);
+        }
+        if (other.gameObject.name == "OrangePortal1")
+        {
+            rb.transform.position = new Vector2(6.5f, 2.68f);
+                
+        }
+        if (other.gameObject.name == "OrangePortal2")
+        {
+            rb.transform.position = new Vector2(-6.5f, -1.59f);
+        }
     }
 
 
