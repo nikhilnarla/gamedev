@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class Movableblock : MonoBehaviour
+public class MovableblockLevel1 : MonoBehaviour
 {
 
     public GameObject key;
-    public AnalyticsManager analyticsManager;
     bool keyFound = false;
     private Rigidbody2D rb;
     public float move;
@@ -12,7 +11,7 @@ public class Movableblock : MonoBehaviour
     public Vector3 startPosition;
     public bool onFloor = false;
 
-    void Start()
+   void Start()
     {
          rb = GetComponent<Rigidbody2D>();
          startPosition = transform.position;
@@ -35,13 +34,6 @@ public class Movableblock : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
 
-
-        if (col.gameObject.tag == "Ground")
-        {
-            GetComponent<Renderer>().material.color = Color.green;
-            GameObject.Find("Collidertile").GetComponent<Renderer>().material.color = Color.green;
-        }
-
         if (col.gameObject.name == "Collidertile")
         {
             Debug.Log("collision!");
@@ -50,17 +42,20 @@ public class Movableblock : MonoBehaviour
 
             if(!keyFound)
             {
-                //Analytics event - found key
-                analyticsManager.SendEvent("LEVEL1 KEYFOUND");
-                keyFound = true;
+            keyFound = true;
             }
         }
-        else if (col.gameObject.name == "Tile13")
+        else if (col.gameObject.name == "rightcollider")
+        {
+            Debug.Log("collision right wall!");
+
+            rb.velocity = new Vector2(-1,0);
+        }
+
+        else if (col.gameObject.name == "Square")
         {
             onFloor = true;
         }
     }
-
-
 
 }
