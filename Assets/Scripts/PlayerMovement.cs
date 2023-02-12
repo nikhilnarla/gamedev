@@ -10,7 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     public AnalyticsManager analyticsManager;
 
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask buttonLayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,10 +25,15 @@ public class PlayerMovement : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        if(Input.GetKeyDown("space") && !isJumping){
+        if(Input.GetKeyDown("space") && IsGrounded()){
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
+    }
+
+     private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
     private void OnCollisionEnter2D(Collision2D other){
@@ -37,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if(other.gameObject.CompareTag("Ground")){
-            isJumping = false;
+        if(other.gameObject.name == ("SpecialTile")){
+                showTiles();
         }
 
          //Analytics : Temp END GAME for Analytics
@@ -53,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
             Destroy(GameObject.Find("EndGame"));
 
          }
+    }
+
+    private void showTiles(){
+        
     }
 
 }
