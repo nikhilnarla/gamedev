@@ -13,7 +13,7 @@ public class AnalyticsManager : MonoBehaviour
     private void Awake()
     {
         //AnalyticsManager = this;
-        _url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfsDeCYjE6xs9le06cgd-Lz6-HzY4IaoAKxNWatBD6Oa7Dx6A/formResponse";
+        _url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScvomqdDXqomed_rlvKhLmn_8Ce6Pr0sgOWEfeRXWhmClxBXA/formResponse";
 
         Guid guid = Guid.NewGuid();
 
@@ -42,8 +42,8 @@ public class AnalyticsManager : MonoBehaviour
 
     public void SendEvent(string eventType){
       WWWForm form = new WWWForm();
-      form.AddField("entry.464988709",_sessionID);
-      form.AddField("entry.1821099035",eventType);
+      form.AddField("entry.566561242",_sessionID);
+      form.AddField("entry.1956343257",eventType);
       StartCoroutine(SendData(form));
     }
 
