@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4611556207800502044}
   - component: {fileID: 4611556207800502047}
+  - component: {fileID: 6986569036026489234}
   - component: {fileID: 4611556207800502046}
+  - component: {fileID: 3683337322587699942}
   - component: {fileID: 4611556207800502045}
   m_Layer: 0
   m_Name: Tile
@@ -86,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6986569036026489234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611556207800502033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e8231b4fdd14946907730f1ff6e576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4611556207800502046
 Rigidbody2D:
   serializedVersion: 4
@@ -107,6 +121,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &3683337322587699942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611556207800502033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641415c0c3db24aa78dd5d0c83ba40d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  speed: 2
 --- !u!61 &4611556207800502045
 BoxCollider2D:
   m_ObjectHideFlags: 0
