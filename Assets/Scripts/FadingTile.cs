@@ -26,12 +26,4 @@ public class FadingTile : MonoBehaviour
         }
          
     }
-
-    void ToggleTile()
-    {   
-        Debug.Log(bridgeTile.name);
-        // bridgeTile.enabled = false;
-        // bridgeTile..GetComponent<BoxCollider2D>().enabled = false;
-    }
-    
 }
