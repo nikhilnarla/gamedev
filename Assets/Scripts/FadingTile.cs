@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisappearingTile : MonoBehaviour
-{    
-
+public class FadingTile : MonoBehaviour
+{
     [SerializeField] private GameObject bridgeTile;
 
     void Update()
@@ -16,24 +15,14 @@ public class DisappearingTile : MonoBehaviour
 
         if(other.gameObject.name == ("Capsule"))
         {   
-            yield return new WaitForSeconds (2);
+            yield return new WaitForSeconds (1);
 
             var renderer = bridgeTile.GetComponent<Renderer>();
             renderer.enabled = false;
-            other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-         
-    }
-
-    private IEnumerator OnCollisionExit2D(Collision2D other){
-
-        if(other.gameObject.name == ("Capsule"))
-        {   
-            yield return new WaitForSeconds (4);
-
-            var renderer = bridgeTile.GetComponent<Renderer>();
+            renderer.GetComponent<BoxCollider2D>().enabled = false;
+            yield return new WaitForSeconds (1);
             renderer.enabled = true;
-            other.collider.enabled = true;
+            renderer.GetComponent<BoxCollider2D>().enabled = true;
         }
          
     }
@@ -44,5 +33,5 @@ public class DisappearingTile : MonoBehaviour
         // bridgeTile.enabled = false;
         // bridgeTile..GetComponent<BoxCollider2D>().enabled = false;
     }
-
+    
 }

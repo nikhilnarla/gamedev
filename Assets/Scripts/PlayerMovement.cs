@@ -132,6 +132,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+     private void OnCollisionExit2D(Collision2D other){
+        rb.GetComponent<BoxCollider2D>().enabled = true;
+     }
+
     private void IntializeBridgeTiles(){
         ShowTiles();
     }
