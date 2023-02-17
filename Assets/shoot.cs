@@ -6,6 +6,7 @@ public class shoot : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
+    private bool superKeyCollected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,10 @@ public class shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (GameObject.Find ("SuperKey") == null) {
+             superKeyCollected = true;
+         }
+        if (superKeyCollected && Input.GetKeyDown(KeyCode.C))
         {
             Instantiate(bulletPrefab,bulletSpawnPoint);
         }
