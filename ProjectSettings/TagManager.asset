@@ -8,6 +8,8 @@ TagManager:
   - GateKey
   - KeyFinder
   - Sharp
+  - Trap
+  - LavaParticle
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Button
   - Bridge Tile
-  - 
+  - Lava
   - 
   - 
   - 
