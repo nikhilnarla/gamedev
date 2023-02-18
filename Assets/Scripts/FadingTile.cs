@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FadingTile : MonoBehaviour
-{
+{   
+    private float timeToFade = 2f;
+    private float currentTime = 0f;
+
     [SerializeField] private GameObject bridgeTile;
+
 
     void Update()
     {
-    
+        if (currentTime == timeToFade){
+            var renderer = bridgeTile.GetComponent<Renderer>();
+            renderer.enabled = false;
+        }
+        currentTime += 1;
+        
     }
 
     private IEnumerator OnCollisionEnter2D(Collision2D other){

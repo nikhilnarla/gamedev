@@ -54,8 +54,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Tile 5") && bridgeStatus.ContainsValue(false)){
+        if(other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
                 ShowTiles();
+        }
+
+        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
+               jump = 3f;
+               speed = 4f;
         }
          
          if(other.gameObject.name == ("Button")){
@@ -132,9 +137,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-     private void OnCollisionExit2D(Collision2D other){
-        rb.GetComponent<BoxCollider2D>().enabled = true;
-     }
+    private void OnCollisionExit2D(Collision2D other){
+
+         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
+               jump = 6.5f;
+               speed = 3f;
+        }
+    }
 
     private void IntializeBridgeTiles(){
         ShowTiles();
@@ -158,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
     void AddGravityToTiles()
     {   
         Rigidbody2D tile = null;
-        for(int i=0; i<7; i+=1)
+        for(int i=0; i<6; i+=1)
         {
             tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();   
             tile.gravityScale = 1;
