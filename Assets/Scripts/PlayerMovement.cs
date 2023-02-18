@@ -15,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject key;
     public GameObject keyLevel1;
 
+    public bool greenblockhit = true;
+
     public AnalyticsManager analyticsManager;
-    public AnalyticsManagerLevel1 analyticsManagerLevel1;
+    //public AnalyticsManagerLevel1 analyticsManagerLevel1;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -92,7 +94,10 @@ public class PlayerMovement : MonoBehaviour
         {
            var objRenderer = GameObject.Find("GreenBlockLevel1").GetComponent<Renderer>();
            objRenderer.material.SetColor("_Color", Color.green);
-
+           if(greenblockhit){
+           analyticsManager.SendEvent("LEVEL1 GREEN BLOCK DETECTED BY PLAYER");
+           greenblockhit = false;
+           }
            var Block = other.gameObject.GetComponent<Rigidbody2D>();
            Block.mass = 5.0F;
            Block.angularDrag = 0.05F;
