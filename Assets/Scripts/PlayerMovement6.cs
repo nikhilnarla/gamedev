@@ -4,8 +4,14 @@ public class PlayerMovement6 : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField]
+    private Transform groundCheck;
+    [SerializeField]
+    private LayerMask groundLayer;
+
+    [SerializeField]
+    private Transform portal1Spawning, portal2Spawning;
+
 
     public float speed;
     public float jump;
@@ -50,11 +56,11 @@ public class PlayerMovement6 : MonoBehaviour
         }
         if (other.gameObject.name == "Portal1")
         {
-            rb.transform.position = new Vector2(4.7f, 2.8f);
+            rb.transform.position = portal2Spawning.transform.position;
         }
         if (other.gameObject.name == "Portal2")
         {
-            rb.transform.position = new Vector2(-2.8f, -0.671f);
+            rb.transform.position = portal1Spawning.transform.position;
         }
     }
 }

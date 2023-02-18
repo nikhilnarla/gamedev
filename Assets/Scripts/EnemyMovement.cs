@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
             rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);
         }
  
-        if (transform.position.x > -0.6)
+        if (transform.position.x > -1.6)
         {
             rB.velocity = new Vector2(WalkSpeed * Rightleft * -1, 0);  
         }
