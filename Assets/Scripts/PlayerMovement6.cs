@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -64,9 +65,10 @@ public class PlayerMovement6 : MonoBehaviour
         {
             analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
         }
-         if (other.gameObject.name == ("LavaCamera"))
+         if (other.gameObject.tag == ("LavaParticle"))
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
          if (other.gameObject.name == ("Ground"))
         {

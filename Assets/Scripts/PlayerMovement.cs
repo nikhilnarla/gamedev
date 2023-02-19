@@ -18,8 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public bool greenblockhit = true;
 
     public AnalyticsManager analyticsManager;
-    //public AnalyticsManagerLevel1 analyticsManagerLevel1;
-
+  
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
@@ -50,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded()
-    { 
+    {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -59,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name == ("Tile 5") && bridgeStatus.ContainsValue(false)){
                 ShowTiles();
         }
-         
+
          if(other.gameObject.name == ("Button")){
                 analyticsManager.SendEvent("LEVEL2 BUTTON WAS TOUCHED BY PLAYER");
                 AddGravityToTiles();
@@ -152,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         {
             var bridgeTile = GameObject.Find("Bridge Tile "+i).GetComponent<Renderer>();
             bridgeTile.enabled = !bridgeTile.enabled;
-            
+
             var collider = bridgeTile.GetComponent<BoxCollider2D>();
             collider.enabled = !collider.enabled;
 
@@ -162,11 +161,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void AddGravityToTiles()
-    {   
+    {
         Rigidbody2D tile = null;
         for(int i=0; i<7; i+=1)
         {
-            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();   
+            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 1;
         }
     }
