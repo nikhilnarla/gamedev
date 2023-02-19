@@ -5370,6 +5370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flipBlock: {fileID: 1236353333}
   rotationSpeed: 50
+  analyticsManager: {fileID: 1374213892}
 --- !u!1001 &1237557342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6115,6 +6116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipBlock: {fileID: 1410223481}
+  analyticsManager: {fileID: 0}
   rotationSpeed: 80
 --- !u!1001 &1415727106
 PrefabInstance:
