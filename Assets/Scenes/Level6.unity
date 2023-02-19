@@ -4620,6 +4620,7 @@ MonoBehaviour:
     m_Bits: 0
   portal1Spawning: {fileID: 158622156}
   portal2Spawning: {fileID: 892099721}
+  analyticsManager: {fileID: 1374213892}
   speed: 2
   jump: 7
   move: 0
@@ -5939,6 +5940,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
   m_PrefabInstance: {fileID: 1353110006}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1374213891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374213893}
+  - component: {fileID: 1374213892}
+  m_Layer: 0
+  m_Name: AnalyticsManagerObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1374213892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374213891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc680425af9c42bda686b1b20d40cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1374213893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374213891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7960023, y: 1.5472234, z: -0.1143492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377705986
 GameObject:
   m_ObjectHideFlags: 0

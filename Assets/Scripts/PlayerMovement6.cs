@@ -11,6 +11,7 @@ public class PlayerMovement6 : MonoBehaviour
 
     [SerializeField]
     private Transform portal1Spawning, portal2Spawning;
+     public AnalyticsManager analyticsManager;
 
 
     public float speed;
