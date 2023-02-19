@@ -68,14 +68,6 @@ public class PlayerMovement6 : MonoBehaviour
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
         }
-        //   if (other.gameObject.name == ("FallingBlock1"))
-        // {
-        //     analyticsManager.SendEvent("LEVEL6 PLAYER USED ROTATING BLOCK 1");
-        // }
-        //      if (other.gameObject.name == ("FallingBlock2"))
-        // {
-        //     analyticsManager.SendEvent("LEVEL6 PLAYER USED ROTATING BLOCK 2");
-        // }
          if (other.gameObject.name == ("Ground"))
         {
             isJumping = false;

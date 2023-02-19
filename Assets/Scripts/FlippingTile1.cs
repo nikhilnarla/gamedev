@@ -14,11 +14,11 @@ public class FlippingTile1 : MonoBehaviour
         rotZ += Time.deltaTime * rotationSpeed;
         transform.rotation = Quaternion.Euler(0,0,rotZ);
     }
-     private void OnCollisionEnter2D(Collision2D other)
+     private void OnCollisionEnter2D(Collision2D Collision)
     {
-        if ( other.gameObject.name == "FallingBlock1")
+        if (Collision.gameObject.tag == "Player")
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER IS ON ROTATING BLOCK 1");
         }
-    } 
+    }
 }
