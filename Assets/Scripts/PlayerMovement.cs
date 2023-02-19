@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
          
          if(other.gameObject.name == ("Button")){
+                analyticsManager.SendEvent("LEVEL2 BUTTON WAS TOUCHED BY PLAYER");
                 AddGravityToTiles();
                 DestroyBridgeTiles();
         }
@@ -121,18 +122,22 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name == "BlackPortal1")
         {
             rb.transform.position = new Vector2( 6.5f, -1.77f);
+            analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER BLACK PORTAL1");
         }
         if (other.gameObject.name == "BlackPortal2")
         {
             rb.transform.position = new Vector2(-6.5f, 3.33f);
+             analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER BLACK PORTAL2");
         }
         if (other.gameObject.name == "OrangePortal1")
         {
             rb.transform.position = new Vector2(6.5f, 2.68f);
+             analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER ORANGE PORTAL1");
         }
         if (other.gameObject.name == "OrangePortal2")
         {
             rb.transform.position = new Vector2(-6.5f, -1.59f);
+            analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER ORANGE PORTAL2");
         }
 
     }
