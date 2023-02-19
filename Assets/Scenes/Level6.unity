@@ -9139,6 +9139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkSpeed: 1
+  analyticsManager: {fileID: 1374213892}
 --- !u!50 &2139298430
 Rigidbody2D:
   serializedVersion: 4

@@ -6,6 +6,8 @@ public class EnemyMovement : MonoBehaviour
 {
     private Rigidbody2D rB;
     public float WalkSpeed = 2;
+    public AnalyticsManager analyticsManager;
+
 
     private float Rightleft = 1;
     // Start is called before the first frame update
@@ -35,7 +37,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if ( other.gameObject.name == "Bullet")
         {
+
             Destroy(gameObject);
+            analyticsManager.SendEvent("LEVEL6 SPRING DESTROYED WITH BULLET");
         }
     } 
     
