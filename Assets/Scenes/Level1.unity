@@ -696,7 +696,8 @@ MonoBehaviour:
   fandetected: 0
   key: {fileID: 1488465840}
   keyLevel1: {fileID: 1488465840}
-  analyticsManager: {fileID: 0}
+  greenblockhit: 1
+  analyticsManager: {fileID: 793240520}
   rb: {fileID: 0}
   groundCheck: {fileID: 0}
   groundLayer:
