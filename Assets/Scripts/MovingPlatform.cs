@@ -4,6 +4,7 @@ public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private GameObject[] waypoints;
     private int currentWayPointIndex = 0;
+    public AnalyticsManager analyticsManager;
 
     [SerializeField] private float speed = 2f;
 
@@ -20,5 +21,21 @@ public class MovingPlatform : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWayPointIndex].transform.position, Time.deltaTime * speed);
     }
+
+       private void OnCollisionEnter2D(Collision2D other)
+    {
+        if ( other.gameObject.name == "EndGate2")
+        {
+
+            Destroy(gameObject);
+            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH GATE 2");
+        }
+         if ( other.gameObject.name == "EndGate1")
+        {
+
+            Destroy(gameObject);
+            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH GATE 1");
+        }
+    } 
     
 }

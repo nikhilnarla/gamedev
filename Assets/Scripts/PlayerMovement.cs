@@ -15,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject key;
     public GameObject keyLevel1;
 
+    public bool greenblockhit = true;
+
     public AnalyticsManager analyticsManager;
-    public AnalyticsManagerLevel1 analyticsManagerLevel1;
+    //public AnalyticsManagerLevel1 analyticsManagerLevel1;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -59,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
          
          if(other.gameObject.name == ("Button")){
+                analyticsManager.SendEvent("LEVEL2 BUTTON WAS TOUCHED BY PLAYER");
                 AddGravityToTiles();
                 DestroyBridgeTiles();
         }
@@ -92,7 +95,10 @@ public class PlayerMovement : MonoBehaviour
         {
            var objRenderer = GameObject.Find("GreenBlockLevel1").GetComponent<Renderer>();
            objRenderer.material.SetColor("_Color", Color.green);
-
+           if(greenblockhit){
+           analyticsManager.SendEvent("LEVEL1 GREEN BLOCK DETECTED BY PLAYER");
+           greenblockhit = false;
+           }
            var Block = other.gameObject.GetComponent<Rigidbody2D>();
            Block.mass = 5.0F;
            Block.angularDrag = 0.05F;
@@ -116,18 +122,22 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name == "BlackPortal1")
         {
             rb.transform.position = new Vector2( 6.5f, -1.77f);
+            analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER BLACK PORTAL1");
         }
         if (other.gameObject.name == "BlackPortal2")
         {
             rb.transform.position = new Vector2(-6.5f, 3.33f);
+             analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER BLACK PORTAL2");
         }
         if (other.gameObject.name == "OrangePortal1")
         {
             rb.transform.position = new Vector2(6.5f, 2.68f);
+             analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER ORANGE PORTAL1");
         }
         if (other.gameObject.name == "OrangePortal2")
         {
             rb.transform.position = new Vector2(-6.5f, -1.59f);
+            analyticsManager.SendEvent("LEVEL2 ABLE TO ENTER ORANGE PORTAL2");
         }
 
     }

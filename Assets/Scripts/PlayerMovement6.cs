@@ -11,6 +11,7 @@ public class PlayerMovement6 : MonoBehaviour
 
     [SerializeField]
     private Transform portal1Spawning, portal2Spawning;
+     public AnalyticsManager analyticsManager;
 
 
     public float speed;
@@ -50,7 +51,32 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
         if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+        if (other.gameObject.name == ("Portal1"))
+        {
+            analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
+        }
+        if (other.gameObject.name == ("Portal2"))
+        {
+            analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
+        }
+         if (other.gameObject.name == ("LavaCamera"))
+        {
+            analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
+        }
+        //   if (other.gameObject.name == ("FallingBlock1"))
+        // {
+        //     analyticsManager.SendEvent("LEVEL6 PLAYER USED ROTATING BLOCK 1");
+        // }
+        //      if (other.gameObject.name == ("FallingBlock2"))
+        // {
+        //     analyticsManager.SendEvent("LEVEL6 PLAYER USED ROTATING BLOCK 2");
+        // }
+         if (other.gameObject.name == ("Ground"))
         {
             isJumping = false;
         }
