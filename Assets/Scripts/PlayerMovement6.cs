@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -100,6 +101,7 @@ public class PlayerMovement6 : MonoBehaviour
         {
             Destroy(GameObject.Find("SuperKey"));
             showText = true;
+            StartCoroutine(WaitAndMakeTextDisappear(3));
         }
         if(other.gameObject.name == "KeyReveal"){
            //Debug.Log("KR");
@@ -119,13 +121,27 @@ public class PlayerMovement6 : MonoBehaviour
         }
     }
 
+    IEnumerator WaitAndMakeTextDisappear(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        showText = false;
+    }
+
     void OnGUI()
     {
         if(showText) {
-            // GUI.Label(new Rect(425, 20, 100, 100), "Powerup Collected, Press C to shoot bullets!","black");
-            var centeredStyle = GUI.skin.GetStyle("Label");
-            centeredStyle.alignment = TextAnchor.UpperCenter;
-            GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-25, 100, 50), "Powerup Collected, Press C to shoot bullets!", centeredStyle);
+            // text - red color
+            GUIStyle style = new GUIStyle(GUI.skin.label);
+            style.alignment = TextAnchor.MiddleCenter;
+            style.normal.textColor = Color.red;
+
+            // draw background - black color
+            Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 25, 120, 70);
+            GUI.color = Color.black;
+            GUI.DrawTexture(rect, Texture2D.whiteTexture);
+            GUI.color = Color.white;
+
+            GUI.Label(rect, "Powerup Collected, Press C to shoot bullets!", style);
         }
     }
 }

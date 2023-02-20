@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.tag.Equals("Bullet"))
         {
             Destroy(other.gameObject);
-            Destroy(gameObject); // merged from week 5 branch
+            // Destroy(gameObject); // merged from week 5 branch
             analyticsManager.SendEvent("LEVEL6 SPRING DESTROYED WITH BULLET");
             
             disappeared = true;
