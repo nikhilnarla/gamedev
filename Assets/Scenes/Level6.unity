@@ -3806,7 +3806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 1377705987}
-  bulletPrefab: {fileID: 8260892804956264881, guid: 9817f997adfca4d57a46cba2823cd473, type: 3}
+  bulletPrefab: {fileID: 6200498979350969258, guid: 9817f997adfca4d57a46cba2823cd473, type: 3}
+  speed: 2
 --- !u!1001 &1033185306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3816,7 +3817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: Wall10
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_TagString
@@ -4999,7 +5000,7 @@ GameObject:
   - component: {fileID: 1377705987}
   m_Layer: 0
   m_Name: BulletSpawnPoint
-  m_TagString: Player
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
