@@ -2770,6 +2770,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466863960}
   m_CullTransparentMesh: 1
+--- !u!1 &1475045198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7580785034715911886, guid: 1630bd09388ab485c933e889d76ecbf3, type: 3}
+  m_PrefabInstance: {fileID: 7580785035067562164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1475045204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475045198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1abf348aa414f35a878892bf6d1b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  jump: 7
+  move: 0
+  isJumping: 0
+  blockPushed: 0
+  green: 1
+  fandetected: 0
+  key: {fileID: 0}
+  keyLevel1: {fileID: 0}
+  greenblockhit: 1
+  analyticsManager: {fileID: 253234996}
+  rb: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  buttonLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1488465840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5633187771907323987, guid: 0047bbd75879741198f3099ad12a2ef3, type: 3}
@@ -3644,6 +3680,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7580785034715911883, guid: 1630bd09388ab485c933e889d76ecbf3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7580785034715911886, guid: 1630bd09388ab485c933e889d76ecbf3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3660,5 +3700,6 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 253234996}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3384900951260678320, guid: 1630bd09388ab485c933e889d76ecbf3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1630bd09388ab485c933e889d76ecbf3, type: 3}
