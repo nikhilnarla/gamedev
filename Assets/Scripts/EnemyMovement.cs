@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private Rigidbody2D rB;
     public float WalkSpeed = 2;
+    public AnalyticsManager analyticsManager;
     private float Rightleft = 1;
 
     private bool disappeared = false;
@@ -46,6 +47,9 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.tag.Equals("Bullet"))
         {
             Destroy(other.gameObject);
+            Destroy(gameObject); // merged from week 5 branch
+            analyticsManager.SendEvent("LEVEL6 SPRING DESTROYED WITH BULLET");
+            
             disappeared = true;
             gameObject.SetActive(false);
             Invoke("Appear", disappearDuration); // disappear for 3 seconds

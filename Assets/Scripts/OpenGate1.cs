@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class OpenGate1 : MonoBehaviour
 {
+    public AnalyticsManager analyticsManager;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -10,6 +12,7 @@ public class OpenGate1 : MonoBehaviour
             Destroy(GameObject.Find("Gate1OpenKey"));
             Destroy(GameObject.Find("Gate1"));
             Destroy(GameObject.Find("Wall10"));
+            analyticsManager.SendEvent("LEVEL6 GATE1 OPENED"); // analytics
         }
     }
 }

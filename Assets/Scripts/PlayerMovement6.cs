@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement6 : MonoBehaviour
 
     [SerializeField]
     private Transform portal1Spawning, portal2Spawning;
+     public AnalyticsManager analyticsManager;
 
 
     public float speed;
@@ -64,20 +66,30 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
         }
-
-        if (other.gameObject.name == "Portal1")
+        if (other.gameObject.name == ("Portal1"))
         {
+            analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
             rb.transform.position = portal2Spawning.transform.position;
         }
-        
-        if (other.gameObject.name == "Portal2")
+        if (other.gameObject.name == ("Portal2"))
         {
+            analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
             rb.transform.position = portal1Spawning.transform.position;
         }
+         if (other.gameObject.tag == ("LavaParticle"))
+        {
+            analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        // if (other.gameObject.name == ("Ground")) // from wk 5
+        // {
+        //     isJumping = false;
+        // }
         if(other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
