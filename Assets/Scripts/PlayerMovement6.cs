@@ -17,6 +17,7 @@ public class PlayerMovement6 : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
+    public bool showText = false;
 
     void Start()
     {
@@ -67,13 +68,32 @@ public class PlayerMovement6 : MonoBehaviour
         {
             isJumping = false;
         }
+
         if (other.gameObject.name == "Portal1")
         {
             rb.transform.position = portal2Spawning.transform.position;
         }
+        
         if (other.gameObject.name == "Portal2")
         {
             rb.transform.position = portal1Spawning.transform.position;
         }
+        if(other.gameObject.name == "SuperPowerKey")
+        {
+            Destroy(GameObject.Find("SuperPowerKey"));
+            Destroy(GameObject.Find("SuperPowerGate"));
+        }
+
+        if(other.gameObject.name == "SuperKey")
+        {
+            Destroy(GameObject.Find("SuperKey"));
+            showText = true;
+        }
+    }
+
+    void OnGUI()
+    {
+        if(showText)
+            GUI.Label(new Rect(425, 20, 100, 100), "Powerup Collected, Press C to shoot bullets!","black");
     }
 }
