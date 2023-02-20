@@ -134,9 +134,10 @@ public class PlayerMovement6 : MonoBehaviour
             GUIStyle style = new GUIStyle(GUI.skin.label);
             style.alignment = TextAnchor.MiddleCenter;
             style.normal.textColor = Color.red;
+            style.fontSize = 30;
 
             // draw background - black color
-            Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 25, 120, 70);
+            Rect rect = new Rect(Screen.width / 2 - 140, Screen.height / 2 - 90, 280, 180);
             GUI.color = Color.black;
             GUI.DrawTexture(rect, Texture2D.whiteTexture);
             GUI.color = Color.white;
