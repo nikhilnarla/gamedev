@@ -41,6 +41,19 @@ public class PlayerMovement6 : MonoBehaviour
             isJumping = true;
         }
 
+        if (Input.GetKeyDown("left") && IsGrounded())
+        {
+            transform.Rotate(0, 180, 0);
+        }
+
+        Flip();
+    }
+
+    void Flip() {
+        if (Input.GetKeyDown("right") && IsGrounded())
+        {
+            transform.Rotate(0, 0, 0);
+        }
     }
 
     private bool IsGrounded()

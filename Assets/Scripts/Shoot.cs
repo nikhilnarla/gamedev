@@ -6,10 +6,12 @@ public class Shoot : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
+    public float speed = 2;
+    // public float bulletSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletSpawnPoint = transform.Find("BulletSpawnPoint");
     }
 
     // Update is called once per frame
@@ -17,7 +19,10 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Instantiate(bulletPrefab,bulletSpawnPoint);
+
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            // bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 1).normalized * speed; //set bullet velocity to the left
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0f);
         }
     }
 }

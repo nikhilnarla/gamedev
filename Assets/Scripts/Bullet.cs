@@ -4,35 +4,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
+    public float life = 3;
+    public float speed = 3;
     private Rigidbody2D rb;
-    public float life = 1.5f;
-    // Start is called before the first frame update
 
     void Awake()
     {
         Destroy(gameObject, life);
     }
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-1 * speed, 0);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("collided with enemy");
-        Debug.Log(other.gameObject.name);
-        if (other.gameObject.name == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            EnemyMovement enemy = other.gameObject.GetComponent<EnemyMovement>();
+            if (enemy != null)
+            {
+                Destroy(gameObject);
+                // enemy.DisappearForSeconds(3f);
+                Destroy(other.gameObject);
+            }
         }
     }
 }

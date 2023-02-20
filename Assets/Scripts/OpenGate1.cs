@@ -9,6 +9,7 @@ public class OpenGate1 : MonoBehaviour
             Debug.Log("Gate 1 Opened!");
             Destroy(GameObject.Find("Gate1OpenKey"));
             Destroy(GameObject.Find("Gate1"));
+            Destroy(GameObject.Find("Wall10"));
         }
     }
 }
