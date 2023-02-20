@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementC : MonoBehaviour
 {
     public float speed;
     public float jump;
