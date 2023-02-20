@@ -20,6 +20,7 @@ public class PlayerMovement6 : MonoBehaviour
     public float move;
     public bool isJumping = false;
     public bool showText = false;
+    public GameObject frozenKey;
 
     void Start()
     {
@@ -99,6 +100,22 @@ public class PlayerMovement6 : MonoBehaviour
         {
             Destroy(GameObject.Find("SuperKey"));
             showText = true;
+        }
+        if(other.gameObject.name == "KeyReveal"){
+           //Debug.Log("KR");
+           Destroy(GameObject.Find("KeyReveal"));
+           frozenKey.SetActive(true);
+           GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
+        }
+        if(other.gameObject.name == "EndGate1"){
+          Destroy(GameObject.Find("EndGate1"));
+          analyticsManager.SendEvent("LEVEL6 END ");
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+        if(other.gameObject.name == "EndGate2"){
+          Destroy(GameObject.Find("EndGate2"));
+          analyticsManager.SendEvent("LEVEL6 END");
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 
