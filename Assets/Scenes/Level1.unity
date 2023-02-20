@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  jump: 10
+  jump: 7
   move: 0
   isJumping: 0
   blockPushed: 0
