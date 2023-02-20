@@ -11,7 +11,8 @@ public class OpenGate1 : MonoBehaviour
             Debug.Log("Gate 1 Opened!");
             Destroy(GameObject.Find("Gate1OpenKey"));
             Destroy(GameObject.Find("Gate1"));
-            analyticsManager.SendEvent("LEVEL6 GATE1 OPENED");
+            Destroy(GameObject.Find("Wall10"));
+            analyticsManager.SendEvent("LEVEL6 GATE1 OPENED"); // analytics
         }
     }
 }

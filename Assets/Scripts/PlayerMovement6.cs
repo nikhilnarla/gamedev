@@ -19,6 +19,7 @@ public class PlayerMovement6 : MonoBehaviour
     public float jump;
     public float move;
     public bool isJumping = false;
+    public bool showText = false;
 
     void Start()
     {
@@ -43,6 +44,18 @@ public class PlayerMovement6 : MonoBehaviour
             isJumping = true;
         }
 
+        Flip();
+    }
+
+    void Flip() {
+        if (Input.GetKeyDown("left") && IsGrounded())
+        {
+            transform.Rotate(0, 180, 0);
+        }
+        // if (Input.GetKeyDown("right") && IsGrounded())
+        // {
+        //     transform.Rotate(0, 0, 0);
+        // }
     }
 
     private bool IsGrounded()
@@ -60,27 +73,42 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.name == ("Portal1"))
         {
             analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
+            rb.transform.position = portal2Spawning.transform.position;
         }
         if (other.gameObject.name == ("Portal2"))
         {
             analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
+            rb.transform.position = portal1Spawning.transform.position;
         }
          if (other.gameObject.tag == ("LavaParticle"))
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-         if (other.gameObject.name == ("Ground"))
+        // if (other.gameObject.name == ("Ground")) // from wk 5
+        // {
+        //     isJumping = false;
+        // }
+        if(other.gameObject.name == "SuperPowerKey")
         {
-            isJumping = false;
+            Destroy(GameObject.Find("SuperPowerKey"));
+            Destroy(GameObject.Find("SuperPowerGate"));
         }
-        if (other.gameObject.name == "Portal1")
+
+        if(other.gameObject.name == "SuperKey")
         {
-            rb.transform.position = portal2Spawning.transform.position;
+            Destroy(GameObject.Find("SuperKey"));
+            showText = true;
         }
-        if (other.gameObject.name == "Portal2")
-        {
-            rb.transform.position = portal1Spawning.transform.position;
+    }
+
+    void OnGUI()
+    {
+        if(showText) {
+            // GUI.Label(new Rect(425, 20, 100, 100), "Powerup Collected, Press C to shoot bullets!","black");
+            var centeredStyle = GUI.skin.GetStyle("Label");
+            centeredStyle.alignment = TextAnchor.UpperCenter;
+            GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-25, 100, 50), "Powerup Collected, Press C to shoot bullets!", centeredStyle);
         }
     }
 }
