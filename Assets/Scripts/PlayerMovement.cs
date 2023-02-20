@@ -63,9 +63,14 @@ public class PlayerMovement : MonoBehaviour
                speed = 4f;
         }
          
-         if(other.gameObject.name == ("Button")){
+        if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
+                Destroy(GameObject.Find("Gate"));
+        }
+
+        if(other.gameObject.name == ("Button 2")){
+                Destroy(GameObject.Find("EntryGate"));
         }
 
         if (other.gameObject.tag == "Trap")
@@ -182,5 +187,13 @@ public class PlayerMovement : MonoBehaviour
             Destroy(bridgeTile);
         }
     }
+
+    // void RemoveTraps(){
+    //     var traps = GameObject.FindGameObjectsWithTag("Trap");
+
+    //     foreach(GameObject trap in traps){
+    //         Destroy(trap);
+    //     }
+    // }
 
 }
