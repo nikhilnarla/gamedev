@@ -44,19 +44,18 @@ public class PlayerMovement6 : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetKeyDown("left") && IsGrounded())
-        {
-            transform.Rotate(0, 180, 0);
-        }
-
         Flip();
     }
 
     void Flip() {
-        if (Input.GetKeyDown("right") && IsGrounded())
+        if (Input.GetKeyDown("left") && IsGrounded())
         {
-            transform.Rotate(0, 0, 0);
+            transform.Rotate(0, 180, 0);
         }
+        // if (Input.GetKeyDown("right") && IsGrounded())
+        // {
+        //     transform.Rotate(0, 0, 0);
+        // }
     }
 
     private bool IsGrounded()
@@ -105,7 +104,11 @@ public class PlayerMovement6 : MonoBehaviour
 
     void OnGUI()
     {
-        if(showText)
-            GUI.Label(new Rect(425, 20, 100, 100), "Powerup Collected, Press C to shoot bullets!","black");
+        if(showText) {
+            // GUI.Label(new Rect(425, 20, 100, 100), "Powerup Collected, Press C to shoot bullets!","black");
+            var centeredStyle = GUI.skin.GetStyle("Label");
+            centeredStyle.alignment = TextAnchor.UpperCenter;
+            GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-25, 100, 50), "Powerup Collected, Press C to shoot bullets!", centeredStyle);
+        }
     }
 }
