@@ -11,6 +11,7 @@ TagManager:
   - Trap
   - LavaParticle
   - Bullet
+  - Teleporter
   layers:
   - Default
   - TransparentFX

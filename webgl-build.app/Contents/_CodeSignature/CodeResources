@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<data>
-		4jsJZkQXWhciOz2sCwjQ6uBjYLA=
+		KPt3bBHe36dJZ5cwzUn/pMlfhQE=
 		</data>
 		<key>Resources/Data/Managed/Mono.Security.dll</key>
 		<data>
@@ -526,39 +526,23 @@
 		</data>
 		<key>Resources/Data/globalgamemanagers</key>
 		<data>
-		MbI/XeqOPhNTyhLZwMoo5ENz6Pc=
+		sFCUWqgF8+vGn6xoHVw5gldqzYQ=
 		</data>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<data>
-		xS2ZHrkYcIllA1UyDUW3qV4eylQ=
+		3Emf1oS963UM2FHXoPaYy0hWu9g=
 		</data>
 		<key>Resources/Data/level0</key>
 		<data>
-		l4Y5/vTBv46fRL08MJdtijYH280=
+		H4mJhLXsiBMr0CqSqfhsSM3h1Jc=
 		</data>
-		<key>Resources/Data/level1</key>
-		<data>
-		UQB0+Br+c5rjOJJtLCa7Z0h6Frs=
-		</data>
-		<key>Resources/Data/level2</key>
-		<data>
-		zwKnc9P/KzGufsJN9hRtlGF17Xw=
-		</data>
-		<key>Resources/Data/level3</key>
-		<data>
-		hL3X9sEybDBnnyWk5dKqijT+Ia8=
-		</data>
-		<key>Resources/Data/level3.resS</key>
+		<key>Resources/Data/level0.resS</key>
 		<data>
 		0tAVYYXNAF8xTiC7sKTk8o6SamM=
 		</data>
-		<key>Resources/Data/level4</key>
-		<data>
-		5Wbf3sfF+L26whcaX9vjdzdA0MA=
-		</data>
 		<key>Resources/Data/resources.assets</key>
 		<data>
-		12BwQ/sCBl2robYCeL55e5VjxXM=
+		YF1SPAiml8eFEUdQ4BfIEGl8Rnc=
 		</data>
 		<key>Resources/Data/resources.assets.resS</key>
 		<data>
@@ -566,39 +550,11 @@
 		</data>
 		<key>Resources/Data/sharedassets0.assets</key>
 		<data>
-		dDt0VnWG76d7XOdmmwiUmMEcD2s=
+		1iIIfMtejDEdVUMwHcmMNX2+9f4=
 		</data>
 		<key>Resources/Data/sharedassets0.assets.resS</key>
 		<data>
-		i3z25zfD45l0F32mjCXzRKkzpGA=
-		</data>
-		<key>Resources/Data/sharedassets1.assets</key>
-		<data>
-		TVb4G+gmLCI4tEj5tcMsMA7ij3E=
-		</data>
-		<key>Resources/Data/sharedassets1.assets.resS</key>
-		<data>
-		ay9dUd7ncFWYPMDopHyxWCc8l1I=
-		</data>
-		<key>Resources/Data/sharedassets2.assets</key>
-		<data>
-		n+BT6iwguVeOq1yo94PGMsOo31A=
-		</data>
-		<key>Resources/Data/sharedassets2.assets.resS</key>
-		<data>
-		G06fhQKUGbqXUnRsuEs05MhrhBE=
-		</data>
-		<key>Resources/Data/sharedassets3.assets</key>
-		<data>
-		0ZSosScny8dpGgzsm2zfPmkEeQM=
-		</data>
-		<key>Resources/Data/sharedassets3.assets.resS</key>
-		<data>
-		ZC4Z9mK7W7rYHrQHNTEDVPJDbwo=
-		</data>
-		<key>Resources/Data/sharedassets4.assets</key>
-		<data>
-		rmR3aED9nEXEa68gvLwv7s2e5NI=
+		lPMTNpOTyMNDrgQBZtYSrI1FszE=
 		</data>
 		<key>Resources/DefaultPreferences.plist</key>
 		<data>
@@ -785,16 +741,16 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			3FvAyBcnJBUS86rbakhIVougfic=
+			vppiPiNdfVXs9S5qZOQVWsI0350=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"dc5bc0c81727241512f3aadb6a4848568ba07e27" or cdhash H"838c3a8bec70d68690f6b200fe9cd2444b298d62"</string>
+			<string>cdhash H"be9a623e235d7d55ecf52e6a64e4155ac234df9d" or cdhash H"370ec514d6878b2158d183722b77c9401362f5a1"</string>
 		</dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zA3Ykxe8+HOqJjdKEP83GfNOkg0CO2hRNHsiOqZRcBU=
+			fOmJP7ke+bxR3T4h7UFe2vQ/hTChKbLt+k5wuGt2/W8=
 			</data>
 		</dict>
 		<key>Resources/Data/Managed/Mono.Security.dll</key>
@@ -1704,63 +1660,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mH8+ZFSu7GfaNqSNp4iL7fCamNRqtx7T9dpL5jbH/Js=
+			VFXJGR2/ZzkRwPjdgEcw4vkwDqDqZWU5GlCfyN+aIWk=
 			</data>
 		</dict>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			whaMlEinMWpjBQGvTOjw8CEzsucpbKpaa813PntA7Xs=
+			PTpH2fIdDkRLvPRlsOCA1dCnA8kyDW7VLNbWZm3MUC0=
 			</data>
 		</dict>
 		<key>Resources/Data/level0</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4iJYOQ9Kk5eIwii36rjAU6U7z7IZj6Y30+HO04p764g=
+			pbReazQz7ZFSkHu1CI94LOZDdgSYTyXXXlu9/2q6gXI=
 			</data>
 		</dict>
-		<key>Resources/Data/level1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jPmBrFL63vNQvs1lzTr1blNbGMrASOzASF8fI1l5tcQ=
-			</data>
-		</dict>
-		<key>Resources/Data/level2</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			w5Ud8kmnsuAsBb9Bk4t0PjE/rKY0mB1d0zYmjUX5QcA=
-			</data>
-		</dict>
-		<key>Resources/Data/level3</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			q9zwDGN/zcBJmP2Xlms5pRs20Nza2M4aLCF5LSIDwVo=
-			</data>
-		</dict>
-		<key>Resources/Data/level3.resS</key>
+		<key>Resources/Data/level0.resS</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			mEro30HI6DS7KoGiXZCY16ki8Bl8RcuNcAS817/zOWM=
 			</data>
 		</dict>
-		<key>Resources/Data/level4</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tvHFciIXm9zYP7E9c1OyE2Fc11swXH6FDqlkxW8KULI=
-			</data>
-		</dict>
 		<key>Resources/Data/resources.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8VGQ0MCq1Jz9D0qLy8BZltv6MfRbhBKK9uteEOqA7+0=
+			QklHPZdnYcSF19iHwEKj4aYpqLTDkJaCCbegC9ZAJ4E=
 			</data>
 		</dict>
 		<key>Resources/Data/resources.assets.resS</key>
@@ -1774,63 +1702,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ieyzhTms5gLGNkrTgonzg9gO5lqwBslf14DxYAUp0Qc=
+			BzeIYKrKmJpJLEFrJcU3qvzRDv3HuSFlCPxMvqiVI+o=
 			</data>
 		</dict>
 		<key>Resources/Data/sharedassets0.assets.resS</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xQFyzjXz/azdYU1iHpmVRdq9bT726VCMscZZdeeLWwE=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets1.assets</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bqbSj/sfh37G43yfC++RYDF8DNLDZyx3wvlXJnhKjSU=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets1.assets.resS</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/V9SjHc/7TXV2CoTh+4cngcNLfOSPPEbQh1ydFV/biI=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets2.assets</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hAkKDoaVFGOWybXhp98A8xVKfQ3XsGXWGfK9W1nnPSA=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets2.assets.resS</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jllM8eNnkGLtRqwE25YogOzQ5yxCgsqfGKFOA7yyQHM=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets3.assets</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CprMDYjJMdVHntw9NQ8/ThSNRgbxCwUmSsE7BxNmCXg=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets3.assets.resS</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EhWJi+/xbuqVSwETvLSWBVviDy6ZRQawpUBIITdmuNk=
-			</data>
-		</dict>
-		<key>Resources/Data/sharedassets4.assets</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IkjNxmYArLNdQuG0ccprenfNQwLbcYGbCH1ZaeTAJpQ=
+			0G9hvX77oULiLKtnD3ptAtGaaF5zHOXy2ZEMoThGaLk=
 			</data>
 		</dict>
 		<key>Resources/DefaultPreferences.plist</key>
