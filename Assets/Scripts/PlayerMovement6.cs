@@ -21,12 +21,22 @@ public class PlayerMovement6 : MonoBehaviour
     public bool showText = false;
     public GameObject frozenKey;
 
-    public static bool isFacingRight = false;
+    public static bool isFacingRight;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         //IntializeBridgeTiles();
+
+        // Check the initial facing direction of the player based on the X component of the transform's scale
+        if (transform.localScale.x > 0)
+        {
+            isFacingRight = true;
+        }
+        else
+        {
+            isFacingRight = false;
+        }
     }
 
     void Update()

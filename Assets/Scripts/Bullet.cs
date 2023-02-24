@@ -15,19 +15,14 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            EnemyMovement enemy = other.gameObject.GetComponent<EnemyMovement>();
-            if (enemy != null)
-            {
-                Destroy(gameObject);
-                // enemy.DisappearForSeconds(3f);
-                Destroy(other.gameObject);
-            }
-        }
-        else if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GateKey"))
+        if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GateKey"))
         { 
             // destroy bullet if it hits anything with like ground, wall, gatekey, etc.
+            Destroy(gameObject);
+        }
+        else if (other.transform.IsChildOf(GameObject.Find("Portals").transform))
+        {
+            // destroy bullet if it hits anything that is a child of the "Portals" parent
             Destroy(gameObject);
         }
     }

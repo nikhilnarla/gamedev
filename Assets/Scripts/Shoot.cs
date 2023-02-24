@@ -26,9 +26,12 @@ public class Shoot : MonoBehaviour
         if (superKeyCollected && Input.GetKeyDown(KeyCode.C))
         {
             // velocity + where bullet travels depending on which side the player is facing
+            Debug.Log("Player is facing: " + PlayerMovement6.isFacingRight);
             float bulletSpeed = PlayerMovement6.isFacingRight ? speed : -speed;
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
         }
     }
+
+       
 }
