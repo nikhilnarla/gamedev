@@ -67,13 +67,13 @@ public class Portals : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //exitVelocity = enteredRigidBody.velocity.x;
+        exitVelocity = enteredRigidBody.velocity.x;
 
-        //if (enterVelocity != exitVelocity)
-        //{
-        //    Destroy(GameObject.Find("Clone"));
+        if (enterVelocity != exitVelocity)
+        {
+           Destroy(GameObject.Find("Clone"));
 
-        //}
+        }
         if (gameObject.name != "Clone")
         {
             Destroy(collision.gameObject);
