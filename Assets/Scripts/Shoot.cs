@@ -25,10 +25,10 @@ public class Shoot : MonoBehaviour
 
         if (superKeyCollected && Input.GetKeyDown(KeyCode.C))
         {
-
+            // velocity + where bullet travels depending on which side the player is facing
+            float bulletSpeed = PlayerMovement6.isFacingRight ? speed : -speed;
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            // bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 1).normalized * speed; //set bullet velocity to the left
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
         }
     }
 }

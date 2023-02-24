@@ -21,6 +21,8 @@ public class PlayerMovement6 : MonoBehaviour
     public bool showText = false;
     public GameObject frozenKey;
 
+    public static bool isFacingRight = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,14 +50,12 @@ public class PlayerMovement6 : MonoBehaviour
     }
 
     void Flip() {
-        if (Input.GetKeyDown("left") && IsGrounded())
-        {
-            transform.Rotate(0, 180, 0);
+        if (isFacingRight && move < 0f || !isFacingRight && move > 0f) { // conditions to want to flip player
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f; // x component of player's local scale
+            transform.localScale = localScale;
         }
-        // if (Input.GetKeyDown("right") && IsGrounded())
-        // {
-        //     transform.Rotate(0, 0, 0);
-        // }
     }
 
     private bool IsGrounded()

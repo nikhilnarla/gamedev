@@ -25,5 +25,10 @@ public class Bullet : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GateKey"))
+        { 
+            // destroy bullet if it hits anything with like ground, wall, gatekey, etc.
+            Destroy(gameObject);
+        }
     }
 }
