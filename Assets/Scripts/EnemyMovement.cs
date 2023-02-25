@@ -73,7 +73,7 @@ public class EnemyMovement : MonoBehaviour
         disappeared = false;
         gameObject.SetActive(true);
         // makes sure that enemy moves back and forth when it respawns
-        transform.position = new Vector3(-2.3f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(-1.3f, transform.position.y, transform.position.z);
         rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);
     }
 

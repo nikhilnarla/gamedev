@@ -20,6 +20,7 @@ public class PlayerMovement6 : MonoBehaviour
     public bool isJumping = false;
     public bool showText = false;
     public GameObject frozenKey;
+    
 
     public static bool isFacingRight;
 
@@ -54,6 +55,18 @@ public class PlayerMovement6 : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);
             isJumping = true;
+        }
+
+        if (showText)
+        {
+            
+            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = true;
+        }
+
+        if(!showText)
+        {
+            
+            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = false;    
         }
 
         Flip();
@@ -125,21 +138,21 @@ public class PlayerMovement6 : MonoBehaviour
         showText = false;
     }
 
-    void OnGUI()
-    {
-        if(showText) {
-            // text - red color
-            GUIStyle style = new GUIStyle(GUI.skin.label);
-            style.alignment = TextAnchor.MiddleCenter;
-            style.normal.textColor = Color.red;
+    // void OnGUI()
+    // {
+    //     if(showText) {
+    //         // text - red color
+    //         GUIStyle style = new GUIStyle(GUI.skin.label);
+    //         style.alignment = TextAnchor.MiddleCenter;
+    //         style.normal.textColor = Color.red;
 
-            // draw background - black color
-            Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 25, 120, 70);
-            GUI.color = Color.black;
-            GUI.DrawTexture(rect, Texture2D.whiteTexture);
-            GUI.color = Color.white;
+    //         // draw background - black color
+    //         Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 25, 120, 70);
+    //         GUI.color = Color.black;
+    //         GUI.DrawTexture(rect, Texture2D.whiteTexture);
+    //         GUI.color = Color.white;
 
-            GUI.Label(rect, "Powerup Collected, Press C to shoot bullets!", style);
-        }
-    }
+    //         GUI.Label(rect, "Powerup Collected, Press C to shoot bullets!", style);
+    //     }
+    // }
 }
