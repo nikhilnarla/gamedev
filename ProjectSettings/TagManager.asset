@@ -11,6 +11,9 @@ TagManager:
   - Trap
   - LavaParticle
   - Bullet
+  - BlackPortal
+  - Tile
+  - Wall
   layers:
   - Default
   - TransparentFX
