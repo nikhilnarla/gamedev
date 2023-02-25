@@ -95,17 +95,6 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("SuperPowerGate"));
         }
 
-        if (other.gameObject.name == "Portal1")
-        {
-            analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
-            rb.transform.position = new Vector2(4.7f, 2.8f);
-        }
-        if (other.gameObject.name == "Portal2")
-        {
-            analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
-            rb.transform.position = new Vector2(-2.8f, -0.671f);
-        }
-
         if(other.gameObject.name == "SuperKey")
         {
             Destroy(GameObject.Find("SuperKey"));

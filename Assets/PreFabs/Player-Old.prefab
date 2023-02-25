@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7580785034715911882}
   - component: {fileID: 7580785034715911881}
+  - component: {fileID: 8945870701047238378}
   - component: {fileID: 7580785034715911880}
+  - component: {fileID: 417719625722484032}
   - component: {fileID: 7580785034715911887}
+  - component: {fileID: 4733945319355859937}
   - component: {fileID: 7580785034715911883}
   m_Layer: 0
   m_Name: Player-Old
@@ -87,6 +90,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8945870701047238378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580785034715911886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70400bf76bf064794a24649af481bfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackPortal: {fileID: 0}
+  orangePortal: {fileID: 0}
+  blackPortalSpawiningPoint: {fileID: 0}
+  orangePortalSpawningPoint: {fileID: 0}
+  clone: {fileID: 0}
 --- !u!50 &7580785034715911880
 Rigidbody2D:
   serializedVersion: 4
@@ -108,6 +128,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &417719625722484032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580785034715911886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2a25690bef1492eb373b6add55ce15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal1Spawn: {fileID: 0}
+  portal2Spawn: {fileID: 0}
+  analyticsManager: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &7580785034715911887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +160,37 @@ MonoBehaviour:
   jump: 7
   move: 0
   isJumping: 0
+  blockPushed: 0
+  green: 1
+  fandetected: 0
   key: {fileID: 0}
+  keyLevel1: {fileID: 0}
+  greenblockhit: 1
   analyticsManager: {fileID: 0}
+  rb: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  buttonLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &4733945319355859937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580785034715911886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2a25690bef1492eb373b6add55ce15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal1Spawn: {fileID: 0}
+  portal2Spawn: {fileID: 0}
+  analyticsManager: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!61 &7580785034715911883
 BoxCollider2D:
   m_ObjectHideFlags: 0
