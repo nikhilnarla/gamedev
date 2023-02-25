@@ -20,6 +20,10 @@ public class PlayerMovementC : MonoBehaviour
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rbspikes;
+    [SerializeField] private Rigidbody2D rbspikes1;
+    [SerializeField] private Rigidbody2D rbspikes2;
+    [SerializeField] private Rigidbody2D rbspikes3;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask buttonLayer;
@@ -27,7 +31,12 @@ public class PlayerMovementC : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rbspikes = GameObject.Find("Trap").GetComponent<Rigidbody2D>();
+        rbspikes1 = GameObject.Find("Trap (2)").GetComponent<Rigidbody2D>();
+        rbspikes2 = GameObject.Find("Trap (3)").GetComponent<Rigidbody2D>();
+        rbspikes3 = GameObject.Find("Trap (4)").GetComponent<Rigidbody2D>();
         IntializeBridgeTiles();
+
     }
 
     void Update()
@@ -44,6 +53,35 @@ public class PlayerMovementC : MonoBehaviour
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
+
+        if (GameObject.Find("Trap").GetComponent<Transform>().position.y < 1.89)
+        { 
+            rbspikes.velocity = new Vector2(0, 2);
+            rbspikes1.velocity = new Vector2(0, 2);
+        }
+ 
+        if (GameObject.Find("Trap (4)").GetComponent<Transform>().position.y > 5.82)
+        {             
+            rbspikes2.velocity = new Vector2(0, -2);
+            rbspikes3.velocity = new Vector2(0, -2);
+        }
+
+        if (GameObject.Find("Trap").GetComponent<Transform>().position.y > 3.50)
+        { 
+            rbspikes.velocity = new Vector2(0, -2);
+            rbspikes1.velocity = new Vector2(0, -2);
+        }
+ 
+        if (GameObject.Find("Trap (4)").GetComponent<Transform>().position.y < 4.00)
+        {             
+            rbspikes2.velocity = new Vector2(0, 2);
+            rbspikes3.velocity = new Vector2(0, 2);
+        }
+ 
+        // if (transform.position.x > -1.6)
+        // {
+        //     rB.velocity = new Vector2(WalkSpeed * Rightleft * -1, 0);  
+        // }
     }
 
     private bool IsGrounded()
@@ -139,6 +177,7 @@ public class PlayerMovementC : MonoBehaviour
             rb.transform.position = new Vector2(-6.5f, -1.59f);
         }
 
+
     }
 
     private void OnCollisionExit2D(Collision2D other){
@@ -147,6 +186,8 @@ public class PlayerMovementC : MonoBehaviour
                jump = 6.5f;
                speed = 3f;
         }
+
+ 
     }
 
     private void IntializeBridgeTiles(){
