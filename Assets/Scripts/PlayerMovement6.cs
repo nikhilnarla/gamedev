@@ -22,10 +22,13 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject frozenKey;
 
     public static bool isFacingRight;
+    Collider m_ObjectCollider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        m_ObjectCollider = GetComponent<Collider>();
+
         //IntializeBridgeTiles();
 
         // Check the initial facing direction of the player based on the X component of the transform's scale
@@ -117,6 +120,15 @@ public class PlayerMovement6 : MonoBehaviour
           analyticsManager.SendEvent("LEVEL6 END");
           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
+        // if(other.gameObject.name == "LeftEnd"){
+        //   //m_ObjectCollider.isTrigger = true;
+        //   Debug.Log("Trigger set");
+        // }
+        // if(other.gameObject.name == "RightEnd"){
+        //   //m_ObjectCollider = GetComponent<Collider>();
+        //   //m_ObjectCollider.isTrigger = false;
+        //   Debug.Log("Trigger set off");
+        // }
     }
 
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
