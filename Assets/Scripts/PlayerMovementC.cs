@@ -21,6 +21,8 @@ public class PlayerMovementC : MonoBehaviour
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rbspikes;
+    [SerializeField] private Rigidbody2D rbspikes1;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask buttonLayer;

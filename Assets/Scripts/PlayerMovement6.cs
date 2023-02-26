@@ -58,6 +58,17 @@ public class PlayerMovement6 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
+        if (showText)
+        {
+            
+            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = true;
+        }
+
+        if(!showText)
+        {
+            
+            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = false;    
+        }
 
         Flip();
     }
@@ -137,21 +148,4 @@ public class PlayerMovement6 : MonoBehaviour
         showText = false;
     }
 
-    void OnGUI()
-    {
-        if(showText) {
-            // text - red color
-            GUIStyle style = new GUIStyle(GUI.skin.label);
-            style.alignment = TextAnchor.MiddleCenter;
-            style.normal.textColor = Color.red;
-
-            // draw background - black color
-            Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 25, 120, 70);
-            GUI.color = Color.black;
-            GUI.DrawTexture(rect, Texture2D.whiteTexture);
-            GUI.color = Color.white;
-
-            GUI.Label(rect, "Powerup Collected, Press C to shoot bullets!", style);
-        }
-    }
 }
