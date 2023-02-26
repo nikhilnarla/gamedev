@@ -116,13 +116,24 @@ public class PlayerMovementC : MonoBehaviour
         //Analytics : Temp END GAME for Analytics
         if (other.gameObject.name == ("EndGame"))
         {
-            Debug.Log("Level 1 End");
+            Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GAMEEND");
+            analyticsManager.SendEvent("LEVEL2 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGame"));
+
+        }
+        if (other.gameObject.name == ("EndGameLevel3"))
+        {
+            Debug.Log("Level 2 End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+
+            //Analytics event - key Collected
+            analyticsManager.SendEvent("LEVEL2 GAMEEND");
+             //Desctroying end block so player can pass
+            Destroy(GameObject.Find("EndGameLevel3"));
 
         }
         if(other.gameObject.name == "BlackPortal1")

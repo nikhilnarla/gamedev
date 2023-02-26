@@ -3855,20 +3855,20 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
+  m_XDamping: 0.2
   m_YDamping: 0.56
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.12
-  m_ScreenY: 0.8
+  m_ScreenX: 0.099999994
+  m_ScreenY: 0.81
   m_CameraDistance: 20
-  m_DeadZoneWidth: 0
+  m_DeadZoneWidth: 0.94
   m_DeadZoneHeight: 2
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
+  m_SoftZoneWidth: 0.99
   m_SoftZoneHeight: 2
-  m_BiasX: -0.00000010244548
+  m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
@@ -7026,7 +7026,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.9433962, g: 0.09344962, b: 0.09344962, a: 1}
   m_FlipX: 0
@@ -11172,7 +11172,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11196,7 +11196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583532078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8205628, y: -0.32999992, z: -20}
+  m_LocalPosition: {x: 3.0910206, y: 1.0100002, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13194,7 +13194,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1138972727}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
