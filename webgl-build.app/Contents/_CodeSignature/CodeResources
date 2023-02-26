@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<data>
-		Pa4NVZJ/ONkz2MZ05SmIck668Vo=
+		uyhQ8o9z/mdao5YZ+dKg7l4/LH0=
 		</data>
 		<key>Resources/Data/Managed/Autodesk.Fbx.dll</key>
 		<data>
@@ -558,7 +558,7 @@
 		</data>
 		<key>Resources/Data/globalgamemanagers</key>
 		<data>
-		p080nPpCf42pVRg69sgKGrXgt98=
+		UlTkDRbituouTTZy/jI7XQDEV3Y=
 		</data>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<data>
@@ -570,15 +570,15 @@
 		</data>
 		<key>Resources/Data/level1</key>
 		<data>
-		LtPvGqVgv5dm5fPeDgbm6KjpKK8=
+		P3BfR1X5XMjd7KW+tTdSoJkuwlk=
 		</data>
 		<key>Resources/Data/level2</key>
 		<data>
-		NvONLtzpVKQY78Y/XBGt7N2Q1eU=
+		yYnePGZ1OJI5NeheyiPCQMU41VI=
 		</data>
 		<key>Resources/Data/level3</key>
 		<data>
-		h/QXSQRNvMMjIlwBMJEx026RHXE=
+		4iIGbZaFckYnWxJUXwmagos8rsY=
 		</data>
 		<key>Resources/Data/level3.resS</key>
 		<data>
@@ -826,16 +826,16 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			/SSnD7l+j91eILzAQj9/78qo8ig=
+			ecEi+SIU4U6GGp2u6iAFVtYs1gk=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"fd24a70fb97e8fdd5e20bcc0423f7fefcaa8f228" or cdhash H"ee0b705d51b9d8d9a24ed42e1be65115a21ecfbc"</string>
+			<string>cdhash H"79c122f92214e14e861a9daeea200556d62cd609" or cdhash H"0cf8d1d083fc85ba2f508f71666ffb63e4fcdcf5"</string>
 		</dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			44V68XtfTPBm9g+OFc/JwFWdWCgqHHT4gPVgdofZvPc=
+			qcumkp0ND+FnekJfnI+cm55v7r1R3F48izfqSwKD2sE=
 			</data>
 		</dict>
 		<key>Resources/Data/Managed/Autodesk.Fbx.dll</key>
@@ -1801,7 +1801,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0DiXfPILOC9Yf95ezH6Gbda8dPipCWcYuwNfwa+56L8=
+			1WELkSbxjy9wt20a26H5ez4Ijl/9shiI0xKGu4Q6BiE=
 			</data>
 		</dict>
 		<key>Resources/Data/globalgamemanagers.assets</key>
@@ -1822,21 +1822,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l0MZeT34mDbzXKhKClnXqIADzFOcOqRiOd8AbnrVgpA=
+			dvS7hvrUjis4LoGt6PkZzjWaaguvAF2E1gOAYunukVc=
 			</data>
 		</dict>
 		<key>Resources/Data/level2</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XVopr6KyiR2XHy8OOdOAPf7HGyM/kcPaDkD7bsghVxw=
+			8Fq1bj0Fc9KRLtzb/4dNNxt3wh937l7sjRkw2bzDWYs=
 			</data>
 		</dict>
 		<key>Resources/Data/level3</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FWyJx5VMPehXNUwxyxt7vaTsIhQ+NIHgVm5ZGvw4uLs=
+			JDxjbEo4e/J3hB0XIpgOinzTJE0I+NxgmIDUrpZB1Wo=
 			</data>
 		</dict>
 		<key>Resources/Data/level3.resS</key>
