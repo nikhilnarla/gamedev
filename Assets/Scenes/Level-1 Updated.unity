@@ -4023,6 +4023,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.010910034
       objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_Color.b
+      value: 0.654902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_Color.r
+      value: 0.42745098
+      objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: m_RootOrder
       value: 4
