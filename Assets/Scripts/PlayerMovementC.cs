@@ -158,8 +158,8 @@ public class PlayerMovementC : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
 
          if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
-               jump = 6.5f;
-               speed = 3f;
+               jump = 7f;
+               speed = 4f;
         }
     }
 
