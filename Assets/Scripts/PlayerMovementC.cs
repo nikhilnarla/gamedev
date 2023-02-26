@@ -14,8 +14,9 @@ public class PlayerMovementC : MonoBehaviour
     public bool fandetected = false;
     public GameObject key;
     public GameObject keyLevel1;
-
+    public Transform TunnelSpawnPoint;
     public AnalyticsManager analyticsManager;
+    public GameObject player;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -47,7 +48,7 @@ public class PlayerMovementC : MonoBehaviour
     }
 
     private bool IsGrounded()
-    { 
+    {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -61,7 +62,7 @@ public class PlayerMovementC : MonoBehaviour
                jump = 3f;
                speed = 4f;
         }
-         
+
         if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
@@ -74,7 +75,7 @@ public class PlayerMovementC : MonoBehaviour
 
         if (other.gameObject.tag == "Trap")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+             player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "Sharp")
         {
@@ -159,7 +160,7 @@ public class PlayerMovementC : MonoBehaviour
         {
             var bridgeTile = GameObject.Find("Bridge Tile "+i).GetComponent<Renderer>();
             bridgeTile.enabled = !bridgeTile.enabled;
-            
+
             var collider = bridgeTile.GetComponent<BoxCollider2D>();
             collider.enabled = !collider.enabled;
 
@@ -169,11 +170,11 @@ public class PlayerMovementC : MonoBehaviour
     }
 
     void AddGravityToTiles()
-    {   
+    {
         Rigidbody2D tile = null;
         for(int i=0; i<6; i+=1)
         {
-            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();   
+            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 1;
         }
     }

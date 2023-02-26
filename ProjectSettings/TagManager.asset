@@ -24,8 +24,8 @@ TagManager:
   - Button
   - Bridge Tile
   - Lava
-  - 
-  - 
+  - TunnelEnemyLayer
+  - SafeLayer
   - 
   - 
   - 
