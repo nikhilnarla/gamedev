@@ -329,7 +329,7 @@ RectTransform:
   m_GameObject: {fileID: 480680252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.97042125, y: 1.085045, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 338707163}
@@ -337,8 +337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000071526, y: 147}
-  m_SizeDelta: {x: 395.7197, y: 50}
+  m_AnchoredPosition: {x: -0, y: 44}
+  m_SizeDelta: {x: 811.0195, y: 108.5712}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480680254
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You are smarter than we thought!
+  m_text: Easy? ...See you next week!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -616,7 +616,7 @@ RectTransform:
   m_GameObject: {fileID: 1882318173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 0.97504, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 338707163}
@@ -624,8 +624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -70}
-  m_SizeDelta: {x: 220, y: 50}
+  m_AnchoredPosition: {x: 25, y: -70}
+  m_SizeDelta: {x: 317.6537, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882318175
 MonoBehaviour:
