@@ -77,7 +77,8 @@ public class PlayerMovementC : MonoBehaviour
 
         if (other.gameObject.tag == "Trap")
         {
-             player.gameObject.transform.position = TunnelSpawnPoint.position;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "Sharp")
         {
