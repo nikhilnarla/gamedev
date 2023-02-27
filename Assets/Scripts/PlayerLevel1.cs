@@ -170,7 +170,10 @@ public class PlayerLevel1 : MonoBehaviour
         var keyRenderer2 =  GameObject.Find("Key 2").GetComponent<Renderer>();
 
         keyRenderer1.enabled = val;
+        keyRenderer1.GetComponent<BoxCollider2D>().enabled = val;
+
         keyRenderer2.enabled = val;
+        keyRenderer2.GetComponent<BoxCollider2D>().enabled = val;
     }
 
 }
