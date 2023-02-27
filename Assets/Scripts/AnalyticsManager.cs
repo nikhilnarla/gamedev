@@ -2,6 +2,24 @@ using System.Collections;
 using UnityEngine;
 using System;
 using UnityEngine.Networking;
+using UnityEditor;
+using UnityEngine.SceneManagement;
+ 
+// public class GetScenesNamesFromEditor
+// {
+//     [MenuItem( "Scenes Names/Save Scenes Names" )]
+//     private static void GetScenesNames()
+//     {
+//         EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+//         for ( int i = 0 ; i &amp;amp;amp;lt; scenes.Length ; ++i )
+//         {
+//             if( scenes[i].enabled )
+//                 Debug.Log( "Scene #" + i + " : " + scenes[i].path + " is enabled" );
+//             else
+//                Debug.LogWarning( "Scene #" + i + " : " + scenes[i].path + " is not enabled" );
+//         }
+//     }
+// }
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -9,9 +27,13 @@ public class AnalyticsManager : MonoBehaviour
     private static string _url;
     private static string _sessionID;
     private static float currTime;
+    public static string levelName;
+    public static bool eventLevelFlag = false;
 
     private void Awake()
     {
+        // Debug.Log("Easley");
+        // Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
         //AnalyticsManager = this;
         _url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScvomqdDXqomed_rlvKhLmn_8Ce6Pr0sgOWEfeRXWhmClxBXA/formResponse";
 
@@ -26,7 +48,25 @@ public class AnalyticsManager : MonoBehaviour
     void Start()
     {
         currTime = 0;
-        SendEvent("LEVEL1 GAMESTART");
+        if(SceneManager.GetActiveScene().name == "Level6"){
+            levelName = "LEVEL6";
+            // SendEvent("LEVEL6 GAMESTART");
+        }
+        if(SceneManager.GetActiveScene().name == "Level-1 Updated"){
+            levelName = "LEVEL1";
+            // SendEvent("LEVEL1 GAMESTART");
+        }
+        if(SceneManager.GetActiveScene().name == "Level-3 Upgrade"){
+            levelName = "LEVEL3";
+            // SendEvent("LEVEL3 GAMESTART");
+        }
+
+        if(!eventLevelFlag){
+        SendEvent(levelName + "GAMESTART");
+
+        Debug.Log("Awake:" + ' ' + SceneManager.GetActiveScene().name);
+        eventLevelFlag = true;
+        }
     }
 
     // Update is called once per frame
