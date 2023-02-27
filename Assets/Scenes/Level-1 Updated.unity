@@ -1012,6 +1012,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
   m_PrefabInstance: {fileID: 256805123}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264650201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+  m_PrefabInstance: {fileID: 1738387915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &272676721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2308,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+--- !u!1 &609870354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609870356}
+  - component: {fileID: 609870355}
+  m_Layer: 0
+  m_Name: AnalyticsManagerObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &609870355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609870354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc680425af9c42bda686b1b20d40cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &609870356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609870354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.69229, y: 2.449129, z: 0.5495738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &629468915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,7 +2857,7 @@ MonoBehaviour:
   key: {fileID: 0}
   keyLevel1: {fileID: 0}
   TunnelSpawnPoint: {fileID: 629468916}
-  analyticsManager: {fileID: 0}
+  analyticsManager: {fileID: 609870355}
   rb: {fileID: 740502426}
   groundCheck: {fileID: 1276936683}
   groundLayer:
@@ -5716,6 +5765,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
   m_PrefabInstance: {fileID: 1738387915}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1738387917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264650201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc680425af9c42bda686b1b20d40cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1815137143
 PrefabInstance:
   m_ObjectHideFlags: 0
