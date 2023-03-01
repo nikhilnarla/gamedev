@@ -89,6 +89,29 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.name.Equals("Green Block"))
+        {
+            Debug.Log("green block");
+            var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
+            objRenderer.material.SetColor("_Color", Color.green);
+            var block = other.gameObject.GetComponent<Rigidbody2D>();
+            block.mass = 10.0f;
+            block.angularDrag = 0.05f;
+            block.gravityScale = 1.0f;
+            //analyticsManager.SendEvent("LEVEL7 PLAYER INTERACTED WITH THE GREEN BLOCK");
+
+        }
+
+        if (other.gameObject.name.Equals("Button"))
+        {
+            Debug.Log("Presssed Button");
+            AddGravityToTiles();
+        }
+
+        if (other.gameObject.tag.Equals("Trap"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -140,6 +163,15 @@ public class PlayerMovement6 : MonoBehaviour
         //   //m_ObjectCollider.isTrigger = false;
         //   Debug.Log("Trigger set off");
         // }
+        if(other.gameObject.name.Equals("Key1"))
+        {
+            Destroy(GameObject.Find("Gate1"));
+        }
+
+        if (other.gameObject.name.Equals("Key2"))
+        {
+            Destroy(GameObject.Find("Gate2"));
+        }
     }
 
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
@@ -147,5 +179,17 @@ public class PlayerMovement6 : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         showText = false;
     }
+
+    void AddGravityToTiles()
+    {
+        Rigidbody2D tile = null;
+        for (int i = 1; i < 4; i += 1)
+        {
+            tile = GameObject.Find("Tile " + i).GetComponent<Rigidbody2D>();
+            tile.gravityScale = 1;
+        }
+    }
+
+    
 
 }
