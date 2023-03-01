@@ -166,11 +166,18 @@ public class PlayerMovement6 : MonoBehaviour
         if(other.gameObject.name.Equals("Key1"))
         {
             Destroy(GameObject.Find("Gate1"));
+            Destroy(GameObject.Find("Key1"));
         }
 
         if (other.gameObject.name.Equals("Key2"))
         {
             Destroy(GameObject.Find("Gate2"));
+            Destroy(GameObject.Find("Key2"));
+        }
+
+        if (other.gameObject.name.Equals("Pad2"))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jump * 3);
         }
     }
 

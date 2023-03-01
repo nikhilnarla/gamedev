@@ -31,12 +31,29 @@ public class EnemyMovement7 : MonoBehaviour
             Destroy(gameObject);
             analyticsManager.SendEvent("LEVEL7 ENEMY DESTROYED WITH BULLET");
 
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
-        else if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by enemy, then it respawns to back at beginning of level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            // if player is hit by enemy, then it respawns to back at beginning of level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (collision.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            analyticsManager.SendEvent("LEVEL7 ENEMY DESTROYED WITH BULLET");
+
+            //gameObject.SetActive(false);
         }
     }
 }
