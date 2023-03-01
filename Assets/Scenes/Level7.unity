@@ -1822,7 +1822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.52
+      value: 24.92
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3907,7 +3907,7 @@ GameObject:
   - component: {fileID: 884534964}
   - component: {fileID: 884534963}
   m_Layer: 0
-  m_Name: Tile5
+  m_Name: BridgeWall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3921,7 +3921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884534961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.4705, y: 4.01, z: 0.1281001}
+  m_LocalPosition: {x: 10.4705, y: 4.01, z: 0}
   m_LocalScale: {x: 2.259, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

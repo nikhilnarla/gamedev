@@ -20,7 +20,6 @@ public class PlayerMovement6 : MonoBehaviour
     public bool isJumping = false;
     public bool showText = false;
     public GameObject frozenKey;
-    public GameObject wayPoint1;
 
 
     public static bool isFacingRight;
@@ -89,7 +88,7 @@ public class PlayerMovement6 : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private IEnumerator OnCollisionEnter2D(Collision2D other)
     {
 
         if (other.gameObject.name == ("BridgeTile 1") ||
@@ -116,8 +115,12 @@ public class PlayerMovement6 : MonoBehaviour
 
         if (other.gameObject.name.Equals("Button"))
         {
-            Debug.Log("Presssed Button");
+            Debug.Log("Pressed Button");
             AddGravityToTiles();
+            yield return new WaitForSeconds(1.60f);
+            Debug.Log("Remove Gravity");
+            RemoveGravityToTiles();
+
         }
 
         if (other.gameObject.tag.Equals("Trap"))
@@ -202,15 +205,20 @@ public class PlayerMovement6 : MonoBehaviour
     void AddGravityToTiles()
     {
         Rigidbody2D tile = null;
-        Transform wayPoint = null;
         for (int i = 1; i < 4; i += 1)
         {
-            tile = GameObject.Find("Tile " + i).GetComponent<Rigidbody2D>();
-            //wayPoint = GameObject.Find("Way" + i).GetComponent<Transform>();
-            //tile.transform.position = wayPoint.transform.position;
+            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 1;
+        }
+    }
 
-
+    void RemoveGravityToTiles()
+    {
+        Rigidbody2D tile = null;
+        for (int i = 1; i < 4; i += 1)
+        {
+            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
+            tile.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
 
