@@ -21,6 +21,7 @@ public class PlayerMovement6 : MonoBehaviour
     public bool showText = false;
     public GameObject frozenKey;
 
+
     public static bool isFacingRight;
     Collider m_ObjectCollider;
 
@@ -60,14 +61,14 @@ public class PlayerMovement6 : MonoBehaviour
         }
         if (showText)
         {
-            
-            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = true;
+
+            GameObject.Find("Popup").GetComponent<Canvas>().enabled = true;
         }
 
-        if(!showText)
+        if (!showText)
         {
-            
-            GameObject.Find("Popup").GetComponent<Canvas> ().enabled = false;    
+
+            GameObject.Find("Popup").GetComponent<Canvas>().enabled = false;
         }
 
         Flip();
@@ -87,15 +88,25 @@ public class PlayerMovement6 : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private IEnumerator OnCollisionEnter2D(Collision2D other)
     {
+
+        if (other.gameObject.name == ("BridgeTile 1") ||
+            other.gameObject.name == ("BridgeTile 2") ||
+            other.gameObject.name == ("BridgeTile 3") ||
+            other.gameObject.name == ("BridgeTile 4") ||
+            other.gameObject.name == ("BridgeWall"))
+        {
+            speed = 3f;
+            jump = 5f;
+        }
         if (other.gameObject.name.Equals("Green Block"))
         {
             Debug.Log("green block");
             var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
             objRenderer.material.SetColor("_Color", Color.green);
             var block = other.gameObject.GetComponent<Rigidbody2D>();
-            block.mass = 10.0f;
+            //block.mass = 200.0f;
             block.angularDrag = 0.05f;
             block.gravityScale = 1.0f;
             //analyticsManager.SendEvent("LEVEL7 PLAYER INTERACTED WITH THE GREEN BLOCK");
@@ -104,8 +115,12 @@ public class PlayerMovement6 : MonoBehaviour
 
         if (other.gameObject.name.Equals("Button"))
         {
-            Debug.Log("Presssed Button");
+            Debug.Log("Pressed Button");
             AddGravityToTiles();
+            yield return new WaitForSeconds(1.60f);
+            Debug.Log("Remove Gravity");
+            RemoveGravityToTiles();
+
         }
 
         if (other.gameObject.tag.Equals("Trap"))
@@ -117,7 +132,7 @@ public class PlayerMovement6 : MonoBehaviour
         {
             isJumping = false;
         }
-         if (other.gameObject.tag == ("LavaParticle"))
+        if (other.gameObject.tag == ("LavaParticle"))
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -126,33 +141,33 @@ public class PlayerMovement6 : MonoBehaviour
         // {
         //     isJumping = false;
         // }
-        if(other.gameObject.name == "SuperPowerKey")
+        if (other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
             Destroy(GameObject.Find("SuperPowerGate"));
         }
 
-        if(other.gameObject.name == "SuperKey")
+        if (other.gameObject.name == "SuperKey")
         {
             Destroy(GameObject.Find("SuperKey"));
             showText = true;
             StartCoroutine(WaitAndMakeTextDisappear(3));
         }
-        if(other.gameObject.name == "KeyReveal"){
-           //Debug.Log("KR");
-           Destroy(GameObject.Find("KeyReveal"));
-           frozenKey.SetActive(true);
-           GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
+        if (other.gameObject.name == "KeyReveal") {
+            //Debug.Log("KR");
+            Destroy(GameObject.Find("KeyReveal"));
+            frozenKey.SetActive(true);
+            GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
         }
-        if(other.gameObject.name == "EndGate1"){
-          Destroy(GameObject.Find("EndGate1"));
-          analyticsManager.SendEvent("LEVEL6 END ");
-          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if (other.gameObject.name == "EndGate1") {
+            Destroy(GameObject.Find("EndGate1"));
+            analyticsManager.SendEvent("LEVEL6 END ");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if(other.gameObject.name == "EndGate2"){
-          Destroy(GameObject.Find("EndGate2"));
-          analyticsManager.SendEvent("LEVEL6 END");
-          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if (other.gameObject.name == "EndGate2") {
+            Destroy(GameObject.Find("EndGate2"));
+            analyticsManager.SendEvent("LEVEL6 END");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         // if(other.gameObject.name == "LeftEnd"){
         //   //m_ObjectCollider.isTrigger = true;
@@ -163,7 +178,7 @@ public class PlayerMovement6 : MonoBehaviour
         //   //m_ObjectCollider.isTrigger = false;
         //   Debug.Log("Trigger set off");
         // }
-        if(other.gameObject.name.Equals("Key1"))
+        if (other.gameObject.name.Equals("Key1"))
         {
             Destroy(GameObject.Find("Gate1"));
             Destroy(GameObject.Find("Key1"));
@@ -192,11 +207,36 @@ public class PlayerMovement6 : MonoBehaviour
         Rigidbody2D tile = null;
         for (int i = 1; i < 4; i += 1)
         {
-            tile = GameObject.Find("Tile " + i).GetComponent<Rigidbody2D>();
+            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 1;
         }
     }
 
-    
+    void RemoveGravityToTiles()
+    {
+        Rigidbody2D tile = null;
+        for (int i = 1; i < 4; i += 1)
+        {
+            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
+            tile.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+
+        if (other.gameObject.name == ("BridgeTile 1") ||
+            other.gameObject.name == ("BridgeTile 2") ||
+            other.gameObject.name == ("BridgeTile 3") ||
+            other.gameObject.name == ("BridgeTile 4") ||
+            (other.gameObject.name == ("BridgeWall")))
+        {
+            speed = 6f;
+            jump = 10f;
+            
+        }
+    }
+
+
 
 }
