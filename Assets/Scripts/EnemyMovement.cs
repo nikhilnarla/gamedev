@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             // Destroy(gameObject); // merged from week 5 branch
-            analyticsManager.SendEvent("LEVEL6 SPRING DESTROYED WITH BULLET");
+            analyticsManager.SendEvent("LEVEL6 ENEMY DESTROYED WITH BULLET");
             
             disappeared = true;
             gameObject.SetActive(false);
