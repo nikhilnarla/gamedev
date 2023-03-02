@@ -21,8 +21,8 @@ public class PlayerMovement6 : MonoBehaviour
     public bool showText = false;
     public GameObject frozenKey;
 
-
     public static bool isFacingRight;
+    public static bool hasGun = false;
     Collider m_ObjectCollider;
 
     void Start()
@@ -63,6 +63,7 @@ public class PlayerMovement6 : MonoBehaviour
         {
 
             GameObject.Find("Popup").GetComponent<Canvas>().enabled = true;
+            hasGun = true;
         }
 
         if (!showText)
@@ -74,8 +75,10 @@ public class PlayerMovement6 : MonoBehaviour
         Flip();
     }
 
-    void Flip() {
-        if (isFacingRight && move < 0f || !isFacingRight && move > 0f) { // conditions to want to flip player
+    void Flip()
+    {
+        if (isFacingRight && move < 0f || !isFacingRight && move > 0f)
+        { // conditions to want to flip player
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f; // x component of player's local scale
@@ -88,45 +91,8 @@ public class PlayerMovement6 : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private IEnumerator OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-
-        if (other.gameObject.name == ("BridgeTile 1") ||
-            other.gameObject.name == ("BridgeTile 2") ||
-            other.gameObject.name == ("BridgeTile 3") ||
-            other.gameObject.name == ("BridgeTile 4") ||
-            other.gameObject.name == ("BridgeWall"))
-        {
-            speed = 3f;
-            jump = 5f;
-        }
-        if (other.gameObject.name.Equals("Green Block"))
-        {
-            Debug.Log("green block");
-            var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
-            objRenderer.material.SetColor("_Color", Color.green);
-            var block = other.gameObject.GetComponent<Rigidbody2D>();
-            //block.mass = 200.0f;
-            block.angularDrag = 0.05f;
-            block.gravityScale = 1.0f;
-            //analyticsManager.SendEvent("LEVEL7 PLAYER INTERACTED WITH THE GREEN BLOCK");
-
-        }
-
-        if (other.gameObject.name.Equals("Button"))
-        {
-            Debug.Log("Pressed Button");
-            AddGravityToTiles();
-            yield return new WaitForSeconds(1.60f);
-            Debug.Log("Remove Gravity");
-            RemoveGravityToTiles();
-
-        }
-
-        if (other.gameObject.tag.Equals("Trap"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
 
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -153,18 +119,21 @@ public class PlayerMovement6 : MonoBehaviour
             showText = true;
             StartCoroutine(WaitAndMakeTextDisappear(3));
         }
-        if (other.gameObject.name == "KeyReveal") {
+        if (other.gameObject.name == "KeyReveal")
+        {
             //Debug.Log("KR");
             Destroy(GameObject.Find("KeyReveal"));
             frozenKey.SetActive(true);
             GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
         }
-        if (other.gameObject.name == "EndGate1") {
+        if (other.gameObject.name == "EndGate1")
+        {
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 END ");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if (other.gameObject.name == "EndGate2") {
+        if (other.gameObject.name == "EndGate2")
+        {
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL6 END");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -178,22 +147,6 @@ public class PlayerMovement6 : MonoBehaviour
         //   //m_ObjectCollider.isTrigger = false;
         //   Debug.Log("Trigger set off");
         // }
-        if (other.gameObject.name.Equals("Key1"))
-        {
-            Destroy(GameObject.Find("Gate1"));
-            Destroy(GameObject.Find("Key1"));
-        }
-
-        if (other.gameObject.name.Equals("Key2"))
-        {
-            Destroy(GameObject.Find("Gate2"));
-            Destroy(GameObject.Find("Key2"));
-        }
-
-        if (other.gameObject.name.Equals("Pad2"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump * 3);
-        }
     }
 
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
@@ -201,42 +154,5 @@ public class PlayerMovement6 : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         showText = false;
     }
-
-    void AddGravityToTiles()
-    {
-        Rigidbody2D tile = null;
-        for (int i = 1; i < 4; i += 1)
-        {
-            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
-            tile.gravityScale = 1;
-        }
-    }
-
-    void RemoveGravityToTiles()
-    {
-        Rigidbody2D tile = null;
-        for (int i = 1; i < 4; i += 1)
-        {
-            tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
-            tile.constraints = RigidbodyConstraints2D.FreezePosition;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-
-        if (other.gameObject.name == ("BridgeTile 1") ||
-            other.gameObject.name == ("BridgeTile 2") ||
-            other.gameObject.name == ("BridgeTile 3") ||
-            other.gameObject.name == ("BridgeTile 4") ||
-            (other.gameObject.name == ("BridgeWall")))
-        {
-            speed = 6f;
-            jump = 10f;
-            
-        }
-    }
-
-
 
 }
