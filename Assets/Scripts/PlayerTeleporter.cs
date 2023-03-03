@@ -18,13 +18,13 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if(collision.gameObject.name == "Portal1")
         {
-            analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
+            // analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
             transform.position = portal2Spawn.position;
         }
 
         if(collision.gameObject.name == "Portal2")
         {
-            analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
+            // analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
             transform.position = portal1Spawn.position;
         }
     }
