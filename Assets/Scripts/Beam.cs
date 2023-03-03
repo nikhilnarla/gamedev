@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Beam : MonoBehaviour
 {
+    public AnalyticsManager analyticsManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Beam : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by laser, then it respawns to back at beginning of level
+            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
