@@ -11,7 +11,7 @@ public class SuperPowerGateOpening : MonoBehaviour
             Debug.Log("Super Gate Opened!");
             Destroy(GameObject.Find("SuperPowerKey"));
             Destroy(GameObject.Find("SuperPowerGate"));
-            analyticsManager.SendEvent("LEVEL6 SUPER POWER GATE OPENING KEY COLLECTED");
+            // analyticsManager.SendEvent("LEVEL6 SUPER POWER GATE OPENING KEY COLLECTED");
         }
         // if(collision.gameObject.name == "SuperPowerKey")
         // {

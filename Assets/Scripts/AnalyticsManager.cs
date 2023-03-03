@@ -60,6 +60,10 @@ public class AnalyticsManager : MonoBehaviour
             levelName = "LEVEL3";
             // SendEvent("LEVEL3 GAMESTART");
         }
+        if(SceneManager.GetActiveScene().name == "Level7"){
+            levelName = "LEVEL7";
+            // SendEvent("LEVEL3 GAMESTART");
+        }
 
         if(!eventLevelFlag){
         SendEvent(levelName + "GAMESTART");
