@@ -64,11 +64,11 @@ public class PlayerLevel1 : MonoBehaviour
             rb.gravityScale = 1;
             inMotion = false;
         }
-        
+
     }
 
     private bool IsGrounded()
-    { 
+    {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -84,12 +84,12 @@ public class PlayerLevel1 : MonoBehaviour
         }
 
         if (other.gameObject.name == ("Tile 2"))
-        {   
+        {
             analyticsManager.SendEvent("LEVEL1 JUMP PAD INTERACTED");
             inMotion = true;
             target = other.gameObject.GetComponent<JumpingPadScript>().target;
         }
-        
+
         if(other.gameObject.name == "Green Block" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
         {
            var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
@@ -108,13 +108,13 @@ public class PlayerLevel1 : MonoBehaviour
 
         if(other.gameObject.name == "Collider Tile" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
         {
-            RenderKeys(true);   
+            RenderKeys(true);
             var objRenderer2 = other.gameObject.GetComponent<Renderer>();
             objRenderer2.material.SetColor("_Color", Color.green);
         }
 
         if(other.gameObject.name == "Key 1")
-        {  
+        {
             var gate = GameObject.Find("EntryGate");
             analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
 
@@ -123,7 +123,7 @@ public class PlayerLevel1 : MonoBehaviour
         }
 
         if(other.gameObject.name == "Key 2")
-        {  
+        {
             var gate = GameObject.Find("Gate");
             analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
 
@@ -135,7 +135,7 @@ public class PlayerLevel1 : MonoBehaviour
         //Analytics : Temp END GAME for Analytics
         if (other.gameObject.name == ("EndGate1"))
         {
-            Debug.Log("Level 1 End");
+            Debug.Log("Level 1 End Tunnel 1");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             // analyticsManager.SendEvent("EXIT GATE 1");
             //Analytics event - key Collected
@@ -147,11 +147,11 @@ public class PlayerLevel1 : MonoBehaviour
         }
         if (other.gameObject.name == ("EndGate2"))
         {
-            Debug.Log("Level 1 End");
+            Debug.Log("Level 1 End Tunnel 2");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             // analyticsManager.SendEvent("EXIT GATE 2");
             //Analytics event - key Collected
-             analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
+            analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGate2"));
@@ -161,17 +161,17 @@ public class PlayerLevel1 : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D other){
-         
-        var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();   
-        
+
+        var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
+
         if(other.gameObject.name == "Collider Tile" && objRenderer.material.color != Color.green)
-        { 
+        {
             RenderKeys(false);
 
             var objRenderer2 = other.gameObject.GetComponent<Renderer>();
             objRenderer2.material.SetColor("_Color", Color.white);
         }
-         
+
     }
 
     void RenderKeys(bool val){
