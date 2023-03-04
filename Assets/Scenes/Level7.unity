@@ -7961,7 +7961,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1185701574148624152, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: rotateSpeed
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574148624154, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_Radius
@@ -8034,6 +8034,10 @@ PrefabInstance:
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185701574502410464, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574502410477, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.x

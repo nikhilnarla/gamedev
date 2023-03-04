@@ -15,14 +15,16 @@ public class Beam : MonoBehaviour
     {
         
     }
-    
+
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by laser, then it respawns to back at beginning of level
-            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
         }
     }
 }
