@@ -16,7 +16,8 @@ public class PlayerLevel1 : MonoBehaviour
     public bool inMotion = false;
     public GameObject key;
     public GameObject keyLevel1;
-    public Transform TunnelSpawnPoint;
+    public Transform Tunnel1SpawnPoint;
+    public Transform Tunnel2SpawnPoint;
 
     public AnalyticsManager analyticsManager;
 
@@ -76,13 +77,13 @@ public class PlayerLevel1 : MonoBehaviour
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL");
-            rb.gameObject.transform.position = TunnelSpawnPoint.position;
+            rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
 
         }
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL");
-            rb.gameObject.transform.position = TunnelSpawnPoint.position;
+            rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
 
         }
         if (other.gameObject.name == ("Button 2")){
