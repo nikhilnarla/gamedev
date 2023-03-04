@@ -1728,7 +1728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558155735686742926, guid: 933dbf739a7194c9290afed68c97e3f7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5558155735686742926, guid: 933dbf739a7194c9290afed68c97e3f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2705,6 +2705,7 @@ GameObject:
   - component: {fileID: 486122543}
   - component: {fileID: 486122542}
   - component: {fileID: 486122541}
+  - component: {fileID: 486122544}
   m_Layer: 0
   m_Name: BridgeTile 3
   m_TagString: Ground
@@ -2723,7 +2724,8 @@ Transform:
   m_LocalPosition: {x: 5.1400003, y: 16.97, z: 0}
   m_LocalScale: {x: 3, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1953343624}
   m_Father: {fileID: 1995294047}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2826,6 +2828,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &486122544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486122539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb5644396c364de78197933b883e4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallPosition: {fileID: 1953343623}
 --- !u!1 &490427499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,6 +3964,7 @@ MonoBehaviour:
   move: 0
   isJumping: 0
   showText: 0
+  lowerPath: 0
   frozenKey: {fileID: 0}
   freezeTime: 1.6
   TunnelSpawnPoint: {fileID: 1624697175}
@@ -6381,6 +6397,7 @@ GameObject:
   - component: {fileID: 1082982971}
   - component: {fileID: 1082982970}
   - component: {fileID: 1082982969}
+  - component: {fileID: 1082982972}
   m_Layer: 0
   m_Name: BridgeTile 2
   m_TagString: Ground
@@ -6399,7 +6416,8 @@ Transform:
   m_LocalPosition: {x: 0.17000055, y: 16.97, z: 0}
   m_LocalScale: {x: 3, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1694476425}
   m_Father: {fileID: 1995294047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6502,6 +6520,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1082982972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082982967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb5644396c364de78197933b883e4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallPosition: {fileID: 1694476424}
 --- !u!1 &1088615557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7096,7 +7127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29670334, y: -3.177998, z: -10}
+  m_LocalPosition: {x: 3.4737778, y: -3.177998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7148,6 +7179,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
   m_PrefabInstance: {fileID: 2075186441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218561087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218561088}
+  m_Layer: 0
+  m_Name: FallPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218561088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218561087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.024, y: -14.995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1481832526}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1232722112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2002238678278842530, guid: 7c1ccdbd72bc14399903c4524b803966, type: 3}
@@ -8432,6 +8494,7 @@ GameObject:
   - component: {fileID: 1481832529}
   - component: {fileID: 1481832528}
   - component: {fileID: 1481832527}
+  - component: {fileID: 1481832530}
   m_Layer: 0
   m_Name: BridgeTile 1
   m_TagString: Ground
@@ -8450,7 +8513,8 @@ Transform:
   m_LocalPosition: {x: -4.789999, y: 16.91, z: 0}
   m_LocalScale: {x: 3, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1218561088}
   m_Father: {fileID: 1995294047}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8553,6 +8617,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1481832530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481832525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb5644396c364de78197933b883e4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallPosition: {fileID: 1218561087}
 --- !u!1001 &1482577035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9427,6 +9504,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+--- !u!1 &1694476424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694476425}
+  m_Layer: 0
+  m_Name: FallPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694476425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694476424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.021, y: -15.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1082982968}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1703319043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10446,7 +10554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1995294047}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836119609
 GameObject:
@@ -10964,6 +11072,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+--- !u!1 &1953343623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953343624}
+  m_Layer: 0
+  m_Name: FallPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953343624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953343623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0154, y: -15.076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 486122540}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1960319979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11498,8 +11637,8 @@ Transform:
   - {fileID: 1082982968}
   - {fileID: 486122540}
   - {fileID: 1074036370}
-  - {fileID: 340662717}
   - {fileID: 1830115971}
+  - {fileID: 340662717}
   - {fileID: 990299305}
   - {fileID: 803881050}
   m_Father: {fileID: 0}
