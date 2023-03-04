@@ -90,6 +90,12 @@ public class PlayerMovementC : MonoBehaviour
              analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+        if (other.gameObject.tag == "TunnelGreenTrap")
+        {
+             rb.gameObject.transform.position = TunnelSpawnPoint.position;
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
 
           if (other.gameObject.tag == "ExitTraps")
         {
@@ -133,11 +139,10 @@ public class PlayerMovementC : MonoBehaviour
            objRenderer2.material.SetColor("_Color", Color.green);
         }
         //Analytics : Temp END GAME for Analytics
-        if (other.gameObject.name == ("EndGame"))
+        if (other.gameObject.name == ("EndGame1"))
         {
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-
             //Analytics event - key Collected
             analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
