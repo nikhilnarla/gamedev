@@ -19,6 +19,7 @@ public class PlayerMovement7 : MonoBehaviour
     public float move;
     public bool isJumping = false;
     public bool showText = false;
+    public bool lowerPath = false;
     public static bool eventanal = false;
     public GameObject frozenKey;
     public float freezeTime = 1.60f;
@@ -90,7 +91,7 @@ public class PlayerMovement7 : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private IEnumerator OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
 
         if (other.gameObject.name == ("BridgeTile 1") ||
@@ -116,31 +117,7 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.name.Equals("ButtonDown"))
         {
-
-            AddGravityToTiles();
-
-            yield return new WaitForSeconds(1.60f);
-            Debug.Log("Remove Gravity");
-            analyticsManager.SendEvent("LEVEL7 PLAYER HIT THE GRAVITY BUTTON FOR TILES TO FALL");
-
-            RemoveGravityToTiles();
-
-            Rigidbody2D tile = null;
-
-
-
-            tile = GameObject.Find("BridgeTile 1").GetComponent<Rigidbody2D>();
-            //tile.gravityScale = 0;
-            tile.position = newPositionBridge1.position;
-
-            tile = GameObject.Find("BridgeTile 2").GetComponent<Rigidbody2D>();
-            //tile.gravityScale = 0;
-            tile.position = newPositionBridge2.position;
-
-            tile = GameObject.Find("BridgeTile 3").GetComponent<Rigidbody2D>();
-            //tile.gravityScale = 0;
-            tile.position = newPositionBridge3.position;
-
+            lowerPath = true;
         }
 
 
