@@ -35,6 +35,9 @@ public class EnemyMove1 : MonoBehaviour
         if(col.gameObject.name == ("Player")){
           col.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+        if(col.gameObject.name == ("Capsule")){
+          col.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
     }
 
 

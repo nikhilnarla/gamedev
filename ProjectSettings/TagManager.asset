@@ -14,6 +14,9 @@ TagManager:
   - BlackPortal
   - Tile
   - Wall
+  - TunnelGreenTrap
+  - TunnelYellowTrap
+  - TunnelLaser
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,8 @@ public class PlayerMovement7 : MonoBehaviour
     public static bool eventanal = false;
     public GameObject frozenKey;
     public float freezeTime = 1.60f;
+    public Transform TunnelSpawnPoint;
+    public Transform TunnelSpawnPoint2;
 
     public float fallingSpeed = 1000f;
 
@@ -125,7 +127,7 @@ public class PlayerMovement7 : MonoBehaviour
 
             Rigidbody2D tile = null;
 
-            
+
 
             tile = GameObject.Find("BridgeTile 1").GetComponent<Rigidbody2D>();
             //tile.gravityScale = 0;
@@ -134,14 +136,14 @@ public class PlayerMovement7 : MonoBehaviour
             tile = GameObject.Find("BridgeTile 2").GetComponent<Rigidbody2D>();
             //tile.gravityScale = 0;
             tile.position = newPositionBridge2.position;
-       
+
             tile = GameObject.Find("BridgeTile 3").GetComponent<Rigidbody2D>();
             //tile.gravityScale = 0;
             tile.position = newPositionBridge3.position;
 
         }
 
- 
+
 
         if (other.gameObject.tag.Equals("Trap"))
         {
@@ -153,11 +155,26 @@ public class PlayerMovement7 : MonoBehaviour
         {
             isJumping = false;
         }
-
+        if (other.gameObject.CompareTag("TunnelLaser"))
+        {
+            rb.gameObject.transform.position = TunnelSpawnPoint.position;
+            analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL LASER");
+        }
+        if (other.gameObject.tag == "TunnelYellowTrap")
+        {
+             rb.gameObject.transform.position = TunnelSpawnPoint.position;
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
+        if (other.gameObject.tag == "TunnelGreenTrap")
+        {
+             rb.gameObject.transform.position = TunnelSpawnPoint2.position;
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY YELLOW TUNNEL TRAPS");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
         if (other.gameObject.name == "EndGate1")
         {
             Destroy(GameObject.Find("EndGate1"));
-            //analyticsManager.SendEvent("LEVEL7 END ");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (other.gameObject.name == "EndGate2")
@@ -224,7 +241,7 @@ public class PlayerMovement7 : MonoBehaviour
         {
             speed = 6f;
             jump = 10f;
-            
+
         }
     }
 
