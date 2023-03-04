@@ -139,7 +139,7 @@ public class PlayerMovementC : MonoBehaviour
            objRenderer2.material.SetColor("_Color", Color.green);
         }
         //Analytics : Temp END GAME for Analytics
-        if (other.gameObject.name == ("EndGame1"))
+        if (other.gameObject.name == ("EndGame"))
         {
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);

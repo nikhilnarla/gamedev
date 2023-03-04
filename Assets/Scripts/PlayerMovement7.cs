@@ -174,14 +174,16 @@ public class PlayerMovement7 : MonoBehaviour
         }
         if (other.gameObject.name == "EndGate1")
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             Destroy(GameObject.Find("EndGate1"));
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
         if (other.gameObject.name == "EndGate2")
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Destroy(GameObject.Find("EndGate2"));
             //analyticsManager.SendEvent("LEVEL7 END");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
 
         if (other.gameObject.name.Equals("Key1"))
