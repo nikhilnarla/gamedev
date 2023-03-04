@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             // Destroy(gameObject); // merged from week 5 branch
-            analyticsManager.SendEvent("LEVEL6 SPRING DESTROYED WITH BULLET");
+            analyticsManager.SendEvent("LEVEL6 ENEMY DESTROYED WITH BULLET");
             
             disappeared = true;
             gameObject.SetActive(false);
@@ -57,6 +57,7 @@ public class EnemyMovement : MonoBehaviour
         else if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by enemy, then it respawns to back at beginning of level
+            analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY AFTER COLLIDING");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     } 
@@ -73,7 +74,7 @@ public class EnemyMovement : MonoBehaviour
         disappeared = false;
         gameObject.SetActive(true);
         // makes sure that enemy moves back and forth when it respawns
-        transform.position = new Vector3(-2.3f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(-1.3f, transform.position.y, transform.position.z);
         rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);
     }
 

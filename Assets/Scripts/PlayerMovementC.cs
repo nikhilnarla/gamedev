@@ -14,12 +14,16 @@ public class PlayerMovementC : MonoBehaviour
     public bool fandetected = false;
     public GameObject key;
     public GameObject keyLevel1;
-
+    public Transform TunnelSpawnPoint;
     public AnalyticsManager analyticsManager;
+    public GameObject player;
+    public static bool eventLevelFlag = false;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rbspikes;
+    [SerializeField] private Rigidbody2D rbspikes1;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask buttonLayer;
@@ -47,7 +51,7 @@ public class PlayerMovementC : MonoBehaviour
     }
 
     private bool IsGrounded()
-    { 
+    {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -55,27 +59,45 @@ public class PlayerMovementC : MonoBehaviour
 
         if(other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
                 ShowTiles();
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
                jump = 3f;
                speed = 4f;
+
         }
-         
+
+        // if(other.gameObject.tag== ("Trap (1)") ||  other.gameObject.tag == ("Traps (2)")  || other.gameObject.tag == ("Traps") ){
+        //         analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
+        // }
+
         if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
                 Destroy(GameObject.Find("Gate"));
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON1 AND OPENED RIGHT GATE");
         }
 
         if(other.gameObject.name == ("Button 2")){
                 Destroy(GameObject.Find("EntryGate"));
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON2 AND OPENED LEFT GATE");
         }
 
         if (other.gameObject.tag == "Trap")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+
+          if (other.gameObject.tag == "ExitTraps")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS IN HARD TUNNEL");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
+
         if (other.gameObject.tag == "Sharp")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -113,13 +135,24 @@ public class PlayerMovementC : MonoBehaviour
         //Analytics : Temp END GAME for Analytics
         if (other.gameObject.name == ("EndGame"))
         {
-            Debug.Log("Level 1 End");
+            Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GAMEEND");
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGame"));
+
+        }
+        if (other.gameObject.name == ("EndGameLevel3"))
+        {
+            Debug.Log("Level 2 End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+
+            //Analytics event - key Collected
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
+             //Desctroying end block so player can pass
+            Destroy(GameObject.Find("EndGameLevel3"));
 
         }
         if(other.gameObject.name == "BlackPortal1")
@@ -144,8 +177,8 @@ public class PlayerMovementC : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
 
          if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
-               jump = 6.5f;
-               speed = 3f;
+               jump = 7f;
+               speed = 4f;
         }
     }
 
@@ -159,7 +192,7 @@ public class PlayerMovementC : MonoBehaviour
         {
             var bridgeTile = GameObject.Find("Bridge Tile "+i).GetComponent<Renderer>();
             bridgeTile.enabled = !bridgeTile.enabled;
-            
+
             var collider = bridgeTile.GetComponent<BoxCollider2D>();
             collider.enabled = !collider.enabled;
 
@@ -169,11 +202,11 @@ public class PlayerMovementC : MonoBehaviour
     }
 
     void AddGravityToTiles()
-    {   
+    {
         Rigidbody2D tile = null;
         for(int i=0; i<6; i+=1)
         {
-            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();   
+            tile = GameObject.Find("Tile "+i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 1;
         }
     }

@@ -8,7 +8,7 @@ public class GetSuperKey : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Destroy(GameObject.Find("SuperKey"));
-             analyticsManager.SendEvent("LEVEL6 SUPER KEY COLLECTED");
+            //  analyticsManager.SendEvent("LEVEL6 SUPER KEY COLLECTED");
         }
         // if(collision.gameObject.tag == "SuperKey")
         // {

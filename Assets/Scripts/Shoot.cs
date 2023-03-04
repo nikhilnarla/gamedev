@@ -6,7 +6,7 @@ public class Shoot : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
-    private bool superKeyCollected = false;
+    //private bool superKeyCollected = false;
     public float speed = 2;
     // public float bulletSpeed = 10;
 
@@ -19,11 +19,8 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find ("SuperKey") == null) {
-            superKeyCollected = true;
-        }
 
-        if (superKeyCollected && Input.GetKeyDown(KeyCode.C))
+        if (PlayerMovement6.hasGun && Input.GetKeyDown(KeyCode.C))
         {
             // velocity + where bullet travels depending on which side the player is facing
             Debug.Log("Player is facing: " + PlayerMovement6.isFacingRight);
