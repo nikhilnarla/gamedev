@@ -15,10 +15,21 @@ public class FlippingTile1 : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,rotZ);
     }
      private void OnCollisionEnter2D(Collision2D Collision)
-    {
+    {  
         if (Collision.gameObject.tag == "Player")
         {
+            Collision.gameObject.GetComponent<PlayerMovement6>().jump = 5f;
+            Collision.gameObject.GetComponent<PlayerMovement6>().speed = 3f;
             analyticsManager.SendEvent("LEVEL6 PLAYER IS ON ROTATING BLOCK 1");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D Collision)
+    {  
+        if (Collision.gameObject.tag == "Player")
+        {
+            Collision.gameObject.GetComponent<PlayerMovement6>().jump = 7f;
+            Collision.gameObject.GetComponent<PlayerMovement6>().speed = 2f;
         }
     }
 }

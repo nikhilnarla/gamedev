@@ -14,26 +14,26 @@ public class DisappearingTile : MonoBehaviour
 
     private IEnumerator OnCollisionEnter2D(Collision2D other){
 
-        if(other.gameObject.name == ("Capsule"))
+        if(other.gameObject.name == ("Capsule") || other.gameObject.name == ("Player"))
         {   
-            yield return new WaitForSeconds (2);
+            yield return new WaitForSeconds (1);
 
             var renderer = bridgeTile.GetComponent<Renderer>();
             renderer.enabled = false;
-            other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            bridgeTile.GetComponent<BoxCollider2D>().enabled = false;
         }
          
     }
 
     private IEnumerator OnCollisionExit2D(Collision2D other){
 
-        if(other.gameObject.name == ("Capsule"))
+        if(other.gameObject.name == ("Capsule") || other.gameObject.name == ("Player"))
         {   
-            yield return new WaitForSeconds (4);
+            yield return new WaitForSeconds (3);
 
             var renderer = bridgeTile.GetComponent<Renderer>();
             renderer.enabled = true;
-            other.collider.enabled = true;
+            bridgeTile.GetComponent<BoxCollider2D>().enabled = true;
         }
          
     }
@@ -41,8 +41,6 @@ public class DisappearingTile : MonoBehaviour
     void ToggleTile()
     {   
         Debug.Log(bridgeTile.name);
-        // bridgeTile.enabled = false;
-        // bridgeTile..GetComponent<BoxCollider2D>().enabled = false;
     }
 
 }

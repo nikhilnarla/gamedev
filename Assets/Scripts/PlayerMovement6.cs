@@ -94,6 +94,12 @@ public class PlayerMovement6 : MonoBehaviour
         {
             isJumping = false;
         }
+
+        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
+               jump = 5f;
+               speed = 2f;
+        }
+
          if (other.gameObject.tag == ("LavaParticle"))
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
@@ -140,6 +146,14 @@ public class PlayerMovement6 : MonoBehaviour
         //   //m_ObjectCollider.isTrigger = false;
         //   Debug.Log("Trigger set off");
         // }
+    }
+
+    private void OnCollisionExit2D(Collision2D other){
+
+         if(other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Bridge Tile 3")){
+               jump = 6f;
+               speed = 2f;
+        }
     }
 
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
