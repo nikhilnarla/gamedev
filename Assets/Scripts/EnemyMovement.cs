@@ -31,12 +31,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void SetVelocity() {
         Debug.Log("move back and forth");
-        if (transform.position.x < -2.7)
+        if (transform.position.x < -2.9)
         { 
             rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);
         }
  
-        if (transform.position.x > -1.6)
+        if (transform.position.x > -1.8)
         {
             rB.velocity = new Vector2(WalkSpeed * Rightleft * -1, 0);  
         }
@@ -47,12 +47,12 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.tag.Equals("Bullet"))
         {
             Destroy(other.gameObject);
-            // Destroy(gameObject); // merged from week 5 branch
+            Destroy(gameObject); // merged from week 5 branch
             analyticsManager.SendEvent("LEVEL6 ENEMY DESTROYED WITH BULLET");
             
-            disappeared = true;
-            gameObject.SetActive(false);
-            Invoke("Appear", disappearDuration); // disappear for 3 seconds
+            // disappeared = true;
+            // gameObject.SetActive(false);
+            // Invoke("Appear", disappearDuration); // disappear for 3 seconds
         } 
         else if (other.gameObject.tag.Equals("Player"))
         {
