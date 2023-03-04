@@ -103,6 +103,11 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+               jump = 5f;
+               speed = 3f;
+        }
         // if (other.gameObject.name == ("Ground")) // from wk 5
         // {
         //     isJumping = false;
@@ -150,6 +155,14 @@ public class PlayerMovement6 : MonoBehaviour
         //   //m_ObjectCollider.isTrigger = false;
         //   Debug.Log("Trigger set off");
         // }
+    }
+
+    private void OnCollisionExit2D(Collision2D other){
+
+         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+               jump = 6.5f;
+               speed = 2f;
+        }
     }
 
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
