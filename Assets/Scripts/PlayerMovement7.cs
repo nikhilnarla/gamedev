@@ -20,7 +20,17 @@ public class PlayerMovement7 : MonoBehaviour
     public bool isJumping = false;
     public bool showText = false;
     public GameObject frozenKey;
+    public float freezeTime = 1.60f;
 
+    public float fallingSpeed = 1000f;
+
+    public Transform newPositionBridge1;
+    public Transform newPositionBridge2;
+    public Transform newPositionBridge3;
+
+    public GameObject bridge1;
+    public GameObject bridge2;
+    public GameObject bridge3;
 
     public static bool isFacingRight;
     Collider m_ObjectCollider;
@@ -59,17 +69,6 @@ public class PlayerMovement7 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
-        //if (showText)
-        //{
-
-        //    GameObject.Find("Popup").GetComponent<Canvas>().enabled = true;
-        //}
-
-        //if (!showText)
-        //{
-
-        //    GameObject.Find("Popup").GetComponent<Canvas>().enabled = false;
-        //}
 
         Flip();
     }
@@ -112,15 +111,32 @@ public class PlayerMovement7 : MonoBehaviour
 
         }
 
-        if (other.gameObject.name.Equals("Button"))
+        if (other.gameObject.name.Equals("ButtonDown"))
         {
-            Debug.Log("Pressed Button");
+
             AddGravityToTiles();
-            yield return new WaitForSeconds(1.60f);
-            Debug.Log("Remove Gravity");
+            yield return new WaitForSeconds(1.0f);
             RemoveGravityToTiles();
 
+            Rigidbody2D tile = null;
+
+            
+
+            tile = GameObject.Find("BridgeTile 1").GetComponent<Rigidbody2D>();
+            //tile.gravityScale = 0;
+            tile.position = newPositionBridge1.position;
+
+            tile = GameObject.Find("BridgeTile 2").GetComponent<Rigidbody2D>();
+            //tile.gravityScale = 0;
+            tile.position = newPositionBridge2.position;
+       
+            tile = GameObject.Find("BridgeTile 3").GetComponent<Rigidbody2D>();
+            //tile.gravityScale = 0;
+            tile.position = newPositionBridge3.position;
+
         }
+
+ 
 
         if (other.gameObject.tag.Equals("Trap"))
         {
@@ -149,6 +165,10 @@ public class PlayerMovement7 : MonoBehaviour
         {
             Destroy(GameObject.Find("Gate1"));
             Destroy(GameObject.Find("Key1"));
+
+            bridge1.SetActive(true);
+            bridge2.SetActive(true);
+            bridge3.SetActive(true);
         }
 
         if (other.gameObject.name.Equals("Key2"))
@@ -179,7 +199,7 @@ public class PlayerMovement7 : MonoBehaviour
         for (int i = 1; i < 4; i += 1)
         {
             tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
-            tile.constraints = RigidbodyConstraints2D.FreezePosition;
+            tile.gravityScale = 0;
         }
     }
 
