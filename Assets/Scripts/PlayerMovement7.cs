@@ -19,6 +19,7 @@ public class PlayerMovement7 : MonoBehaviour
     public float move;
     public bool isJumping = false;
     public bool showText = false;
+    public static bool eventanal = false;
     public GameObject frozenKey;
     public float freezeTime = 1.60f;
 
@@ -115,7 +116,11 @@ public class PlayerMovement7 : MonoBehaviour
         {
 
             AddGravityToTiles();
-            yield return new WaitForSeconds(1.0f);
+
+            yield return new WaitForSeconds(1.60f);
+            Debug.Log("Remove Gravity");
+            analyticsManager.SendEvent("LEVEL7 PLAYER HIT THE GRAVITY BUTTON FOR TILES TO FALL");
+
             RemoveGravityToTiles();
 
             Rigidbody2D tile = null;
@@ -141,6 +146,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.tag.Equals("Trap"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY RED TRAPS");
         }
 
         if (other.gameObject.CompareTag("Ground"))
@@ -169,12 +175,16 @@ public class PlayerMovement7 : MonoBehaviour
             bridge1.SetActive(true);
             bridge2.SetActive(true);
             bridge3.SetActive(true);
+
+            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED KEY 1 AND GATE 1 IS OPENED");
+
         }
 
         if (other.gameObject.name.Equals("Key2"))
         {
             Destroy(GameObject.Find("Gate2"));
             Destroy(GameObject.Find("Key2"));
+            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED KEY 2 AND GATE 2 IS OPENED");
         }
 
         if (other.gameObject.name.Equals("Pad2"))

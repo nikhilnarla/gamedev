@@ -17,6 +17,7 @@ public class PlayerMovementC : MonoBehaviour
     public Transform TunnelSpawnPoint;
     public AnalyticsManager analyticsManager;
     public GameObject player;
+    public static bool eventLevelFlag = false;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -58,28 +59,45 @@ public class PlayerMovementC : MonoBehaviour
 
         if(other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
                 ShowTiles();
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
                jump = 3f;
                speed = 4f;
+
         }
+
+        // if(other.gameObject.tag== ("Trap (1)") ||  other.gameObject.tag == ("Traps (2)")  || other.gameObject.tag == ("Traps") ){
+        //         analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
+        // }
 
         if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
                 Destroy(GameObject.Find("Gate"));
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON1 AND OPENED RIGHT GATE");
         }
 
         if(other.gameObject.name == ("Button 2")){
                 Destroy(GameObject.Find("EntryGate"));
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON2 AND OPENED LEFT GATE");
         }
 
         if (other.gameObject.tag == "Trap")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+
+          if (other.gameObject.tag == "ExitTraps")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS IN HARD TUNNEL");
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
+
         if (other.gameObject.tag == "Sharp")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -121,7 +139,7 @@ public class PlayerMovementC : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL2 GAMEEND");
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGame"));
 
@@ -132,7 +150,7 @@ public class PlayerMovementC : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
 
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL2 GAMEEND");
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGameLevel3"));
 
