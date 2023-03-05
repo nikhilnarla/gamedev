@@ -3934,7 +3934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334825003}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &513832641
 Rigidbody2D:
@@ -4375,6 +4375,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!4 &563945889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+  m_PrefabInstance: {fileID: 1114672476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &572999914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8907577791732632675, guid: 3cf0cb3d3a08e45c182bf3336ba8f5ed, type: 3}
@@ -7214,6 +7219,7 @@ MonoBehaviour:
   speed: 3
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 9220673}
+  analyticsManager: {fileID: 0}
 --- !u!50 &1088403621
 Rigidbody2D:
   serializedVersion: 4
@@ -7486,11 +7492,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1472510077}
+    m_TransformParent: {fileID: 1334825003}
     m_Modifications:
     - target: {fileID: 1185701574148624152, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: rotateSpeed
-      value: 0.1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574148624154, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_Radius
@@ -7506,27 +7512,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0325
+      value: 0.361375
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0325
+      value: 0.361375
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0325
+      value: 0.361375
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.771
+      value: -33.19985
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.83409
+      value: 1.0500685
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8913,6 +8919,7 @@ Transform:
   - {fileID: 712511073}
   - {fileID: 1844071}
   - {fileID: 1472510077}
+  - {fileID: 563945889}
   - {fileID: 513832640}
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -10792,6 +10799,7 @@ MonoBehaviour:
   speed: 2.5
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 185600701}
+  analyticsManager: {fileID: 0}
 --- !u!212 &1515138951
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11499,7 +11507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583532078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.972807, y: 2.1399994, z: -20}
+  m_LocalPosition: {x: -10.548702, y: 2.1399994, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11988,7 +11996,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1185701574148624152, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: rotateSpeed
-      value: 0.05
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574148624154, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_Radius
