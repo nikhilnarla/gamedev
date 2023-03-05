@@ -38,6 +38,7 @@ public class PlayerMovement7 : MonoBehaviour
 
     public static bool isFacingRight;
     Collider m_ObjectCollider;
+    public GameObject closedGate;
 
     void Start()
     {
@@ -139,7 +140,6 @@ public class PlayerMovement7 : MonoBehaviour
             rb.gameObject.transform.position = TunnelSpawnPoint.position;
             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL LASER");
         }
-
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
@@ -160,6 +160,12 @@ public class PlayerMovement7 : MonoBehaviour
               analyticsManager.SendEvent("LEVEL7 GATE 1 USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
+        }
+        if (other.gameObject.name == "YellowTunnelEntry")
+        {
+            Destroy(GameObject.Find("YellowTunnelEntry"));
+            analyticsManager.SendEvent("LEVEL7 PLAYER ENTERED GREEN TUNNEL");
+            closedGate.SetActive(true);
         }
 
         if (other.gameObject.name == "EndGate2")

@@ -24,6 +24,7 @@ public class PlayerMovement6 : MonoBehaviour
     public static bool isFacingRight;
     public static bool hasGun = false;
     Collider m_ObjectCollider;
+    public GameObject closedGate;
 
     void Start()
     {
@@ -118,6 +119,13 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("SuperPowerKey"));
             analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER KEY TO ACCESS SUPER POWER");
             Destroy(GameObject.Find("SuperPowerGate"));
+        }
+        if (other.gameObject.name == "YellowTunnelEntry")
+        {
+            Destroy(GameObject.Find("YellowTunnelEntry"));
+            analyticsManager.SendEvent("LEVEL6 PLAYER ENTERED YELLOW TUNNEL");
+            closedGate.SetActive(true);
+
         }
 
         if (other.gameObject.name == "SuperKey")
