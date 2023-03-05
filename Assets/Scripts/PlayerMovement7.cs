@@ -157,7 +157,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name == "EndGate1")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-              analyticsManager.SendEvent("LEVEL7 GATE 1 USED");
+              analyticsManager.SendEvent("LEVEL7 GREEN GATE 1 USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
         }
@@ -165,10 +165,29 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name == "EndGate2")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            analyticsManager.SendEvent("LEVEL7 GATE 2 USED");
+            analyticsManager.SendEvent("LEVEL7 YELLOW GATE 2 USED");
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
             
+        }
+
+        if (other.gameObject.name == "TunnelEndGate2")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            analyticsManager.SendEvent("LEVEL7 YELLOW TUNNEL GATE 2 USED");
+            Destroy(GameObject.Find("TunnelEndGate2"));
+            analyticsManager.SendEvent("LEVEL7 TUNNEL GAMEEND");
+
+        }
+
+        if (other.gameObject.name == "TunnelEndGate1")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            analyticsManager.SendEvent("LEVEL7 GREEN TUNNEL GATE 2 USED");
+            Destroy(GameObject.Find("TunnelEndGate1"));
+            analyticsManager.SendEvent("LEVEL7 TUNNEL GAMEEND");
+
         }
 
         if (other.gameObject.name.Equals("Pad2"))

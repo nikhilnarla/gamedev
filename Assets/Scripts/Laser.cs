@@ -17,6 +17,7 @@ public class Laser : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         //transform.Rotate(0,0, rotateSpeed); // laser rotates 360 degrees
         //transform.Rotate(rotateSpeed, 0 ,0);
-        transform.Rotate(new Vector3(0, 0, rotateSpeed), Space.Self);
+        // Multiply rotation speed with Time.deltaTime
+        transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime), Space.Self);
     }
 }
