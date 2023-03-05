@@ -1030,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+      propertyPath: m_TagString
+      value: TunnelGreenTrap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &203823223 stripped
@@ -1420,6 +1424,10 @@ PrefabInstance:
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_Name
       value: Trap (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+      propertyPath: m_TagString
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -2684,7 +2692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -3298,6 +3306,10 @@ PrefabInstance:
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_Name
       value: Trap (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
+      propertyPath: m_TagString
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -5867,7 +5879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -6200,7 +6212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -6632,7 +6644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -9601,7 +9613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -10869,7 +10881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -11714,7 +11726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
       propertyPath: m_TagString
-      value: TunnelYellowTrap
+      value: TunnelGreenTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}

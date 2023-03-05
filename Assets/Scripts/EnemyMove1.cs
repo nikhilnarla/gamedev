@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EnemyMove1 : MonoBehaviour
@@ -40,8 +41,15 @@ public class EnemyMove1 : MonoBehaviour
         if(col.gameObject.name == ("Capsule")){
           col.gameObject.transform.position = TunnelSpawnPoint.position;
           
-          
+           if(SceneManager.GetActiveScene().name == "Level-3 Upgrade"){
           analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+           }
+             if(SceneManager.GetActiveScene().name == "Level7"){
+          analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+           }
+            if(SceneManager.GetActiveScene().name == "Level6"){
+          analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+           }
         }
     }
 

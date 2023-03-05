@@ -66,6 +66,7 @@ public class AnalyticsManager : MonoBehaviour
         }
 
         if(!eventLevelFlag){
+        
         SendEvent(levelName + "GAMESTART");
 
         Debug.Log("Awake:" + ' ' + SceneManager.GetActiveScene().name);
