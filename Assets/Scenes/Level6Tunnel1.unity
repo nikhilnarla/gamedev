@@ -7214,6 +7214,7 @@ MonoBehaviour:
   speed: 3
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 9220673}
+  analyticsManager: {fileID: 0}
 --- !u!50 &1088403621
 Rigidbody2D:
   serializedVersion: 4
@@ -7490,7 +7491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1185701574148624152, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: rotateSpeed
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574148624154, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_Radius
@@ -10792,6 +10793,7 @@ MonoBehaviour:
   speed: 2.5
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 185600701}
+  analyticsManager: {fileID: 0}
 --- !u!212 &1515138951
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10858,7 +10860,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Name
-      value: Gate1
+      value: ClosedGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Color.b
@@ -11499,7 +11505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583532078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.972807, y: 2.1399994, z: -20}
+  m_LocalPosition: {x: -10.856373, y: 2.1399994, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

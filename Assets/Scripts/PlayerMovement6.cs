@@ -146,7 +146,7 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL6 USED GATE1 RIGHT USED");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
         // if(other.gameObject.name == "LeftEnd"){
         //   //m_ObjectCollider.isTrigger = true;
