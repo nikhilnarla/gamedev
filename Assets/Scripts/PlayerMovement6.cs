@@ -59,6 +59,7 @@ public class PlayerMovement6 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
+        
         if (showText)
         {
 

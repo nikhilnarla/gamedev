@@ -1243,7 +1243,7 @@ GameObject:
   - component: {fileID: 272075562}
   m_Layer: 0
   m_Name: Left 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2544,7 +2544,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.009070873, y: -0.015693188}
@@ -3332,7 +3332,7 @@ GameObject:
   - component: {fileID: 549706677}
   m_Layer: 0
   m_Name: Right 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3897,8 +3897,8 @@ GameObject:
   - component: {fileID: 711868991}
   - component: {fileID: 711868990}
   - component: {fileID: 711868989}
-  - component: {fileID: 711868988}
   - component: {fileID: 711868987}
+  - component: {fileID: 711868988}
   - component: {fileID: 711868992}
   m_Layer: 0
   m_Name: Player
@@ -4066,7 +4066,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 711868986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd46b0184ac24ce595bc2e8a03b588d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1856a37e0eac4473c808b09b82022134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 937608534}
@@ -4505,7 +4505,7 @@ GameObject:
   - component: {fileID: 763033920}
   m_Layer: 0
   m_Name: Right 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7140,7 +7140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3250618, y: -3.177998, z: -10}
+  m_LocalPosition: {x: 1.6187592, y: -3.177998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8033,7 +8033,7 @@ GameObject:
   - component: {fileID: 1359188976}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8875,7 +8875,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.009070873, y: -0.015693188}
@@ -11503,7 +11503,7 @@ GameObject:
   - component: {fileID: 1987972879}
   m_Layer: 0
   m_Name: Left 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

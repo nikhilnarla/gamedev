@@ -103,6 +103,7 @@ public class PlayerMovement7 : MonoBehaviour
             speed = 3f;
             jump = 5f;
         }
+
         if (other.gameObject.name.Equals("Green Block"))
         {
             Debug.Log("green block");
@@ -122,8 +123,6 @@ public class PlayerMovement7 : MonoBehaviour
             lowerPath = true;
         }
 
-
-
         if (other.gameObject.tag.Equals("Trap"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -134,31 +133,35 @@ public class PlayerMovement7 : MonoBehaviour
         {
             isJumping = false;
         }
+
         if (other.gameObject.CompareTag("TunnelLaser"))
         {
             rb.gameObject.transform.position = TunnelSpawnPoint.position;
             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL LASER");
         }
+
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
              analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint2.position;
              analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
+
         if (other.gameObject.name == "EndGate1")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
               analyticsManager.SendEvent("LEVEL7 GATE 1 USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
-            
         }
+
         if (other.gameObject.name == "EndGate2")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -168,10 +171,21 @@ public class PlayerMovement7 : MonoBehaviour
             
         }
 
+        if (other.gameObject.name.Equals("Pad2"))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jump * 3);
+            analyticsManager.SendEvent("LEVEL7 PLAYER USED JUMPPAD");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // use OnTrigger so box colliders won't stop the player's movement
+        // isTrigger checked for key 1 and key 2
         if (other.gameObject.name.Equals("Key1"))
         {
             Destroy(GameObject.Find("Gate1"));
-            Destroy(GameObject.Find("Key1"));
+            Destroy(other.gameObject); // destroy key 1
 
             bridge1.SetActive(true);
             bridge2.SetActive(true);
@@ -184,14 +198,8 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name.Equals("Key2"))
         {
             Destroy(GameObject.Find("Gate2"));
-            Destroy(GameObject.Find("Key2"));
+            Destroy(other.gameObject); // destroy key 2
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED KEY 2 AND GATE 2 IS OPENED");
-        }
-
-        if (other.gameObject.name.Equals("Pad2"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump * 3);
-            analyticsManager.SendEvent("LEVEL7 PLAYER USED JUMPPAD");
         }
     }
 
@@ -229,7 +237,4 @@ public class PlayerMovement7 : MonoBehaviour
 
         }
     }
-
-
-
 }

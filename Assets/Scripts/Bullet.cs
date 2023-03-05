@@ -24,6 +24,9 @@ public class Bullet : MonoBehaviour
         {
             // destroy bullet if it hits anything that is a child of the "Portals" parent
             Destroy(gameObject);
+        } 
+        else if (other.gameObject.name.Equals("Laser")) {
+            Destroy(gameObject);
         }
     }
 }
