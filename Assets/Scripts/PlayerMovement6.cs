@@ -110,10 +110,6 @@ public class PlayerMovement6 : MonoBehaviour
                jump = 5f;
                speed = 3f;
         }
-        // if (other.gameObject.name == ("Ground")) // from wk 5
-        // {
-        //     isJumping = false;
-        // }
         if (other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
