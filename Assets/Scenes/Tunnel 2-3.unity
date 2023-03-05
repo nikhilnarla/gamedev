@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 180812462}
   m_Layer: 0
   m_Name: Trap1 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.190426, y: -0.7300005, z: -20}
+  m_LocalPosition: {x: -19.419735, y: -0.7300005, z: -20}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 306130646}
   m_Layer: 0
   m_Name: Trap1 (1)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1646,7 +1646,7 @@ GameObject:
   - component: {fileID: 459251507}
   m_Layer: 0
   m_Name: Trap2 (1)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 516706809}
   m_Layer: 0
   m_Name: Trap1
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,7 +2128,7 @@ GameObject:
   - component: {fileID: 520777430}
   m_Layer: 0
   m_Name: Trap3 (1)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2779,7 +2779,7 @@ GameObject:
   - component: {fileID: 721583879}
   m_Layer: 0
   m_Name: Trap2 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3511,7 +3511,7 @@ GameObject:
   - component: {fileID: 798466646}
   m_Layer: 0
   m_Name: Trap1
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 855073735}
   m_Layer: 0
   m_Name: Trap2 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5101,7 +5101,7 @@ GameObject:
   - component: {fileID: 993497403}
   m_Layer: 0
   m_Name: Trap2
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6047,7 +6047,7 @@ GameObject:
   - component: {fileID: 1228781043}
   m_Layer: 0
   m_Name: Trap1 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6634,7 +6634,7 @@ GameObject:
   - component: {fileID: 1403519546}
   m_Layer: 0
   m_Name: Trap2
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6878,7 +6878,7 @@ GameObject:
   - component: {fileID: 1410461660}
   m_Layer: 0
   m_Name: Trap3
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7562,6 +7562,7 @@ MonoBehaviour:
   speed: 3
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 2055542815}
+  analyticsManager: {fileID: 25129226}
 --- !u!212 &1563088367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8430,7 +8431,7 @@ GameObject:
   - component: {fileID: 1678511033}
   m_Layer: 0
   m_Name: Trap3 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8955,7 +8956,7 @@ GameObject:
   - component: {fileID: 1842117582}
   m_Layer: 0
   m_Name: Trap3 (2)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9443,7 +9444,7 @@ GameObject:
   - component: {fileID: 1986271548}
   m_Layer: 0
   m_Name: Trap3 (1)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9724,7 +9725,7 @@ GameObject:
   - component: {fileID: 2021137955}
   m_Layer: 0
   m_Name: Trap2 (1)
-  m_TagString: Trap
+  m_TagString: TunnelYellowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

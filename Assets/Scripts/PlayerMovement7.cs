@@ -108,6 +108,7 @@ public class PlayerMovement7 : MonoBehaviour
             Debug.Log("green block");
             var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
             objRenderer.material.SetColor("_Color", Color.green);
+            analyticsManager.SendEvent("LEVEL7 PLAYER HIT GREEN FALLING BLOCK");
             var block = other.gameObject.GetComponent<Rigidbody2D>();
             block.angularDrag = 0.05f;
             block.gravityScale = 1.0f;
@@ -117,6 +118,7 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.name.Equals("ButtonDown"))
         {
+            analyticsManager.SendEvent("LEVEL7 PLAYER HIT BUTTON FOR FALLING TILES");
             lowerPath = true;
         }
 
@@ -140,26 +142,29 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS");
+             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint2.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY YELLOW TUNNEL TRAPS");
+             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL TRAPS");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.name == "EndGate1")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+              analyticsManager.SendEvent("LEVEL7 GATE 1 USED");
             Destroy(GameObject.Find("EndGate1"));
+            analyticsManager.SendEvent("LEVEL7 GAMEEND");
             
         }
         if (other.gameObject.name == "EndGate2")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            analyticsManager.SendEvent("LEVEL7 GATE 2 USED");
             Destroy(GameObject.Find("EndGate2"));
-            //analyticsManager.SendEvent("LEVEL7 END");
+            analyticsManager.SendEvent("LEVEL7 GAMEEND");
             
         }
 
@@ -186,6 +191,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name.Equals("Pad2"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump * 3);
+            analyticsManager.SendEvent("LEVEL7 PLAYER USED JUMPPAD");
         }
     }
 
