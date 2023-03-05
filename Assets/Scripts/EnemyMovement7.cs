@@ -46,6 +46,7 @@ public class EnemyMovement7 : MonoBehaviour
         {
             // if player is hit by enemy, then it respawns to back at beginning of level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY");
         }
         if (collision.gameObject.tag.Equals("Bullet"))
         {

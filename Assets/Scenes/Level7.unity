@@ -3118,7 +3118,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 120644219}
   - {fileID: 569856701}
-  analyticsManager: {fileID: 0}
+  analyticsManager: {fileID: 680176899}
   speed: 5
 --- !u!4 &531364843 stripped
 Transform:
@@ -5692,6 +5692,7 @@ MonoBehaviour:
   speed: 2.5
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 1624697175}
+  analyticsManager: {fileID: 0}
 --- !u!212 &937850044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7127,7 +7128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4737778, y: -3.177998, z: -10}
+  m_LocalPosition: {x: 2.3250618, y: -3.177998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11280,6 +11281,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.9433962
       objectReference: {fileID: 0}
+    - target: {fileID: 1185701574502410479, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+      propertyPath: analyticsManager
+      value: 
+      objectReference: {fileID: 680176899}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
 --- !u!4 &1975284345 stripped

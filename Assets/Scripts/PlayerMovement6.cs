@@ -137,13 +137,14 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.name == "EndGate1")
         {
             Destroy(GameObject.Find("EndGate1"));
-            analyticsManager.SendEvent("LEVEL6 END ");
+            analyticsManager.SendEvent("LEVEL6 USED GATE2 TUNNEL");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (other.gameObject.name == "EndGate2")
         {
             Destroy(GameObject.Find("EndGate2"));
-            analyticsManager.SendEvent("LEVEL6 END");
+            analyticsManager.SendEvent("LEVEL6 USED GATE1 RIGHT USED");
+            analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         // if(other.gameObject.name == "LeftEnd"){

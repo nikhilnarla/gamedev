@@ -76,12 +76,12 @@ public class PlayerMovementC : MonoBehaviour
                 AddGravityToTiles();
                 DestroyBridgeTiles();
                 Destroy(GameObject.Find("Gate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON1 AND OPENED RIGHT GATE");
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON1 AND OPENED GATE1 RIGHT");
         }
 
         if(other.gameObject.name == ("Button 2")){
                 Destroy(GameObject.Find("EntryGate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON2 AND OPENED LEFT GATE");
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON2 AND OPENED GATE2 LEFT");
         }
 
         if (other.gameObject.tag == "Trap")
@@ -93,10 +93,15 @@ public class PlayerMovementC : MonoBehaviour
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS");
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS AT POSITION:"+rb.position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
-
+        if (other.gameObject.tag == "TunnelYellowTrap")
+        {
+             rb.gameObject.transform.position = TunnelSpawnPoint.position;
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY YELLOW TUNNEL TRAPS AT POSITION:"+rb.position);
+            //player.gameObject.transform.position = TunnelSpawnPoint.position;
+        }
           if (other.gameObject.tag == "ExitTraps")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -144,9 +149,10 @@ public class PlayerMovementC : MonoBehaviour
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL3 GAMEEND");
+            analyticsManager.SendEvent("LEVEL3 GATE2 LEFT USED");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGame"));
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
 
         }
         if (other.gameObject.name == ("EndGameLevel3"))
@@ -155,7 +161,7 @@ public class PlayerMovementC : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
 
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL3 GAMEEND");
+            // analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGameLevel3"));
 
