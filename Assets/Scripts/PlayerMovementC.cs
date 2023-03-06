@@ -76,36 +76,36 @@ public class PlayerMovementC : MonoBehaviour
                 AddGravityToTiles();
                 DestroyBridgeTiles();
                 Destroy(GameObject.Find("Gate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON1 AND OPENED GATE1 RIGHT");
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
 
         if(other.gameObject.name == ("Button 2")){
                 Destroy(GameObject.Find("EntryGate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT BUTTON2 AND OPENED GATE2 LEFT");
+                analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
         }
 
         if (other.gameObject.tag == "Trap")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS");
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL TRAPS AT POSITION:"+rb.position);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL SPIKES AT POSITION:"+rb.position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY YELLOW TUNNEL TRAPS AT POSITION:"+rb.position);
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY YELLOW TUNNEL SPIKES AT POSITION:"+rb.position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
           if (other.gameObject.tag == "ExitTraps")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY RED TRAPS IN HARD TUNNEL");
+             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES IN HARD TUNNEL");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
@@ -149,7 +149,7 @@ public class PlayerMovementC : MonoBehaviour
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL3 GATE2 LEFT USED");
+            analyticsManager.SendEvent("LEVEL3 YELLOW GATE LEFT USED");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGame"));
             analyticsManager.SendEvent("LEVEL3 GAMEEND");

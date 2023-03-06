@@ -127,7 +127,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.tag.Equals("Trap"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY RED TRAPS");
+            analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY SPIKES");
         }
 
         if (other.gameObject.CompareTag("Ground"))
@@ -143,21 +143,21 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL TRAPS");
+             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL SPIKES");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint2.position;
-             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL TRAPS");
+             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL SPIKES");
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
         if (other.gameObject.name == "EndGate1")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-              analyticsManager.SendEvent("LEVEL7 GATE 1 USED");
+              analyticsManager.SendEvent("LEVEL7 GREEN GATE USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
         }
@@ -171,7 +171,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name == "EndGate2")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            analyticsManager.SendEvent("LEVEL7 GATE 2 USED");
+            analyticsManager.SendEvent("LEVEL7 YELLOW GATE USED");
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
             
@@ -197,7 +197,7 @@ public class PlayerMovement7 : MonoBehaviour
             bridge2.SetActive(true);
             bridge3.SetActive(true);
 
-            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED KEY 1 AND GATE 1 IS OPENED");
+            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED GREEN GATE KEY  AND GREEN GATE IS OPENED");
 
         }
 
@@ -205,7 +205,7 @@ public class PlayerMovement7 : MonoBehaviour
         {
             Destroy(GameObject.Find("Gate2"));
             Destroy(other.gameObject); // destroy key 2
-            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED KEY 2 AND GATE 2 IS OPENED");
+            analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED YELLOW GATE KEY AND YELLOW GATE IS OPENED");
         }
     }
 

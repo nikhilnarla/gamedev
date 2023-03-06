@@ -135,20 +135,20 @@ public class PlayerMovement6 : MonoBehaviour
         {
             //Debug.Log("KR");
             Destroy(GameObject.Find("KeyReveal"));
-            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER KEY TO REVEAL GATE 2 KEY ");
+            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER KEY TO REVEAL YELLOW GATE KEY ");
             frozenKey.SetActive(true);
             GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
         }
         if (other.gameObject.name == "EndGate1")
         {
             Destroy(GameObject.Find("EndGate1"));
-            analyticsManager.SendEvent("LEVEL6 USED GATE2 TUNNEL");
+            analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (other.gameObject.name == "EndGate2")
         {
             Destroy(GameObject.Find("EndGate2"));
-            analyticsManager.SendEvent("LEVEL6 USED GATE1 RIGHT USED");
+            analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }

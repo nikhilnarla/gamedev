@@ -79,14 +79,14 @@ public class PlayerLevel1 : MonoBehaviour
         {
             // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
-            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GATE1 TUNNEL AT POSITION:" + rb.position);
+            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
 
         }
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
             // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
-            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GATE2 TUNNEL AT POSITION:" + rb.position);
+            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
 
         }
         if (other.gameObject.name == ("Button 2")){
@@ -126,7 +126,7 @@ public class PlayerLevel1 : MonoBehaviour
         if(other.gameObject.name == "Key 1")
         {
             var gate = GameObject.Find("EntryGate");
-            analyticsManager.SendEvent("LEVEL1 GATE2 (LEFT) UNLOCKED");
+            analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
 
             Destroy(gate);
             Destroy(other.gameObject);
@@ -135,7 +135,7 @@ public class PlayerLevel1 : MonoBehaviour
         if(other.gameObject.name == "Key 2")
         {
             var gate = GameObject.Find("Gate");
-            analyticsManager.SendEvent("LEVEL1 GATE1 (RIGHT) UNLOCKED");
+            analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
 
 
             Destroy(gate);
@@ -149,7 +149,7 @@ public class PlayerLevel1 : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             // analyticsManager.SendEvent("EXIT GATE 1");
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GATE2 (LEFT) USED");
+            analyticsManager.SendEvent("LEVEL1 YELLOW GATE USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
              //Desctroying end block so player can pass
@@ -162,7 +162,7 @@ public class PlayerLevel1 : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             // analyticsManager.SendEvent("EXIT GATE 2");
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GATE1 (RIGHT) USED");
+            analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
              //Desctroying end block so player can pass

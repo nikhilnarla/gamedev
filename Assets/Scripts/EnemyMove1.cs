@@ -44,11 +44,11 @@ public class EnemyMove1 : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "Level-3 Upgrade")
             {
-                analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+                analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
             if (SceneManager.GetActiveScene().name == "Level7")
             {
-                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
             if (SceneManager.GetActiveScene().name == "Level7-Tunnel")
             {
@@ -57,7 +57,7 @@ public class EnemyMove1 : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Level6")
             {
-                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
             if (SceneManager.GetActiveScene().name == "Level6Tunnel1")
             {
@@ -75,13 +75,13 @@ public class EnemyMove1 : MonoBehaviour
             }
             
             if (SceneManager.GetActiveScene().name == "Level-3 Upgrade"){
-          analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+          analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN GREEN TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
            }
              if(SceneManager.GetActiveScene().name == "Level7"){
-          analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+          analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN GREEN TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
            }
             if(SceneManager.GetActiveScene().name == "Level6"){
-          analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN GATE2 TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
+          analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
            }
         }
     }
