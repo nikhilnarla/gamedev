@@ -28,13 +28,13 @@ public class MovingPlatform : MonoBehaviour
         {
 
             Destroy(gameObject);
-            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH GATE 2");
+            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH YELLOW GATE");
         }
          if ( other.gameObject.name == "EndGate1")
         {
 
             Destroy(gameObject);
-            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH GATE 1");
+            analyticsManager.SendEvent("LEVEL6 PLAYER FINISHED THROUGH GREEN GATE");
         }
     } 
     

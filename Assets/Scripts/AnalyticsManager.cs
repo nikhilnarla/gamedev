@@ -35,7 +35,7 @@ public class AnalyticsManager : MonoBehaviour
         // Debug.Log("Easley");
         // Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
         //AnalyticsManager = this;
-        _url = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScvomqdDXqomed_rlvKhLmn_8Ce6Pr0sgOWEfeRXWhmClxBXA/formResponse";
+        _url = "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdS9Pe4gTu6KR7fppufylqegJmox0Wyb56zwLtujiXLpx0xTg/formResponse";
 
         Guid guid = Guid.NewGuid();
 
@@ -87,8 +87,8 @@ public class AnalyticsManager : MonoBehaviour
 
     public void SendEvent(string eventType){
       WWWForm form = new WWWForm();
-      form.AddField("entry.566561242",_sessionID);
-      form.AddField("entry.1956343257",eventType);
+      form.AddField("entry.1478963987",_sessionID);
+      form.AddField("entry.138696861",eventType);
       StartCoroutine(SendData(form));
     }
 
