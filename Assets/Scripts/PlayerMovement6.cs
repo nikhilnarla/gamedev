@@ -60,7 +60,7 @@ public class PlayerMovement6 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
-        
+
         if (showText)
         {
 
@@ -119,8 +119,10 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.name == "YellowTunnelEntry")
         {
             Destroy(GameObject.Find("YellowTunnelEntry"));
-            analyticsManager.SendEvent("LEVEL6 PLAYER ENTERED YELLOW TUNNEL");
+            analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
+            //analyticsManager.SendEvent("LEVEL6 GAMEEND");
             closedGate.SetActive(true);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
 
         }
 
@@ -143,14 +145,14 @@ public class PlayerMovement6 : MonoBehaviour
         {
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
         if (other.gameObject.name == "EndGate2")
         {
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         // if(other.gameObject.name == "LeftEnd"){
         //   //m_ObjectCollider.isTrigger = true;
