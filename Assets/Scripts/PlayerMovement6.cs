@@ -145,6 +145,7 @@ public class PlayerMovement6 : MonoBehaviour
         {
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
+            analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
         if (other.gameObject.name == "EndGate2")
