@@ -164,6 +164,7 @@ public class PlayerMovementC : MonoBehaviour
             // analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGameLevel3"));
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
 
         }
         if(other.gameObject.name == "BlackPortal1")

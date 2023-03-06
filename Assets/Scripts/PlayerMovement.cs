@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public bool greenblockhit = true;
 
     public AnalyticsManager analyticsManager;
-  
+
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;

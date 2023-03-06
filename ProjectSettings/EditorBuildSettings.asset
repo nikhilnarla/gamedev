@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level6Tunnel1.unity
     guid: 453cf3b3ff777416ab7aa6298408f22a
   - enabled: 1
+    path: Assets/Scenes/Level6TunnelYellow.unity
+    guid: 15a04a3d4745143ad8f17410a0b6e2c5
+  - enabled: 1
     path: Assets/Scenes/Level7.unity
     guid: 4afce4b01e90840f19e43ea6287d898c
   - enabled: 1
