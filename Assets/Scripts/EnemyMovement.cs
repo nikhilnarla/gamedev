@@ -59,6 +59,7 @@ public class EnemyMovement : MonoBehaviour
             // if player is hit by enemy, then it respawns to back at beginning of level
             analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY AFTER COLLIDING");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
     } 
 

@@ -14,6 +14,7 @@ public class PlayerLevel1 : MonoBehaviour
     public bool blockPushed = false;
     public bool green = true;
     public bool inMotion = false;
+    public bool flag = false;
     public GameObject key;
     public GameObject keyLevel1;
     public Transform Tunnel1SpawnPoint;
@@ -75,18 +76,21 @@ public class PlayerLevel1 : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.tag == "TunnelGreenTrap")
+        flag = false;
+        if (other.gameObject.tag == "TunnelGreenTrap" && !flag)
         {
             // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
+            flag = true;
 
         }
-        if (other.gameObject.tag == "TunnelYellowTrap")
+        if (other.gameObject.tag == "TunnelYellowTrap" && !flag)
         {
             // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
+            flag = true;
 
         }
         if (other.gameObject.name == ("Button 2")){
@@ -152,8 +156,9 @@ public class PlayerLevel1 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL1 YELLOW GATE USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
-             //Desctroying end block so player can pass
-            
+            analyticsManager.SendEvent("LEVEL3 GAMESTART");
+            //Desctroying end block so player can pass
+
 
         }
         if (other.gameObject.name == ("EndGate2"))
@@ -165,8 +170,9 @@ public class PlayerLevel1 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
-             //Desctroying end block so player can pass
-            
+            analyticsManager.SendEvent("LEVEL3 GAMESTART");
+            //Desctroying end block so player can pass
+
 
         }
 

@@ -143,14 +143,14 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.tag == "TunnelYellowTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL SPIKES");
+            analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL SPIKES AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
              rb.gameObject.transform.position = TunnelSpawnPoint2.position;
-             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY YELLOW TUNNEL SPIKES");
+            analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL SPIKES AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 

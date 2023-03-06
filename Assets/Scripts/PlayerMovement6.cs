@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Threading;
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement6 : MonoBehaviour
     public float move;
     public bool isJumping = false;
     public bool showText = false;
+    public bool flag = false;
     public GameObject frozenKey;
 
     public static bool isFacingRight;
@@ -95,15 +97,18 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        flag = false;
 
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
         }
-        if (other.gameObject.tag == ("LavaParticle"))
+        if (other.gameObject.tag == ("LavaParticle") && !flag)
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
+            flag = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
@@ -154,6 +159,24 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if (other.gameObject.name == "Tunnel6EndGate1")
+        {
+            Destroy(GameObject.Find("EndGate1"));
+            analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
+            analyticsManager.SendEvent("LEVEL6 GAMEEND");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            analyticsManager.SendEvent("LEVEL7 GAMESTART");
+        }
+
+        if (other.gameObject.name == "Tunnel6EndGate2")
+        {
+            Destroy(GameObject.Find("EndGate1"));
+            analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
+            analyticsManager.SendEvent("LEVEL6 GAMEEND");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            analyticsManager.SendEvent("LEVEL7 GAMESTART");
         }
         // if(other.gameObject.name == "LeftEnd"){
         //   //m_ObjectCollider.isTrigger = true;

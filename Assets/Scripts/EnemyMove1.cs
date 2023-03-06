@@ -37,7 +37,7 @@ public class EnemyMove1 : MonoBehaviour
 
         if(col.gameObject.name == ("Player")){
           col.gameObject.transform.position = TunnelSpawnPoint.position;
-
+             
             if (SceneManager.GetActiveScene().name == "Tunnel 2-3")
             {
                 analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
@@ -53,6 +53,11 @@ public class EnemyMove1 : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Level7-Tunnel")
             {
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
+            
+            if (SceneManager.GetActiveScene().name == "Level6TunnelYellow")
+            {
+                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
 
             if (SceneManager.GetActiveScene().name == "Level6")

@@ -37,6 +37,7 @@ public class EnemyMovement7 : MonoBehaviour
         {
             // if player is hit by enemy, then it respawns to back at beginning of level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
         }
     }
 
@@ -47,6 +48,7 @@ public class EnemyMovement7 : MonoBehaviour
             // if player is hit by enemy, then it respawns to back at beginning of level
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY ENEMY");
+            analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
         }
         if (collision.gameObject.tag.Equals("Bullet"))
         {

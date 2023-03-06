@@ -50,7 +50,7 @@ public class AnalyticsManager : MonoBehaviour
         currTime = 0;
         if(SceneManager.GetActiveScene().name == "Level6"){
             levelName = "LEVEL6";
-            // SendEvent("LEVEL6 GAMESTART");
+             //SendEvent("LEVEL6 GAMESTART");
         }
         if(SceneManager.GetActiveScene().name == "Level-1 Updated"){
             levelName = "LEVEL1";
@@ -64,13 +64,29 @@ public class AnalyticsManager : MonoBehaviour
             levelName = "LEVEL7";
             // SendEvent("LEVEL3 GAMESTART");
         }
+        if (SceneManager.GetActiveScene().name == "Level7-Tunnel")
+        {
+            levelName = "LEVEL7 YELLOW TUNNEL";
+        }
+        if (SceneManager.GetActiveScene().name == "Level6Tunnel1")
+        {
+            levelName = "LEVEL6 GREEN TUNNEL";
+        }
+        if (SceneManager.GetActiveScene().name == "Level6TunnelYellow")
+        {
+            levelName = "LEVEL6 YELLOW TUNNEL";
+        }
+        if (SceneManager.GetActiveScene().name == "Tunnel 2-3")
+        {
+            levelName = "LEVEL3 YELLOW TUNNEL";
+        }
 
-        if(!eventLevelFlag){
+        if (!eventLevelFlag){
         
-        SendEvent(levelName + "GAMESTART");
+            SendEvent(levelName + " GAMESTART");
 
-        Debug.Log("Awake:" + ' ' + SceneManager.GetActiveScene().name);
-        eventLevelFlag = true;
+            Debug.Log("Awake:" + ' ' + SceneManager.GetActiveScene().name);
+            eventLevelFlag = true;
         }
     }
 
