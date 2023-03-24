@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerLevel1 : MonoBehaviour
@@ -33,8 +32,8 @@ public class PlayerLevel1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = 4f;
-        jump = 9f;
+        //speed = 4f;
+        //jump = 9f;
         RenderKeys(false);
     }
 
@@ -60,7 +59,7 @@ public class PlayerLevel1 : MonoBehaviour
 
         if(inMotion){
             rb.gravityScale = 0;
-            transform.position = Vector2.MoveTowards(transform.position, target, 15*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target, 30*Time.deltaTime);
         }
 
         if(target == new Vector2(rb.transform.position.x, rb.transform.position.y)){
@@ -79,7 +78,6 @@ public class PlayerLevel1 : MonoBehaviour
         flag = false;
         if (other.gameObject.tag == "TunnelGreenTrap" && !flag)
         {
-            // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
             flag = true;
@@ -87,17 +85,23 @@ public class PlayerLevel1 : MonoBehaviour
         }
         if (other.gameObject.tag == "TunnelYellowTrap" && !flag)
         {
-            // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL");
             rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
             analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
             flag = true;
 
         }
-        if (other.gameObject.name == ("Button 2")){
-                Destroy(GameObject.Find("EntryGate"));
+        if (other.gameObject.tag == "Trap" && !flag)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
+            flag = true;
         }
 
-        if (other.gameObject.name == ("Tile 2"))
+        if (other.gameObject.name == ("Button 2")){
+            Destroy(GameObject.Find("EntryGate"));
+        }
+
+        if (other.gameObject.name == ("Tile 2") || other.gameObject.name == ("Top"))
         {
             analyticsManager.SendEvent("LEVEL1 JUMP PAD INTERACTED");
             inMotion = true;
@@ -130,6 +134,7 @@ public class PlayerLevel1 : MonoBehaviour
         if(other.gameObject.name == "Key 1")
         {
             var gate = GameObject.Find("EntryGate");
+
             analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
 
             Destroy(gate);
@@ -139,8 +144,8 @@ public class PlayerLevel1 : MonoBehaviour
         if(other.gameObject.name == "Key 2")
         {
             var gate = GameObject.Find("Gate");
-            analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
 
+            analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
 
             Destroy(gate);
             Destroy(other.gameObject);
@@ -151,27 +156,21 @@ public class PlayerLevel1 : MonoBehaviour
         {
             Debug.Log("Level 1 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            // analyticsManager.SendEvent("EXIT GATE 1");
-            //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 YELLOW GATE USED");
             Destroy(GameObject.Find("EndGate1"));
+
+            analyticsManager.SendEvent("LEVEL1 YELLOW GATE USED");
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
             analyticsManager.SendEvent("LEVEL3 GAMESTART");
-            //Desctroying end block so player can pass
-
-
         }
         if (other.gameObject.name == ("EndGate2"))
         {
             Debug.Log("Level 1 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            // analyticsManager.SendEvent("EXIT GATE 2");
-            //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             Destroy(GameObject.Find("EndGate2"));
+
+            analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
             analyticsManager.SendEvent("LEVEL3 GAMESTART");
-            //Desctroying end block so player can pass
 
 
         }
