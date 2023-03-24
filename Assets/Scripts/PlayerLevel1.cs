@@ -18,7 +18,8 @@ public class PlayerLevel1 : MonoBehaviour
     public GameObject keyLevel1;
     public Transform Tunnel1SpawnPoint;
     public Transform Tunnel2SpawnPoint;
-    
+    public GameObject dialogue;
+
 
     public AnalyticsManager analyticsManager;
 
@@ -76,6 +77,11 @@ public class PlayerLevel1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
         flag = false;
+
+        if(other.gameObject.name.Equals("Bottom"))
+        {
+            dialogue.SetActive(true);
+        }
         if (other.gameObject.tag == "TunnelGreenTrap" && !flag)
         {
             rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
@@ -187,6 +193,10 @@ public class PlayerLevel1 : MonoBehaviour
 
             var objRenderer2 = other.gameObject.GetComponent<Renderer>();
             objRenderer2.material.SetColor("_Color", Color.white);
+        }
+        if (other.gameObject.name.Equals("Bottom"))
+        {
+            dialogue.SetActive(false);
         }
 
     }
