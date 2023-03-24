@@ -31,12 +31,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void SetVelocity() {
         Debug.Log("move back and forth");
-        if (transform.position.x < -2.9)
+        if (transform.position.x < -2.5)
         { 
             rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);
         }
  
-        if (transform.position.x > -1.8)
+        if (transform.position.x > -0.6)
         {
             rB.velocity = new Vector2(WalkSpeed * Rightleft * -1, 0);  
         }

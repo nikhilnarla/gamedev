@@ -29,7 +29,7 @@ public class FlippingTile2 : MonoBehaviour
         {
             if (Collision.gameObject.tag == "Player")
             {   
-                Collision.gameObject.GetComponent<PlayerMovement6>().jump = 6.5f;
+                Collision.gameObject.GetComponent<PlayerMovement6>().jump = 8f;
                 
                 analyticsManager.SendEvent("LEVEL6 PLAYER IS ON ROTATING BLOCK 2");
             }

@@ -112,8 +112,8 @@ public class PlayerMovement6 : MonoBehaviour
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 5f;
-               speed = 3f;
+               jump = 7f;
+               speed = 4f;
         }
         if (other.gameObject.name == "SuperPowerKey")
         {
@@ -192,8 +192,8 @@ public class PlayerMovement6 : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
 
          if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 6.5f;
-               speed = 2f;
+               jump = 9f;
+               speed = 5f;
         }
     }
 

@@ -6,8 +6,8 @@ using System.Collections.Generic;
 public class PlayerMovementC : MonoBehaviour
 {
     public float speed;
-    public float jump;
-    public float move;
+    public float jump = 10f;
+    public float move = 7f;
     public bool isJumping = false;
     public bool blockPushed = false;
     public bool green = true;
@@ -67,8 +67,8 @@ public class PlayerMovementC : MonoBehaviour
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
-               jump = 3f;
-               speed = 4f;
+               jump = 5f;
+               speed = 8f;
 
         }
 
@@ -84,8 +84,9 @@ public class PlayerMovementC : MonoBehaviour
         }
 
         if(other.gameObject.name == ("Button 2")){
-                Destroy(GameObject.Find("EntryGate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
+            Destroy(GameObject.Find("EntryGate"));
+            Destroy(GameObject.Find("Button 2"));
+            analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
         }
 
         if (other.gameObject.tag == "Trap" && !flag)
@@ -212,8 +213,8 @@ public class PlayerMovementC : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
 
          if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
-               jump = 7f;
-               speed = 4f;
+            jump = 10f;
+            speed = 7f;
         }
     }
 
