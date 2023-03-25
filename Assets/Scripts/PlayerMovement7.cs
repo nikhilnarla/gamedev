@@ -174,7 +174,20 @@ public class PlayerMovement7 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL7 YELLOW GATE USED");
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
-            
+
+        }
+
+        //Exit Yellow Tunnel
+        if (other.gameObject.name == "ExitYellowTunnelLevel7")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            Destroy(GameObject.Find("ExitYellowTunnelLevel7"));
+        }
+        //Exit Green Tunnel
+        if (other.gameObject.name == "ExitGreenTunnelLevel7")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
         }
 
         if (other.gameObject.name.Equals("Pad2"))
