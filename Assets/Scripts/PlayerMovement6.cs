@@ -108,6 +108,7 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
             flag = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerMovement6.hasGun = false; // lose gun when player dies
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
 

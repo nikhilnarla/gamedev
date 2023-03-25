@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 369035221}
   m_Layer: 0
   m_Name: Vertical Right 1
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4092,7 +4092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 937608534}
   bulletPrefab: {fileID: 6200498979350969258, guid: 49519f3c4d4dc4e488627b4bec8d813e, type: 3}
-  speed: 2
+  speed: 30
 --- !u!1001 &712228951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4918,7 +4918,7 @@ GameObject:
   - component: {fileID: 811119225}
   m_Layer: 0
   m_Name: Vertical Left 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6694,7 +6694,7 @@ GameObject:
   - component: {fileID: 1093707771}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7167,7 +7167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1887245, y: -5.3799987, z: -10}
+  m_LocalPosition: {x: 5.06868, y: -5.3799987, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10332,7 +10332,7 @@ GameObject:
   - component: {fileID: 1802286013}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12536,7 +12536,7 @@ GameObject:
   - component: {fileID: 2141665547}
   m_Layer: 0
   m_Name: Vertical Left 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
