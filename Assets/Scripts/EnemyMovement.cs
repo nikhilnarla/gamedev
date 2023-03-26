@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void SetVelocity() {
-        Debug.Log("move back and forth");
+        //Debug.Log("move back and forth");
         if (transform.position.x < -2.5)
         { 
             rB.velocity = new Vector2(WalkSpeed * Rightleft, 0);

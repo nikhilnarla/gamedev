@@ -19,7 +19,7 @@ public class PlayerMovementC : MonoBehaviour
     public GameObject player;
     public static bool eventLevelFlag = false;
     public static bool flag = false;
-
+    public GameObject dialogue;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -62,8 +62,9 @@ public class PlayerMovementC : MonoBehaviour
         flag = false;
 
         if(other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
-                ShowTiles();
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
+            ShowTiles();
+            dialogue.SetActive(true);
+            analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
@@ -204,8 +205,6 @@ public class PlayerMovementC : MonoBehaviour
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
 
-            //Analytics event - key Collected
-            // analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGameLevel3"));
             analyticsManager.SendEvent("LEVEL3 GREEN GATE USED");
@@ -214,7 +213,7 @@ public class PlayerMovementC : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMESTART");
 
         }
-
+        
         //Exit Green Tunnel
         if (other.gameObject.name == ("EndGateGreenLevel2"))
         {
@@ -235,6 +234,12 @@ public class PlayerMovementC : MonoBehaviour
             jump = 10f;
             speed = 7f;
         }
+
+         if(other.gameObject.name == ("Tile 4"))
+        {
+            dialogue.SetActive(false);
+        }
+
     }
 
     private void IntializeBridgeTiles(){
