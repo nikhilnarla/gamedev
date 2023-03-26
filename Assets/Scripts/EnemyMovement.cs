@@ -60,6 +60,10 @@ public class EnemyMovement : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY AFTER COLLIDING");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
+            if (SceneManager.GetActiveScene().name == "Level6")
+            {
+                PlayerMovement6.hasGun = false; // lose gun when player dies in level 6
+            }
         }
     } 
 
