@@ -13402,6 +13402,10 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 1374213892}
+    - target: {fileID: 1027037804, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 373280153266191703, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: portal1Spawn
       value: 

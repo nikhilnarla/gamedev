@@ -4219,7 +4219,7 @@ GameObject:
   - component: {fileID: 513832641}
   m_Layer: 0
   m_Name: Level Transition 1.10 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6714,7 +6714,7 @@ GameObject:
   - component: {fileID: 855092431}
   m_Layer: 0
   m_Name: Level Transition 1.2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8875,7 +8875,7 @@ GameObject:
   - component: {fileID: 1253994409}
   m_Layer: 0
   m_Name: Level Transition 1.1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11832,7 +11832,7 @@ GameObject:
   - component: {fileID: 1585492995}
   m_Layer: 0
   m_Name: Level Transition 1.6
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14245,7 +14245,7 @@ GameObject:
   - component: {fileID: 1989542192}
   m_Layer: 0
   m_Name: Level Transition 1.5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14378,7 +14378,7 @@ GameObject:
   - component: {fileID: 1992452127}
   m_Layer: 0
   m_Name: Level Transition 1.10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15146,6 +15146,10 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 1374213892}
+    - target: {fileID: 1027037804, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 373280153266191703, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: portal1Spawn
       value: 

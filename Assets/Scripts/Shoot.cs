@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     //private bool superKeyCollected = false;
-    public float speed = 2;
+    public float speed;
     // public float bulletSpeed = 10;
 
     // Start is called before the first frame update
