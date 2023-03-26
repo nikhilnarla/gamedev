@@ -179,15 +179,6 @@ public class PlayerMovement6 : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             analyticsManager.SendEvent("LEVEL7 GAMESTART");
         }
-        // if(other.gameObject.name == "LeftEnd"){
-        //   //m_ObjectCollider.isTrigger = true;
-        //   Debug.Log("Trigger set");
-        // }
-        // if(other.gameObject.name == "RightEnd"){
-        //   //m_ObjectCollider = GetComponent<Collider>();
-        //   //m_ObjectCollider.isTrigger = false;
-        //   Debug.Log("Trigger set off");
-        // }
     }
 
     private void OnCollisionExit2D(Collision2D other){

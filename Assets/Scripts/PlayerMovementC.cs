@@ -154,28 +154,51 @@ public class PlayerMovementC : MonoBehaviour
            objRenderer2.material.SetColor("_Color", Color.green);
         }
         //Analytics : Temp END GAME for Analytics
-        if (other.gameObject.name == ("EndGame"))
+        //Enter yellow Tunnel
+        if (other.gameObject.name == ("EndGameYellow"))
+        {
+            Debug.Log("Level 2 End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            //Analytics event - key Collected
+            analyticsManager.SendEvent("LEVEL3 YELLOW GATE USED");
+             //Desctroying end block so player can pass
+            Destroy(GameObject.Find("EndGameYellow"));
+            analyticsManager.SendEvent("LEVEL3 GAMEEND");
+        }
+
+        //Enter Green Tunnel
+        if (other.gameObject.name == ("EndGameGreen"))
         {
             Debug.Log("Level 2 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             //Analytics event - key Collected
-            analyticsManager.SendEvent("LEVEL3 YELLOW GATE USED");
+            analyticsManager.SendEvent("LEVEL3 GREEN GATE USED");
              //Desctroying end block so player can pass
-            Destroy(GameObject.Find("EndGame"));
+            Destroy(GameObject.Find("EndGameGreen"));
             analyticsManager.SendEvent("LEVEL3 GAMEEND");
-
         }
-        if (other.gameObject.name == ("EndGateYellow"))
+
+        //Exit Yellow Tunnel Level2
+        if (other.gameObject.name == ("EndGateYellowLevel2"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //Analytics event - key Collected
             analyticsManager.SendEvent("LEVEL3 YELLOW TUNNEL EXIT");
             //Desctroying end block so player can pass
-            Destroy(GameObject.Find("EndGateYellow"));
+            Destroy(GameObject.Find("EndGateYellowLevel2"));
             analyticsManager.SendEvent("LEVEL3 GAMEEND");
             analyticsManager.SendEvent("LEVEL6 GAMESTART");
 
         }
+        //Exit Yellow Tunnel
+        if (other.gameObject.name == ("ExitYellowTLevel3"))
+        {
+            Debug.Log("Exit Yellow Tunnel Level 3");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            Destroy(GameObject.Find("ExitYellowTLevel3"));
+        }
+
+        //Enter green Tunnel
         if (other.gameObject.name == ("EndGameLevel3"))
         {
             Debug.Log("Level 2 End");
@@ -191,22 +214,18 @@ public class PlayerMovementC : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMESTART");
 
         }
-        //if(other.gameObject.name == "BlackPortal1")
-        //{
-        //    rb.transform.position = new Vector2( 6.5f, -1.77f);
-        //}
-        //if (other.gameObject.name == "BlackPortal2")
-        //{
-        //    rb.transform.position = new Vector2(-6.5f, 3.33f);
-        //}
-        //if (other.gameObject.name == "OrangePortal1")
-        //{
-        //    rb.transform.position = new Vector2(6.5f, 2.68f);
-        //}
-        //if (other.gameObject.name == "OrangePortal2")
-        //{
-        //    rb.transform.position = new Vector2(-6.5f, -1.59f);
-        //}
+
+        //Exit Green Tunnel
+        if (other.gameObject.name == ("EndGateGreenLevel2"))
+        {
+            Debug.Log("Exit Green Tunnel Level 3");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+
+            //Analytics event - key Collected
+            // analyticsManager.SendEvent("LEVEL3 GAMEEND");
+             //Desctroying end block so player can pass
+            Destroy(GameObject.Find("EndGateGreenLevel2"));
+        }
 
     }
 
