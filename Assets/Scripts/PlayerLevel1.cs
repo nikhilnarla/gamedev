@@ -99,7 +99,7 @@ public class PlayerLevel1 : MonoBehaviour
         if (other.gameObject.tag == "Trap" && !flag)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
+
             flag = true;
         }
 
@@ -157,7 +157,7 @@ public class PlayerLevel1 : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        //Analytics : Temp END GAME for Analytics
+        //Enter Level1 yellow Tunnel
         if (other.gameObject.name == ("EndGate1"))
         {
             Debug.Log("Level 1 End");
@@ -168,17 +168,28 @@ public class PlayerLevel1 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
             analyticsManager.SendEvent("LEVEL3 GAMESTART");
         }
+        //Exit Yellow Tunnel LEVEL1
+        if (other.gameObject.name == ("ExitYellowTunnelLevel1"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            Destroy(GameObject.Find("ExitYellowTunnelLevel1"));
+        }
+        //Exit Green Tunnel LEVEL1
+        if (other.gameObject.name == ("ExitGreenTunnelLevel1"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            Destroy(GameObject.Find("ExitGreenTunnelLevel1"));
+        }
+
         if (other.gameObject.name == ("EndGate2"))
         {
             Debug.Log("Level 1 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
             Destroy(GameObject.Find("EndGate2"));
 
             analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
             analyticsManager.SendEvent("LEVEL3 GAMESTART");
-
-
         }
 
     }
