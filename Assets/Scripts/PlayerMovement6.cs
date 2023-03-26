@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Threading;
+using TMPro;
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -22,6 +22,7 @@ public class PlayerMovement6 : MonoBehaviour
     public bool showText = false;
     public bool flag = false;
     public GameObject frozenKey;
+    public GameObject shootDialogue;
 
     public static bool isFacingRight;
     public static bool hasGun = false;
@@ -30,6 +31,7 @@ public class PlayerMovement6 : MonoBehaviour
 
     void Start()
     {
+       
         rb = GetComponent<Rigidbody2D>();
         m_ObjectCollider = GetComponent<Collider>();
 
@@ -65,16 +67,9 @@ public class PlayerMovement6 : MonoBehaviour
 
         if (showText)
         {
-
-            GameObject.Find("Popup").GetComponent<Canvas>().enabled = true;
             hasGun = true;
         }
 
-        if (!showText)
-        {
-
-            GameObject.Find("Popup").GetComponent<Canvas>().enabled = false;
-        }
 
         Flip();
     }
@@ -87,6 +82,7 @@ public class PlayerMovement6 : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f; // x component of player's local scale
             transform.localScale = localScale;
+            
         }
     }
 
@@ -111,8 +107,8 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
 
-        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 7f;
+        if(other.gameObject.name == ("Ground4") || other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+               jump = 5f;
                speed = 4f;
         }
         if (other.gameObject.name == "SuperPowerKey")
@@ -136,7 +132,10 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("SuperKey"));
             analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER TO ACCESS GUN TO SHOOT");
             showText = true;
-            StartCoroutine(WaitAndMakeTextDisappear(3));
+
+            shootDialogue.SetActive(true);
+
+            StartCoroutine(WaitAndMakeTextDisappear(5));
         }
         if (other.gameObject.name == "KeyReveal")
         {
@@ -178,21 +177,12 @@ public class PlayerMovement6 : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             analyticsManager.SendEvent("LEVEL7 GAMESTART");
         }
-        // if(other.gameObject.name == "LeftEnd"){
-        //   //m_ObjectCollider.isTrigger = true;
-        //   Debug.Log("Trigger set");
-        // }
-        // if(other.gameObject.name == "RightEnd"){
-        //   //m_ObjectCollider = GetComponent<Collider>();
-        //   //m_ObjectCollider.isTrigger = false;
-        //   Debug.Log("Trigger set off");
-        // }
     }
 
     private void OnCollisionExit2D(Collision2D other){
 
-         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 9f;
+         if(other.gameObject.name == ("Ground4") || other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+               jump = 8f;
                speed = 5f;
         }
     }
@@ -200,6 +190,7 @@ public class PlayerMovement6 : MonoBehaviour
     IEnumerator WaitAndMakeTextDisappear(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        shootDialogue.SetActive(false);
         showText = false;
     }
 

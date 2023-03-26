@@ -9,6 +9,7 @@ public class FlippingTile2 : MonoBehaviour
 
     public float rotationSpeed;
     private float rotZ;
+    public float jumpOnTile;
 
     void Update(){
         rotZ -= Time.deltaTime * rotationSpeed;
@@ -19,7 +20,7 @@ public class FlippingTile2 : MonoBehaviour
         {
             if (Collision.gameObject.tag == "Player")
             {   
-                Collision.gameObject.GetComponent<PlayerMovement6>().jump = 5.5f;
+                Collision.gameObject.GetComponent<PlayerMovement6>().jump = jumpOnTile;
 
                 analyticsManager.SendEvent("LEVEL6 PLAYER IS ON ROTATING BLOCK 2");
             }

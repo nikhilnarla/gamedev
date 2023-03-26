@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class PlayerLevel1 : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class PlayerLevel1 : MonoBehaviour
     public Transform Tunnel2SpawnPoint;
     public GameObject dialogue;
 
+    public GameObject getKeyDialogue;
 
     public AnalyticsManager analyticsManager;
 
@@ -68,6 +71,8 @@ public class PlayerLevel1 : MonoBehaviour
             inMotion = false;
         }
 
+
+        
     }
 
     private bool IsGrounded()
@@ -116,28 +121,35 @@ public class PlayerLevel1 : MonoBehaviour
 
         if(other.gameObject.name == "Green Block" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
         {
-           var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
-           objRenderer.material.SetColor("_Color", Color.green);
-           Debug.Log("green block");
-           analyticsManager.SendEvent("LEVEL1 PLAYER INTERACTED WITH THE GREEN BLOCK");
-           var Block = other.gameObject.GetComponent<Rigidbody2D>();
-           Block.mass = 5.0f;
-           Block.angularDrag = 0.05f;
-           Block.gravityScale = 1.0f;
+            var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
+            objRenderer.material.SetColor("_Color", Color.green);
+            Debug.Log("green block");
+            analyticsManager.SendEvent("LEVEL1 PLAYER INTERACTED WITH THE GREEN BLOCK");
+            var Block = other.gameObject.GetComponent<Rigidbody2D>();
+            Block.mass = 5.0f;
+            Block.angularDrag = 0.05f;
+            Block.gravityScale = 1.0f;
 
-           var objRenderer2 = GameObject.Find("Collider Tile").GetComponent<Renderer>();
-           objRenderer2.material.SetColor("_Color", Color.green);
-           RenderKeys(true);
+            var objRenderer2 = GameObject.Find("Collider Tile").GetComponent<Renderer>();
+            objRenderer2.material.SetColor("_Color", Color.green);
+            RenderKeys(true);
+
+            getKeyDialogue.SetActive(false);
+
         }
 
-        if(other.gameObject.name == "Collider Tile" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
+        if (other.gameObject.name == "Collider Tile" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
         {
             RenderKeys(true);
             var objRenderer2 = other.gameObject.GetComponent<Renderer>();
             objRenderer2.material.SetColor("_Color", Color.green);
+
+            
         }
 
-        if(other.gameObject.name == "Key 1")
+        
+
+        if (other.gameObject.name == "Key 1")
         {
             var gate = GameObject.Find("EntryGate");
 
@@ -210,6 +222,8 @@ public class PlayerLevel1 : MonoBehaviour
 
         keyRenderer2.enabled = val;
         keyRenderer2.GetComponent<BoxCollider2D>().enabled = val;
+
+        getKeyDialogue.SetActive(val);
     }
 
 }
