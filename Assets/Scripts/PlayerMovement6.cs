@@ -108,7 +108,7 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
 
-        if(other.gameObject.name == ("Ground4") || other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
                jump = 5f;
                speed = 4f;
         }
@@ -182,7 +182,7 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other){
 
-         if(other.gameObject.name == ("Ground4") || other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
+         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
                jump = 8f;
                speed = 5f;
         }
