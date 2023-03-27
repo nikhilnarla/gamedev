@@ -24,20 +24,20 @@ public class Beam : MonoBehaviour
         {
             
             // if player is hit by laser, then it respawns to back at beginning of level
-            if (SceneManager.GetActiveScene().name == "Level6Tunnel1")
+            if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
             {
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
 
-            if (SceneManager.GetActiveScene().name == "Level7")
+            if (SceneManager.GetActiveScene().name == "Level4")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
                 analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
             }
 
-            if (SceneManager.GetActiveScene().name == "Level7-Tunnel")
+            if (SceneManager.GetActiveScene().name == "Level4YellowTunnel")
             {
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
