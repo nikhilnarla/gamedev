@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 89737434}
   m_Layer: 0
   m_Name: Trap3 (6)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1814,7 @@ GameObject:
   - component: {fileID: 191577716}
   m_Layer: 0
   m_Name: Trap1 (3)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4268,7 +4268,7 @@ GameObject:
   - component: {fileID: 494454164}
   m_Layer: 0
   m_Name: Trap2 (5)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9381,7 +9381,7 @@ GameObject:
   - component: {fileID: 959455859}
   m_Layer: 0
   m_Name: Trap2 (4)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12078,7 +12078,7 @@ GameObject:
   - component: {fileID: 1215406815}
   m_Layer: 0
   m_Name: Trap3 (5)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13589,7 +13589,7 @@ GameObject:
   - component: {fileID: 1372602155}
   m_Layer: 0
   m_Name: Trap2 (8)
-  m_TagString: TunnelYellowTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 15110674}
   m_Layer: 0
   m_Name: Trap1 (27)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8110,7 +8110,7 @@ GameObject:
   - component: {fileID: 796066879}
   m_Layer: 0
   m_Name: Trap1 (11)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12728,7 +12728,7 @@ GameObject:
   - component: {fileID: 1161598553}
   m_Layer: 0
   m_Name: Trap1 (23)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19058,7 +19058,7 @@ GameObject:
   - component: {fileID: 1656415718}
   m_Layer: 0
   m_Name: Trap1 (21)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21758,7 +21758,7 @@ GameObject:
   - component: {fileID: 1907914222}
   m_Layer: 0
   m_Name: Trap1 (22)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21869,7 +21869,7 @@ GameObject:
   - component: {fileID: 1910610439}
   m_Layer: 0
   m_Name: Trap1 (26)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23726,7 +23726,7 @@ GameObject:
   - component: {fileID: 2057744065}
   m_Layer: 0
   m_Name: Trap1 (25)
-  m_TagString: TunnelGreenTrap
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
