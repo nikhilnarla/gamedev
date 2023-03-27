@@ -2638,7 +2638,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &734783734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4179,7 +4179,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &908819896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6412,7 +6412,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &1389727138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6656,7 +6656,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &1403987760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9583,7 +9583,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &2020166643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10480,7 +10480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234079, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
