@@ -26,6 +26,8 @@ public class PlayerLevel1 : MonoBehaviour
 
     public AnalyticsManager analyticsManager;
 
+    public Animator transition;
+
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
@@ -36,6 +38,7 @@ public class PlayerLevel1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        transition = GameObject.Find("Canvas").GetComponent<Animator>();
         //speed = 4f;
         //jump = 9f;
         RenderKeys(false);
@@ -184,6 +187,7 @@ public class PlayerLevel1 : MonoBehaviour
         //Exit Green Tunnel LEVEL1
         if (other.gameObject.name == ("ExitGreenTunnelLevel1"))
         {
+            transition.SetTrigger("Start");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             Destroy(GameObject.Find("ExitGreenTunnelLevel1"));
         }
