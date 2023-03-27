@@ -3710,7 +3710,7 @@ GameObject:
   - component: {fileID: 553302139}
   - component: {fileID: 553302138}
   - component: {fileID: 553302137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottom 2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4272,7 +4272,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1843763473}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   analyticsManager: {fileID: 680176899}
   speed: 4
   jump: 8
@@ -7857,7 +7857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.148586, y: -0.63999903, z: -10}
+  m_LocalPosition: {x: -23.185041, y: -0.63999903, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9366,7 +9366,7 @@ GameObject:
   - component: {fileID: 1451564910}
   - component: {fileID: 1451564909}
   - component: {fileID: 1451564908}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottom 1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14178,7 +14178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2105277749}
   - component: {fileID: 2105277748}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

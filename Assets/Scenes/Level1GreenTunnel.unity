@@ -4199,6 +4199,7 @@ MonoBehaviour:
   dialogue: {fileID: 1081756336}
   getKeyDialogue: {fileID: 0}
   analyticsManager: {fileID: 609870355}
+  transition: {fileID: 0}
   rb: {fileID: 740502426}
   groundCheck: {fileID: 1276936683}
   groundLayer:
@@ -8138,6 +8139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234077, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
@@ -8250,7 +8255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.528107, y: 0.039999396, z: -10}
+  m_LocalPosition: {x: 31.028954, y: 0.039999396, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

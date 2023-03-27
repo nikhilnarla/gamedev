@@ -2587,7 +2587,7 @@ GameObject:
   - component: {fileID: 423957312}
   - component: {fileID: 423957311}
   - component: {fileID: 423957310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Level Transition 1.10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2794,7 +2794,7 @@ GameObject:
   - component: {fileID: 435672875}
   - component: {fileID: 435672874}
   - component: {fileID: 435672873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottom 2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4563,7 +4563,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1843763473}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   analyticsManager: {fileID: 680176899}
   speed: 6
   jump: 8
@@ -10281,7 +10281,7 @@ GameObject:
   - component: {fileID: 1481545529}
   - component: {fileID: 1481545528}
   - component: {fileID: 1481545527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottom 1
   m_TagString: Ground
   m_Icon: {fileID: 0}
