@@ -63,12 +63,6 @@ public class PlayerMovement7 : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        if (Input.GetKeyDown("space") && !isJumping)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump);
-            isJumping = true;
-        }
-
         if (Input.GetKeyDown("space") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jump);

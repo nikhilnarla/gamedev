@@ -14169,6 +14169,10 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 1374213892}
+    - target: {fileID: 1027037799, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1027037804, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: speed
       value: 30
