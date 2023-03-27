@@ -185,11 +185,10 @@ public class PlayerLevel1 : MonoBehaviour
             Destroy(GameObject.Find("ExitYellowTunnelLevel1"));
         }
         //Exit Green Tunnel LEVEL1
-        if (other.gameObject.name == ("ExitGreenTunnelLevel1"))
+        if (other.gameObject.name == ("ExitGreenTunnel"))
         {
-            transition.SetTrigger("Start");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            Destroy(GameObject.Find("ExitGreenTunnelLevel1"));
+            Destroy(GameObject.Find("ExitGreenTunnel"));
         }
 
         if (other.gameObject.name == ("EndGate2"))
@@ -197,6 +196,8 @@ public class PlayerLevel1 : MonoBehaviour
             Debug.Log("Level 1 End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
             Destroy(GameObject.Find("EndGate2"));
+
+            
 
             analyticsManager.SendEvent("LEVEL1 GREEN GATE USED");
             analyticsManager.SendEvent("LEVEL1 GAMEEND");
