@@ -103,7 +103,7 @@ public class PlayerMovement6 : MonoBehaviour
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 5f;
+               jump = 7f;
                speed = 4f;
         }
         if (other.gameObject.name == "SuperPowerKey")

@@ -2885,7 +2885,7 @@ MonoBehaviour:
   flipBlock: {fileID: 0}
   analyticsManager: {fileID: 0}
   rotationSpeed: 50
-  jumpOnTile: 5
+  jumpOnTile: 7
 --- !u!1 &490427499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,7 +6701,7 @@ MonoBehaviour:
   flipBlock: {fileID: 0}
   analyticsManager: {fileID: 0}
   rotationSpeed: 50
-  jumpOnTile: 5
+  jumpOnTile: 7
 --- !u!1 &1088615557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7352,19 +7352,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalScale.x
-      value: 18.121553
+      value: 12.4926815
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.208233
+      value: 3.1892369
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4496
+      value: -1.496
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3658288732860876932, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_RootOrder
@@ -7416,11 +7416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_fontSize
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_fontSizeBase
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -7428,15 +7428,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5178514646380276837, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2.27
+      value: 1.9746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178514646380276837, guid: f06df641d0667447a87d240496c96051, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.2227
       objectReference: {fileID: 0}
     - target: {fileID: 5178514646380276837, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.46
+      value: -1.476
       objectReference: {fileID: 0}
     - target: {fileID: 5178514646380276837, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.45
+      value: -0.69
       objectReference: {fileID: 0}
     - target: {fileID: 6009883935169579557, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalScale.x
@@ -8949,7 +8953,7 @@ MonoBehaviour:
   flipBlock: {fileID: 0}
   analyticsManager: {fileID: 0}
   rotationSpeed: 50
-  jumpOnTile: 5
+  jumpOnTile: 7
 --- !u!1001 &1482577035
 PrefabInstance:
   m_ObjectHideFlags: 0

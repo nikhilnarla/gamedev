@@ -95,8 +95,8 @@ public class PlayerMovement7 : MonoBehaviour
             other.gameObject.name == ("BridgeTile 4") ||
             other.gameObject.name == ("BridgeWall"))
         {
-            speed = 3f;
-            jump = 5f;
+            speed = 6f;
+            jump = 8f;
         }
 
         if (other.gameObject.name.Equals("Green Block"))

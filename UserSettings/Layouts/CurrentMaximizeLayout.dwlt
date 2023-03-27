@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 12882
+  controlID: 2482
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 12883
+  controlID: 2483
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 12884
+  controlID: 2484
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: da6d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6c0dffffbe14ffffc41dffff3821ffffd226ffff8027ffff1a28ffff662bffffbe2effffcc31ffffc635fffff839ffff8c3fffff9445ffffb04affff024effff1651fffffe51ffff1853ffffa256ffff905affffda5effff6463ffffa068fffffe73ffffe67effffe483ffff0888ffff988affffd0a4ffff58a5ffff00a7ffff6ca7ffffd4a7ffff40a8ffff50abffff54aeffff3cb1ffff14b2ffffacb2ffff64b5ffff20b8ffff9ab8fffff8b8ffff68c9ffff36d1ffffd6d2ffff1ed3ffff9ad3ffff32d6ffff5cdaffffb4daffff20dbffff76dbffff10deffff36e2ffff82e2ffffd2e3ffff2ee4ffff70e4ffffdee4ffff28e5ffff7ee5ffffa8e9ffff04eaffff6aeaffffb2eaffff70f7ffff0efbfffff62401000e2901005c6701000c6801009c6801008a690100f8690100146a01004a6a0100566a0100ae6a0100586b0100b86c0100d28101004c9e0100569e01008a9e010014e60100e2f6010052fa01003e030200c00d020026130200041a0200b4280200002f02001c320200223702007a3b0200403f0200364a0200d44e0200f0530200fa530200
+      m_SelectedIDs: 7cd20000
+      m_LastClickedID: 53884
+      m_ExpandedIDs: 0cd1ffff5cd2ffff12d3ffff5ad3ffffa2d5ffffaed8ffff7edbffffdeddffffb2e2ffff6ee7ffff54ebffff72ebffff90ebffffc4ebffff8aeeffff5cf1ffff04f4ffff14f4ffffe8f9ffff0efbffffb86d00000ed10000bad1000054d3000066d30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 62.124092, y: 6.827968, z: -7.5737505}
+    m_Target: {x: -0.23003629, y: -8.503371, z: -8.901067}
     speed: 2
-    m_Value: {x: 62.124092, y: 6.827968, z: -7.5737505}
+    m_Value: {x: -0.23003629, y: -8.503371, z: -8.901067}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 34.064888
+    m_Target: 26.196444
     speed: 2
-    m_Value: 34.064888
+    m_Value: 26.196444
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -801,22 +801,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/mahima/Unity Projects/gamedev
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a6c0000
-    m_LastClickedID: 27674
-    m_ExpandedIDs: 00000000546b000000ca9a3bffffff7f
+    m_SelectedIDs: 30680000
+    m_LastClickedID: 26672
+    m_ExpandedIDs: 000000000c68000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -844,7 +844,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000546b000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000000c68000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -869,9 +869,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: da6d0000
-    m_LastClickedInstanceID: 28122
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 7cd20000
+    m_LastClickedInstanceID: 53884
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000a09000003469000052690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 36.75}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207

@@ -914,7 +914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.002733, y: 3.7764025, z: -20}
+  m_LocalPosition: {x: -10.148558, y: 3.7764025, z: -20}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10452,11 +10452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: jump
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: speed
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: player
@@ -10477,6 +10477,10 @@ PrefabInstance:
     - target: {fileID: 6478246078170234077, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: m_Name
       value: Capsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234079, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
