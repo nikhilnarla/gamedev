@@ -2798,7 +2798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.173824, y: -15.759996, z: -19.927858}
+  m_LocalPosition: {x: 52.583794, y: -15.759996, z: -19.927858}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17111,7 +17111,7 @@ GameObject:
   - component: {fileID: 1498520270}
   - component: {fileID: 1498520269}
   m_Layer: 0
-  m_Name: 'EndGateGreenLevel2 '
+  m_Name: ENDGATEGREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17145,7 +17145,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.040023804, y: -0.04080975}
+  m_Offset: {x: -0.047166824, y: -0.04080975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17156,7 +17156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9199524, y: 0.9183805}
+  m_Size: {x: 1.0943336, y: 0.9183805}
   m_EdgeRadius: 0
 --- !u!50 &1498520270
 Rigidbody2D:
