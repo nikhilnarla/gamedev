@@ -13,6 +13,7 @@ public class Level7GreenBlock : MonoBehaviour
         if(collision.gameObject.name.Equals("Ground"))
         {
             dialogue.SetActive(true);
+            StartCoroutine(WaitAndDisappear(3f));
         }
 
     }
@@ -23,5 +24,11 @@ public class Level7GreenBlock : MonoBehaviour
         {
             dialogue.SetActive(false) ;
         }
+    }
+
+    IEnumerator WaitAndDisappear(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        dialogue.SetActive(false);
     }
 }
