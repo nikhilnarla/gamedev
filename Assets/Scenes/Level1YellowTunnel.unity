@@ -1509,7 +1509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &272676722
 Transform:
   m_ObjectHideFlags: 0
@@ -3111,7 +3111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 30.7749
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3119,7 +3119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.3754
+      value: 26.3577
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4408,7 +4408,9 @@ MonoBehaviour:
   Tunnel1SpawnPoint: {fileID: 629468916}
   Tunnel2SpawnPoint: {fileID: 628170161}
   dialogue: {fileID: 1081756336}
+  getKeyDialogue: {fileID: 0}
   analyticsManager: {fileID: 609870355}
+  transition: {fileID: 0}
   rb: {fileID: 740502426}
   groundCheck: {fileID: 1276936683}
   groundLayer:
@@ -5089,7 +5091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 26.9607
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5097,7 +5099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.61
+      value: -31.5903
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6671,8 +6673,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226453180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -127.100006, y: 0.85999966, z: 0}
-  m_LocalScale: {x: 93.3981, y: 1, z: 1.1149}
+  m_LocalPosition: {x: -127.100006, y: 14.7558, z: 0}
+  m_LocalScale: {x: 93.3981, y: 28.7916, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1035180802}
@@ -8046,8 +8048,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534049364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -135.8, y: -6.84, z: 0}
-  m_LocalScale: {x: 110.367165, y: 1, z: 1.1149}
+  m_LocalPosition: {x: -135.8, y: -32.7597, z: 0}
+  m_LocalScale: {x: 110.367165, y: 52.8393, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1035180802}
@@ -8111,7 +8113,7 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.43
+  m_ScreenX: 0.7
   m_ScreenY: 0.48000002
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
@@ -8363,7 +8365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.816187, y: -0.3200012, z: -10}
+  m_LocalPosition: {x: -40.725212, y: -0.3200012, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -699,8 +699,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123275474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.72, y: -23.3, z: 10}
-  m_LocalScale: {x: 40, y: 1, z: 1}
+  m_LocalPosition: {x: 3.72, y: -43.9459, z: 10}
+  m_LocalScale: {x: 40, y: 42.2919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 182817994}
@@ -2809,8 +2809,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435672871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.8, y: 8.66, z: 0.17370725}
-  m_LocalScale: {x: 33.568592, y: 1, z: 1}
+  m_LocalPosition: {x: -20.8, y: 7.2265, z: 0.17370725}
+  m_LocalScale: {x: 33.568592, y: 3.8669, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082476284}
@@ -3201,6 +3201,7 @@ GameObject:
   - component: {fileID: 486122543}
   - component: {fileID: 486122542}
   - component: {fileID: 486122541}
+  - component: {fileID: 486122544}
   m_Layer: 0
   m_Name: BridgeTile 3
   m_TagString: Ground
@@ -3322,6 +3323,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &486122544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486122539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f722bd30156241aa923817f7b17376d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipBlock: {fileID: 0}
+  analyticsManager: {fileID: 0}
+  rotationSpeed: 50
+  jumpOnTile: 0
 --- !u!1 &490427499
 GameObject:
   m_ObjectHideFlags: 0
@@ -7654,6 +7671,7 @@ GameObject:
   - component: {fileID: 1082982971}
   - component: {fileID: 1082982970}
   - component: {fileID: 1082982969}
+  - component: {fileID: 1082982972}
   m_Layer: 0
   m_Name: BridgeTile 2
   m_TagString: Ground
@@ -7775,6 +7793,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1082982972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082982967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f722bd30156241aa923817f7b17376d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipBlock: {fileID: 0}
+  analyticsManager: {fileID: 0}
+  rotationSpeed: 50
+  jumpOnTile: 0
 --- !u!1 &1088615557
 GameObject:
   m_ObjectHideFlags: 0
@@ -8435,7 +8469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.07414, y: -9.1, z: -10}
+  m_LocalPosition: {x: 32.781303, y: -9.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8736,8 +8770,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245439699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21, y: 14.94, z: 0.17370725}
-  m_LocalScale: {x: 40.02257, y: 1, z: 1}
+  m_LocalPosition: {x: -21, y: 32.4281, z: 0.17370725}
+  m_LocalScale: {x: 40.02257, y: 35.9762, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082476284}
@@ -9192,8 +9226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297547153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.85, y: 11.87, z: 0.17370725}
-  m_LocalScale: {x: 11.59, y: 1, z: 1}
+  m_LocalPosition: {x: -45.85, y: 25.9178, z: 0.17370725}
+  m_LocalScale: {x: 11.59, y: 29.0957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082476284}
@@ -9601,8 +9635,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359188973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.72, y: 5.72, z: 10}
-  m_LocalScale: {x: 40, y: 1, z: 1}
+  m_LocalPosition: {x: 3.72, y: 20.5763, z: 10}
+  m_LocalScale: {x: 40, y: 30.7127, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 182817994}
@@ -10296,8 +10330,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481545525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.67, y: 5.58, z: 0.17370725}
-  m_LocalScale: {x: 14, y: 1, z: 1}
+  m_LocalPosition: {x: -26.8952, y: -7.0344, z: 0.17370725}
+  m_LocalScale: {x: 49.5502, y: 26.2288, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082476284}
@@ -10414,6 +10448,7 @@ GameObject:
   - component: {fileID: 1481832529}
   - component: {fileID: 1481832528}
   - component: {fileID: 1481832527}
+  - component: {fileID: 1481832530}
   m_Layer: 0
   m_Name: BridgeTile 1
   m_TagString: Ground
@@ -10535,6 +10570,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1481832530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481832525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f722bd30156241aa923817f7b17376d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipBlock: {fileID: 0}
+  analyticsManager: {fileID: 0}
+  rotationSpeed: 50
+  jumpOnTile: 0
 --- !u!1001 &1482577035
 PrefabInstance:
   m_ObjectHideFlags: 0
