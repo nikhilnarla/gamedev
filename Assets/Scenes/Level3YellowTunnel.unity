@@ -10552,7 +10552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574588d38eba044f4a9b994735cc8849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 3
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 185600701}
   analyticsManager: {fileID: 1374213892}
@@ -14681,6 +14681,14 @@ PrefabInstance:
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.x
