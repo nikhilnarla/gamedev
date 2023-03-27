@@ -215,7 +215,7 @@ public class PlayerMovementC : MonoBehaviour
         }
         
         //Exit Green Tunnel
-        if (other.gameObject.name == ("EndGateGreenLevel2"))
+        if (other.gameObject.name == ("GATEEND"))
         {
             Debug.Log("Exit Green Tunnel Level 3");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
@@ -223,7 +223,7 @@ public class PlayerMovementC : MonoBehaviour
             //Analytics event - key Collected
             // analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pass
-            Destroy(GameObject.Find("EndGateGreenLevel2"));
+            Destroy(GameObject.Find("GATEEND"));
         }
 
     }
