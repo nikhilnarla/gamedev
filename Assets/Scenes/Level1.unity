@@ -6563,7 +6563,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Pad 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9077767961441333968, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
 --- !u!1001 &1346688468
 PrefabInstance:
@@ -9151,5 +9152,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Pad 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9077767961441333968, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
