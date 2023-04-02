@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections;
+using TMPro;
 
 public class PlayerTutorial : MonoBehaviour
 {
@@ -24,8 +25,9 @@ public class PlayerTutorial : MonoBehaviour
     public GameObject bridge3;
 
     public GameObject dialogue;
+    public GameObject panel;
 
-    //public GameObject getKeyDialogue;
+    public TextMeshPro text;
 
     public AnalyticsManager analyticsManager;
 
@@ -42,7 +44,11 @@ public class PlayerTutorial : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         transition = GameObject.Find("Canvas").GetComponent<Animator>();
-     
+
+
+
+        //dialogue.SetActive(true);
+        StartCoroutine(WaitAndDisappearPanel(3f));
     }
 
     void Update()
@@ -70,10 +76,10 @@ public class PlayerTutorial : MonoBehaviour
             inMotion = false;
         }
 
-        if(Input.GetKey("i"))
+        if (Input.GetKey("i"))
         {
             dialogue.SetActive(true);
-            StartCoroutine(WaitAndDisappear(3f));
+            StartCoroutine(WaitAndDisappearDialogue(3f));
         }
     }
 
@@ -133,10 +139,22 @@ public class PlayerTutorial : MonoBehaviour
         }
     }
 
-        IEnumerator WaitAndDisappear(float time)
+    IEnumerator WaitAndDisappearDialogue(float time)
     {
         yield return new WaitForSeconds(time);
+        text.text = "hello";
+        yield return new WaitForSeconds(1f);
         dialogue.SetActive(false);
+        
+    }
+
+    IEnumerator WaitAndDisappearPanel(float time)
+    {
+        yield return new WaitForSeconds(time);
+        //text.text = "hello";
+        //yield return new WaitForSeconds(1f);
+        panel.SetActive(false);
+
     }
 
 
