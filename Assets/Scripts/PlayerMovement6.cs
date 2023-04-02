@@ -24,6 +24,8 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject frozenKey;
     public GameObject shootDialogue;
 
+    public DoorBehaviour dBL3GT;
+
     public static bool isFacingRight;
     public static bool hasGun = false;
     Collider m_ObjectCollider;
@@ -66,6 +68,11 @@ public class PlayerMovement6 : MonoBehaviour
 
 
         Flip();
+
+        if (SceneManager.GetActiveScene().name == "Level3GreenTunnel")
+        {
+            dBL3GT._isLevel1GreenTunnel = true;
+        }
     }
 
     void Flip()

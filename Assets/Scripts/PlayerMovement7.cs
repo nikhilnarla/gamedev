@@ -13,6 +13,10 @@ public class PlayerMovement7 : MonoBehaviour
 
     public AnalyticsManager analyticsManager;
 
+    public DoorBehaviour dbL4GG;
+    public DoorBehaviour dbL4YG;
+    public DoorBehaviour dbL4GT;
+    public DoorBehaviour dbL4YT;
 
     public float speed;
     public float jump;
@@ -70,6 +74,16 @@ public class PlayerMovement7 : MonoBehaviour
         }
 
         Flip();
+
+        if (SceneManager.GetActiveScene().name == "Level4GreenTunnel")
+        {
+            dbL4GT._isLevel1GreenTunnel = true;
+        }
+        if (SceneManager.GetActiveScene().name == "Level4YellowTunnel")
+        {
+            dbL4YT._isLevel1YellowTunnel = true;
+        }
+
     }
 
     void Flip() {
@@ -151,7 +165,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name == "EndGate1")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-              analyticsManager.SendEvent("LEVEL7 GREEN GATE USED");
+            analyticsManager.SendEvent("LEVEL7 GREEN GATE USED");
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL7 GAMEEND");
         }
@@ -205,22 +219,25 @@ public class PlayerMovement7 : MonoBehaviour
         // isTrigger checked for key 1 and key 2
         if (other.gameObject.name.Equals("Key1"))
         {
-            Destroy(GameObject.Find("Gate1"));
             Destroy(other.gameObject); // destroy key 1
-
+            Destroy(GameObject.Find("Gate1"));
+            
             bridge1.SetActive(true);
             bridge2.SetActive(true);
             bridge3.SetActive(true);
 
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED GREEN GATE KEY  AND GREEN GATE IS OPENED");
+            //dbL4GG._isLevel4GreenDoorOpen = true;
 
         }
 
         if (other.gameObject.name.Equals("Key2"))
         {
-            Destroy(GameObject.Find("Gate2"));
+            
+            //Destroy(GameObject.Find("Gate2"));
             Destroy(other.gameObject); // destroy key 2
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED YELLOW GATE KEY AND YELLOW GATE IS OPENED");
+            dbL4YG._isLevel4YellowDoorOpen = true;
         }
     }
 

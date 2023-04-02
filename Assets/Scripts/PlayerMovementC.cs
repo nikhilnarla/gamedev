@@ -23,6 +23,11 @@ public class PlayerMovementC : MonoBehaviour
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
+    public DoorBehaviour dBL2GG;
+    public DoorBehaviour dBL2YG;
+    public DoorBehaviour dBL2GT;
+    public DoorBehaviour dBL2YT;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Rigidbody2D rbspikes;
     [SerializeField] private Rigidbody2D rbspikes1;
@@ -49,6 +54,15 @@ public class PlayerMovementC : MonoBehaviour
         if(Input.GetKeyDown("space") && IsGrounded()){
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level2GreenTunnel")
+        {
+            dBL2GT._isLevel1GreenTunnel = true;
+        }
+        if (SceneManager.GetActiveScene().name == "Level2YellowTunnel")
+        {
+            dBL2YT._isLevel1YellowTunnel = true;
         }
     }
 
@@ -80,12 +94,14 @@ public class PlayerMovementC : MonoBehaviour
         if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
-                Destroy(GameObject.Find("Gate"));
-                analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
+                dBL2GG._isLevel2GreenDoorOpen = true;
+            //Destroy(GameObject.Find("Gate"));
+            analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
 
         if(other.gameObject.name == ("Button 2")){
-            Destroy(GameObject.Find("EntryGate"));
+            //Destroy(GameObject.Find("EntryGate"));
+            dBL2YG._isLevel2YelllowDoorOpen = true;
             Destroy(GameObject.Find("Button 2"));
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
         }
