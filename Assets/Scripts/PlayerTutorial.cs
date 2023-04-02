@@ -26,6 +26,7 @@ public class PlayerTutorial : MonoBehaviour
 
     public GameObject dialogue;
     public GameObject panel;
+    public GameObject endPanel;
 
     public TextMeshPro text;
 
@@ -140,10 +141,18 @@ public class PlayerTutorial : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.name.Equals("Bridge1") || other.gameObject.name.Equals("Bridge2") || other.gameObject.name.Equals("Bridge3") || other.gameObject.name.Equals("GreenTile"))
+        if (other.gameObject.name.Equals("Bridge1") || other.gameObject.name.Equals("Bridge2") || other.gameObject.name.Equals("Bridge3"))
         {
             jump = 10f;
         }
+
+        if(other.gameObject.name.Equals("GreenTile"))
+        {
+            jump = 10f;
+            text.color = Color.black;
+            text.text = "collect key";
+        }
+
     }
 
     IEnumerator WaitAndDisappearDialogue(float time)
@@ -163,6 +172,8 @@ public class PlayerTutorial : MonoBehaviour
 
     IEnumerator WaitAndEnd(float time)
     {
+        yield return new WaitForSeconds(2f);
+        endPanel.SetActive(true);
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
