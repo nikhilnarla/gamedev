@@ -21,6 +21,11 @@ public class PlayerMovementC : MonoBehaviour
     public static bool flag = false;
     public GameObject dialogue;
 
+    public DoorBehaviour dbL3GG;
+    public DoorBehaviour dbL3GT;
+    public DoorBehaviour dbL3YG;
+    public DoorBehaviour dbL3YT;
+
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     [SerializeField] private Rigidbody2D rb;
@@ -49,6 +54,17 @@ public class PlayerMovementC : MonoBehaviour
         if(Input.GetKeyDown("space") && IsGrounded()){
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
+        }
+
+        //GreenTunnelLevel2 Scene
+        if (SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            dbL3GT._isLevel1GreenTunnel = true;
+        }
+        //YellowTunnelLevel2 Scene
+        if (SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            dbL3YT._isLevel1YellowTunnel = true;
         }
     }
 
@@ -80,11 +96,25 @@ public class PlayerMovementC : MonoBehaviour
         if(other.gameObject.name == ("Button 1")){
                 AddGravityToTiles();
                 DestroyBridgeTiles();
-                Destroy(GameObject.Find("Gate"));
+                //OPEN green gate Level 3
+                dbL3GG._isLevel2GreenDoorOpen = true;
+                //Destroy(GameObject.Find("Gate"));
                 analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
+        //CLOSE GREEN GATE
+        if (other.gameObject.name == "CloseYellowGate")
+        {
+            Destroy(other.gameObject);
+            dbL3GG._isLevel2GreenDoorClose = true;
+            //var gate = GameObject.Find("EntryGate");
+            //doorBehaviour._isDoorOpen = true;
+            //analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
 
-        if(other.gameObject.name == ("Button 2")){
+            //Destroy(gate);
+
+        }
+
+        if (other.gameObject.name == ("Button 2")){
             Destroy(GameObject.Find("EntryGate"));
             Destroy(GameObject.Find("Button 2"));
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");

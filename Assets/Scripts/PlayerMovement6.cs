@@ -24,6 +24,11 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject frozenKey;
     public GameObject shootDialogue;
 
+    public DoorBehaviour dBL3GG;
+    public DoorBehaviour dBL3YG;
+    public DoorBehaviour dBL3GT;
+    public DoorBehaviour dBL3YT;
+
     public static bool isFacingRight;
     public static bool hasGun = false;
     Collider m_ObjectCollider;
@@ -66,6 +71,12 @@ public class PlayerMovement6 : MonoBehaviour
 
 
         Flip();
+
+        //GreenTunnelLevel4 Scene
+        if (SceneManager.GetActiveScene().buildIndex == 9)
+        {
+            dBL3GT._isLevel1GreenTunnel = true;
+        }
     }
 
     void Flip()
@@ -153,6 +164,11 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (other.gameObject.name == "CloseGreenGate")
+        {
+            Destroy(GameObject.Find("CloseGreenGate"));
+            dBL3GG._isLevel3GreenDoorClose = true;
         }
 
         if (other.gameObject.name == "Tunnel6EndGate1")
