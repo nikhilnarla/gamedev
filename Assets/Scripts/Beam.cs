@@ -29,6 +29,11 @@ public class Beam : MonoBehaviour
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
+             if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
+            {
+                other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
 
             if (SceneManager.GetActiveScene().name == "Level4")
             {
@@ -42,8 +47,20 @@ public class Beam : MonoBehaviour
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
-
+            if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
+            {
+                other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
 
         }
+// if (other.gameObject.tag.Equals("Capsule"))
+//         {
+//          if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
+//             {
+//                 other.gameObject.transform.position = TunnelSpawnPoint.position;
+//                 // analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+//             }
+//         }
     }
 }

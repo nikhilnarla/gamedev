@@ -92,6 +92,13 @@ public class PlayerLevel1 : MonoBehaviour
             flag = true;
 
         }
+        //  if (other.gameObject.tag == "TunnelLaser")
+        // {
+        //     rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
+        //     // analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
+        //     // flag = true;
+
+        // }
         if (other.gameObject.tag == "TunnelYellowTrap" && !flag)
         {
             rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
