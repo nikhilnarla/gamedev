@@ -92,6 +92,11 @@ public class PlayerTutorial : MonoBehaviour
 
         if(other.gameObject.name.Equals("GreenTile"))
         {
+            text.text = "Warning!!\nleft tiles disappear & speed slows!";
+            text.color = Color.red;
+            dialogue.SetActive(true);
+
+            StartCoroutine(WaitAndDisappearDialogue(3f));
 
             bridge1.SetActive(true);
             bridge2.SetActive(true);
@@ -122,6 +127,8 @@ public class PlayerTutorial : MonoBehaviour
             Block.mass = 500.0f;
             Block.angularDrag = 0.05f;
             Block.gravityScale = 1.0f;
+
+            text.text = "move block & press button";
         }
 
         if(other.gameObject.name.Equals("Bridge1") || other.gameObject.name.Equals("Bridge2") || other.gameObject.name.Equals("Bridge3") || other.gameObject.name.Equals("GreenTile"))
@@ -142,8 +149,6 @@ public class PlayerTutorial : MonoBehaviour
     IEnumerator WaitAndDisappearDialogue(float time)
     {
         yield return new WaitForSeconds(time);
-        text.text = "hello";
-        yield return new WaitForSeconds(1f);
         dialogue.SetActive(false);
         
     }
@@ -151,8 +156,6 @@ public class PlayerTutorial : MonoBehaviour
     IEnumerator WaitAndDisappearPanel(float time)
     {
         yield return new WaitForSeconds(time);
-        //text.text = "hello";
-        //yield return new WaitForSeconds(1f);
         panel.SetActive(false);
 
     }

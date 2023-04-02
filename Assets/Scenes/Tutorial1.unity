@@ -1669,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalScale.y
-      value: 11.578794
+      value: 12.9393015
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1677,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163314344890063800, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1276
+      value: -0.2365
       objectReference: {fileID: 0}
     - target: {fileID: 3658288732860876932, guid: f06df641d0667447a87d240496c96051, type: 3}
       propertyPath: m_RootOrder
@@ -2475,6 +2475,7 @@ MonoBehaviour:
   movePosition: {fileID: 356306859}
   jumpPad: {fileID: 2050590518}
   greenblock: {fileID: 791023929}
+  text: {fileID: 1322499663}
 --- !u!1001 &1757153798
 PrefabInstance:
   m_ObjectHideFlags: 0

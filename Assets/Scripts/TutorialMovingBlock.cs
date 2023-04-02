@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class TutorialMovingBlock : MonoBehaviour
@@ -7,6 +8,8 @@ public class TutorialMovingBlock : MonoBehaviour
     private Vector2 target;
     public GameObject jumpPad;
     public GameObject greenblock;
+
+    public TextMeshPro text;
 
 
     public void Start()
@@ -27,6 +30,8 @@ public class TutorialMovingBlock : MonoBehaviour
             AddGravityToTiles();
             jumpPad.SetActive(true);
             greenblock.SetActive(true);
+
+            text.text = "jump on jumppad";
         }
     }
 
@@ -35,7 +40,6 @@ public class TutorialMovingBlock : MonoBehaviour
         Rigidbody2D tile = null;
         for (int i = 1; i < 5; i += 1)
         {
-
             tile = GameObject.Find("Tile" + i).GetComponent<Rigidbody2D>();
             tile.constraints = RigidbodyConstraints2D.None;
             tile.gravityScale = 1;
