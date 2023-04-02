@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1185701574502410476, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+      propertyPath: m_TagString
+      value: TunnelLaser
+      objectReference: {fileID: 0}
     - target: {fileID: 1185701574502410477, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.91575
@@ -1513,7 +1517,7 @@ GameObject:
   - component: {fileID: 272075562}
   m_Layer: 0
   m_Name: Left 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3818,7 +3822,7 @@ GameObject:
   - component: {fileID: 549706677}
   m_Layer: 0
   m_Name: Right 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4682,8 +4686,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 937608534}
-  bulletPrefab: {fileID: 6200498979350969258, guid: 49519f3c4d4dc4e488627b4bec8d813e, type: 3}
-  speed: 2
+  bulletPrefab: {fileID: 6200498979350969258, guid: 9817f997adfca4d57a46cba2823cd473, type: 3}
+  speed: 30
 --- !u!1001 &712228951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4694,6 +4698,10 @@ PrefabInstance:
     - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Name
       value: Gate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Color.b
@@ -5187,7 +5195,7 @@ GameObject:
   - component: {fileID: 763033920}
   m_Layer: 0
   m_Name: Right 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6606,7 +6614,7 @@ GameObject:
   - component: {fileID: 937850041}
   m_Layer: 9
   m_Name: TunnelEnemy
-  m_TagString: Untagged
+  m_TagString: TunnelEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8130,6 +8138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate2
       objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Color.b
       value: 0.19215685
@@ -8469,7 +8481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.781303, y: -9.1, z: -10}
+  m_LocalPosition: {x: 33.02621, y: -9.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14403,7 +14415,7 @@ GameObject:
   - component: {fileID: 1987972879}
   m_Layer: 0
   m_Name: Left 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14846,6 +14858,10 @@ PrefabInstance:
     - target: {fileID: 1185701574502410464, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185701574502410476, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+      propertyPath: m_TagString
+      value: TunnelLaser
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574502410477, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_LocalScale.x
@@ -15382,7 +15398,7 @@ GameObject:
   - component: {fileID: 2141665547}
   m_Layer: 0
   m_Name: Vertical Left 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
