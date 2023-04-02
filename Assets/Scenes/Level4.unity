@@ -3826,7 +3826,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 937608534}
-  bulletPrefab: {fileID: 6200498979350969258, guid: 49519f3c4d4dc4e488627b4bec8d813e, type: 3}
+  bulletPrefab: {fileID: 6200498979350969258, guid: 9817f997adfca4d57a46cba2823cd473, type: 3}
   speed: 30
 --- !u!1001 &712228951
 PrefabInstance:
@@ -4341,6 +4341,10 @@ PrefabInstance:
     - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Name
       value: Gate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Color.b
@@ -5103,7 +5107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &803881050
 Transform:
   m_ObjectHideFlags: 0
@@ -6048,7 +6052,7 @@ GameObject:
   - component: {fileID: 937850041}
   m_Layer: 9
   m_Name: TunnelEnemy
-  m_TagString: Untagged
+  m_TagString: TunnelEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6423,7 +6427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &990299305
 Transform:
   m_ObjectHideFlags: 0
@@ -7244,6 +7248,10 @@ PrefabInstance:
     - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_Color.b
@@ -11322,7 +11330,7 @@ GameObject:
   - component: {fileID: 1802286013}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Wall
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11592,7 +11600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1830115971
 Transform:
   m_ObjectHideFlags: 0
@@ -12238,6 +12246,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819894, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
       propertyPath: m_Name
+      value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185701574358819894, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
+      propertyPath: m_TagString
       value: Laser
       objectReference: {fileID: 0}
     - target: {fileID: 1185701574358819895, guid: 126eea3e2d2f54e7595ba2da705d942a, type: 3}
