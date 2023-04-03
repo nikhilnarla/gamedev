@@ -440,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083622201804484672, guid: 7c1ccdbd72bc14399903c4524b803966, type: 3}
       propertyPath: m_Name
-      value: Tile 1
+      value: Bottom
       objectReference: {fileID: 0}
     - target: {fileID: 6536707012527792042, guid: 7c1ccdbd72bc14399903c4524b803966, type: 3}
       propertyPath: m_Name
@@ -804,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196804296}
   m_LocalRotation: {x: -0, y: -0, z: -0.0003667915, w: 1}
-  m_LocalPosition: {x: -3.3, y: -0.248, z: 0.0037006438}
+  m_LocalPosition: {x: -2.24, y: -0.25, z: 0.0037006438}
   m_LocalScale: {x: 6.404974, y: 0.46225327, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4333,7 +4333,6 @@ MonoBehaviour:
   dBL1YT: {fileID: 0}
   getKeyDialogue: {fileID: 588280432}
   analyticsManager: {fileID: 609870355}
-  transition: {fileID: 0}
   rb: {fileID: 740502426}
   groundCheck: {fileID: 1276936683}
   groundLayer:
@@ -6794,6 +6793,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7902762767210830871, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
+      propertyPath: m_Name
+      value: Tile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902762767210830871, guid: 81d901b13cc484331926a732d682e8ed, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -8270,7 +8273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691431547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: -0.16, z: 0.0037006438}
+  m_LocalPosition: {x: 2.43, y: -0.16, z: 0.0037006438}
   m_LocalScale: {x: 6.0576034, y: 0.50483185, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
