@@ -10376,7 +10376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583532078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.775469, y: 0.31000012, z: -5}
+  m_LocalPosition: {x: 15.212123, y: 0.31000012, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13817,6 +13817,14 @@ PrefabInstance:
     - target: {fileID: 1027037804, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: speed
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377705987, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377705987, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 373280153266191703, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: portal1Spawn
