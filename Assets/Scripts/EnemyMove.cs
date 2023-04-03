@@ -18,8 +18,8 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        float newY = startPosition.y + Mathf.PingPong(Time.time * speed, distance);
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        float newY = startPosition.x + Mathf.PingPong(Time.time * speed, distance);
+        transform.position = new Vector3(newY,transform.position.y, transform.position.z);
     }
 }
 
