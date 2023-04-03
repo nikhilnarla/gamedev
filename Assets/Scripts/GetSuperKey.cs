@@ -10,6 +10,7 @@ public class GetSuperKey : MonoBehaviour
             Destroy(GameObject.Find("SuperKey"));
             //  analyticsManager.SendEvent("LEVEL6 SUPER KEY COLLECTED");
         }
+
         // if(collision.gameObject.tag == "SuperKey")
         // {
         //      analyticsManager.SendEvent("LEVEL6 SUPER KEY COLLECTED");

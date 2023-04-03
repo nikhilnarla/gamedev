@@ -22,6 +22,11 @@ public class PlayerLevel1 : MonoBehaviour
     public Transform Tunnel2SpawnPoint;
     public GameObject dialogue;
 
+    public DoorBehaviour doorBehaviour;
+    public DoorBehaviour doorBehaviourLevel1Green;
+    public DoorBehaviour dBL1GT;
+    public DoorBehaviour dBL1YT;
+
     public GameObject getKeyDialogue;
 
     public AnalyticsManager analyticsManager;
@@ -69,8 +74,19 @@ public class PlayerLevel1 : MonoBehaviour
             inMotion = false;
         }
 
+        //GreenTunnelLevel1 Scene
+        if (SceneManager.GetActiveScene().name == "Level1GreenTunnel")
+        {
+            dBL1GT._isLevel1GreenTunnel = true;
+        }
+        //YellowTunnelLevel1 Scene
+        if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
+        {
+            dBL1YT._isLevel1YellowTunnel = true;
+        }
 
-        
+
+
     }
 
     private bool IsGrounded()
@@ -156,22 +172,33 @@ public class PlayerLevel1 : MonoBehaviour
 
         if (other.gameObject.name == "Key 1")
         {
-            var gate = GameObject.Find("EntryGate");
-
-            analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
-
-            Destroy(gate);
             Destroy(other.gameObject);
+            doorBehaviour._isDoorOpen = true;
+            //var gate = GameObject.Find("EntryGate");
+            //analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
+            //Destroy(gate);
+            //Destroy(other.gameObject);
         }
-
-        if(other.gameObject.name == "Key 2")
+        //Close Yellow Gate.
+        if (other.gameObject.name == "`")
         {
-            var gate = GameObject.Find("Gate");
-
-            analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
-
-            Destroy(gate);
             Destroy(other.gameObject);
+            doorBehaviour._isLevel2GreenDoorClose = true;
+        }
+        if (other.gameObject.name == "Key 2")
+        {
+            Destroy(other.gameObject);
+            doorBehaviourLevel1Green._isLevel1GreenDoorOpen = true;
+            //var gate = GameObject.Find("Gate");
+            //analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
+            //Destroy(gate);
+            //Destroy(other.gameObject);
+        }
+        //Close Green Gate.
+        if (other.gameObject.name == "CloseGreenGate")
+        {
+            Destroy(other.gameObject);
+            doorBehaviourLevel1Green._isLevel1GreenDoorClose = true;
         }
 
         //Enter Level1 yellow Tunnel

@@ -22,7 +22,6 @@ public class Beam : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            
             // if player is hit by laser, then it respawns to back at beginning of level
             if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
             {
@@ -47,20 +46,13 @@ public class Beam : MonoBehaviour
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             }
-            if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
+              if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
             {
                 other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }
-
-        }
-// if (other.gameObject.tag.Equals("Capsule"))
-//         {
-//          if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
-//             {
-//                 other.gameObject.transform.position = TunnelSpawnPoint.position;
-//                 // analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-//             }
-//         }
+            }        } else if (other.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(other.gameObject); // make bullet disappear when it collides laser beam
+        } 
     }
 }
