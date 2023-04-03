@@ -2624,7 +2624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531069303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.7, y: 30.3397, z: 0.0125}
+  m_LocalPosition: {x: 69.7, y: 30.5, z: 0.0125}
   m_LocalScale: {x: 104.31556, y: 47.0794, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7662,7 +7662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234077, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
@@ -7776,7 +7776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.171299, y: 0.039999396, z: -10}
+  m_LocalPosition: {x: 32.29855, y: 0.039999396, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7852,6 +7852,14 @@ PrefabInstance:
     - target: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_Name
       value: Tile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_RootOrder
