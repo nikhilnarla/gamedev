@@ -2194,7 +2194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199087732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.195, y: 0.07638493, z: 0.012529}
+  m_LocalPosition: {x: 0.421, y: -1.067, z: 0.012529}
   m_LocalScale: {x: 0.008029436, y: 0.18332385, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2909,7 +2909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.08999, y: -15.759996, z: -19.927858}
+  m_LocalPosition: {x: 51.489426, y: -15.759996, z: -19.927858}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6410,6 +6410,10 @@ MonoBehaviour:
   _isLevel3GreenDoorClose: 0
   _isLevel3YellowDoorOpen: 0
   _isLevel3YellowDoorClose: 0
+  _isLevel4GreenDoorOpen: 0
+  _isLevel4GreenDoorClose: 0
+  _isLevel4YellowDoorOpen: 0
+  _isLevel4YellowDoorClose: 0
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 376905836}
@@ -8226,7 +8230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763254834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94.4337, y: -12.6636, z: 0}
+  m_LocalPosition: {x: 139.4, y: -13.2, z: 0}
   m_LocalScale: {x: 307.01697, y: 49.201454, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
