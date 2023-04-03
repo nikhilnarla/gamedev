@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMoveFromGround : MonoBehaviour
 {
     public float speed;
     public float distance;
@@ -18,8 +18,10 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        float newY = startPosition.y + Mathf.PingPong(Time.time * speed, distance);
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        float newX = startPosition.x + Mathf.PingPong(Time.time * speed, distance);
+        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
 }
+
+
 
