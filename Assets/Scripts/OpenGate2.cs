@@ -3,6 +3,7 @@ using UnityEngine;
 public class OpenGate2 : MonoBehaviour
 {
     public GameObject frozenKey;
+    public DoorBehaviour dbL3GG;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -10,7 +11,8 @@ public class OpenGate2 : MonoBehaviour
         {
             Debug.Log("Gate 2 Opened!");
             Destroy(GameObject.Find("Gate2OpenKey"));
-            Destroy(GameObject.Find("Gate2"));
+            dbL3GG._isLevel3GreenDoorOpen = true;
+            //Destroy(GameObject.Find("Gate2"));
         }
     }
 
