@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using System.Threading;
+using System.Threading.Tasks; 
 
 public class PlayerMovement6 : MonoBehaviour
 {
@@ -167,8 +169,10 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            analyticsManager.SendEvent("LEVEL7 GAMESTART");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // analyticsManager.SendEvent("LEVEL7 GAMESTART");
+            SceneManager.LoadScene("Level-transition3");
+            Thread.Sleep(100);
         }
 
         if (other.gameObject.name == "Tunnel6EndGate2")
@@ -176,8 +180,10 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-            analyticsManager.SendEvent("LEVEL7 GAMESTART");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            // analyticsManager.SendEvent("LEVEL7 GAMESTART");
+            SceneManager.LoadScene("Level-transition3");
+            Thread.Sleep(100);
         }
     }
 

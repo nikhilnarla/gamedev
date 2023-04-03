@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks; 
 
 public class PlayerMovementC : MonoBehaviour
 {
@@ -204,6 +206,8 @@ public class PlayerMovementC : MonoBehaviour
             //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGateYellowLevel2"));
             analyticsManager.SendEvent("LEVEL3 GAMEEND");
+            SceneManager.LoadScene("Level-transition2");
+            Thread.Sleep(100);
             analyticsManager.SendEvent("LEVEL6 GAMESTART");
 
         }
@@ -234,8 +238,9 @@ public class PlayerMovementC : MonoBehaviour
         if (other.gameObject.name == ("ENDGATEGREEN"))
         {
             Debug.Log("Exit Green Tunnel Level 3");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
-
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            SceneManager.LoadScene("Level-transition2");
+            Thread.Sleep(100);
             //Analytics event - key Collected
             // analyticsManager.SendEvent("LEVEL3 GAMEEND");
              //Desctroying end block so player can pas
