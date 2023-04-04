@@ -42,6 +42,6 @@ public class Menu : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-15);
+        SceneManager.LoadScene("Level1");
     }
 }
