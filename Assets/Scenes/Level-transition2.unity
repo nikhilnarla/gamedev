@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 2060876015}
-  lvlindex: 9
+  levelName: Level3
   transitionTime: 1
 --- !u!95 &2060876015 stripped
 Animator:

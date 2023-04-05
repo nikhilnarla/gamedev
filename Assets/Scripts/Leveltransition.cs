@@ -6,7 +6,8 @@ using UnityEngine;
 public class Leveltransition : MonoBehaviour
 {
     public Animator transition;
-    public int lvlindex=0;
+    // public int lvlindex=0;
+    public string levelName;
 
     public float transitionTime = 2.5f;
     
@@ -14,17 +15,15 @@ public class Leveltransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        LoadNextLevel(); 
-        
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(lvlindex));
+        StartCoroutine(LoadLevel(levelName));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel(string levelName)
     {
         yield return new WaitForSeconds(transitionTime);
 
@@ -32,6 +31,6 @@ public class Leveltransition : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime-1);
 
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(levelName);
     }
 }

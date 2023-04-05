@@ -6,6 +6,6 @@ public class Control : MonoBehaviour
     public void CloseControls()
     {
         Debug.Log("controls");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Menu");
     }
 }
