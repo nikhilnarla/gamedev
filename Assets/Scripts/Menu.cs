@@ -17,13 +17,13 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("Level1");
     }
 
     public void Tutorial()
     {
         Debug.Log("inside");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Tutorial1");
 
         //var box = GameObject.Find("Modal Panel").GetComponent<GameObject>();
         //box.SetActive(true);
@@ -32,11 +32,16 @@ public class Menu : MonoBehaviour
 
     public void Controls()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Controls");
+    }
+
+    public void RoomSelection()
+    {
+        SceneManager.LoadScene("Rooms");
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-15);
+        SceneManager.LoadScene("Level1");
     }
 }
