@@ -39,6 +39,10 @@ public class PlayerLevel1 : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask buttonLayer;
 
+    public AudioSource AudioSource;
+    public AudioClip DoorOpenSound;
+    public bool _isSoundPlayed = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -95,7 +99,27 @@ public class PlayerLevel1 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other){
         flag = false;
 
-        if(other.gameObject.name.Equals("Bottom"))
+        //BrownDoor Green Tunnel Level1
+        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
+        {
+            Destroy(GameObject.Find("BrownExitDoorClosed"));
+            Destroy(GameObject.Find("DoorKnobClosed"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
+            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+
+            
+
+        }
+
+        if (other.gameObject.name.Equals("Bottom"))
         {
             dialogue.SetActive(true);
         }

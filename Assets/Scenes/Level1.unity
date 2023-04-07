@@ -4478,8 +4478,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1356044358}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1001 &699139300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6511,8 +6511,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1987362974}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1001 &1109611724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7856,7 +7856,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.539
+  m_Volume: 0.055
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10478,7 +10478,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.546
+  m_Volume: 0.055
   m_Pitch: 1
   Loop: 0
   Mute: 0
