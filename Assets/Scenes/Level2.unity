@@ -913,7 +913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.17477, y: 3.7764025, z: -20}
+  m_LocalPosition: {x: -10.232409, y: 3.7764025, z: -20}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4327,8 +4327,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 981173421}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1 &834587704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,7 +5645,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.539
+  m_Volume: 0.028
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8490,8 +8490,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1623374007}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1 &1449162468
 GameObject:
   m_ObjectHideFlags: 0
@@ -9656,7 +9656,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.512
+  m_Volume: 0.028
   m_Pitch: 1
   Loop: 0
   Mute: 0

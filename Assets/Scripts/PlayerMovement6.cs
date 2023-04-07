@@ -33,6 +33,10 @@ public class PlayerMovement6 : MonoBehaviour
     Collider m_ObjectCollider;
     public GameObject closedGate;
 
+    public AudioSource AudioSource;
+    public AudioClip DoorOpenSound;
+    public bool _isSoundPlayed = false;
+
     void Start()
     {
        
@@ -97,6 +101,23 @@ public class PlayerMovement6 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         flag = false;
+        //Tunnel Brown Door
+        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
+        {
+            Destroy(GameObject.Find("BrownExitDoorClosed"));
+            Destroy(GameObject.Find("DoorKnobClosed"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
+            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+        }
+
 
         if (other.gameObject.CompareTag("Ground"))
         {

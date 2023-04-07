@@ -2471,8 +2471,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 617693873}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!4 &312816208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8907577791732632675, guid: 3cf0cb3d3a08e45c182bf3336ba8f5ed, type: 3}
@@ -3043,7 +3043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380221341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.57, y: 2.41, z: 25.202988}
+  m_LocalPosition: {x: 19.51, y: 2.53, z: 25.202988}
   m_LocalScale: {x: 0.3228585, y: 0.9581839, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4189,7 +4189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557708005}
   m_LocalRotation: {x: -0, y: -0, z: -0.7066163, w: 0.707597}
-  m_LocalPosition: {x: 8.93, y: 0.84, z: 25.202988}
+  m_LocalPosition: {x: 8.58, y: 1.47, z: 25.202988}
   m_LocalScale: {x: 0.5686389, y: 0.6927418, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4909,7 +4909,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.511
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6664,7 +6664,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.512
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11619,7 +11619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528443314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.793, y: 2.1412, z: 0}
+  m_LocalPosition: {x: 8.56, y: 2.1412, z: 0}
   m_LocalScale: {x: 146.9219, y: 50.04586, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11659,7 +11659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.64782
+      value: 6.906683
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_LocalScale.y
@@ -11667,7 +11667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.1
+      value: 124.6
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
       propertyPath: m_LocalPosition.y

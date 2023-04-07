@@ -4691,6 +4691,9 @@ MonoBehaviour:
   buttonLayer:
     serializedVersion: 2
     m_Bits: 0
+  AudioSource: {fileID: 0}
+  DoorOpenSound: {fileID: 0}
+  _isSoundPlayed: 0
 --- !u!4 &740502433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
@@ -7856,7 +7859,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.055
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
