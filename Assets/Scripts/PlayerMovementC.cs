@@ -37,6 +37,10 @@ public class PlayerMovementC : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask buttonLayer;
 
+    public AudioSource AudioSource;
+    public AudioClip DoorOpenSound;
+    public bool _isSoundPlayed = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -77,7 +81,24 @@ public class PlayerMovementC : MonoBehaviour
 
         flag = false;
 
-        if(other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
+        //Tunnel Brown Door
+        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
+        {
+            Destroy(GameObject.Find("BrownExitDoorClosed"));
+            Destroy(GameObject.Find("DoorKnobClosed"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
+            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+        }
+
+        if (other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
             ShowTiles();
             dialogue.SetActive(true);
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");

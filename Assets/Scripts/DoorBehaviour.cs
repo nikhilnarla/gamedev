@@ -51,7 +51,7 @@ public class DoorBehaviour : MonoBehaviour
     Vector3 _doorTunnelOpenPos;
     Vector3 _doorTunnelClosePos;
 
-    float _doorSpeed = 3.4f;
+    float _doorSpeed = 5.4f;
 
     public AudioSource AudioSource;
     public AudioClip shutterOpenSound;
@@ -63,7 +63,7 @@ public class DoorBehaviour : MonoBehaviour
         _doorOpenPos = new Vector3(transform.position.x, transform.position.y + 10f, transform.position.z);
 
         _doorTunnelOpenPos = transform.position;
-        _doorTunnelClosePos = new Vector3(transform.position.x, transform.position.y - 10f, transform.position.z);
+        _doorTunnelClosePos = new Vector3(transform.position.x, transform.position.y - 2f, transform.position.z);
 
     }
 
