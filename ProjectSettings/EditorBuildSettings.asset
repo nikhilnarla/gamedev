@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4GreenTunnel.unity
     guid: c12869b56128248f6a5ed0dd4c10027e
   - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: f52e2a0bafcf94bf1bc879d56146efe3
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 41c9e6b027bd242a080adedbe0ee5d7d
   - enabled: 1

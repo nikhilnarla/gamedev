@@ -182,13 +182,7 @@ public class PlayerMovement7 : MonoBehaviour
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
-        if (other.gameObject.name == "EndGate1")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-            analyticsManager.SendEvent("LEVEL7 GREEN GATE USED");
-            Destroy(GameObject.Find("EndGate1"));
-            analyticsManager.SendEvent("LEVEL7 GAMEEND");
-        }
+       
         if (other.gameObject.name == "YellowTunnelEntry")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -204,11 +198,11 @@ public class PlayerMovement7 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL7 PLAYER ENTERED GREEN TUNNEL");
             closedGate.SetActive(true);
         }
-        if (other.gameObject.name == "EndGate2")
+        if (other.gameObject.name == "EndGate1")
         {
+            Destroy(GameObject.Find("EndGate1"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Destroy(GameObject.Find("EndGate2"));
-
+            
         }
 
         //Exit Yellow Tunnel
