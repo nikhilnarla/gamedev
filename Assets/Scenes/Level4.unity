@@ -1016,7 +1016,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.511
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4893,8 +4893,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 158862742}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1001 &715791046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8309,8 +8309,8 @@ MonoBehaviour:
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1270870292}
-  shutterOpenSound: {fileID: 8300000, guid: 75b88b54f56cf4e2ebed794cfa1d3330, type: 3}
-  shutterCloseSound: {fileID: 8300000, guid: df3553ddce24449afaac180b17acefd6, type: 3}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!4 &1124471487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9220887411442697545, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -8579,7 +8579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9687843, y: -5.3799987, z: -10}
+  m_LocalPosition: {x: 5.4289474, y: -5.3799987, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9563,7 +9563,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.512
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0
