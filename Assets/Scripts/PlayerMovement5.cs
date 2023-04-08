@@ -257,7 +257,7 @@ public class PlayerMovement5 : MonoBehaviour
 
     }
 
-    private void OnCollisionExit2D(Collider2D other)
+    private void OnCollisionExit2D(Collision2D other)
     {
 
         if (other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2"))

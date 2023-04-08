@@ -4391,8 +4391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab07a9e32419045e6a3cb722139a2f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  jump: 10
+  speed: 6
+  jump: 8
   move: 1
   isJumping: 0
   blockPushed: 0
@@ -9118,7 +9118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.31814, y: 0.039999396, z: -10}
+  m_LocalPosition: {x: 33.678474, y: 0.039999396, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

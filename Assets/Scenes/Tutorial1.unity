@@ -872,10 +872,13 @@ MonoBehaviour:
   groundCheck: {fileID: 1492273394}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   buttonLayer:
     serializedVersion: 2
     m_Bits: 0
+  AudioSource: {fileID: 0}
+  DoorOpenSound: {fileID: 0}
+  _isSoundPlayed: 0
 --- !u!50 &511789228 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6478246078170234079, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}

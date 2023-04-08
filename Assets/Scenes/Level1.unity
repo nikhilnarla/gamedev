@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0945
+      value: -2.038
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4475,6 +4475,7 @@ MonoBehaviour:
   _isLevel4GreenDoorClose: 0
   _isLevel4YellowDoorOpen: 0
   _isLevel4YellowDoorClose: 0
+  _isLevel5GreenDoorOpen: 0
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1356044358}
@@ -4664,8 +4665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab07a9e32419045e6a3cb722139a2f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  jump: 12
+  speed: 8
+  jump: 11
   move: 1
   isJumping: 0
   blockPushed: 0
@@ -6511,6 +6512,7 @@ MonoBehaviour:
   _isLevel4GreenDoorClose: 0
   _isLevel4YellowDoorOpen: 0
   _isLevel4YellowDoorClose: 0
+  _isLevel5GreenDoorOpen: 0
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 1987362974}
@@ -8889,6 +8891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234079, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
@@ -9654,6 +9660,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4611556207800502047, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611556207800502047, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611556207800502047, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
 --- !u!4 &1738387916 stripped
@@ -10032,7 +10050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3405
+      value: -6.374
       objectReference: {fileID: 0}
     - target: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e, type: 3}
       propertyPath: m_LocalPosition.y

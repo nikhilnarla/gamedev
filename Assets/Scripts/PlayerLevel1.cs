@@ -87,8 +87,6 @@ public class PlayerLevel1 : MonoBehaviour
             dBL1YT._isLevel1YellowTunnel = true;
         }
 
-
-
     }
 
     private bool IsGrounded()
