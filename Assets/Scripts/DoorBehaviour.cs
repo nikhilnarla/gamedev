@@ -40,6 +40,9 @@ public class DoorBehaviour : MonoBehaviour
     public bool _isLevel4YellowDoorOpen = false;
     public bool _isLevel4YellowDoorClose = false;
 
+    //-----Level5------//
+    public bool _isLevel5GreenDoorOpen = false;
+
     //Open/Close sounds
     public bool _isOpenSoundPlayed = false;
     public bool _isClosedSoundPlayed = false;
@@ -263,7 +266,7 @@ public class DoorBehaviour : MonoBehaviour
 
         //------Level 4 ------//
         // Green Gate OPEN
-        if (_isLevel3GreenDoorOpen)
+        if (_isLevel4GreenDoorOpen)
         {
             if (transform.position != _doorOpenPos)
             {
@@ -271,7 +274,7 @@ public class DoorBehaviour : MonoBehaviour
             }
             if (transform.position == _doorOpenPos)
             {
-                _isLevel2YelllowDoorOpen = false;
+                _isLevel4GreenDoorOpen = false;
             }
             if (!_isOpenSoundPlayed)
             {
@@ -281,7 +284,7 @@ public class DoorBehaviour : MonoBehaviour
             }
         }
 
-        if (_isLevel3GreenDoorClose)
+        if (_isLevel4GreenDoorClose)
         {
             if (transform.position != _doorClosedPos)
             {
@@ -327,6 +330,26 @@ public class DoorBehaviour : MonoBehaviour
                 AudioSource.clip = shutterCloseSound;
                 AudioSource.Play();
                 _isClosedSoundPlayed = true;
+            }
+        }
+
+        //------Level 5 ------//
+        //Green Gate
+        if (_isLevel5GreenDoorOpen)
+        {
+            if (transform.position != _doorOpenPos)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
+            }
+            if (transform.position == _doorOpenPos)
+            {
+                _isLevel5GreenDoorOpen = false;
+            }
+            if (!_isOpenSoundPlayed)
+            {
+                AudioSource.clip = shutterOpenSound;
+                AudioSource.Play();
+                _isOpenSoundPlayed = true;
             }
         }
     }

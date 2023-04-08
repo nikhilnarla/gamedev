@@ -40,6 +40,10 @@ public class PlayerMovement7 : MonoBehaviour
     public GameObject bridge2;
     public GameObject bridge3;
 
+    public bool _isSoundPlayed = false;
+    public AudioSource AudioSource;
+    public AudioClip DoorOpenSound;
+
     public static bool isFacingRight;
     Collider m_ObjectCollider;
     public GameObject closedGate;
@@ -102,6 +106,22 @@ public class PlayerMovement7 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //Tunnel Brown Door
+        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
+        {
+            Destroy(GameObject.Find("BrownExitDoorClosed"));
+            Destroy(GameObject.Find("DoorKnobClosed"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
+            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+        }
 
         if (other.gameObject.name == ("BridgeTile 1") ||
             other.gameObject.name == ("BridgeTile 2") ||
@@ -162,13 +182,7 @@ public class PlayerMovement7 : MonoBehaviour
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
 
-        if (other.gameObject.name == "EndGate1")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-            analyticsManager.SendEvent("LEVEL7 GREEN GATE USED");
-            Destroy(GameObject.Find("EndGate1"));
-            analyticsManager.SendEvent("LEVEL7 GAMEEND");
-        }
+       
         if (other.gameObject.name == "YellowTunnelEntry")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -184,13 +198,11 @@ public class PlayerMovement7 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL7 PLAYER ENTERED GREEN TUNNEL");
             closedGate.SetActive(true);
         }
-        if (other.gameObject.name == "EndGate2")
+        if (other.gameObject.name == "EndGate1")
         {
+            Destroy(GameObject.Find("EndGate1"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            analyticsManager.SendEvent("LEVEL7 YELLOW GATE USED");
-            Destroy(GameObject.Find("EndGate2"));
-            analyticsManager.SendEvent("LEVEL7 GAMEEND");
-
+            
         }
 
         //Exit Yellow Tunnel
@@ -220,14 +232,15 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name.Equals("Key1"))
         {
             Destroy(other.gameObject); // destroy key 1
-            Destroy(GameObject.Find("Gate1"));
-            
+            //Destroy(GameObject.Find("Gate1"));
+            dbL4GG._isLevel4GreenDoorOpen = true;
+
             bridge1.SetActive(true);
             bridge2.SetActive(true);
             bridge3.SetActive(true);
 
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED GREEN GATE KEY  AND GREEN GATE IS OPENED");
-            //dbL4GG._isLevel4GreenDoorOpen = true;
+            
 
         }
 
