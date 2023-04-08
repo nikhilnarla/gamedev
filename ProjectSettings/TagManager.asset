@@ -19,6 +19,7 @@ TagManager:
   - TunnelLaser
   - Laser
   - TunnelEnemy
+  - Zipline
   layers:
   - Default
   - TransparentFX

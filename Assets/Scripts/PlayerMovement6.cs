@@ -79,6 +79,10 @@ public class PlayerMovement6 : MonoBehaviour
         {
             dBL3GT._isLevel1GreenTunnel = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow)){
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
     }
 
     void Flip()
@@ -206,13 +210,35 @@ public class PlayerMovement6 : MonoBehaviour
             SceneManager.LoadScene("Level-transition3");
             Thread.Sleep(100);
         }
+
+        if(other.gameObject.name == "Key2")
+        {
+            Destroy(GameObject.Find("Key2"));
+        }
+
     }
 
-    private void OnCollisionExit2D(Collision2D other){
+    private void OnCollisionExit2D(Collider2D other){
 
          if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
                jump = 8f;
                speed = 5f;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag.Equals("Zipline"))
+        {
+            
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag.Equals("Zipline"))
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
