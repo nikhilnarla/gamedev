@@ -23,6 +23,10 @@ public class Beam : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by laser, then it respawns to back at beginning of level
+            if(SceneManager.GetActiveScene().name == "Level5")
+            {
+                SceneManager.LoadScene("Level5");   
+            }
             if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
             {
                 other.gameObject.transform.position = TunnelSpawnPoint.position;

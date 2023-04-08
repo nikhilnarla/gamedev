@@ -216,6 +216,11 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("Key2"));
         }
 
+        if(other.gameObject.CompareTag("Trap"))
+        {
+            SceneManager.LoadScene("Level5");
+        }
+
     }
 
     private void OnCollisionExit2D(Collider2D other){
