@@ -71,23 +71,23 @@ public class PlayerMovement5 : MonoBehaviour
         {
             hasGun = true;
         }
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            inMotion = false;
-            rb.gravityScale = 1;
-        }
+        // if (Input.GetAxis("Horizontal") != 0)
+        // {
+        //     inMotion = false;
+        //     rb.gravityScale = 1;
+        // }
 
-        if (inMotion)
-        {
-            rb.gravityScale = 0;
-            transform.position = Vector2.MoveTowards(transform.position, target, 30 * Time.deltaTime);
-        }
+        // if (inMotion)
+        // {
+        //     rb.gravityScale = 0;
+        //     transform.position = Vector2.MoveTowards(transform.position, target, 30 * Time.deltaTime);
+        // }
 
-        if (target == new Vector2(rb.transform.position.x, rb.transform.position.y))
-        {
-            rb.gravityScale = 1;
-            inMotion = false;
-        }
+        // if (target == new Vector2(rb.transform.position.x, rb.transform.position.y))
+        // {
+        //     rb.gravityScale = 1;
+        //     inMotion = false;
+        // }
 
 
         Flip();
@@ -251,6 +251,14 @@ public class PlayerMovement5 : MonoBehaviour
         {
             Destroy(GameObject.Find("LavaKey"));
             dBL5GT._isLevel5GreenDoorOpen = true;
+
+
+        }
+        //Open Yellow gate
+        if (other.gameObject.name == "LavaKey (1)")
+        {
+            Destroy(GameObject.Find("LavaKey (1)"));
+            // dBL5GT._isLevel5YellownDoorOpen = true;
 
 
         }
