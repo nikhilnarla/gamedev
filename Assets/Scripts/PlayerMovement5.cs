@@ -25,6 +25,7 @@ public class PlayerMovement5 : MonoBehaviour
     public bool flag = false;
     public GameObject frozenKey;
     public GameObject shootDialogue;
+    public GameObject lavaPlatform;
 
     public DoorBehaviour dBL5GT;
 
@@ -244,6 +245,7 @@ public class PlayerMovement5 : MonoBehaviour
             Destroy(GameObject.Find("LavaPLatformRightDisappearing"));
             Destroy(GameObject.Find("LavaPLatformLeft (1)"));
             //Destroy(GameObject.Find("LavaPLatformLeft (1)"));
+            lavaPlatform.SetActive(true);
             GameObject.Find("LavaPLatformLeft (2)").GetComponent<Renderer>().enabled = true;
         }
         //Open Green gate
