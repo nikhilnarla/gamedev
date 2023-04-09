@@ -42,6 +42,7 @@ public class DoorBehaviour : MonoBehaviour
 
     //-----Level5------//
     public bool _isLevel5GreenDoorOpen = false;
+    public bool _isLevel5YellowDoorOpen = false;
 
     //Open/Close sounds
     public bool _isOpenSoundPlayed = false;
@@ -49,10 +50,12 @@ public class DoorBehaviour : MonoBehaviour
 
     Vector3 _doorClosedPos;// Level1 Yellow Door
     Vector3 _doorLevel1GreenClosedPos;// Level1 Green Door
+    Vector3 _doorTunnelHorizontalClosePos;
     Vector3 _doorOpenPos;
 
     Vector3 _doorTunnelOpenPos;
     Vector3 _doorTunnelClosePos;
+    Vector3 _doorTunnelHorizontalOpenPos;
 
     float _doorSpeed = 5.4f;
 
@@ -67,6 +70,9 @@ public class DoorBehaviour : MonoBehaviour
 
         _doorTunnelOpenPos = transform.position;
         _doorTunnelClosePos = new Vector3(transform.position.x, transform.position.y - 2f, transform.position.z);
+
+        _doorTunnelHorizontalClosePos = transform.position;
+        _doorTunnelHorizontalOpenPos = new Vector3(transform.position.x - 10f, transform.position.y, transform.position.z);
 
     }
 
@@ -300,15 +306,15 @@ public class DoorBehaviour : MonoBehaviour
         }
 
         //Yellow
-        if (_isLevel4YellowDoorOpen)
+        if (_isLevel3YellowDoorOpen)
         {
-            if (transform.position != _doorOpenPos)
+            if (transform.position != _doorTunnelHorizontalOpenPos)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _doorTunnelHorizontalOpenPos, _doorSpeed * Time.deltaTime);
             }
-            if (transform.position == _doorOpenPos)
+            if (transform.position == _doorTunnelHorizontalOpenPos)
             {
-                _isLevel2YelllowDoorOpen = false;
+                _isLevel3YellowDoorOpen = false;
             }
             if (!_isOpenSoundPlayed)
             {
@@ -352,5 +358,24 @@ public class DoorBehaviour : MonoBehaviour
                 _isOpenSoundPlayed = true;
             }
         }
+
+        if (_isLevel5YellowDoorOpen)
+        {
+            if (transform.position != _doorTunnelHorizontalOpenPos)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _doorTunnelHorizontalOpenPos, _doorSpeed * Time.deltaTime);
+            }
+            if (transform.position == _doorTunnelHorizontalOpenPos)
+            {
+                _isLevel5YellowDoorOpen = false;
+            }
+            if (!_isOpenSoundPlayed)
+            {
+                AudioSource.clip = shutterOpenSound;
+                AudioSource.Play();
+                _isOpenSoundPlayed = true;
+            }
+        }
+
     }
 }

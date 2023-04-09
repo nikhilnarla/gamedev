@@ -2469,6 +2469,7 @@ MonoBehaviour:
   _isLevel4YellowDoorOpen: 0
   _isLevel4YellowDoorClose: 0
   _isLevel5GreenDoorOpen: 0
+  _isLevel5YellowDoorOpen: 0
   _isOpenSoundPlayed: 0
   _isClosedSoundPlayed: 0
   AudioSource: {fileID: 617693873}
@@ -6646,7 +6647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970135654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.188, y: -0.034, z: 0}
+  m_LocalPosition: {x: -0.0307, y: 0.412, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8273,7 +8274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170183384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2007359, y: 0.07638493, z: 0.012529}
+  m_LocalPosition: {x: -0.1028, y: 0.414, z: 0.012529}
   m_LocalScale: {x: 0.008029436, y: 0.18332385, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11708,11 +11709,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+--- !u!1 &1529537718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6655923179215677153, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
+  m_PrefabInstance: {fileID: 1529537717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1529537720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47, type: 3}
   m_PrefabInstance: {fileID: 1529537717}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1529537721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529537718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc93fd210da73452789a33174744a31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isDoorOpen: 0
+  _isDoorClose: 0
+  _isLevel1GreenDoorOpen: 0
+  _isLevel1GreenDoorClose: 0
+  _isLevel1GreenTunnel: 0
+  _isLevel1YellowTunnel: 0
+  _isLevel2YelllowDoorOpen: 0
+  _isLevel2GreenDoorOpen: 0
+  _isLevel2GreenDoorClose: 0
+  _isLevel3GreenDoorOpen: 0
+  _isLevel3GreenDoorClose: 0
+  _isLevel3YellowDoorOpen: 0
+  _isLevel3YellowDoorClose: 0
+  _isLevel4GreenDoorOpen: 0
+  _isLevel4GreenDoorClose: 0
+  _isLevel4YellowDoorOpen: 0
+  _isLevel4YellowDoorClose: 0
+  _isLevel5GreenDoorOpen: 0
+  _isLevel5YellowDoorOpen: 0
+  _isOpenSoundPlayed: 0
+  _isClosedSoundPlayed: 0
+  AudioSource: {fileID: 970135656}
+  shutterOpenSound: {fileID: 8300000, guid: 436c2ce80b04645c795367636f16d26d, type: 3}
+  shutterCloseSound: {fileID: 8300000, guid: 04361b0a71fa045a8a19453703e7301d, type: 3}
 --- !u!1 &1536402583
 GameObject:
   m_ObjectHideFlags: 0
@@ -15416,6 +15458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 1374213892}
+  dBL3YT: {fileID: 1529537721}
 --- !u!1001 &1969435825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16194,11 +16237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9032
+      value: -5.19
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7426
+      value: 10.17
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.z
