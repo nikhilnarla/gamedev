@@ -24,9 +24,13 @@ public class PlayerMovement5 : MonoBehaviour
     public bool showText = false;
     public bool flag = false;
     public GameObject frozenKey;
+    public GameObject lavaPlatform;
     public GameObject shootDialogue;
+    public GameObject rotatingPlatform;
 
     public DoorBehaviour dBL5GT;
+    public DoorBehaviour dBL5YT;
+
 
     public static bool isFacingRight;
     public static bool hasGun = false;
@@ -198,14 +202,6 @@ public class PlayerMovement5 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
-        if (other.gameObject.name == "EndGate2")
-        {
-            Destroy(GameObject.Find("EndGate2"));
-            analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
-            analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
         if (other.gameObject.name == "Tunnel6EndGate1")
         {
             Destroy(GameObject.Find("EndGate1"));
@@ -244,24 +240,32 @@ public class PlayerMovement5 : MonoBehaviour
             Destroy(GameObject.Find("LavaPLatformRightDisappearing"));
             Destroy(GameObject.Find("LavaPLatformLeft (1)"));
             //Destroy(GameObject.Find("LavaPLatformLeft (1)"));
+            lavaPlatform.SetActive(true);
             GameObject.Find("LavaPLatformLeft (2)").GetComponent<Renderer>().enabled = true;
         }
+
         //Open Green gate
         if (other.gameObject.name == "LavaKey")
         {
             Destroy(GameObject.Find("LavaKey"));
             dBL5GT._isLevel5GreenDoorOpen = true;
-
+            rotatingPlatform.SetActive(true);
+            GameObject.Find("RotatingPlatform1").GetComponent<Renderer>().enabled = true;
 
         }
         //Open Yellow gate
-        if (other.gameObject.name == "LavaKey (1)")
+        if (other.gameObject.name == "YellowGateKey")
         {
-            Destroy(GameObject.Find("LavaKey (1)"));
-            // dBL5GT._isLevel5YellownDoorOpen = true;
-
-
+            Destroy(GameObject.Find("YellowGateKey"));
+            dBL5YT._isLevel5YellowDoorOpen = true;
         }
+        if (other.gameObject.name == "EndGate2")
+        {
+            Destroy(GameObject.Find("EndGate2"));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+
+        
 
     }
 
