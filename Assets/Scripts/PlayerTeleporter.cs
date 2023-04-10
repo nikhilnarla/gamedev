@@ -27,6 +27,7 @@ public class PlayerTeleporter : MonoBehaviour
         {
             
             transform.position = portal1Spawn.position;
+            Debug.Log("poooooo");
             analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
         }
     }
