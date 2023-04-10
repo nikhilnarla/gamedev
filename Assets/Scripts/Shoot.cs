@@ -21,7 +21,6 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        Debug.Log(currentScene.name);
 
         if (PlayerMovement6.hasGun && Input.GetKeyDown(KeyCode.C))
         {

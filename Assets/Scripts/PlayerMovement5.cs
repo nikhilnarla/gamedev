@@ -75,23 +75,29 @@ public class PlayerMovement5 : MonoBehaviour
         {
             hasGun = true;
         }
-        // if (Input.GetAxis("Horizontal") != 0)
-        // {
-        //     inMotion = false;
-        //     rb.gravityScale = 1;
-        // }
 
-        // if (inMotion)
-        // {
-        //     rb.gravityScale = 0;
-        //     transform.position = Vector2.MoveTowards(transform.position, target, 30 * Time.deltaTime);
-        // }
+        if(rb.position.x > 0.9 && rb.position.x < 3.4)
+        {
+            float xPos = rb.position.x;
+            Debug.Log("Rigidbody X position is: " + xPos);
+            rb.gravityScale = -1;
+        }
+        else{
+            rb.gravityScale = 1;
+        }        
 
-        // if (target == new Vector2(rb.transform.position.x, rb.transform.position.y))
-        // {
-        //     rb.gravityScale = 1;
-        //     inMotion = false;
-        // }
+        if (inMotion)
+        {
+
+            rb.gravityScale = 0;
+            transform.position = Vector2.MoveTowards(transform.position, target, 30 * Time.deltaTime);
+        }
+
+        if (target == new Vector2(rb.transform.position.x, rb.transform.position.y))
+        {
+            rb.gravityScale = 1;
+            inMotion = false;
+        }
 
 
         Flip();
@@ -122,6 +128,7 @@ public class PlayerMovement5 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         flag = false;
+
         //Tunnel Brown Door
         if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
         {
@@ -138,10 +145,9 @@ public class PlayerMovement5 : MonoBehaviour
             GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
             GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
         }
-
-        if (other.gameObject.name == ("Tile 2") || other.gameObject.name == ("Top"))
+        
+        if (other.gameObject.name.Equals("Tile 2"))
         {
-            analyticsManager.SendEvent("LEVEL1 JUMP PAD INTERACTED");
             inMotion = true;
             target = other.gameObject.GetComponent<JumpingPadScript>().target;
         }
