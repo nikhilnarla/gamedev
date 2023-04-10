@@ -16281,7 +16281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386686, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LinearDrag
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
