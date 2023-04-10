@@ -201,12 +201,12 @@ public class PlayerMovement5 : MonoBehaviour
             frozenKey.SetActive(true);
             GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
         }
-        if (other.gameObject.name == "EndGate1")
+        if (other.gameObject.name == "ExitGreenTunnelLevel7")
         {
-            Destroy(GameObject.Find("EndGate1"));
-            analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
-            analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
+            //analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
+            //analyticsManager.SendEvent("LEVEL6 GAMEEND");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (other.gameObject.name == "Tunnel6EndGate1")
         {
