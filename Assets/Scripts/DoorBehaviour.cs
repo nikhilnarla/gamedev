@@ -290,6 +290,24 @@ public class DoorBehaviour : MonoBehaviour
             }
         }
 
+        if (_isLevel4YellowDoorOpen)
+        {
+            if (transform.position != _doorOpenPos)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
+            }
+            if (transform.position == _doorOpenPos)
+            {
+                _isLevel4YellowDoorOpen = false;
+            }
+            if (!_isOpenSoundPlayed)
+            {
+                AudioSource.clip = shutterOpenSound;
+                AudioSource.Play();
+                _isOpenSoundPlayed = true;
+            }
+        }
+
         if (_isLevel4GreenDoorClose)
         {
             if (transform.position != _doorClosedPos)
@@ -304,6 +322,8 @@ public class DoorBehaviour : MonoBehaviour
                 _isClosedSoundPlayed = true;
             }
         }
+
+
 
         //Yellow
         if (_isLevel3YellowDoorOpen)
