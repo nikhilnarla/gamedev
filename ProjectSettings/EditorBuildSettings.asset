@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial1.unity
     guid: 34755351445e34e5db81d6924f59e262
   - enabled: 1
+    path: Assets/Scenes/TutorialTunnel.unity
+    guid: a89a9855710a54cbaa1bb0b0a336447d
+  - enabled: 1
     path: Assets/Scenes/Rooms.unity
     guid: 5bc4ef8d35ac748a7bc013e249e36fa9
   - enabled: 1

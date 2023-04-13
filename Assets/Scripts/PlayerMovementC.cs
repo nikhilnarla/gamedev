@@ -22,6 +22,7 @@ public class PlayerMovementC : MonoBehaviour
     public static bool eventLevelFlag = false;
     public static bool flag = false;
     public GameObject dialogue;
+    public GameObject tunnelDialogue;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -108,6 +109,16 @@ public class PlayerMovementC : MonoBehaviour
                jump = 5f;
                speed = 8f;
 
+        }
+
+        if(other.gameObject.name.Equals("BlindSpotEnter")) {
+            Destroy(GameObject.Find("BlindSpotEnter"));
+            tunnelDialogue.SetActive(true);
+        }
+
+        if(other.gameObject.name.Equals("BlindSpotExit")) {
+            Destroy(GameObject.Find("BlindSpotExit"));
+            tunnelDialogue.SetActive(false);
         }
 
         // if(other.gameObject.tag== ("Trap (1)") ||  other.gameObject.tag == ("Traps (2)")  || other.gameObject.tag == ("Traps") ){
@@ -198,7 +209,7 @@ public class PlayerMovementC : MonoBehaviour
         if (other.gameObject.name == ("EndGameYellow"))
         {
             Debug.Log("Level 2 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            SceneManager.LoadScene("Level2YellowTunnel");
             //Analytics event - key Collected
             analyticsManager.SendEvent("LEVEL3 YELLOW GATE USED");
              //Desctroying end block so player can pass
@@ -210,7 +221,7 @@ public class PlayerMovementC : MonoBehaviour
         if (other.gameObject.name == ("EndGameGreen"))
         {
             Debug.Log("Level 2 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene("Level2GreenTunnel");
             //Analytics event - key Collected
             analyticsManager.SendEvent("LEVEL3 GREEN GATE USED");
              //Desctroying end block so player can pass

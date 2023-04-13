@@ -7,6 +7,8 @@ public class SafeSpace : MonoBehaviour
     public GameObject Player;
     Rigidbody m_Rigidbody;
     Collider m_ObjectCollider;
+
+    public GameObject tunnelDialogue;
     //Renderer rend;
 
 
@@ -22,6 +24,7 @@ public class SafeSpace : MonoBehaviour
          if(col.gameObject.name == ("Player") || col.gameObject.name == ("Capsule") ){
           //Debug.Log("PLAYER FOUND IN SAFE SPACE 1");
           Physics2D.IgnoreLayerCollision(9,10,true);
+          tunnelDialogue.SetActive(false);
           //Color customColor = new Color(0.3f, 0.9f, 0.1f, 1.0f);
           //rend.material.color = customColor;
          }
@@ -33,6 +36,7 @@ public class SafeSpace : MonoBehaviour
           //Debug.Log("PLAYER FOUND IN SAFE SPACE 1");
           Physics2D.IgnoreLayerCollision(9,10,false);
           //rend.material.SetColor("_Color", Color.white);
+          tunnelDialogue.SetActive(true);
          }
     }
 

@@ -49,7 +49,7 @@ public class PlayerTutorial : MonoBehaviour
 
 
         //dialogue.SetActive(true);
-        StartCoroutine(WaitAndDisappearPanel(3f));
+        StartCoroutine(WaitAndDisappearPanel(5f));
     }
 
     void Update()
@@ -80,7 +80,7 @@ public class PlayerTutorial : MonoBehaviour
         if (Input.GetKey("i"))
         {
             dialogue.SetActive(true);
-            StartCoroutine(WaitAndDisappearDialogue(3f));
+            StartCoroutine(WaitAndDisappearDialogue(5f));
         }
     }
 
@@ -137,6 +137,7 @@ public class PlayerTutorial : MonoBehaviour
             jump = 8f;
         }
 
+
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -175,7 +176,7 @@ public class PlayerTutorial : MonoBehaviour
         yield return new WaitForSeconds(2f);
         endPanel.SetActive(true);
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene("TutorialTunnel");
     }
 
 

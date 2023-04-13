@@ -25,6 +25,7 @@ public class PlayerMovement6 : MonoBehaviour
     public bool flag = false;
     public GameObject frozenKey;
     public GameObject shootDialogue;
+    public GameObject tunnelDialogue;
 
     public DoorBehaviour dBL3GT;
 
@@ -156,6 +157,16 @@ public class PlayerMovement6 : MonoBehaviour
 
         }
 
+        if(other.gameObject.name.Equals("BlindSpotEnter")) {
+            Destroy(GameObject.Find("BlindSpotEnter"));
+            tunnelDialogue.SetActive(true);
+        }
+
+        if(other.gameObject.name.Equals("BlindSpotExit")) {
+            Destroy(GameObject.Find("BlindSpotExit"));
+            tunnelDialogue.SetActive(false);
+        }
+
         if (other.gameObject.name == "SuperKey")
         {
             Destroy(GameObject.Find("SuperKey"));
@@ -179,14 +190,14 @@ public class PlayerMovement6 : MonoBehaviour
             Destroy(GameObject.Find("EndGate1"));
             analyticsManager.SendEvent("LEVEL6 USED GREEN GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("Level3YellowTunnel");
         }
         if (other.gameObject.name == "EndGate2")
         {
             Destroy(GameObject.Find("EndGate2"));
             analyticsManager.SendEvent("LEVEL6 USED YELLOW GATE TUNNEL");
             analyticsManager.SendEvent("LEVEL6 GAMEEND");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level3GreenTunnel");
         }
 
         if (other.gameObject.name == "Tunnel6EndGate1")
