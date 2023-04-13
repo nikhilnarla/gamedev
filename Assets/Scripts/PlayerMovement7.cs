@@ -185,7 +185,7 @@ public class PlayerMovement7 : MonoBehaviour
        
         if (other.gameObject.name == "YellowTunnelEntry")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level4YellowTunnel");
             Destroy(GameObject.Find("YellowTunnelEntry"));
             analyticsManager.SendEvent("LEVEL7 PLAYER ENTERED Yellow TUNNEL");
             closedGate.SetActive(true);
@@ -193,7 +193,7 @@ public class PlayerMovement7 : MonoBehaviour
         //Enter into Green Tunnel
         if (other.gameObject.name == "GreenTunnelEntry")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("Level4GreenTunnel");
             Destroy(GameObject.Find("GreenTunnelEntry"));
             analyticsManager.SendEvent("LEVEL7 PLAYER ENTERED GREEN TUNNEL");
             closedGate.SetActive(true);

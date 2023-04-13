@@ -3,35 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - GateKey
-  - KeyFinder
-  - Sharp
-  - Trap
-  - LavaParticle
-  - Bullet
-  - BlackPortal
-  - Tile
-  - Wall
-  - TunnelGreenTrap
-  - TunnelYellowTrap
-  - TunnelLaser
-  - Laser
-  - TunnelEnemy
-  - Zipline
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Button
-  - Bridge Tile
-  - Lava
-  - TunnelEnemyLayer
-  - SafeLayer
+  - 
+  - 
+  - Platforms
+  - 
+  - 
   - 
   - 
   - 
@@ -57,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 2855655295
+  - name: Perspective
+    uniqueID: 3420322187
+    locked: 0
+  - name: Top
+    uniqueID: 282671577
     locked: 0

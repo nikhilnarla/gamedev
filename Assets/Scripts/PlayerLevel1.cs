@@ -112,9 +112,10 @@ public class PlayerLevel1 : MonoBehaviour
 
             GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
             GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+        }
 
-            
-
+        if(other.gameObject.name.Equals("TunnelEnd")) {
+            SceneManager.LoadScene("Menu");
         }
 
         if (other.gameObject.name.Equals("Bottom"))
@@ -225,7 +226,7 @@ public class PlayerLevel1 : MonoBehaviour
         if (other.gameObject.name == ("EndGate1"))
         {
             Debug.Log("Level 1 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene("Level1YellowTunnel");
             Destroy(GameObject.Find("EndGate1"));
 
             analyticsManager.SendEvent("LEVEL1 YELLOW GATE USED");
@@ -252,7 +253,7 @@ public class PlayerLevel1 : MonoBehaviour
         if (other.gameObject.name == ("EndGate2"))
         {
             Debug.Log("Level 1 End");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
+            SceneManager.LoadScene("Level1GreenTunnel");
             Destroy(GameObject.Find("EndGate2"));
 
             
