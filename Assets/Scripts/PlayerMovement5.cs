@@ -242,9 +242,12 @@ public class PlayerMovement5 : MonoBehaviour
         //Lava Key
         if (other.gameObject.name == "LavaButton")
         {
+
             Destroy(GameObject.Find("LavaPLatformLeftDisappearing"));
             Destroy(GameObject.Find("LavaPLatformRightDisappearing"));
             Destroy(GameObject.Find("LavaPLatformLeft (1)"));
+            Destroy(GameObject.Find("LavaPLatformLeftDisappearing"));
+
             //Destroy(GameObject.Find("LavaPLatformLeft (1)"));
             lavaPlatform.SetActive(true);
             GameObject.Find("LavaPLatformLeft (2)").GetComponent<Renderer>().enabled = true;
@@ -293,6 +296,7 @@ public class PlayerMovement5 : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
