@@ -28,6 +28,11 @@ public class PlayerTutorial : MonoBehaviour
     public GameObject panel;
     public GameObject endPanel;
 
+    public GameObject gate;
+    private Vector2 movePosition;
+    public GameObject moveGate;
+
+
     public TextMeshPro text;
 
     public AnalyticsManager analyticsManager;
@@ -45,8 +50,8 @@ public class PlayerTutorial : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         transition = GameObject.Find("Canvas").GetComponent<Animator>();
-
-
+        movePosition = moveGate.transform.position;
+ 
 
         //dialogue.SetActive(true);
         StartCoroutine(WaitAndDisappearPanel(5f));
@@ -108,8 +113,14 @@ public class PlayerTutorial : MonoBehaviour
         if(other.gameObject.name.Equals("Key"))
         {
             Destroy(GameObject.Find("Key"));
-            StartCoroutine(WaitAndEnd(3f));
+            gate.transform.position = Vector2.MoveTowards( movePosition, transform.position, 0.00001f * Time.deltaTime);
+            // StartCoroutine(WaitAndEnd(3f));
 
+        }
+
+        if(other.gameObject.name.Equals("EndGate")) {
+            Destroy(GameObject.Find("EndGate"));
+            SceneManager.LoadScene("TutorialTunnel");    
         }
 
         if (other.gameObject.name == ("Top"))
