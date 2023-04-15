@@ -25,7 +25,7 @@ public class TutorialMovingBlock : MonoBehaviour
             box.transform.position = Vector2.MoveTowards( target, transform.position, 0.00001f * Time.deltaTime);
         }
 
-        if(collision.gameObject.name.Equals("Button 1"))
+        if(collision.gameObject.name.Equals("Button"))
         {
             AddGravityToTiles();
             jumpPad.SetActive(true);
@@ -38,7 +38,7 @@ public class TutorialMovingBlock : MonoBehaviour
     void AddGravityToTiles()
     {
         Rigidbody2D tile = null;
-        for (int i = 1; i < 5; i += 1)
+        for (int i = 0; i < 5; i += 1)
         {
             tile = GameObject.Find("Tile" + i).GetComponent<Rigidbody2D>();
             tile.constraints = RigidbodyConstraints2D.None;
