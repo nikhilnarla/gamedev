@@ -1675,6 +1675,16 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!1 &243043959
@@ -1868,7 +1878,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300218, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
+  m_Sprite: {fileID: 21300190, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
   m_FlipX: 0
   m_FlipY: 0
@@ -6004,8 +6014,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146690512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0.12000004, z: 0}
-  m_LocalScale: {x: 0.7537076, y: 0.10837896, z: 1}
+  m_LocalPosition: {x: 0.7907, y: 0.14534, z: 0}
+  m_LocalScale: {x: 0.7349656, y: 0.057694454, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1676596432}
@@ -7807,8 +7817,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676596431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69429994, y: 0.34743178, z: 0}
-  m_LocalScale: {x: 0.012523109, y: 0.36996093, z: 1}
+  m_LocalPosition: {x: -0.691647, y: 0.34743178, z: 0}
+  m_LocalScale: {x: 0.007217118, y: 0.36996093, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146690513}
@@ -7884,7 +7894,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.6886792, g: 0.1786668, b: 0.1786668, a: 1}
+  m_Color: {r: 0.50980395, g: 0.14117648, b: 0.21568629, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
