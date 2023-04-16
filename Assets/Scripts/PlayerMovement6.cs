@@ -27,6 +27,7 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject shootDialogue;
     public GameObject tunnelDialogue;
     public Transform CannonSpawnPoint;
+    public GameObject player;
 
     public DoorBehaviour dBL3GT;
 
@@ -107,7 +108,9 @@ public class PlayerMovement6 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         //Kill by Cannon Gun
-        if (other.gameObject.name.Equals("Bullet 2")) {
+        if (other.gameObject.CompareTag("CannonBullet"))
+        {
+            Debug.Log("KILLED");
             rb.gameObject.transform.position = CannonSpawnPoint.position;
         }
 
