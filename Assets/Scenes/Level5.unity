@@ -3878,9 +3878,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &229275488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4948,9 +4953,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &289805809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7022,9 +7032,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &472350285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9746,9 +9761,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &622609722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12234,8 +12254,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12285,7 +12305,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa,
+  m_Sprite: {fileID: 5297247701428631304, guid: c25eabb1e181a4697b56f922317af123,
     type: 3}
   m_Color: {r: 0.2784314, g: 1, b: 0.19215688, a: 1}
   m_FlipX: 0
@@ -12304,14 +12324,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821229056}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7066163, w: 0.707597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.0290084, y: 0.8469267, z: 19.512947}
   m_LocalScale: {x: 1.0607492, y: 1.088075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 941941703}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &828040295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8907577791732632675, guid: 3cf0cb3d3a08e45c182bf3336ba8f5ed,
@@ -14298,9 +14318,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &948445894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15210,9 +15235,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &976894323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15594,9 +15624,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1001929344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16154,8 +16189,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16205,7 +16240,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa,
+  m_Sprite: {fileID: -2306229432983995031, guid: c25eabb1e181a4697b56f922317af123,
     type: 3}
   m_Color: {r: 1, g: 0.9019677, b: 0.18396229, a: 1}
   m_FlipX: 0
@@ -16224,14 +16259,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029056063}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7066163, w: 0.707597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.293699, y: 4.4587164, z: 19.512947}
   m_LocalScale: {x: 1.0607492, y: 1.088075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1261266369}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1031044970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18248,9 +18283,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1100744607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22431,9 +22471,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1281737949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23525,9 +23570,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1344432307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24153,9 +24203,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1396479554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27601,9 +27656,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1685367359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29523,9 +29583,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1787410623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30726,9 +30791,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1843699232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32134,9 +32204,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1920206077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32869,9 +32944,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 1
   TunnelSpawnPoint: {fileID: 0}
   analyticsManager: {fileID: 0}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!114 &1944538207
 MonoBehaviour:
   m_ObjectHideFlags: 0
