@@ -10486,7 +10486,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee,
+  m_Sprite: {fileID: -9095717837082945937, guid: a6080695d4f604d999f088827b2944b5,
     type: 3}
   m_Color: {r: 0.9433962, g: 0.09344962, b: 0.09344962, a: 1}
   m_FlipX: 0
@@ -10507,7 +10507,7 @@ Transform:
   m_GameObject: {fileID: 1088403617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.800003, y: -4.04, z: -0.07214244}
-  m_LocalScale: {x: 1.5361328, y: 1.2182577, z: 1}
+  m_LocalScale: {x: 1.977771, y: 1.3735856, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 539953770}
@@ -10527,9 +10527,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  currSpeed: 0
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 9220673}
   analyticsManager: {fileID: 1374213892}
+  bulletHitTime: 0
+  fastSpeed: 9
 --- !u!50 &1088403621
 Rigidbody2D:
   serializedVersion: 4
@@ -10564,8 +10567,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.10378017}
-  m_Size: {x: 1, y: 2.2075598}
+  m_Offset: {x: -0.0000004821965, y: -0.10378017}
+  m_Size: {x: 1.0645713, y: 2.2075598}
   m_Direction: 0
 --- !u!1001 &1093229855
 PrefabInstance:
@@ -13828,7 +13831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583532078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.377418, y: 0.31000012, z: -5}
+  m_LocalPosition: {x: 15.140622, y: 0.31000012, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

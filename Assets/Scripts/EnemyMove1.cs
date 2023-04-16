@@ -7,26 +7,47 @@ using UnityEngine.SceneManagement;
 public class EnemyMove1 : MonoBehaviour
 {
      public float speed;
+     public float currSpeed;
      public bool MoveRight = false;
      public Transform TunnelSpawnPoint;
      public AnalyticsManager analyticsManager;
+     public float bulletHitTime = 0.0f;
+     public float fastSpeed;
+
+    private void Start()
+    {
+        currSpeed = speed;
+    }
 
     // Update is called once per frame
     void Update()
     {
         if(MoveRight){
-           transform.Translate(2*Time.deltaTime * speed,0,0);
+           transform.Translate(2*Time.deltaTime * currSpeed, 0,0);
            //transform.localScale = new Vector2(2,1);
            //MoveRight = false;
         }
         else{
-           transform.Translate(-2*Time.deltaTime * speed,0,0);
+           transform.Translate(-2*Time.deltaTime * currSpeed, 0,0);
            //transform.localScale = new Vector2(-2,1);
            //MoveRight = true;
         }
     }
 
+    public void ActivateFastSpeed() {
+        currSpeed = fastSpeed;
+    }
+
+    public void ActivateSlowSpeed() {
+        currSpeed = speed;
+    }
+
     private void OnCollisionEnter2D(Collision2D col){
+        //If bullet Hit
+        if (col.gameObject.tag == ("Bullet1")) {
+            Debug.Log("Bullet Hit");
+            Debug.Log("BUllet hit time"+bulletHitTime);
+        }
         if(col.gameObject.name == ("LeftEnd")){
           MoveRight = true;
         }

@@ -1577,7 +1577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154735586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.43, y: -2.526, z: 25.202988}
+  m_LocalPosition: {x: 19.72, y: 2.26, z: 25.202988}
   m_LocalScale: {x: 0.46285102, y: 1.4284887, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4710,7 +4710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557708005}
   m_LocalRotation: {x: -0, y: -0, z: -0.7066163, w: 0.707597}
-  m_LocalPosition: {x: 8.58, y: 1.47, z: 25.202988}
+  m_LocalPosition: {x: 19.05, y: 2.37, z: 25.202988}
   m_LocalScale: {x: 0.5686389, y: 0.6927418, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5221,6 +5221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  tunnelDialogue: {fileID: 0}
 --- !u!1001 &607430813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6067,6 +6068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1027037798}
+  tunnelDialogue: {fileID: 0}
 --- !u!61 &713061277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8672,6 +8674,7 @@ MonoBehaviour:
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 9220673}
   analyticsManager: {fileID: 1374213892}
+  bulletHitTime: 0
 --- !u!50 &1088403621
 Rigidbody2D:
   serializedVersion: 4
@@ -12954,6 +12957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1027037798}
+  tunnelDialogue: {fileID: 0}
 --- !u!61 &1505754875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14774,6 +14778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1027037798}
+  tunnelDialogue: {fileID: 0}
 --- !u!1 &1708802470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4611556207800502033, guid: b28c255843a0e4f3583c3eb9c964d83e,
@@ -18224,12 +18229,12 @@ PrefabInstance:
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: 18.73
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
