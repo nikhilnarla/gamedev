@@ -10531,8 +10531,12 @@ MonoBehaviour:
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 9220673}
   analyticsManager: {fileID: 1374213892}
-  bulletHitTime: 0
-  fastSpeed: 9
+  fastSpeed: 13
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: -9095717837082945937, guid: d41953bac11f44ca286c0487646344fc,
+    type: 3}
+  normalFaceSprite: {fileID: -9095717837082945937, guid: a6080695d4f604d999f088827b2944b5,
+    type: 3}
 --- !u!50 &1088403621
 Rigidbody2D:
   serializedVersion: 4

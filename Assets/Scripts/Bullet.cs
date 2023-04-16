@@ -22,12 +22,14 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("BulletHIT FLAG"+bulletHitTunnelEnemy);
+        ////Debug.Log("BulletHIT FLAG"+bulletHitTunnelEnemy);
         //Debug.Log("Time Elapsed"+(Time.time - bulletHitStartTime));
-        if ((Time.time - bulletHitStartTime) > 4.0){
-            //Increase speed of Tunnel Enemy.
-            TunnelEnemy.ActivateSlowSpeed();
-        }
+        //if ((Time.time - bulletHitStartTime) > 2.0){
+        //    //Increase speed of Tunnel Enemy.
+        //    Debug.Log("ACTIAVTE SLOW");
+        //    TunnelEnemy.ActivateSlowSpeed();
+        //    this.bulletHitTunnelEnemy = false;
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -47,13 +49,13 @@ public class Bullet : MonoBehaviour
         // }
         else if (other.gameObject.CompareTag("TunnelEnemy")) {
             //Debug.Log("Hit Tunnel Enemy");
-            this.bulletHitStartTime = Time.deltaTime;
-            if (!bulletHitTunnelEnemy) {
-                TunnelEnemy.ActivateFastSpeed();
-            }
-            this.bulletHitTunnelEnemy = true;
+            TunnelEnemy.BulletHit();
 
-            
+            //this.bulletHitStartTime = Time.deltaTime;
+            //if (!bulletHitTunnelEnemy) {
+            //    TunnelEnemy.ActivateFastSpeed();
+            //}
+            //this.bulletHitTunnelEnemy = true;
             Destroy(gameObject);
         }
     }
