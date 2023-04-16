@@ -26,6 +26,7 @@ public class PlayerLevel1 : MonoBehaviour
     public DoorBehaviour doorBehaviourLevel1Green;
     public DoorBehaviour dBL1GT;
     public DoorBehaviour dBL1YT;
+    public DoorBehaviour dbTutorialLevel;
 
     public GameObject getKeyDialogue;
 
@@ -86,7 +87,9 @@ public class PlayerLevel1 : MonoBehaviour
         {
             dBL1YT._isLevel1YellowTunnel = true;
         }
-
+        if (SceneManager.GetActiveScene().name == "TutorialTunnel"){
+            dbTutorialLevel._isTutorialLevel = true;
+        }
     }
 
     private bool IsGrounded()
