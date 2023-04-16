@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272676721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.4162, y: 3.87, z: -0.058}
+  m_LocalPosition: {x: -17.8, y: 3.8, z: -0.058}
   m_LocalScale: {x: 2.075, y: 2.075, z: 2.075}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2291,7 +2291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289474199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8478, y: 3.87, z: -0.058}
+  m_LocalPosition: {x: 7.8, y: 4, z: -0.058}
   m_LocalScale: {x: 1.8875, y: 1.8875, z: 1.8875}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5217,18 +5217,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.014870048, y: 0.18095586}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.28125, y: 1.03125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25569654, y: 0.33331245}
   m_EdgeRadius: 0
 --- !u!50 &695826764
 Rigidbody2D:
@@ -5292,8 +5292,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 21300038, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 0.27835733, g: 1, b: 0.19215685, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5312,8 +5311,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695826762}
   m_LocalRotation: {x: -0, y: -0, z: 0.0003667915, w: 1}
-  m_LocalPosition: {x: 23.88, y: 8.2151, z: -0.21381061}
-  m_LocalScale: {x: 1.1885189, y: 5.412324, z: 1}
+  m_LocalPosition: {x: 23.9, y: 5.4, z: -0.21381061}
+  m_LocalScale: {x: 6.9626555, y: 16.324076, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 196804297}
@@ -5334,6 +5333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0
@@ -5403,6 +5404,7 @@ MonoBehaviour:
   doorBehaviourLevel1Green: {fileID: 695826767}
   dBL1GT: {fileID: 0}
   dBL1YT: {fileID: 0}
+  dbTutorialLevel: {fileID: 0}
   getKeyDialogue: {fileID: 588280432}
   analyticsManager: {fileID: 609870355}
   rb: {fileID: 740502426}
@@ -6693,18 +6695,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000011920929, y: 0.28891516}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.28125, y: 1.03125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2650311, y: 0.4221697}
   m_EdgeRadius: 0
 --- !u!50 &1105499467
 Rigidbody2D:
@@ -6768,8 +6770,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 21300038, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 1, g: 0.93406713, b: 0.19215685, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6788,8 +6789,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105499465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.4, y: 8.0536, z: -0.21381061}
-  m_LocalScale: {x: 1.114799, y: 4.9383335, z: 1}
+  m_LocalPosition: {x: -17.4, y: 4.3, z: -0.21381061}
+  m_LocalScale: {x: 7.0512953, y: 12.556408, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1691431548}
@@ -6810,6 +6811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0

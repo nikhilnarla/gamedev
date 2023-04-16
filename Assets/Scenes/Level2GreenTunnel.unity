@@ -3606,7 +3606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.053055, y: -15.759996, z: -19.927858}
+  m_LocalPosition: {x: 51.719696, y: -15.759996, z: -19.927858}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7347,8 +7347,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556654735}
   m_LocalRotation: {x: -0, y: -0, z: 0.0003667915, w: 1}
-  m_LocalPosition: {x: 46.3, y: -18.3516, z: 0}
-  m_LocalScale: {x: 1.1147989, y: 8.726112, z: 1}
+  m_LocalPosition: {x: 46.3, y: -21.69, z: 0}
+  m_LocalScale: {x: 5.5905523, y: 11.485745, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7367,18 +7367,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000009059906, y: 0.40711427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.28125, y: 1.03125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2712431, y: 0.78232574}
   m_EdgeRadius: 0
 --- !u!50 &556654738
 Rigidbody2D:
@@ -7442,8 +7442,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 21300038, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 0.27835733, g: 1, b: 0.19215685, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7468,6 +7467,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0
@@ -16047,7 +16048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300124, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21311,9 +21312,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  currSpeed: 0
   MoveRight: 0
   TunnelSpawnPoint: {fileID: 2055542815}
   analyticsManager: {fileID: 25129226}
+  fastSpeed: 0
+  TunnelEnemy_SpriteRenderer: {fileID: 0}
+  angrySprite: {fileID: 0}
+  normalFaceSprite: {fileID: 0}
 --- !u!212 &1563088367
 SpriteRenderer:
   m_ObjectHideFlags: 0

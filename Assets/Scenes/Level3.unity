@@ -445,8 +445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30361916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1863, y: 4.3735, z: 0.063156575}
-  m_LocalScale: {x: 2.6668983, y: 2.4013908, z: 1}
+  m_LocalPosition: {x: -1.4, y: 4.23, z: 0.063156575}
+  m_LocalScale: {x: 2.6668983, y: 2.9341993, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 220080450}
@@ -3053,6 +3053,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300038, guid: 7810966f0f690954c87305933cabf2b0,
+        type: 3}
+    - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
       propertyPath: m_Color.b
       value: 0.19215687
       objectReference: {fileID: 0}
@@ -3074,12 +3080,12 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.31569988
+      value: 2.0569496
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 62.34375
+      value: 47.53711
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -3159,6 +3165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0
@@ -12697,12 +12705,12 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.155
+      value: 8.693938
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.5553613
+      value: 6.833042
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -12712,7 +12720,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.323
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -14711,13 +14719,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300034, guid: 7810966f0f690954c87305933cabf2b0,
+        type: 3}
+    - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
       propertyPath: m_Color.b
-      value: 0.19215687
+      value: 0.2216981
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.93333334
+      value: 0.9357713
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -14732,17 +14746,17 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.906683
+      value: 6.122127
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 7.195344
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 124.6
+      value: 116.2
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -14817,6 +14831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0
@@ -19976,12 +19992,12 @@ PrefabInstance:
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.64
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.77
+      value: -2.96
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386684, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}

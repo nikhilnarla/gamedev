@@ -5805,6 +5805,47 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.22146559
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.49341357
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.25329322
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.28125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300038, guid: 7810966f0f690954c87305933cabf2b0,
+        type: 3}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_Color.b
@@ -5828,12 +5869,12 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75265265
+      value: 3.8563228
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.303348
+      value: 9.877485
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -5843,7 +5884,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -5913,6 +5954,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isDoorOpen: 0
   _isDoorClose: 0
+  _isTutorialLevel: 0
+  _isTutorialLevleYellowDoor: 0
   _isLevel1GreenDoorOpen: 0
   _isLevel1GreenDoorClose: 0
   _isLevel1GreenTunnel: 0
@@ -10396,7 +10439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.965797, y: -9.1, z: -10}
+  m_LocalPosition: {x: 32.456924, y: -9.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
