@@ -26,6 +26,7 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject frozenKey;
     public GameObject shootDialogue;
     public GameObject tunnelDialogue;
+    public Transform CannonSpawnPoint;
 
     public DoorBehaviour dBL3GT;
 
@@ -105,6 +106,11 @@ public class PlayerMovement6 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //Kill by Cannon Gun
+        if (other.gameObject.name.Equals("Bullet 2")) {
+            rb.gameObject.transform.position = CannonSpawnPoint.position;
+        }
+
         flag = false;
         //Tunnel Brown Door
         if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
