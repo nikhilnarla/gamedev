@@ -31,6 +31,7 @@ public class PlayerTutorial : MonoBehaviour
     public GameObject gate;
     private Vector2 movePosition;
     public GameObject moveGate;
+    public DoorBehaviour dbTL;
 
 
     public TextMeshPro text;
@@ -113,7 +114,8 @@ public class PlayerTutorial : MonoBehaviour
         if(other.gameObject.name.Equals("Key"))
         {
             Destroy(GameObject.Find("Key"));
-            gate.transform.position = Vector2.MoveTowards( movePosition, transform.position, 0.00001f * Time.deltaTime);
+            dbTL._isTutorialLevleYellowDoor = true;
+            //gate.transform.position = Vector2.MoveTowards( movePosition, transform.position, 0.00001f * Time.deltaTime);
             // StartCoroutine(WaitAndEnd(3f));
 
         }
