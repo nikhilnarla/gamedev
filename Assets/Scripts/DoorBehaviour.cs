@@ -9,7 +9,8 @@ public class DoorBehaviour : MonoBehaviour
     public bool _isDoorClose = false;
 
     //Level1 Tutorial Level
-    public bool _isTutorialLevel = false;
+    public bool _isTutorialLevel = false; //Tunnel Yellow Gate close.
+    public bool _isTutorialLevleYellowDoor = false;
 
     //Level1 Green gate
     public bool _isLevel1GreenDoorOpen = false;
@@ -84,7 +85,7 @@ public class DoorBehaviour : MonoBehaviour
     private void Update()
     {
         //Debug.Log("DOOR STAT\n" + _isDoorOpen);
-        //TutoalTunnel.
+        //TutorialTunnel.
         if (_isTutorialLevel)
         {
             if (transform.position != _doorTunnelClosePos)
@@ -97,6 +98,20 @@ public class DoorBehaviour : MonoBehaviour
                 AudioSource.clip = shutterCloseSound;
                 AudioSource.Play();
                 _isClosedSoundPlayed = true;
+            }
+        }
+        //Tutorial Level Yellow Level.
+        if (_isTutorialLevleYellowDoor)
+        {
+            if (transform.position != _doorTunnelHorizontalOpenPos)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, _doorTunnelHorizontalOpenPos, _doorSpeed * Time.deltaTime);
+            }
+            if (!_isOpenSoundPlayed)
+            {
+                AudioSource.clip = shutterOpenSound;
+                AudioSource.Play();
+                _isOpenSoundPlayed = true;
             }
         }
 
