@@ -106,6 +106,12 @@ public class PlayerMovement5 : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+
+        if(GameObject.Find("Image (1)").GetComponent<RectTransform>().position.y < 4)
+        {
+            float x = GameObject.Find("Image (1)").GetComponent<RectTransform>().position.x;
+            GameObject.Find("Image (1)").GetComponent<RectTransform>().position = new Vector2(x, 0);
+        }
     }
 
     void Flip()
@@ -294,6 +300,7 @@ public class PlayerMovement5 : MonoBehaviour
         {
 
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+            GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = Color.green;
         }
     }
 
@@ -303,6 +310,7 @@ public class PlayerMovement5 : MonoBehaviour
         if (other.gameObject.tag.Equals("Zipline"))
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = new Color(0.823f, 0.706f, 0.549f);
         }
     }
 
