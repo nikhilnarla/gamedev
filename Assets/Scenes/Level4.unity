@@ -10302,7 +10302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.101604, y: -5.3799987, z: -10}
+  m_LocalPosition: {x: 8.595242, y: -5.3799987, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13865,7 +13865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1e66b5aba4e48888dabdeca7f85cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 18
+  Range: 16
   Target: {fileID: 711868991}
   AlarmLight: {fileID: 1312976154}
   Gun: {fileID: 839549794}
