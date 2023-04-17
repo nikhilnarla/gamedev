@@ -29,6 +29,7 @@ public class PlayerMovement7 : MonoBehaviour
     public float freezeTime = 1.60f;
     public Transform TunnelSpawnPoint;
     public Transform TunnelSpawnPoint2;
+    public Transform CannonSpawnPoint1;
 
     public float fallingSpeed = 1000f;
 
@@ -106,6 +107,12 @@ public class PlayerMovement7 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //Kill by Cannon Gun
+        if (other.gameObject.CompareTag("CannonBullet"))
+        {
+            //Debug.Log("KILLED");
+            rb.gameObject.transform.position = CannonSpawnPoint1.position;
+        }
         //Tunnel Brown Door
         if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
         {

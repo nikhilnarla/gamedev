@@ -110,7 +110,7 @@ public class PlayerMovement6 : MonoBehaviour
         //Kill by Cannon Gun
         if (other.gameObject.CompareTag("CannonBullet"))
         {
-            Debug.Log("KILLED");
+            //Debug.Log("KILLED");
             rb.gameObject.transform.position = CannonSpawnPoint.position;
         }
 
