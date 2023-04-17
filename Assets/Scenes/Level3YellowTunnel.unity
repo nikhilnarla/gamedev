@@ -11416,7 +11416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464520475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.5591, y: -0.886, z: 0}
+  m_LocalPosition: {x: 24.5591, y: -0.897, z: 0}
   m_LocalScale: {x: 8.434551, y: 0.7445431, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15431,7 +15431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592096858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -1.233, z: 0}
+  m_LocalPosition: {x: 0.5, y: -1.231, z: 0}
   m_LocalScale: {x: 11.070233, y: 1.4192777, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31834,7 +31834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270765707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.2, y: -1.231, z: 0}
+  m_LocalPosition: {x: 4.22, y: -1.231, z: 0}
   m_LocalScale: {x: 11.070233, y: 1.4192777, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40538,8 +40538,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -45995,17 +45995,17 @@ PrefabInstance:
     - target: {fileID: 1667265280877868721, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667265280877868721, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667265280877868721, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667265280877868721, guid: f06df641d0667447a87d240496c96051,
         type: 3}
@@ -46105,17 +46105,17 @@ PrefabInstance:
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4627453174931688451, guid: f06df641d0667447a87d240496c96051,
         type: 3}
@@ -46155,17 +46155,17 @@ PrefabInstance:
     - target: {fileID: 5793185344931368053, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5793185344931368053, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5793185344931368053, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5793185344931368053, guid: f06df641d0667447a87d240496c96051,
         type: 3}
@@ -46225,17 +46225,17 @@ PrefabInstance:
     - target: {fileID: 7966988016757209255, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7966988016757209255, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7966988016757209255, guid: f06df641d0667447a87d240496c96051,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7966988016757209255, guid: f06df641d0667447a87d240496c96051,
         type: 3}
