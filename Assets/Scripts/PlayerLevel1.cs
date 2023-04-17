@@ -21,6 +21,7 @@ public class PlayerLevel1 : MonoBehaviour
     public Transform Tunnel1SpawnPoint;
     public Transform Tunnel2SpawnPoint;
     public GameObject dialogue;
+    public bool isFacingRight = true;
 
     public DoorBehaviour doorBehaviour;
     public DoorBehaviour doorBehaviourLevel1Green;
@@ -62,9 +63,17 @@ public class PlayerLevel1 : MonoBehaviour
             isJumping = true;
         }
 
-        if(Input.GetAxis("Horizontal") != 0){
+        if(move != 0){
             inMotion = false;
             rb.gravityScale = 1;
+        }
+
+        if (move > 0 && !isFacingRight) {
+           Flip();
+        }
+
+        if (move < 0 && isFacingRight) {
+           Flip();
         }
 
         if(inMotion){
@@ -90,6 +99,14 @@ public class PlayerLevel1 : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "TutorialTunnel"){
             dbTutorialLevel._isTutorialLevel = true;
         }
+    }
+
+    void Flip() {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // changes sprite direction
+        gameObject.transform.localScale = currentScale;
+
+        isFacingRight = !isFacingRight;
     }
 
     private bool IsGrounded()

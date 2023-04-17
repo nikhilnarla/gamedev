@@ -9,7 +9,7 @@ public class PlayerMovementC : MonoBehaviour
 {
     public float speed;
     public float jump = 10f;
-    public float move = 7f;
+    public float move;
     public bool isJumping = false;
     public bool blockPushed = false;
     public bool green = true;
@@ -23,6 +23,7 @@ public class PlayerMovementC : MonoBehaviour
     public static bool flag = false;
     public GameObject dialogue;
     public GameObject tunnelDialogue;
+    public bool isFacingRight = true;
 
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
@@ -53,6 +54,14 @@ public class PlayerMovementC : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
+        if (move > 0 && !isFacingRight) {
+           Flip();
+        }
+
+        if (move < 0 && isFacingRight) {
+           Flip();
+        }
+
         if(Input.GetKeyDown("space") && !isJumping){
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
@@ -71,6 +80,14 @@ public class PlayerMovementC : MonoBehaviour
         {
             dBL2YT._isLevel1YellowTunnel = true;
         }
+    }
+
+    void Flip() {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // changes sprite direction
+        gameObject.transform.localScale = currentScale;
+
+        isFacingRight = !isFacingRight;
     }
 
     private bool IsGrounded()
