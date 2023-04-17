@@ -146,10 +146,21 @@ public class PlayerMovement6 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
         }
 
-        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 7f;
-               speed = 4f;
+        if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") 
+            || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2") 
+            || other.gameObject.name == ("Wall5")){
+               jump = 6f;
+               speed = 3.5f;
+        } else if(other.gameObject.name == ("FallingBlock1") || other.gameObject.name == ("FallingBlock2") || other.gameObject.name == ("FallingBlock3") 
+            || other.gameObject.name == ("FallingBlock4")){
+               jump = 6f;
+               speed = 3.5f;
+        } else {
+            jump = 8f;
+            speed = 5f;
         }
+
+
         if (other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
@@ -241,14 +252,6 @@ public class PlayerMovement6 : MonoBehaviour
             SceneManager.LoadScene("Level5");
         }
 
-    }
-
-    private void OnCollisionExit2D(Collision2D other){
-
-         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2")){
-               jump = 8f;
-               speed = 5f;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other){

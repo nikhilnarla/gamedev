@@ -138,6 +138,9 @@ public class PlayerMovement7 : MonoBehaviour
         {
             speed = 6f;
             jump = 8f;
+        } else {
+            speed = 6f;
+            jump = 10f;
         }
 
         if (other.gameObject.name.Equals("Green Block"))
@@ -278,21 +281,6 @@ public class PlayerMovement7 : MonoBehaviour
         {
             tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 0;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-
-        if (other.gameObject.name == ("BridgeTile 1") ||
-            other.gameObject.name == ("BridgeTile 2") ||
-            other.gameObject.name == ("BridgeTile 3") ||
-            other.gameObject.name == ("BridgeTile 4") ||
-            (other.gameObject.name == ("BridgeWall")))
-        {
-            speed = 6f;
-            jump = 10f;
-
         }
     }
 }
