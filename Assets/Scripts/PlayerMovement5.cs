@@ -294,6 +294,7 @@ public class PlayerMovement5 : MonoBehaviour
         {
 
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+            GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = Color.green;
         }
     }
 
@@ -303,6 +304,7 @@ public class PlayerMovement5 : MonoBehaviour
         if (other.gameObject.tag.Equals("Zipline"))
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = new Color(0.823f, 0.706f, 0.549f);
         }
     }
 
