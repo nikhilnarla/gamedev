@@ -777,6 +777,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TunnelGreenTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.45638275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006629944
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &57705419 stripped
@@ -5282,6 +5307,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TunnelGreenTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.72190666
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.13904667
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &668931758 stripped
@@ -6326,7 +6376,7 @@ PrefabInstance:
     - target: {fileID: 9220887411442697545, guid: a90407185c0b642ffbbbe92a0708a200,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7379
+      value: -0.99280006
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697545, guid: a90407185c0b642ffbbbe92a0708a200,
         type: 3}
@@ -6377,6 +6427,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: TunnelGreenTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.71349335
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.14325333
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -9012,6 +9087,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TunnelGreenTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35773182
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &1001557484 stripped
@@ -9302,7 +9402,7 @@ PrefabInstance:
     - target: {fileID: 9220887411442697545, guid: a90407185c0b642ffbbbe92a0708a200,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7351
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9220887411442697545, guid: a90407185c0b642ffbbbe92a0708a200,
         type: 3}
@@ -9353,6 +9453,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: TunnelGreenTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.71349335
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.14325333
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -9965,6 +10090,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TunnelGreenTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.40207672
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.012454987
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &1152120518 stripped
@@ -10454,6 +10604,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: TunnelGreenTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.38349724
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0068502426
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
@@ -14499,7 +14674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.13003, y: 0.4899994, z: -10}
+  m_LocalPosition: {x: 37.37214, y: 0.4899994, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15939,6 +16114,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TunnelGreenTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.40095234
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0058722496
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
 --- !u!4 &1780683765 stripped
@@ -16034,6 +16234,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: TunnelGreenTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.6685276
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1657362
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220887411442697550, guid: a90407185c0b642ffbbbe92a0708a200,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90407185c0b642ffbbbe92a0708a200, type: 3}
