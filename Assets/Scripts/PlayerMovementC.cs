@@ -24,6 +24,9 @@ public class PlayerMovementC : MonoBehaviour
     public GameObject dialogue;
     public GameObject tunnelDialogue;
 
+    float inputHorizontal;
+    bool facingRight = true;
+
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     public DoorBehaviour dBL2GG;
@@ -53,14 +56,23 @@ public class PlayerMovementC : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        if(Input.GetKeyDown("space") && !isJumping){
+        if(Input.GetKeyDown("space") && !isJumping) {
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
         }
 
-        if(Input.GetKeyDown("space") && IsGrounded()){
+        if(Input.GetKeyDown("space") && IsGrounded()) {
             rb.velocity =  new Vector2(rb.velocity.x, jump);
             isJumping = true;
+        }
+
+        inputHorizontal = Input.GetAxis("Horizontal");
+        if (inputHorizontal > 0 && !facingRight) {
+           Flip();
+        }
+
+        if (inputHorizontal < 0 && facingRight) {
+           Flip();
         }
 
         if (SceneManager.GetActiveScene().name == "Level2GreenTunnel")
@@ -71,6 +83,15 @@ public class PlayerMovementC : MonoBehaviour
         {
             dBL2YT._isLevel1YellowTunnel = true;
         }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // changes sprite direction
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     private bool IsGrounded()

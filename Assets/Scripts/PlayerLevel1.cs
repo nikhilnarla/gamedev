@@ -43,11 +43,12 @@ public class PlayerLevel1 : MonoBehaviour
     public AudioClip DoorOpenSound;
     public bool _isSoundPlayed = false;
 
+    float inputHorizontal;
+    bool facingRight = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //speed = 4f;
-        //jump = 9f;
         RenderKeys(false);
     }
 
@@ -61,12 +62,22 @@ public class PlayerLevel1 : MonoBehaviour
             isJumping = true;
         }
 
-        if(Input.GetAxis("Horizontal") != 0){
+        inputHorizontal = Input.GetAxis("Horizontal");
+
+        if(inputHorizontal != 0){
             inMotion = false;
             rb.gravityScale = 1;
         }
 
-        if(inMotion){
+        if (inputHorizontal > 0 && !facingRight) {
+           Flip();
+        }
+
+        if (inputHorizontal < 0 && facingRight) {
+           Flip();
+        }
+
+        if(inMotion) {
             rb.gravityScale = 0;
             transform.position = Vector2.MoveTowards(transform.position, target, 30*Time.deltaTime);
         }
@@ -87,6 +98,15 @@ public class PlayerLevel1 : MonoBehaviour
             dBL1YT._isLevel1YellowTunnel = true;
         }
 
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1; // changes sprite direction
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     private bool IsGrounded()

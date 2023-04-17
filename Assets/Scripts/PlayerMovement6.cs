@@ -28,7 +28,6 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject tunnelDialogue;
 
     public DoorBehaviour dBL3GT;
-
     public static bool isFacingRight;
     public static bool hasGun = false;
     Collider m_ObjectCollider;
@@ -73,7 +72,6 @@ public class PlayerMovement6 : MonoBehaviour
             hasGun = true;
         }
 
-
         Flip();
 
         if (SceneManager.GetActiveScene().name == "Level3GreenTunnel")
@@ -94,7 +92,6 @@ public class PlayerMovement6 : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f; // x component of player's local scale
             transform.localScale = localScale;
-            
         }
     }
 
