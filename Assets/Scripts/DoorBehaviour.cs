@@ -398,13 +398,10 @@ public class DoorBehaviour : MonoBehaviour
         //Green Gate
         if (_isLevel5GreenDoorOpen)
         {
-            if (transform.position != _doorOpenPos)
+
+            if (transform.position != _doorTunnelHorizontalOpenPos)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
-            }
-            if (transform.position == _doorOpenPos)
-            {
-                _isLevel5GreenDoorOpen = false;
+                transform.position = Vector3.MoveTowards(transform.position, _doorTunnelHorizontalOpenPos, _doorSpeed * Time.deltaTime);
             }
             if (!_isOpenSoundPlayed)
             {
@@ -416,13 +413,9 @@ public class DoorBehaviour : MonoBehaviour
 
         if (_isLevel5YellowDoorOpen)
         {
-            if (transform.position != _doorTunnelHorizontalOpenPos)
+            if (transform.position != _doorOpenPos)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _doorTunnelHorizontalOpenPos, _doorSpeed * Time.deltaTime);
-            }
-            if (transform.position == _doorTunnelHorizontalOpenPos)
-            {
-                _isLevel5YellowDoorOpen = false;
+                transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
             }
             if (!_isOpenSoundPlayed)
             {
