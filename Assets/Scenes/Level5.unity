@@ -17224,7 +17224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398366915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.029533, y: -8.633601, z: 19.503532}
+  m_LocalPosition: {x: 21.28, y: -1.58, z: 19.503532}
   m_LocalScale: {x: 1.5875, y: 6.49688, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24217,7 +24217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821229056}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.0290084, y: 1.6, z: 19.512947}
+  m_LocalPosition: {x: 5.7, y: 1.9, z: 19.512947}
   m_LocalScale: {x: 1.0607492, y: 1.088075, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70194,7 +70194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886988765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.970467, y: 14.046399, z: 19.503532}
+  m_LocalPosition: {x: -13.970467, y: 14.75, z: 19.503532}
   m_LocalScale: {x: 9.36625, y: 6.49688, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76571,6 +76571,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1.1478233
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.61600417
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07391167
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.19199792
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
+        type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.28125
       objectReference: {fileID: 0}
@@ -76613,7 +76633,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 42.440594
+      value: 21.220297
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
