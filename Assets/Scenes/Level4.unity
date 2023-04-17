@@ -5146,6 +5146,7 @@ MonoBehaviour:
   freezeTime: 1.6
   TunnelSpawnPoint: {fileID: 1624697175}
   TunnelSpawnPoint2: {fileID: 60037239}
+  CannonSpawnPoint1: {fileID: 1063354381}
   fallingSpeed: 1000
   newPositionBridge1: {fileID: 1830115971}
   newPositionBridge2: {fileID: 990299305}
@@ -5644,6 +5645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenBlock: {fileID: 2068055324}
+  Cannon: {fileID: 1599956817}
 --- !u!1 &742627360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,7 +6449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839549794}
   m_LocalRotation: {x: -0.00001850817, y: -0.012864204, z: -0.71119004, w: 0.7028821}
-  m_LocalPosition: {x: 2.11, y: -0.8, z: -0.1}
+  m_LocalPosition: {x: 2.1, y: -1, z: -0.1}
   m_LocalScale: {x: 1.0759331, y: 1.9344234, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12623,7 +12625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1e66b5aba4e48888dabdeca7f85cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 15
+  Range: 18
   Target: {fileID: 711868991}
   AlarmLight: {fileID: 1312976154}
   Gun: {fileID: 839549794}
@@ -12639,7 +12641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599956816}
   m_LocalRotation: {x: 0.00904302, y: -0.000013034724, z: 0.00000011787803, w: 0.9999592}
-  m_LocalPosition: {x: -18.5, y: -9.5, z: -0.1}
+  m_LocalPosition: {x: -18.4, y: -12.5, z: -0.2}
   m_LocalScale: {x: 0.8720023, y: 0.75802857, z: 1.0170501}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14341,6 +14343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenBlock: {fileID: 2068055324}
+  Cannon: {fileID: 0}
 --- !u!50 &1836119612
 Rigidbody2D:
   serializedVersion: 4
