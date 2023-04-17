@@ -5626,18 +5626,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.009343147}
+  m_Offset: {x: 0, y: 0.036891937}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 2.32, y: 2.67}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.981314}
+  m_Size: {x: 1.3082352, y: 2.50531}
   m_EdgeRadius: 0
 --- !u!50 &711868988
 Rigidbody2D:
@@ -5691,6 +5691,7 @@ MonoBehaviour:
   freezeTime: 1.6
   TunnelSpawnPoint: {fileID: 1624697175}
   TunnelSpawnPoint2: {fileID: 60037239}
+  CannonSpawnPoint1: {fileID: 0}
   fallingSpeed: 1000
   newPositionBridge1: {fileID: 1830115971}
   newPositionBridge2: {fileID: 990299305}
@@ -5743,9 +5744,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee,
-    type: 3}
-  m_Color: {r: 0.42745098, g: 0.7372549, b: 0.654902, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 96dc99388faff45a7b1a75ddcbfb2342, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5763,9 +5763,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711868986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.8, y: -11.9, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 29.8, y: -11.65, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 937608534}
   - {fileID: 1843763473}
@@ -6329,6 +6329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenBlock: {fileID: 2068055324}
+  Cannon: {fileID: 0}
 --- !u!1001 &746476240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10439,7 +10440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.456924, y: -9.1, z: -10}
+  m_LocalPosition: {x: 32.742813, y: -8.85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16908,6 +16909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenBlock: {fileID: 2068055324}
+  Cannon: {fileID: 0}
 --- !u!50 &1836119612
 Rigidbody2D:
   serializedVersion: 4
@@ -17195,7 +17197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843763472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: -1.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
