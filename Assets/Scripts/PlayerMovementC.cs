@@ -249,13 +249,14 @@ public class PlayerMovementC : MonoBehaviour
         //Exit Yellow Tunnel Level2
         if (other.gameObject.name == ("EndGateYellowLevel2"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level-transition2");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //Analytics event - key Collected
             analyticsManager.SendEvent("LEVEL3 YELLOW TUNNEL EXIT");
             //Desctroying end block so player can pass
             Destroy(GameObject.Find("EndGateYellowLevel2"));
             analyticsManager.SendEvent("LEVEL3 GAMEEND");
-            SceneManager.LoadScene("Level-transition2");
+            
             Thread.Sleep(100);
             analyticsManager.SendEvent("LEVEL6 GAMESTART");
 

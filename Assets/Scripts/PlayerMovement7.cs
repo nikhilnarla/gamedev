@@ -218,13 +218,15 @@ public class PlayerMovement7 : MonoBehaviour
         //Exit Yellow Tunnel
         if (other.gameObject.name == "ExitYellowTunnelLevel7")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("Level-transition4");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             Destroy(GameObject.Find("ExitYellowTunnelLevel7"));
         }
         //Exit Green Tunnel
         if (other.gameObject.name == "ExitGreenTunnelLevel7")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level-transition4");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
         }
 
