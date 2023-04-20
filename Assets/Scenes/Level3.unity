@@ -1886,13 +1886,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1688010833120070719, guid: c25eabb1e181a4697b56f922317af123,
-    type: 3}
-  m_Color: {r: 0.8156863, g: 0.36078432, b: 0.09411765, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9a504911f99194e85a8ca8bd3bd32544, type: 3}
+  m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 8.6, y: 2.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1906,8 +1905,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154735586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -3.06, z: 25.202988}
-  m_LocalScale: {x: 0.90125, y: 0.90125, z: 0.90125}
+  m_LocalPosition: {x: -0.4, y: -2.57, z: 25.202988}
+  m_LocalScale: {x: 0.32465702, y: 0.32465702, z: 0.32465702}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1709028483}
@@ -1929,9 +1928,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.50188804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.6, y: 2.75}
+    newSize: {x: 8.6, y: 2.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -23010,6 +23009,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9095717837082945937, guid: d41953bac11f44ca286c0487646344fc,
         type: 3}
+    - target: {fileID: 1190231439481770643, guid: 9ec8e11aa8ecc4cd7b62f621c898284e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190231439481770643, guid: 9ec8e11aa8ecc4cd7b62f621c898284e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190231439481770643, guid: 9ec8e11aa8ecc4cd7b62f621c898284e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
     - target: {fileID: 1190231439481770644, guid: 9ec8e11aa8ecc4cd7b62f621c898284e,
         type: 3}
       propertyPath: m_RootOrder
