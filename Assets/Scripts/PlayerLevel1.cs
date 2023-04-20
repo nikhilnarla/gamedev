@@ -71,6 +71,7 @@ public class PlayerLevel1 : MonoBehaviour
         }
 
         if (move > 0 && !isFacingRight) {
+        
            Flip();
         }
 
@@ -332,7 +333,8 @@ public class PlayerLevel1 : MonoBehaviour
         keyRenderer2.enabled = val;
         keyRenderer2.GetComponent<BoxCollider2D>().enabled = val;
 
-        getKeyDialogue.SetActive(val);
+        if(!isFacingRight)
+            getKeyDialogue.SetActive(val);
     }
 
 }
