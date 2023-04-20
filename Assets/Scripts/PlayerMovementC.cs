@@ -25,6 +25,10 @@ public class PlayerMovementC : MonoBehaviour
     public GameObject tunnelDialogue;
     public bool isFacingRight = true;
 
+    public GameObject closedDoor;
+    public GameObject EndGame;
+
+
     Dictionary<string, bool> bridgeStatus = new Dictionary<string, bool>();
 
     public DoorBehaviour dBL2GG;
@@ -98,6 +102,23 @@ public class PlayerMovementC : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other){
 
         flag = false;
+
+        if (other.gameObject.name == ("DoorOpen"))
+        {
+            //Debug.Log("DOORALERT");
+            Destroy(GameObject.Find("DoorOpen"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            closedDoor.SetActive(true);
+            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
+            EndGame.SetActive(true);
+        }
 
         //Tunnel Brown Door
         if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))

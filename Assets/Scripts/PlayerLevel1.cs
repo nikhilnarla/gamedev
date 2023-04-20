@@ -22,6 +22,8 @@ public class PlayerLevel1 : MonoBehaviour
     public Transform Tunnel2SpawnPoint;
     public GameObject dialogue;
     public bool isFacingRight = true;
+    public GameObject closedDoor;
+    public GameObject ExitGreenTunnel;
 
     public DoorBehaviour doorBehaviour;
     public DoorBehaviour doorBehaviourLevel1Green;
@@ -116,6 +118,23 @@ public class PlayerLevel1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other){
         flag = false;
+
+        if (other.gameObject.name == ("DoorOpen"))
+        {
+            //Debug.Log("DOORALERT");
+            Destroy(GameObject.Find("DoorOpen"));
+
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+
+            closedDoor.SetActive(true);
+            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
+            ExitGreenTunnel.SetActive(true);
+        }
 
         //BrownDoor Green Tunnel Level1
         if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
