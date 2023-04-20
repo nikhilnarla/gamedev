@@ -18,9 +18,8 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if(collision.gameObject.name == "Portal1")
         {
-            
             transform.position = portal2Spawn.position;
-             analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
+            analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
         }
 
         if (collision.gameObject.name == "Portal2")
