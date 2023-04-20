@@ -45,6 +45,11 @@ public class PlayerLevel1 : MonoBehaviour
 
     public AudioSource AudioSource;
     public AudioClip DoorOpenSound;
+
+    public AudioSource GreenKeyCollectAudioSource;
+    public AudioSource YellowKeyCollectAudioSource;
+    public AudioClip KeyCollectSound;
+
     public bool _isSoundPlayed = false;
 
     void Start()
@@ -199,6 +204,8 @@ public class PlayerLevel1 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL1 JUMP PAD INTERACTED");
             inMotion = true;
             target = other.gameObject.GetComponent<JumpingPadScript>().target;
+            AudioSource.clip = DoorOpenSound;
+            AudioSource.Play();
         }
 
         if(other.gameObject.name == "Green Block" && other.gameObject.GetComponent<Renderer>().material.color != Color.green)
@@ -235,6 +242,8 @@ public class PlayerLevel1 : MonoBehaviour
         {
             Destroy(other.gameObject);
             doorBehaviour._isDoorOpen = true;
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
             //var gate = GameObject.Find("EntryGate");
             //analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
             //Destroy(gate);
@@ -250,6 +259,8 @@ public class PlayerLevel1 : MonoBehaviour
         {
             Destroy(other.gameObject);
             doorBehaviourLevel1Green._isLevel1GreenDoorOpen = true;
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             //var gate = GameObject.Find("Gate");
             //analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
             //Destroy(gate);
