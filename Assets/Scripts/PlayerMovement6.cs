@@ -28,6 +28,8 @@ public class PlayerMovement6 : MonoBehaviour
     public GameObject tunnelDialogue;
     public Transform CannonSpawnPoint;
     public GameObject player;
+    public GameObject closedDoor;
+    public GameObject TunnelEndGate;
 
     public DoorBehaviour dBL3GT;
 
@@ -113,13 +115,12 @@ public class PlayerMovement6 : MonoBehaviour
             //Debug.Log("KILLED");
             rb.gameObject.transform.position = CannonSpawnPoint.position;
         }
-
         flag = false;
-        //Tunnel Brown Door
-        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
-        {
-            Destroy(GameObject.Find("BrownExitDoorClosed"));
-            Destroy(GameObject.Find("DoorKnobClosed"));
+
+
+        if (other.gameObject.name == ("DoorOpen")) {
+            //Debug.Log("DOORALERT");
+            Destroy(GameObject.Find("DoorOpen"));
 
             if (!_isSoundPlayed)
             {
@@ -128,10 +129,23 @@ public class PlayerMovement6 : MonoBehaviour
                 _isSoundPlayed = true;
             }
 
-            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
-            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+            closedDoor.SetActive(true);
+            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
+            TunnelEndGate.SetActive(true);
         }
 
+        //Tunnel Brown Door
+        if (other.gameObject.Equals("BrownDoorClose")){
+            Destroy(GameObject.Find("BrownDoorClose"));
+            if (!_isSoundPlayed)
+            {
+                AudioSource.clip = DoorOpenSound;
+                AudioSource.Play();
+                _isSoundPlayed = true;
+            }
+            GameObject.Find("BrownDoorOpen").SetActive(true);
+            GameObject.Find("BrownDoorOpen").GetComponent<Renderer>().enabled = true;
+        }
 
         if (other.gameObject.CompareTag("Ground"))
         {

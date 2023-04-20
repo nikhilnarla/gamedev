@@ -12,6 +12,9 @@ TagManager:
   - GateKey
   - Trap
   - CannonBullet
+  - TunnelLaser
+  - Zipline
+  - BrownDoor
   layers:
   - Default
   - TransparentFX
