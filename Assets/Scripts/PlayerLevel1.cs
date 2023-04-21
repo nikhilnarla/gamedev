@@ -49,6 +49,8 @@ public class PlayerLevel1 : MonoBehaviour
     public AudioSource GreenKeyCollectAudioSource;
     public AudioSource YellowKeyCollectAudioSource;
     public AudioClip KeyCollectSound;
+    public AudioSource HitGreenBlockAudioSource;
+    public AudioClip HitGreenBlockSound;
 
     public bool _isSoundPlayed = false;
 
@@ -222,6 +224,9 @@ public class PlayerLevel1 : MonoBehaviour
             var objRenderer2 = GameObject.Find("Collider Tile").GetComponent<Renderer>();
             objRenderer2.material.SetColor("_Color", Color.green);
             RenderKeys(true);
+
+            HitGreenBlockAudioSource.clip = HitGreenBlockSound;
+            HitGreenBlockAudioSource.Play();
 
             getKeyDialogue.SetActive(false);
 
