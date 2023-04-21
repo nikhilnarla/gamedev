@@ -6,7 +6,9 @@ public class PlayerTeleporter : MonoBehaviour
     public Transform portal1Spawn, portal2Spawn;
 
     public AnalyticsManager analyticsManager;
+  public AudioSource GreenKeyCollectAudioSource;
 
+    public AudioClip KeyCollectSound;
     public Rigidbody2D rb;
 
     private void Start()
@@ -18,15 +20,17 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if(collision.gameObject.name == "Portal1")
         {
+                GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             transform.position = portal2Spawn.position;
             analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
         }
 
         if (collision.gameObject.name == "Portal2")
         {
-            
+              GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             transform.position = portal1Spawn.position;
-            Debug.Log("poooooo");
             analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
         }
     }

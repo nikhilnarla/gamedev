@@ -12,6 +12,17 @@ public class PlayerMovementC : MonoBehaviour
     public float move;
     public bool isJumping = false;
     public bool blockPushed = false;
+
+      public AudioSource YellowKeyCollectAudioSource;
+
+    public AudioSource HitGreenBlockAudioSource;
+    public AudioClip HitGreenBlockSound;
+
+      public AudioSource HitButtonSource;
+    public AudioClip HitButtonSound;
+
+       public AudioSource SpikeSourceSound;
+    public AudioClip SpikeSoundClip;
     public bool green = true;
     public bool fandetected = false;
     public GameObject key;
@@ -44,6 +55,8 @@ public class PlayerMovementC : MonoBehaviour
     [SerializeField] private LayerMask buttonLayer;
 
     public AudioSource AudioSource;
+
+        public AudioClip KeyCollectSound;
     public AudioClip DoorOpenSound;
     public bool _isSoundPlayed = false;
 
@@ -141,6 +154,9 @@ public class PlayerMovementC : MonoBehaviour
             ShowTiles();
             dialogue.SetActive(true);
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
+            // Debug.Log("yassssss");
+            HitGreenBlockAudioSource.clip = HitGreenBlockSound;
+            HitGreenBlockAudioSource.Play();
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2")){
@@ -167,6 +183,8 @@ public class PlayerMovementC : MonoBehaviour
                 AddGravityToTiles();
                 DestroyBridgeTiles();
                 dBL2GG._isLevel2GreenDoorOpen = true;
+                HitButtonSource.clip = HitButtonSound;
+            HitButtonSource.Play();
             //Destroy(GameObject.Find("Gate"));
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
@@ -174,12 +192,22 @@ public class PlayerMovementC : MonoBehaviour
         if(other.gameObject.name == ("Button 2")){
             //Destroy(GameObject.Find("EntryGate"));
             dBL2YG._isLevel2YelllowDoorOpen = true;
+
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
             Destroy(GameObject.Find("Button 2"));
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
         }
 
         if (other.gameObject.tag == "Trap" && !flag)
         {
+
+              if (!_isSoundPlayed)
+            {
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
+                _isSoundPlayed = true;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES");
             analyticsManager.SendEvent("LEVEL3 GAMESTART AGAIN");
