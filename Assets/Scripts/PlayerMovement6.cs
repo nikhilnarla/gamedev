@@ -16,6 +16,9 @@ public class PlayerMovement6 : MonoBehaviour
 
     public AnalyticsManager analyticsManager;
 
+    public AudioSource GreenKeyCollectAudioSource;
+
+    public AudioClip KeyCollectSound;
 
     public float speed;
     public float jump;
@@ -25,6 +28,12 @@ public class PlayerMovement6 : MonoBehaviour
     public bool flag = false;
     public GameObject frozenKey;
     public GameObject shootDialogue;
+
+    public AudioSource GunCollectorSourceSound;
+    public AudioClip GunCollectorSoundClip;
+
+      public AudioSource SpCollectorSourceSound;
+    public AudioClip SpCollectorSoundClip;
     public GameObject tunnelDialogue;
     public Transform CannonSpawnPoint;
     public GameObject player;
@@ -178,6 +187,8 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
+            SpCollectorSourceSound.clip = SpCollectorSoundClip;
+            SpCollectorSourceSound.Play();
             analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER KEY TO ACCESS SUPER POWER");
             Destroy(GameObject.Find("SuperPowerGate"));
         }
@@ -204,6 +215,8 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.name == "SuperKey")
         {
             Destroy(GameObject.Find("SuperKey"));
+               GunCollectorSourceSound.clip = GunCollectorSoundClip;
+                GunCollectorSourceSound.Play();
             analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER TO ACCESS GUN TO SHOOT");
             showText = true;
 
@@ -215,6 +228,8 @@ public class PlayerMovement6 : MonoBehaviour
         {
             //Debug.Log("KR");
             Destroy(GameObject.Find("KeyReveal"));
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER KEY TO REVEAL YELLOW GATE KEY ");
             frozenKey.SetActive(true);
             GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
