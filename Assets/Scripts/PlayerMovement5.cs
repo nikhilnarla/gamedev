@@ -167,6 +167,13 @@ public class PlayerMovement5 : MonoBehaviour
             jump = 7f;
             speed = 4f;
         }
+
+        if (other.gameObject.name == ("RotatingPlatform1") || other.gameObject.name == ("RotatingPlatform2") || other.gameObject.name == ("LavaTile") || other.gameObject.name == ("PortalPlatform"))
+        {
+            jump = 5f;
+            speed = 6f;
+        }
+
         if (other.gameObject.name == "SuperPowerKey")
         {
             Destroy(GameObject.Find("SuperPowerKey"));
@@ -280,6 +287,12 @@ public class PlayerMovement5 : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
+
+        if (other.gameObject.name == ("PortalPlatform"))
+        {
+            jump = 8f;
+            speed = 5f;
+        }
 
         if (other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2"))
         {
