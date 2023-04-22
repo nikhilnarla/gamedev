@@ -52,6 +52,11 @@ public class PlayerLevel1 : MonoBehaviour
     public AudioSource HitGreenBlockAudioSource;
     public AudioClip HitGreenBlockSound;
 
+    public AudioSource SpikeSourceSound;
+    public AudioClip SpikeSoundClip;
+    public AudioSource GameEndAudioSource;
+    public AudioClip GameEndSound;
+
     public bool _isSoundPlayed = false;
 
     void Start()
@@ -192,9 +197,14 @@ public class PlayerLevel1 : MonoBehaviour
         }
         if (other.gameObject.tag == "Trap" && !flag)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-            flag = true;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
+
+            GameEndAudioSource.clip = GameEndSound;
+            GameEndAudioSource.Play();
+            StartCoroutine(WaitCoroutine());
         }
 
         if (other.gameObject.name == ("Button 2")){
@@ -321,6 +331,13 @@ public class PlayerLevel1 : MonoBehaviour
 
     }
 
+    System.Collections.IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        flag = true;
+    }
+
     private void OnCollisionExit2D(Collision2D other){
 
         var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
@@ -352,5 +369,7 @@ public class PlayerLevel1 : MonoBehaviour
         if(!isFacingRight)
             getKeyDialogue.SetActive(val);
     }
+
+
 
 }
