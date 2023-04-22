@@ -29,6 +29,9 @@ public class PlayerMovementC : MonoBehaviour
     public AudioSource PlayerJumpAudioSource;
     public AudioClip PlayerJumpSound;
 
+    public AudioSource GameEndAudioSource;
+    public AudioClip GameEndSound;
+
     public bool green = true;
     public bool fandetected = false;
     public GameObject key;
@@ -250,16 +253,12 @@ public class PlayerMovementC : MonoBehaviour
         if (other.gameObject.tag == "Trap" && !flag)
         {
 
-              if (!_isSoundPlayed)
-            {
             SpikeSourceSound.clip = SpikeSoundClip;
             SpikeSourceSound.Play();
-                _isSoundPlayed = true;
-            }
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES");
-            analyticsManager.SendEvent("LEVEL3 GAMESTART AGAIN");
-            flag = true;
+
+            GameEndAudioSource.clip = GameEndSound;
+            GameEndAudioSource.Play();
+            StartCoroutine(WaitCoroutine());
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "TunnelGreenTrap" & !flag)
@@ -393,6 +392,17 @@ public class PlayerMovementC : MonoBehaviour
              //Desctroying end block so player can pas
         }
 
+    }
+
+    IEnumerator WaitCoroutine()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        Debug.Log("COROUTINE");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES");
+        //analyticsManager.SendEvent("LEVEL3 GAMESTART AGAIN");
+        flag = true;
     }
 
     private void OnCollisionExit2D(Collision2D other){
