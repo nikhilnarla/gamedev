@@ -17,6 +17,9 @@ public class GunShooting : MonoBehaviour
     public Transform ShootPoint;
     public float Force;
 
+    public AudioSource ShootSoundSrc;
+    public AudioClip ShootSoundClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,9 @@ public class GunShooting : MonoBehaviour
 
     void shoot()
     {
+        ShootSoundSrc.clip = ShootSoundClip;
+        ShootSoundSrc.Play();
+
         GameObject BulletIns = Instantiate(Bullet,ShootPoint.position,Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction*Force);
     }
