@@ -1309,6 +1309,17 @@ MonoBehaviour:
     m_Bits: 0
   AudioSource: {fileID: 0}
   DoorOpenSound: {fileID: 0}
+  GreenKeyCollectAudioSource: {fileID: 0}
+  YellowKeyCollectAudioSource: {fileID: 0}
+  KeyCollectSound: {fileID: 0}
+  HitGreenBlockAudioSource: {fileID: 0}
+  HitGreenBlockSound: {fileID: 0}
+  SpikeSourceSound: {fileID: 0}
+  SpikeSoundClip: {fileID: 0}
+  GameEndAudioSource: {fileID: 0}
+  GameEndSound: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
   _isSoundPlayed: 0
 --- !u!50 &511789228 stripped
 Rigidbody2D:
@@ -6571,7 +6582,7 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.5821896
+      value: 2.897216
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -6581,7 +6592,7 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.049906254
+      value: -0.0025981665
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -6591,13 +6602,13 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.67
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 96dc99388faff45a7b1a75ddcbfb2342,
+      objectReference: {fileID: 21300000, guid: 39c35089a79404ab59decb55dd2a2543,
         type: 3}
     - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -6702,7 +6713,7 @@ PrefabInstance:
     - target: {fileID: 6478246078184485886, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.24
+      value: -1.45
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}

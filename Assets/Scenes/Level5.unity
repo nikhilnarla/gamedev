@@ -21518,6 +21518,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!114 &622609722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31791,6 +31796,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!114 &948445894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49918,11 +49928,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 998127788, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 998127788, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.28
+      value: -1.453
       objectReference: {fileID: 0}
     - target: {fileID: 1027037799, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: jump
@@ -50054,22 +50064,22 @@ PrefabInstance:
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.2515001
+      value: 1.261116
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.6105042
+      value: 2.8797135
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.02515173
+      value: -0.0084991455
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.05169964
+      value: 0.003626585
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
@@ -50079,7 +50089,7 @@ PrefabInstance:
     - target: {fileID: 3289925359048386685, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.67
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386686, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
@@ -50090,7 +50100,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 96dc99388faff45a7b1a75ddcbfb2342,
+      objectReference: {fileID: 21300000, guid: 39c35089a79404ab59decb55dd2a2543,
         type: 3}
     - target: {fileID: 3289925359048386687, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
@@ -50110,7 +50120,7 @@ PrefabInstance:
     - target: {fileID: 3289925359048386687, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386687, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
@@ -51484,6 +51494,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!114 &1333808850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53416,6 +53431,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!114 &1466135819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61130,6 +61150,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!114 &1610505556
 MonoBehaviour:
   m_ObjectHideFlags: 0
