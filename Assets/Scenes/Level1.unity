@@ -867,7 +867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &186225611
 Transform:
   m_ObjectHideFlags: 0
@@ -6268,6 +6268,8 @@ MonoBehaviour:
   SpikeSoundClip: {fileID: 8300000, guid: 0716022a808c24f3f9280dbcf2712796, type: 3}
   GameEndAudioSource: {fileID: 342943317}
   GameEndSound: {fileID: 8300000, guid: ff1e693bf745b44269f7e38122d1148b, type: 3}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
   _isSoundPlayed: 0
 --- !u!4 &740502433 stripped
 Transform:
@@ -9517,7 +9519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1375021580
 Transform:
   m_ObjectHideFlags: 0
@@ -10212,7 +10214,7 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.5458593
+      value: 2.8613396
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -10222,7 +10224,7 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.026322842
+      value: -0.0060253143
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -10232,13 +10234,13 @@ PrefabInstance:
     - target: {fileID: 6478246078170234064, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.67
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 96dc99388faff45a7b1a75ddcbfb2342,
+      objectReference: {fileID: 21300000, guid: 39c35089a79404ab59decb55dd2a2543,
         type: 3}
     - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -10343,7 +10345,7 @@ PrefabInstance:
     - target: {fileID: 6478246078184485886, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3
+      value: -1.44
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688, type: 3}
