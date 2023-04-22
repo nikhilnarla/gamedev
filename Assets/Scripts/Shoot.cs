@@ -22,20 +22,26 @@ public class Shoot : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (PlayerMovement6.hasGun && Input.GetKeyDown(KeyCode.C))
-        {
-            // velocity + where bullet travels depending on which side the player is facing
-            Debug.Log("Player is facing: " + PlayerMovement6.isFacingRight);
-            float bulletSpeed = PlayerMovement6.isFacingRight ? speed : -speed;
+        // check if in level 3,4,5 to prevent shooting in level 1,2
+        if (currentScene.name == "Level3" || currentScene.name == "Level4" || currentScene.name == "Level5") {
+            if (PlayerMovement6.hasGun && Input.GetKeyDown(KeyCode.C)) 
+            {
+                // velocity + where bullet travels depending on which side the player is facing
+                Debug.Log("Player is facing: " + PlayerMovement6.isFacingRight);
+                float bulletSpeed = PlayerMovement6.isFacingRight ? speed : -speed;
 
-            // check if it is in level 4
-            if (currentScene.name == "Level4" || currentScene.name == "Level4GreenTunnel" || currentScene.name == "Level4YellowTunnel") {
-                Debug.Log("Player is facing: " + PlayerMovement7.isFacingRight);
-                bulletSpeed = PlayerMovement7.isFacingRight ? speed : -speed;
+                // check if it is in level 4
+                if (currentScene.name == "Level4" || currentScene.name == "Level4GreenTunnel" || currentScene.name == "Level4YellowTunnel") {
+                    Debug.Log("Player is facing: " + PlayerMovement7.isFacingRight);
+                    bulletSpeed = PlayerMovement7.isFacingRight ? speed : -speed;
+                } 
+                else if (currentScene.name == "Level5") {
+                    bulletSpeed = PlayerMovement5.isFacingRight ? speed : -speed;
+                }
+                
+                GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
             }
-            
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
         }
     }  
 }

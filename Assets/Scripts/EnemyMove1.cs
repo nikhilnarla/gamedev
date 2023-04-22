@@ -150,6 +150,11 @@ public class EnemyMove1 : MonoBehaviour
           //analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY IN YELLOW TUNNEL AT POSITION:"+ GameObject.Find("Capsule").GetComponent<Rigidbody2D>().position);
           // }
         }
+
+        if (col.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(col.gameObject); // make bullet disappear when it collides laser beam
+        } 
     }
 
     IEnumerator WaitCoroutine()

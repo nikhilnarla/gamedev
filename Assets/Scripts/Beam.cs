@@ -66,9 +66,11 @@ public class Beam : MonoBehaviour
             {
                 //other.gameObject.transform.position = TunnelSpawnPoint.position;
                 analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }        } else if (other.gameObject.tag.Equals("Bullet"))
+            }        
+        } 
+        else if (other.gameObject.tag.Equals("Bullet"))
         {
-            Destroy(other.gameObject); // make bullet disappear when it collides laser beam
+            Destroy(other.gameObject); // make bullet disappear when it collides trap
         } 
     }
 
