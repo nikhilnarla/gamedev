@@ -22,11 +22,14 @@ public class EnemyMovement7 : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWayPointIndex].transform.position, Time.deltaTime * speed);
     }
-
+     public AudioSource EnemyDeathAudioSource;
+    public AudioClip EnemyDeathSound;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag.Equals("Bullet"))
         {
+            EnemyDeathAudioSource.clip = EnemyDeathSound;
+            EnemyDeathAudioSource.Play();
             Destroy(other.gameObject);
             Destroy(gameObject);
             analyticsManager.SendEvent("LEVEL7 ENEMY DESTROYED WITH BULLET");
