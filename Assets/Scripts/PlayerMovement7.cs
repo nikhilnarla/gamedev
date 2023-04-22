@@ -49,6 +49,15 @@ public class PlayerMovement7 : MonoBehaviour
     Collider m_ObjectCollider;
     public GameObject closedGate;
 
+    public AudioSource PlayerSpawnSourceSound;
+    public AudioClip PlayerSpawnClip;
+
+    public AudioSource SpikeSourceSound;
+    public AudioClip SpikeSoundClip;
+
+    public GameObject closedDoor;
+    public GameObject ExitGreenTunnel;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -113,11 +122,11 @@ public class PlayerMovement7 : MonoBehaviour
             //Debug.Log("KILLED");
             rb.gameObject.transform.position = CannonSpawnPoint1.position;
         }
-        //Tunnel Brown Door
-        if (other.gameObject.name.Equals("BrownExitDoorClosed") || other.gameObject.name.Equals("DoorKnobClosed"))
+
+        if (other.gameObject.name == ("DoorOpen"))
         {
-            Destroy(GameObject.Find("BrownExitDoorClosed"));
-            Destroy(GameObject.Find("DoorKnobClosed"));
+            //Debug.Log("DOORALERT");
+            Destroy(GameObject.Find("DoorOpen"));
 
             if (!_isSoundPlayed)
             {
@@ -126,9 +135,11 @@ public class PlayerMovement7 : MonoBehaviour
                 _isSoundPlayed = true;
             }
 
-            GameObject.Find("BrownExitDoorOpen").GetComponent<Renderer>().enabled = true;
-            GameObject.Find("DoorKnobOpen").GetComponent<Renderer>().enabled = true;
+            closedDoor.SetActive(true);
+            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
+            ExitGreenTunnel.SetActive(true);
         }
+
 
         if (other.gameObject.name == ("BridgeTile 1") ||
             other.gameObject.name == ("BridgeTile 2") ||
@@ -187,7 +198,10 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.tag == "TunnelGreenTrap")
         {
-             rb.gameObject.transform.position = TunnelSpawnPoint2.position;
+
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
+            StartCoroutine(WaitCoroutineTunnel());
             analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY GREEN TUNNEL SPIKES AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
@@ -226,7 +240,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (other.gameObject.name == "ExitGreenTunnelLevel7")
         {
             SceneManager.LoadScene("Level-transition4");
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
         }
 
@@ -284,5 +298,16 @@ public class PlayerMovement7 : MonoBehaviour
             tile = GameObject.Find("BridgeTile " + i).GetComponent<Rigidbody2D>();
             tile.gravityScale = 0;
         }
+    }
+
+
+    System.Collections.IEnumerator WaitCoroutineTunnel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        PlayerSpawnSourceSound.clip = PlayerSpawnClip;
+        PlayerSpawnSourceSound.Play();
+
+        rb.gameObject.transform.position = TunnelSpawnPoint2.position;
+        //analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
     }
 }
