@@ -138,6 +138,7 @@ public class PlayerMovement7 : MonoBehaviour
             closedDoor.SetActive(true);
             GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
             ExitGreenTunnel.SetActive(true);
+            ExitGreenTunnel.GetComponent<Renderer>().enabled = true;
         }
 
 
@@ -239,8 +240,8 @@ public class PlayerMovement7 : MonoBehaviour
         //Exit Green Tunnel
         if (other.gameObject.name == "ExitGreenTunnelLevel7")
         {
-            SceneManager.LoadScene("Level-transition4");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene("Level-transition4");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
         }
 
