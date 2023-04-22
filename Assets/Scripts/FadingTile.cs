@@ -6,6 +6,8 @@ public class FadingTile : MonoBehaviour
 {   
     private float timeToFade = 2f;
     private float currentTime = 0f;
+    public AudioSource BridgeTileAudioSource;
+    public AudioClip BridgeTileSound;
 
     [SerializeField] private GameObject bridgeTile;
 
@@ -28,6 +30,8 @@ public class FadingTile : MonoBehaviour
 
             var renderer = bridgeTile.GetComponent<Renderer>();
             renderer.enabled = false;
+            BridgeTileAudioSource.clip = BridgeTileSound;
+            BridgeTileAudioSource.Play();
             renderer.GetComponent<BoxCollider2D>().enabled = false;
             yield return new WaitForSeconds (1);
             renderer.enabled = true;
