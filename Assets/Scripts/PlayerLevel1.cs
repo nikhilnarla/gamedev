@@ -56,6 +56,8 @@ public class PlayerLevel1 : MonoBehaviour
     public AudioClip SpikeSoundClip;
     public AudioSource GameEndAudioSource;
     public AudioClip GameEndSound;
+    public AudioSource PlayerSpawnSourceSound;
+    public AudioClip PlayerSpawnClip;
 
     public bool _isSoundPlayed = false;
 
@@ -176,10 +178,9 @@ public class PlayerLevel1 : MonoBehaviour
         }
         if (other.gameObject.tag == "TunnelGreenTrap" && !flag)
         {
-            rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
-            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
-            flag = true;
-
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
+            StartCoroutine(WaitCoroutineTunnel());
         }
         //  if (other.gameObject.tag == "TunnelLaser")
         // {
@@ -250,9 +251,6 @@ public class PlayerLevel1 : MonoBehaviour
 
             
         }
-
-        
-
         if (other.gameObject.name == "Key 1")
         {
             Destroy(other.gameObject);
@@ -335,6 +333,16 @@ public class PlayerLevel1 : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        flag = true;
+    }
+
+    System.Collections.IEnumerator WaitCoroutineTunnel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        PlayerSpawnSourceSound.clip = PlayerSpawnClip;
+        PlayerSpawnSourceSound.Play();
+        rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
+        analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
         flag = true;
     }
 
