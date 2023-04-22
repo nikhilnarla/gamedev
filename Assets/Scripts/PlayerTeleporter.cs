@@ -19,18 +19,19 @@ public class PlayerTeleporter : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name == "Portal1")
-        {
-                GreenKeyCollectAudioSource.clip = KeyCollectSound;
-            GreenKeyCollectAudioSource.Play();
+        {   
             transform.position = portal2Spawn.position;
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             analyticsManager.SendEvent("LEVEL6 PORTAL1 USED");
         }
 
         if (collision.gameObject.name == "Portal2")
         {
-              GreenKeyCollectAudioSource.clip = KeyCollectSound;
-            GreenKeyCollectAudioSource.Play();
+            
             transform.position = portal1Spawn.position;
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             analyticsManager.SendEvent("LEVEL6 PORTAL2 USED");
         }
     }
