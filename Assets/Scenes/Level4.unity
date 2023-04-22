@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 59489259}
   m_Layer: 3
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1568,6 +1568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 0}
+  player: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
+  HammerHitSourceSound: {fileID: 0}
+  HammerHitClip: {fileID: 0}
 --- !u!61 &132232062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3500,7 +3505,7 @@ GameObject:
   - component: {fileID: 401826016}
   m_Layer: 3
   m_Name: Down (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3633,7 +3638,7 @@ GameObject:
   - component: {fileID: 416179225}
   m_Layer: 3
   m_Name: Down (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4570,7 +4575,7 @@ GameObject:
   - component: {fileID: 513866646}
   m_Layer: 3
   m_Name: Right (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5929,6 +5934,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 0}
+  player: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
+  HammerHitSourceSound: {fileID: 0}
+  HammerHitClip: {fileID: 0}
 --- !u!61 &706683667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8387,6 +8397,11 @@ MonoBehaviour:
   TunnelEnemy_SpriteRenderer: {fileID: 0}
   angrySprite: {fileID: 0}
   normalFaceSprite: {fileID: 0}
+  player: {fileID: 0}
+  PlayerCaughtSourceSound: {fileID: 0}
+  PlayerCauhtClip: {fileID: 0}
+  PlayerSpawnSourceSound: {fileID: 0}
+  PlayerSpawnClip: {fileID: 0}
 --- !u!212 &937850044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8648,7 +8663,7 @@ GameObject:
   - component: {fileID: 945516097}
   m_Layer: 3
   m_Name: Right (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10635,7 +10650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4631653, y: -5.3799987, z: -10}
+  m_LocalPosition: {x: 3.1851234, y: -5.3799987, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11072,7 +11087,7 @@ GameObject:
   - component: {fileID: 1225538165}
   m_Layer: 3
   m_Name: Right (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12263,7 +12278,7 @@ GameObject:
   - component: {fileID: 1323678497}
   m_Layer: 3
   m_Name: Right (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13053,7 +13068,7 @@ GameObject:
   - component: {fileID: 1402314426}
   m_Layer: 3
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14353,6 +14368,8 @@ MonoBehaviour:
   FireRate: 4
   ShootPoint: {fileID: 1311937948}
   Force: 150
+  ShootSoundSrc: {fileID: 0}
+  ShootSoundClip: {fileID: 0}
 --- !u!4 &1599956818
 Transform:
   m_ObjectHideFlags: 0
@@ -17850,7 +17867,7 @@ GameObject:
   - component: {fileID: 2022085557}
   m_Layer: 3
   m_Name: Down (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17989,7 +18006,7 @@ GameObject:
   - component: {fileID: 2038016716}
   m_Layer: 3
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
