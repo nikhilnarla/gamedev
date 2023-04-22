@@ -52,7 +52,7 @@ public class Beam : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Level4")
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene("Level4");  
                 analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
                 analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
             }

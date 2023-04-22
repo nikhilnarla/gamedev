@@ -21,9 +21,12 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+        Debug.Log(currentScene);
 
         // check if in level 3,4,5 to prevent shooting in level 1,2
-        if (currentScene.name == "Level3" || currentScene.name == "Level4" || currentScene.name == "Level5") {
+        if (currentScene.name == "Level3" || currentScene.name == "Level4" || currentScene.name == "Level5" ||
+            currentScene.name == "Level3GreenTunnel" || currentScene.name == "Level3YellowTunnel" || 
+            currentScene.name == "Level4GreenTunnel" || currentScene.name == "Level4YellowTunnel") {
             if (PlayerMovement6.hasGun && Input.GetKeyDown(KeyCode.C)) 
             {
                 // velocity + where bullet travels depending on which side the player is facing
