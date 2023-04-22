@@ -31,7 +31,6 @@ public class PlayerMovement5 : MonoBehaviour
     public DoorBehaviour dBL5GT;
     public DoorBehaviour dBL5YT;
 
-
     public static bool isFacingRight;
     public static bool hasGun = false;
     Collider m_ObjectCollider;
