@@ -32,11 +32,15 @@ public class PlayerMovementC : MonoBehaviour
     public AudioSource GameEndAudioSource;
     public AudioClip GameEndSound;
 
+    public AudioSource PlayerSpawnSourceSound;
+    public AudioClip PlayerSpawnClip;
+
     public bool green = true;
     public bool fandetected = false;
     public GameObject key;
     public GameObject keyLevel1;
     public Transform TunnelSpawnPoint;
+    public Transform Tunnel1SpawnPoint;
     public AnalyticsManager analyticsManager;
     public GameObject player;
     public static bool eventLevelFlag = false;
@@ -243,7 +247,6 @@ public class PlayerMovementC : MonoBehaviour
         if(other.gameObject.name == ("Button 2")){
             //Destroy(GameObject.Find("EntryGate"));
             dBL2YG._isLevel2YelllowDoorOpen = true;
-
             YellowKeyCollectAudioSource.clip = KeyCollectSound;
             YellowKeyCollectAudioSource.Play();
             Destroy(GameObject.Find("Button 2"));
@@ -263,9 +266,12 @@ public class PlayerMovementC : MonoBehaviour
         }
         if (other.gameObject.tag == "TunnelGreenTrap" & !flag)
         {
-             rb.gameObject.transform.position = TunnelSpawnPoint.position;
-             analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL SPIKES AT POSITION:"+rb.position);
-            flag = true;
+                SpikeSourceSound.clip = SpikeSoundClip;
+                SpikeSourceSound.Play();
+                StartCoroutine(WaitCoroutineTunnel());
+            //rb.gameObject.transform.position = TunnelSpawnPoint.position;
+            // analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY GREEN TUNNEL SPIKES AT POSITION:"+rb.position);
+            // flag = true;
             //player.gameObject.transform.position = TunnelSpawnPoint.position;
         }
         if (other.gameObject.tag == "TunnelYellowTrap" & !flag)
@@ -404,6 +410,18 @@ public class PlayerMovementC : MonoBehaviour
         //analyticsManager.SendEvent("LEVEL3 GAMESTART AGAIN");
         flag = true;
     }
+
+    System.Collections.IEnumerator WaitCoroutineTunnel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        PlayerSpawnSourceSound.clip = PlayerSpawnClip;
+        PlayerSpawnSourceSound.Play();
+
+        rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
+        //analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
+        flag = true;
+    }
+
 
     private void OnCollisionExit2D(Collision2D other){
 

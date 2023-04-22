@@ -3321,7 +3321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240627649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 179.7, y: -20.3, z: -0.07214244}
+  m_LocalPosition: {x: 179.77, y: -20.3, z: -0.07214244}
   m_LocalScale: {x: 9.600353, y: 9.706336, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3806,7 +3806,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 141.8
+      value: 142.08
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -4013,7 +4013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269996484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.2, y: -4.89, z: 0.16390666}
+  m_LocalPosition: {x: 48.7, y: -15.98, z: 0.16390666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4098,7 +4098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270728935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.882828, y: -20.28, z: -19.927858}
+  m_LocalPosition: {x: 53.4433, y: -20.900002, z: -19.927858}
   m_LocalScale: {x: 0.29890147, y: 1.5387636, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5796,7 +5796,7 @@ GameObject:
   - component: {fileID: 404145390}
   m_Layer: 0
   m_Name: Trap1 (33)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9351,6 +9351,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234065, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_RootOrder
@@ -9374,12 +9379,12 @@ PrefabInstance:
     - target: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.22
+      value: 48.9
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.08
+      value: -22.7
       objectReference: {fileID: 0}
     - target: {fileID: 6478246078170234066, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
@@ -9468,6 +9473,21 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ed315758d26434c769f64bfb0760f8bd, type: 3}
     - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
+      propertyPath: SpikeSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0716022a808c24f3f9280dbcf2712796, type: 3}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: PlayerSpawnClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: SpikeSourceSound
+      value: 
+      objectReference: {fileID: 1641743972}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
       propertyPath: TunnelSpawnPoint
       value: 
       objectReference: {fileID: 0}
@@ -9476,6 +9496,16 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: Tunnel1SpawnPoint
+      value: 
+      objectReference: {fileID: 269996485}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: PlayerSpawnSourceSound
+      value: 
+      objectReference: {fileID: 2124669427}
     - target: {fileID: 6478246078170234077, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Name
@@ -10162,7 +10192,7 @@ GameObject:
   - component: {fileID: 675882996}
   m_Layer: 0
   m_Name: Trap1 (38)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12228,7 +12258,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.6890836
+      value: 7.1305475
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -12243,7 +12273,7 @@ PrefabInstance:
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 141.8
+      value: 142.08
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677165, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -15891,7 +15921,7 @@ GameObject:
   - component: {fileID: 1028637447}
   m_Layer: 0
   m_Name: Trap1 (37)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21150,7 +21180,7 @@ GameObject:
   - component: {fileID: 1388030055}
   m_Layer: 0
   m_Name: Trap1 (32)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23359,7 +23389,7 @@ GameObject:
   - component: {fileID: 1534876516}
   m_Layer: 0
   m_Name: Trap1 (31)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25120,6 +25150,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1641743970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641743971}
+  - component: {fileID: 1641743972}
+  m_Layer: 0
+  m_Name: SpikeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641743971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641743970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.2, y: -6.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1729089166}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1641743972
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641743970}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.075
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1648305296
 GameObject:
   m_ObjectHideFlags: 0
@@ -25490,7 +25648,7 @@ GameObject:
   - component: {fileID: 1686983727}
   m_Layer: 0
   m_Name: Trap1 (34)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26020,6 +26178,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1729089165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729089166}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1729089166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729089165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 141.8, y: -25.6, z: 729.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1641743971}
+  - {fileID: 2124669426}
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730569774
 GameObject:
   m_ObjectHideFlags: 0
@@ -30098,7 +30289,7 @@ GameObject:
   - component: {fileID: 1999573705}
   m_Layer: 0
   m_Name: Trap1 (39)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31772,7 +31963,7 @@ GameObject:
   - component: {fileID: 2097524399}
   m_Layer: 0
   m_Name: Trap1 (29)
-  m_TagString: Trap
+  m_TagString: TunnelGreenTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32137,6 +32328,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2124669425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124669426}
+  - component: {fileID: 2124669427}
+  m_Layer: 0
+  m_Name: RespawnSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124669426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124669425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -93, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1729089166}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2124669427
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124669425}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.092
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 92
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2135964699
 GameObject:
   m_ObjectHideFlags: 0
@@ -32569,6 +32888,11 @@ PrefabInstance:
       objectReference: {fileID: 804820559}
     - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
+      propertyPath: SpikeSourceSound
+      value: 
+      objectReference: {fileID: 1641743972}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
       propertyPath: TunnelSpawnPoint
       value: 
       objectReference: {fileID: 269996485}
@@ -32577,6 +32901,11 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 25129226}
+    - target: {fileID: 6478246078170234067, guid: 3fc82973089a74b2f9a696a77b7ed688,
+        type: 3}
+      propertyPath: PlayerSpawnSourceSound
+      value: 
+      objectReference: {fileID: 2124669427}
     - target: {fileID: 6478246078170234077, guid: 3fc82973089a74b2f9a696a77b7ed688,
         type: 3}
       propertyPath: m_Name
