@@ -43,10 +43,7 @@ public class Bullet : MonoBehaviour
         {
             // destroy bullet if it hits anything that is a child of the "Portals" parent
             Destroy(gameObject);
-        } 
-        // else if (other.gameObject.name.Equals("Laser") || other.gameObject.CompareTag("Laser") || other.gameObject.CompareTag("TunnelLaser")) {
-        //     Destroy(gameObject);
-        // }
+        }
         else if (other.gameObject.CompareTag("TunnelEnemy")) {
             //Debug.Log("Hit Tunnel Enemy");
             TunnelEnemy.BulletHit();
