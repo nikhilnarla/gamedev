@@ -139,8 +139,9 @@ public class PlayerMovement6 : MonoBehaviour
             }
 
             closedDoor.SetActive(true);
-            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
+            closedDoor.GetComponent<Renderer>().enabled = true;
             TunnelEndGate.SetActive(true);
+            TunnelEndGate.GetComponent<Renderer>().enabled = true;
         }
 
         //Tunnel Brown Door
