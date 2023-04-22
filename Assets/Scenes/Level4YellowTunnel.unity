@@ -9874,11 +9874,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 1624697175}
-  player: {fileID: 0}
-  PlayerSpawnSourceSound: {fileID: 0}
-  PlayerSpawnClip: {fileID: 0}
-  HammerHitSourceSound: {fileID: 0}
-  HammerHitClip: {fileID: 0}
+  player: {fileID: 711868986}
+  PlayerSpawnSourceSound: {fileID: 561833719}
+  PlayerSpawnClip: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+  HammerHitSourceSound: {fileID: 573564641}
+  HammerHitClip: {fileID: 8300000, guid: 7623cd8fe7f7b413ba4d7f99f2dc6ba2, type: 3}
 --- !u!61 &716404583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16093,7 +16093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.567999, y: -0.63999903, z: -10}
+  m_LocalPosition: {x: -24.238737, y: -0.63999903, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16183,11 +16183,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 1624697175}
-  player: {fileID: 0}
-  PlayerSpawnSourceSound: {fileID: 0}
-  PlayerSpawnClip: {fileID: 0}
-  HammerHitSourceSound: {fileID: 0}
-  HammerHitClip: {fileID: 0}
+  player: {fileID: 711868986}
+  PlayerSpawnSourceSound: {fileID: 561833719}
+  PlayerSpawnClip: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+  HammerHitSourceSound: {fileID: 573564641}
+  HammerHitClip: {fileID: 8300000, guid: 7623cd8fe7f7b413ba4d7f99f2dc6ba2, type: 3}
 --- !u!61 &1143868907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22881,11 +22881,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 1624697175}
-  player: {fileID: 0}
-  PlayerSpawnSourceSound: {fileID: 0}
-  PlayerSpawnClip: {fileID: 0}
-  HammerHitSourceSound: {fileID: 0}
-  HammerHitClip: {fileID: 0}
+  player: {fileID: 711868986}
+  PlayerSpawnSourceSound: {fileID: 561833719}
+  PlayerSpawnClip: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+  HammerHitSourceSound: {fileID: 573564641}
+  HammerHitClip: {fileID: 8300000, guid: 7623cd8fe7f7b413ba4d7f99f2dc6ba2, type: 3}
 --- !u!61 &1651843766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29924,11 +29924,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyticsManager: {fileID: 0}
   TunnelSpawnPoint: {fileID: 1624697175}
-  player: {fileID: 0}
-  PlayerSpawnSourceSound: {fileID: 0}
-  PlayerSpawnClip: {fileID: 0}
-  HammerHitSourceSound: {fileID: 0}
-  HammerHitClip: {fileID: 0}
+  player: {fileID: 711868986}
+  PlayerSpawnSourceSound: {fileID: 561833719}
+  PlayerSpawnClip: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+  HammerHitSourceSound: {fileID: 573564641}
+  HammerHitClip: {fileID: 8300000, guid: 7623cd8fe7f7b413ba4d7f99f2dc6ba2, type: 3}
 --- !u!61 &2100345048
 BoxCollider2D:
   m_ObjectHideFlags: 0
