@@ -224,16 +224,14 @@ public class DoorBehaviour : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, _doorOpenPos, _doorSpeed * Time.deltaTime);
             }
-            if (transform.position == _doorOpenPos)
-            {
-                _isLevel2YelllowDoorOpen = false;
-            }
+            Debug.Log("GATE SOUND");
             if (!_isOpenSoundPlayed)
             {
                 AudioSource.clip = shutterOpenSound;
                 AudioSource.Play();
                 _isOpenSoundPlayed = true;
             }
+
         }
         //Green Gate CLOSE
         if (_isLevel2GreenDoorClose)

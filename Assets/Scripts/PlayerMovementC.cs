@@ -13,16 +13,22 @@ public class PlayerMovementC : MonoBehaviour
     public bool isJumping = false;
     public bool blockPushed = false;
 
-      public AudioSource YellowKeyCollectAudioSource;
+    public AudioSource YellowKeyCollectAudioSource;
+    public AudioSource TileButtonAudioSource;
+    public AudioClip TileButtonSound;
 
     public AudioSource HitGreenBlockAudioSource;
     public AudioClip HitGreenBlockSound;
 
-      public AudioSource HitButtonSource;
-    public AudioClip HitButtonSound;
-
-       public AudioSource SpikeSourceSound;
+    public AudioSource SpikeSourceSound;
     public AudioClip SpikeSoundClip;
+
+    public AudioSource BridgeTileAudioSource;
+    public AudioClip BridgeTileSound;
+
+    public AudioSource PlayerJumpAudioSource;
+    public AudioClip PlayerJumpSound;
+
     public bool green = true;
     public bool fandetected = false;
     public GameObject key;
@@ -56,7 +62,7 @@ public class PlayerMovementC : MonoBehaviour
 
     public AudioSource AudioSource;
 
-        public AudioClip KeyCollectSound;
+    public AudioClip KeyCollectSound;
     public AudioClip DoorOpenSound;
     public bool _isSoundPlayed = false;
 
@@ -116,6 +122,46 @@ public class PlayerMovementC : MonoBehaviour
 
         flag = false;
 
+        if (other.gameObject.name == ("Tile 0")) {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Tile 1"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Tile 3"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Tile 2"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Tile 5"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Tile 4"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Block"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+        if (other.gameObject.name == ("Block (1)"))
+        {
+            PlayerJumpAudioSource.clip = PlayerJumpSound;
+            PlayerJumpAudioSource.Play();
+        }
+
         if (other.gameObject.name == ("DoorOpen"))
         {
             //Debug.Log("DOORALERT");
@@ -163,6 +209,7 @@ public class PlayerMovementC : MonoBehaviour
                jump = 5f;
                speed = 8f;
 
+
         }
 
         if(other.gameObject.name.Equals("BlindSpotEnter")) {
@@ -180,11 +227,12 @@ public class PlayerMovementC : MonoBehaviour
         // }
 
         if(other.gameObject.name == ("Button 1")){
-                AddGravityToTiles();
-                DestroyBridgeTiles();
-                dBL2GG._isLevel2GreenDoorOpen = true;
-                HitButtonSource.clip = HitButtonSound;
-            HitButtonSource.Play();
+            AddGravityToTiles();
+            DestroyBridgeTiles();
+            dBL2GG._isLevel2GreenDoorOpen = true;
+            TileButtonAudioSource.clip = TileButtonSound;
+            TileButtonAudioSource.Play();
+            //HitButtonSource.Play();
             //Destroy(GameObject.Find("Gate"));
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
@@ -357,6 +405,7 @@ public class PlayerMovementC : MonoBehaviour
          if(other.gameObject.name == ("Tile 4"))
         {
             dialogue.SetActive(false);
+
         }
 
     }
