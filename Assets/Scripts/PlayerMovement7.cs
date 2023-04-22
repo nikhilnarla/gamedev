@@ -58,7 +58,21 @@ public class PlayerMovement7 : MonoBehaviour
     public GameObject closedDoor;
     public GameObject ExitGreenTunnel;
     public GameObject EndGame;
+  public AudioSource GreenKeyCollectAudioSource;
+    public AudioSource YellowKeyCollectAudioSource;
+    public AudioClip KeyCollectSound;
 
+
+        public AudioSource SpringAudioSource;
+    public AudioClip SpringDoorOpenSound;
+
+      public AudioSource ButtonAudioSource;
+    public AudioClip ButtonDoorOpenSound; 
+    public AudioSource BridgeAudioSource;
+    public AudioClip BridgeDoorOpenSound; 
+
+    public AudioSource HitGreenBlockAudioSource;
+    public AudioClip HitGreenBlockSound;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -178,6 +192,8 @@ public class PlayerMovement7 : MonoBehaviour
         {
             Debug.Log("green block");
             var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
+            HitGreenBlockAudioSource.clip = HitGreenBlockSound;
+            HitGreenBlockAudioSource.Play();
             objRenderer.material.SetColor("_Color", Color.green);
             analyticsManager.SendEvent("LEVEL7 PLAYER HIT GREEN FALLING BLOCK");
             var block = other.gameObject.GetComponent<Rigidbody2D>();
@@ -189,6 +205,8 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.name.Equals("ButtonDown"))
         {
+            BridgeAudioSource.clip = BridgeDoorOpenSound;
+            BridgeAudioSource.Play();
             analyticsManager.SendEvent("LEVEL7 PLAYER HIT BUTTON FOR FALLING TILES");
             lowerPath = true;
         }
@@ -268,6 +286,8 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.name.Equals("Pad2"))
         {
+            SpringAudioSource.clip = SpringDoorOpenSound;
+            SpringAudioSource.Play();
             rb.velocity = new Vector2(rb.velocity.x, jump * 3);
             analyticsManager.SendEvent("LEVEL7 PLAYER USED JUMPPAD");
         }
@@ -279,10 +299,13 @@ public class PlayerMovement7 : MonoBehaviour
         // isTrigger checked for key 1 and key 2
         if (other.gameObject.name.Equals("Key1"))
         {
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             Destroy(other.gameObject); // destroy key 1
             //Destroy(GameObject.Find("Gate1"));
             dbL4GG._isLevel4GreenDoorOpen = true;
-
+            BridgeAudioSource.clip = BridgeDoorOpenSound;
+            BridgeAudioSource.Play();
             bridge1.SetActive(true);
             bridge2.SetActive(true);
             bridge3.SetActive(true);
@@ -294,7 +317,8 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.name.Equals("Key2"))
         {
-            
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
             //Destroy(GameObject.Find("Gate2"));
             Destroy(other.gameObject); // destroy key 2
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED YELLOW GATE KEY AND YELLOW GATE IS OPENED");
