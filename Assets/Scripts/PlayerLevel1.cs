@@ -191,9 +191,9 @@ public class PlayerLevel1 : MonoBehaviour
         // }
         if (other.gameObject.tag == "TunnelYellowTrap" && !flag)
         {
-            rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
-            analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
-            flag = true;
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
+            StartCoroutine(WaitCoroutineTunnelYellow());
 
         }
         if (other.gameObject.tag == "Trap" && !flag)
@@ -343,6 +343,16 @@ public class PlayerLevel1 : MonoBehaviour
         PlayerSpawnSourceSound.Play();
         rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
         analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN GREEN GATE TUNNEL AT POSITION:" + rb.position);
+        flag = true;
+    }
+
+    System.Collections.IEnumerator WaitCoroutineTunnelYellow()
+    {
+        yield return new WaitForSeconds(0.3f);
+        PlayerSpawnSourceSound.clip = PlayerSpawnClip;
+        PlayerSpawnSourceSound.Play();
+        rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
+        analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
         flag = true;
     }
 
