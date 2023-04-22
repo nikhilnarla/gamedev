@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class EnemyMovement : MonoBehaviour
 {
     private Rigidbody2D rB;
@@ -42,10 +43,21 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+
+     public AudioSource EnemyDeathAudioSource;
+    public AudioClip EnemyDeathSound;
+
+     public AudioSource PlayerDeathAudioSource;
+    public AudioClip PlayerDeathSound;
+
+
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag.Equals("Bullet"))
         {
+            EnemyDeathAudioSource.clip = EnemyDeathSound;
+            EnemyDeathAudioSource.Play();
             Destroy(other.gameObject);
             Destroy(gameObject); // merged from week 5 branch
             analyticsManager.SendEvent("LEVEL6 ENEMY DESTROYED WITH BULLET");
@@ -57,6 +69,8 @@ public class EnemyMovement : MonoBehaviour
         else if (other.gameObject.tag.Equals("Player"))
         {
             // if player is hit by enemy, then it respawns to back at beginning of level
+            PlayerDeathAudioSource.clip = PlayerDeathSound;
+            PlayerDeathAudioSource.Play();
             analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY ENEMY AFTER COLLIDING");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
