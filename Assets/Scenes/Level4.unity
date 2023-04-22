@@ -17509,6 +17509,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
     - target: {fileID: 1185701574502410479, guid: 126eea3e2d2f54e7595ba2da705d942a,
         type: 3}
+      propertyPath: TunnelSpawnPoint
+      value: 
+      objectReference: {fileID: 1624697175}
+    - target: {fileID: 1185701574502410479, guid: 126eea3e2d2f54e7595ba2da705d942a,
+        type: 3}
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 680176899}
