@@ -10,6 +10,9 @@ public class Shoot7 : MonoBehaviour
     public float speed;
     // public float bulletSpeed = 10;
 
+    public AudioSource GunSourceSound;
+    public AudioClip GunClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,8 @@ public class Shoot7 : MonoBehaviour
             // velocity + where bullet travels depending on which side the player is facing
             Debug.Log("Player is facing: " + PlayerMovement7.isFacingRight);
             float bulletSpeed = PlayerMovement7.isFacingRight ? speed : -speed;
+            GunSourceSound.clip = GunClip;
+            GunSourceSound.Play();
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
         }
