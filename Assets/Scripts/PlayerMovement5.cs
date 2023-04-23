@@ -40,6 +40,10 @@ public class PlayerMovement5 : MonoBehaviour
     public AudioClip DoorOpenSound;
     public bool _isSoundPlayed = false;
 
+    public AudioSource LavaDeathSoundSorce;
+    public AudioClip LavaDeathSoundClip;
+    public bool isLavaSoundPlayed = false;
+
     void Start()
     {
 
@@ -158,7 +162,13 @@ public class PlayerMovement5 : MonoBehaviour
         }
         if (other.gameObject.tag == ("LavaParticle"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!isLavaSoundPlayed)
+            {
+                isLavaSoundPlayed = true;
+                LavaDeathSoundSorce.clip = LavaDeathSoundClip;
+                LavaDeathSoundSorce.Play();
+            }
+            StartCoroutine(WaitLavaDeathSceneReload());
         }
 
         if (other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") || other.gameObject.name == ("Ground1") || other.gameObject.name == ("PortalTile2"))
@@ -284,6 +294,7 @@ public class PlayerMovement5 : MonoBehaviour
 
     }
 
+
     private void OnCollisionExit2D(Collision2D other)
     {
 
@@ -325,5 +336,13 @@ public class PlayerMovement5 : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         shootDialogue.SetActive(false);
         showText = false;
+    }
+
+
+
+    IEnumerator WaitLavaDeathSceneReload()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
