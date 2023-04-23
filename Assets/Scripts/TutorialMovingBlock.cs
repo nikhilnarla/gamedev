@@ -8,6 +8,8 @@ public class TutorialMovingBlock : MonoBehaviour
     private Vector2 target;
     public GameObject jumpPad;
     public GameObject greenblock;
+    public AudioSource YellowKeyVisisbleSource;
+    public AudioClip YellowKeySound;
 
     public TextMeshPro text;
 
@@ -30,7 +32,8 @@ public class TutorialMovingBlock : MonoBehaviour
             AddGravityToTiles();
             jumpPad.SetActive(true);
             greenblock.SetActive(true);
-
+            YellowKeyVisisbleSource.clip = YellowKeySound;
+            YellowKeyVisisbleSource.Play();
             text.text = "jump on jumppad";
         }
     }
