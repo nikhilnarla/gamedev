@@ -384,8 +384,8 @@ public class PlayerLevel1 : MonoBehaviour
         keyRenderer2.enabled = val;
         keyRenderer2.GetComponent<BoxCollider2D>().enabled = val;
 
-        if(!isFacingRight)
-            getKeyDialogue.SetActive(val);
+        // if(!isFacingRight)
+        //     getKeyDialogue.SetActive(val);
     }
 
 

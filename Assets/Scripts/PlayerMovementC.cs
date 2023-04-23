@@ -206,7 +206,7 @@ public class PlayerMovementC : MonoBehaviour
 
         if (other.gameObject.name == ("Tile 4") && bridgeStatus.ContainsValue(false)){
             ShowTiles();
-            dialogue.SetActive(true);
+            // dialogue.SetActive(true);
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN BLOCK");
             // Debug.Log("yassssss");
             HitGreenBlockAudioSource.clip = HitGreenBlockSound;
