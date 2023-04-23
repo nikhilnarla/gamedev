@@ -145,23 +145,6 @@ public class PlayerMovement7 : MonoBehaviour
             tunnelDialogue.SetActive(false);
         }
 
-        if (other.gameObject.name == ("DoorOpen"))
-        {
-            //Debug.Log("DOORALERT");
-            Destroy(GameObject.Find("DoorOpen"));
-
-            if (!_isSoundPlayed)
-            {
-                AudioSource.clip = DoorOpenSound;
-                AudioSource.Play();
-                _isSoundPlayed = true;
-            }
-
-            closedDoor.SetActive(true);
-            GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
-            EndGame.SetActive(true);
-        }
-
         //Kill by Cannon Gun
         if (other.gameObject.CompareTag("CannonBullet"))
         {
@@ -174,12 +157,9 @@ public class PlayerMovement7 : MonoBehaviour
             //Debug.Log("DOORALERT");
             Destroy(GameObject.Find("DoorOpen"));
 
-            if (!_isSoundPlayed)
-            {
                 AudioSource.clip = DoorOpenSound;
                 AudioSource.Play();
                 _isSoundPlayed = true;
-            }
 
             closedDoor.SetActive(true);
             GameObject.Find("DoorClose").GetComponent<Renderer>().enabled = true;
@@ -285,16 +265,19 @@ public class PlayerMovement7 : MonoBehaviour
         //Exit Yellow Tunnel
         if (other.gameObject.name == "ExitYellowTunnelLevel7")
         {
-            SceneManager.LoadScene("Level-transition4");
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            //SceneManager.LoadScene("Level-transition3");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             Destroy(GameObject.Find("ExitYellowTunnelLevel7"));
         }
         //Exit Green Tunnel
         if (other.gameObject.name == "ExitGreenTunnelLevel7")
         {
-            SceneManager.LoadScene("Level-transition4");
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene("Level-transition4");
             Destroy(GameObject.Find("ExitGreenTunnelLevel7"));
+            //SceneManager.LoadScene("Level-transition3");
+            //Thread.Sleep(100);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
 
         if (other.gameObject.name.Equals("Pad2"))
