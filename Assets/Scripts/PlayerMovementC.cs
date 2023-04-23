@@ -106,6 +106,7 @@ public class PlayerMovementC : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level2GreenTunnel")
         {
             dBL2GT._isLevel1GreenTunnel = true;
+            jump = 11f;
         }
         if (SceneManager.GetActiveScene().name == "Level2YellowTunnel")
         {

@@ -113,6 +113,7 @@ public class PlayerMovement7 : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level4YellowTunnel")
         {
             dbL4YT._isLevel1YellowTunnel = true;
+            jump = 8f;
         }
 
     }

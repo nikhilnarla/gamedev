@@ -154,6 +154,7 @@ public class EnemyMove1 : MonoBehaviour
         if (col.gameObject.tag.Equals("Bullet"))
         {
             Destroy(col.gameObject); // make bullet disappear when it collides laser beam
+            BulletHit();
         } 
     }
 
