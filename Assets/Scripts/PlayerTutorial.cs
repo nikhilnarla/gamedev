@@ -19,6 +19,7 @@ public class PlayerTutorial : MonoBehaviour
     public bool inMotion = false;
     public bool flag = false;
     public GameObject key;
+    public GameObject EndGate;
 
     public GameObject bridge1;
     public GameObject bridge2;
@@ -33,6 +34,11 @@ public class PlayerTutorial : MonoBehaviour
     public GameObject moveGate;
     public DoorBehaviour dbTL;
 
+    public AudioSource DisapperingTileVisibleSound;
+    public AudioClip DiapperingSound;
+
+    public AudioSource KeyCollectSoundSource;
+    public AudioClip KeyCollectSound;
 
     public TextMeshPro text;
 
@@ -105,6 +111,9 @@ public class PlayerTutorial : MonoBehaviour
 
             StartCoroutine(WaitAndDisappearDialogue(3f));
 
+            DisapperingTileVisibleSound.clip = DiapperingSound;
+            DisapperingTileVisibleSound.Play();
+
             bridge1.SetActive(true);
             bridge2.SetActive(true);
             bridge3.SetActive(true);
@@ -115,6 +124,10 @@ public class PlayerTutorial : MonoBehaviour
         {
             Destroy(GameObject.Find("Key"));
             dbTL._isTutorialLevleYellowDoor = true;
+            EndGate.SetActive(true);
+
+            KeyCollectSoundSource.clip = KeyCollectSound;
+            KeyCollectSoundSource.Play();
             //gate.transform.position = Vector2.MoveTowards( movePosition, transform.position, 0.00001f * Time.deltaTime);
             // StartCoroutine(WaitAndEnd(3f));
 
