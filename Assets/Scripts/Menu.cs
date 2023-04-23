@@ -42,6 +42,6 @@ public class Menu : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Menu");
     }
 }

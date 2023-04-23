@@ -31,6 +31,8 @@ public class PlayerMovement7 : MonoBehaviour
     public Transform TunnelSpawnPoint2;
     public Transform CannonSpawnPoint1;
 
+    public GameObject tunnelDialogue;
+
     public float fallingSpeed = 1000f;
 
     public Transform newPositionBridge1;
@@ -131,6 +133,16 @@ public class PlayerMovement7 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        if(other.gameObject.name.Equals("BlindSpotEnter")) {
+            Destroy(GameObject.Find("BlindSpotEnter"));
+            tunnelDialogue.SetActive(true);
+        }
+
+        if(other.gameObject.name.Equals("BlindSpotExit")) {
+            Destroy(GameObject.Find("BlindSpotExit"));
+            tunnelDialogue.SetActive(false);
+        }
 
         if (other.gameObject.name == ("DoorOpen"))
         {
