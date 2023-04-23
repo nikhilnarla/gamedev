@@ -11,6 +11,9 @@ public class Shoot : MonoBehaviour
     public float speed;
     // public float bulletSpeed = 10;
 
+    public AudioSource GunSourceSound;
+    public AudioClip GunClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +44,9 @@ public class Shoot : MonoBehaviour
                 else if (currentScene.name == "Level5") {
                     bulletSpeed = PlayerMovement5.isFacingRight ? speed : -speed;
                 }
-                
+
+                GunSourceSound.clip = GunClip;
+                GunSourceSound.Play();
                 GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
             }
