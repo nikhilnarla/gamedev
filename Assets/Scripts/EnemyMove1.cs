@@ -86,7 +86,8 @@ public class EnemyMove1 : MonoBehaviour
           MoveRight = false;
         }
 
-        if(col.gameObject.name == ("Player")){
+        if(col.gameObject.name == ("Player") || col.gameObject.name == ("Capsule"))
+        {
             stopMovement = true;
 
             PlayerCaughtSourceSound.clip = PlayerCauhtClip;
