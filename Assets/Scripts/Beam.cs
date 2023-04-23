@@ -14,6 +14,9 @@ public class Beam : MonoBehaviour
     public AudioSource HammerHitSourceSound;
     public AudioClip HammerHitClip;
 
+        public AudioSource GameEndAudioSource;
+    public AudioClip GameEndSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +72,8 @@ public class Beam : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Level4")
             {
+                GameEndAudioSource.clip = GameEndSound;
+                GameEndAudioSource.Play();
                 SceneManager.LoadScene("Level4");
                 analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
                 analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
