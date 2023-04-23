@@ -34,44 +34,11 @@ public class Beam : MonoBehaviour
             HammerHitSourceSound.Play();
 
             StartCoroutine(WaitCoroutine());
-            // if player is hit by laser, then it respawns to back at beginning of level
-            if (SceneManager.GetActiveScene().name == "Level5")
-            {
-                SceneManager.LoadScene("Level5");   
-            }
-            if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
-            {
-                //other.gameObject.transform.position = TunnelSpawnPoint.position;
-                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }
-             if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
-            {
-                //other.gameObject.transform.position = TunnelSpawnPoint.position;
-                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }
-
-            if (SceneManager.GetActiveScene().name == "Level4")
-            {
-                SceneManager.LoadScene("Level4");  
-                analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
-                analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
-            }
-
-            if (SceneManager.GetActiveScene().name == "Level4YellowTunnel")
-            {
-                //other.gameObject.transform.position = TunnelSpawnPoint.position;
-                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }
-              if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
-            {
-                //other.gameObject.transform.position = TunnelSpawnPoint.position;
-                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
-            }        
-        } 
+        }
         else if (other.gameObject.tag.Equals("Bullet"))
         {
             Destroy(other.gameObject); // make bullet disappear when it collides trap
-        } 
+        }
     }
 
     System.Collections.IEnumerator WaitCoroutine()
@@ -83,5 +50,40 @@ public class Beam : MonoBehaviour
         PlayerSpawnSourceSound.Play();
         player.gameObject.transform.position = TunnelSpawnPoint.position;
 
-    }
+
+            // if player is hit by laser, then it respawns to back at beginning of level
+            if (SceneManager.GetActiveScene().name == "Level5")
+            {
+                SceneManager.LoadScene("Level5");
+            }
+            if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
+            {
+                //other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
+            if (SceneManager.GetActiveScene().name == "Level3YellowTunnel")
+            {
+                //other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL6 PLAYER KILLED BY LASER BEAM IN GREEN TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
+
+            if (SceneManager.GetActiveScene().name == "Level4")
+            {
+                SceneManager.LoadScene("Level4");
+                analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY LASER BEAM");
+                analyticsManager.SendEvent("LEVEL7 GAMESTART AGAIN");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Level4YellowTunnel")
+            {
+                //other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
+            if (SceneManager.GetActiveScene().name == "Level1YellowTunnel")
+            {
+                //other.gameObject.transform.position = TunnelSpawnPoint.position;
+                analyticsManager.SendEvent("LEVEL7 PLAYER KILLED BY LASER BEAM IN YELLOW TUNNEL AT POSITION:" + GameObject.Find("Player").GetComponent<Rigidbody2D>().position);
+            }
+        }
+
 }
