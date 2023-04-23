@@ -48,7 +48,7 @@ public class Beam : MonoBehaviour
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
         //Debug.Log("COROUTINE");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
         player.gameObject.transform.position = TunnelSpawnPoint.position;

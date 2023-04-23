@@ -20,6 +20,9 @@ public class PlayerMovement6 : MonoBehaviour
 
     public AudioClip KeyCollectSound;
 
+    public AudioSource BridgeTileAudioSource;
+    public AudioClip BridgeTileSound;
+
     public float speed;
     public float jump;
     public float move;

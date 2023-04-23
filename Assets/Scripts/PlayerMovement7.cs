@@ -185,8 +185,11 @@ public class PlayerMovement7 : MonoBehaviour
         {
             Debug.Log("green block");
             var objRenderer = GameObject.Find("Green Block").GetComponent<Renderer>();
+            if (!_isSoundPlayed){
             HitGreenBlockAudioSource.clip = HitGreenBlockSound;
             HitGreenBlockAudioSource.Play();
+            _isSoundPlayed = true;
+            }
             objRenderer.material.SetColor("_Color", Color.green);
             analyticsManager.SendEvent("LEVEL7 PLAYER HIT GREEN FALLING BLOCK");
             var block = other.gameObject.GetComponent<Rigidbody2D>();
@@ -345,7 +348,7 @@ public class PlayerMovement7 : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutineTunnel()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
 
@@ -355,7 +358,7 @@ public class PlayerMovement7 : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutineTunnelYellow()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
 

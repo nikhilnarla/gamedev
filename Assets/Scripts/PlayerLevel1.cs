@@ -331,14 +331,14 @@ public class PlayerLevel1 : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         flag = true;
     }
 
     System.Collections.IEnumerator WaitCoroutineTunnel()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
         rb.gameObject.transform.position = Tunnel2SpawnPoint.position;
@@ -348,7 +348,7 @@ public class PlayerLevel1 : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutineTunnelYellow()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
         rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
