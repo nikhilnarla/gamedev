@@ -32,7 +32,7 @@ public class PlayerMovement6 : MonoBehaviour
     public AudioSource GunCollectorSourceSound;
     public AudioClip GunCollectorSoundClip;
 
-      public AudioSource SpCollectorSourceSound;
+    public AudioSource SpCollectorSourceSound;
     public AudioClip SpCollectorSoundClip;
     public GameObject tunnelDialogue;
     public Transform CannonSpawnPoint;
@@ -50,6 +50,10 @@ public class PlayerMovement6 : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip DoorOpenSound;
     public bool _isSoundPlayed = false;
+    public bool isLavaSoundPlayed = false;
+
+    public AudioSource LavaDeathSoundSorce;
+    public AudioClip LavaDeathSoundClip;
 
     void Start()
     {
@@ -164,10 +168,13 @@ public class PlayerMovement6 : MonoBehaviour
         if (other.gameObject.tag == ("LavaParticle") && !flag)
         {
             analyticsManager.SendEvent("LEVEL6 PLAYER FELL INTO LAVA");
-            flag = true;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            PlayerMovement6.hasGun = false; // lose gun when player dies
-            analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
+            if (!isLavaSoundPlayed)
+            {
+                isLavaSoundPlayed = true;
+                LavaDeathSoundSorce.clip = LavaDeathSoundClip;
+                LavaDeathSoundSorce.Play();
+            }
+            StartCoroutine(WaitLavaDeathSceneReload());
         }
 
         if(other.gameObject.name == ("Bridge Tile 0") || other.gameObject.name == ("Bridge Tile 1") || other.gameObject.name == ("Bridge Tile 2") 
@@ -305,6 +312,15 @@ public class PlayerMovement6 : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         shootDialogue.SetActive(false);
         showText = false;
+    }
+
+    IEnumerator WaitLavaDeathSceneReload()
+    {
+        yield return new WaitForSeconds(0.3f);
+        flag = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerMovement6.hasGun = false; // lose gun when player dies
+        analyticsManager.SendEvent("LEVEL6 GAMESTART AGAIN");
     }
 
 }
