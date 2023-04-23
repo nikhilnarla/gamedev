@@ -7631,7 +7631,7 @@ MonoBehaviour:
   DoorOpenSound: {fileID: 8300000, guid: ed315758d26434c769f64bfb0760f8bd, type: 3}
   closedGate: {fileID: 0}
   PlayerSpawnSourceSound: {fileID: 265083626}
-  PlayerSpawnClip: {fileID: 8300000, guid: 2862a730170974f5387bb2f94312302c, type: 3}
+  PlayerSpawnClip: {fileID: 8300000, guid: 0716022a808c24f3f9280dbcf2712796, type: 3}
   SpikeSourceSound: {fileID: 163069172}
   SpikeSoundClip: {fileID: 8300000, guid: 0716022a808c24f3f9280dbcf2712796, type: 3}
   closedDoor: {fileID: 184186422}
@@ -13786,7 +13786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143619140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.14658, y: -8.864, z: -10}
+  m_LocalPosition: {x: 34.098423, y: -8.864, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

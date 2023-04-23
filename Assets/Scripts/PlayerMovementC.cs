@@ -131,45 +131,45 @@ public class PlayerMovementC : MonoBehaviour
 
         flag = false;
 
-        if (other.gameObject.name == ("Tile 0")) {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Tile 1"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Tile 3"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Tile 2"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Tile 5"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Tile 4"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Block"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
-        if (other.gameObject.name == ("Block (1)"))
-        {
-            PlayerJumpAudioSource.clip = PlayerJumpSound;
-            PlayerJumpAudioSource.Play();
-        }
+        // if (other.gameObject.name == ("Tile 0")) {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Tile 1"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Tile 3"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Tile 2"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Tile 5"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Tile 4"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Block"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
+        // if (other.gameObject.name == ("Block (1)"))
+        // {
+        //     PlayerJumpAudioSource.clip = PlayerJumpSound;
+        //     PlayerJumpAudioSource.Play();
+        // }
 
         if (other.gameObject.name == ("DoorOpen"))
         {
@@ -406,7 +406,7 @@ public class PlayerMovementC : MonoBehaviour
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
         Debug.Log("COROUTINE");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //analyticsManager.SendEvent("LEVEL3 PLAYER KILLED BY SPIKES");
         //analyticsManager.SendEvent("LEVEL3 GAMESTART AGAIN");
@@ -415,7 +415,7 @@ public class PlayerMovementC : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutineTunnel()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
 
@@ -426,7 +426,7 @@ public class PlayerMovementC : MonoBehaviour
 
     System.Collections.IEnumerator WaitCoroutineTunnelYellow()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         PlayerSpawnSourceSound.clip = PlayerSpawnClip;
         PlayerSpawnSourceSound.Play();
 
