@@ -251,33 +251,11 @@ public class PlayerLevel1 : MonoBehaviour
 
             
         }
-        if (other.gameObject.name == "Key 1")
-        {
-            Destroy(other.gameObject);
-            doorBehaviour._isDoorOpen = true;
-            YellowKeyCollectAudioSource.clip = KeyCollectSound;
-            YellowKeyCollectAudioSource.Play();
-            //var gate = GameObject.Find("EntryGate");
-            //analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
-            //Destroy(gate);
-            //Destroy(other.gameObject);
-        }
         //Close Yellow Gate.
         if (other.gameObject.name == "`")
         {
             Destroy(other.gameObject);
             doorBehaviour._isLevel2GreenDoorClose = true;
-        }
-        if (other.gameObject.name == "Key 2")
-        {
-            Destroy(other.gameObject);
-            doorBehaviourLevel1Green._isLevel1GreenDoorOpen = true;
-            GreenKeyCollectAudioSource.clip = KeyCollectSound;
-            GreenKeyCollectAudioSource.Play();
-            //var gate = GameObject.Find("Gate");
-            //analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
-            //Destroy(gate);
-            //Destroy(other.gameObject);
         }
         //Close Green Gate.
         if (other.gameObject.name == "CloseGreenGate")
@@ -327,6 +305,32 @@ public class PlayerLevel1 : MonoBehaviour
             analyticsManager.SendEvent("LEVEL3 GAMESTART");
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Key 1")
+        {
+            Destroy(other.gameObject);
+            doorBehaviour._isDoorOpen = true;
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
+            //var gate = GameObject.Find("EntryGate");
+            //analyticsManager.SendEvent("LEVEL1 YELLOW GATE UNLOCKED");
+            //Destroy(gate);
+            //Destroy(other.gameObject);
+        }
+        if (other.gameObject.name == "Key 2")
+        {
+            Destroy(other.gameObject);
+            doorBehaviourLevel1Green._isLevel1GreenDoorOpen = true;
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
+            //var gate = GameObject.Find("Gate");
+            //analyticsManager.SendEvent("LEVEL1 GREEN GATE UNLOCKED");
+            //Destroy(gate);
+            //Destroy(other.gameObject);
+        }
     }
 
     System.Collections.IEnumerator WaitCoroutine()
