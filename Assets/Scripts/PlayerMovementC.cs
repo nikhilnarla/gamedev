@@ -246,6 +246,15 @@ public class PlayerMovementC : MonoBehaviour
             analyticsManager.SendEvent("LEVEL3 PLAYER HIT GREEN GATE BUTTON AND OPENED GREEN GATE RIGHT");
         }
 
+        if(other.gameObject.name == ("Button 2")){
+            //Destroy(GameObject.Find("EntryGate"));
+            dBL2YG._isLevel2YelllowDoorOpen = true;
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
+            Destroy(GameObject.Find("Button 2"));
+            analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
+        }
+
         if (other.gameObject.tag == "Trap" && !flag)
         {
 
@@ -391,18 +400,6 @@ public class PlayerMovementC : MonoBehaviour
              //Desctroying end block so player can pas
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.name == ("Button 2")){
-            //Destroy(GameObject.Find("EntryGate"));
-            dBL2YG._isLevel2YelllowDoorOpen = true;
-            YellowKeyCollectAudioSource.clip = KeyCollectSound;
-            YellowKeyCollectAudioSource.Play();
-            Destroy(GameObject.Find("Button 2"));
-            analyticsManager.SendEvent("LEVEL3 PLAYER HIT YELLOW GATE BUTTON AND OPENED YELLOW GATE LEFT");
-        }
     }
 
     IEnumerator WaitCoroutine()

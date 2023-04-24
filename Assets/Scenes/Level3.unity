@@ -1922,10 +1922,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.078798294, y: 0.50188804}
+  m_Offset: {x: 0, y: 0.50188804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1936,7 +1936,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2386274, y: 0.9684305}
+  m_Size: {x: 1, y: 0.9684305}
   m_EdgeRadius: 0
 --- !u!114 &154735590
 MonoBehaviour:
@@ -6272,7 +6272,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.018921375, y: 0.4919426}
@@ -14859,7 +14859,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.015031576, y: 0.49601126}
@@ -18341,26 +18341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.2805245
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.010352194
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.28125
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655923179215677154, guid: 1059f8c1dd5d048acbef05d85b518e47,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.28125
       objectReference: {fileID: 0}
     - target: {fileID: 6655923179215677164, guid: 1059f8c1dd5d048acbef05d85b518e47,
         type: 3}
@@ -24818,7 +24798,7 @@ PrefabInstance:
     - target: {fileID: 3289925359048386687, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3289925359048386687, guid: 80f5c598f202b46949921a327e8cde92,
         type: 3}

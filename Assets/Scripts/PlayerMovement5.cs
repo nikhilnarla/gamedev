@@ -266,6 +266,11 @@ public class PlayerMovement5 : MonoBehaviour
             Thread.Sleep(100);
         }
 
+        if (other.gameObject.name == "Key2")
+        {
+            Destroy(GameObject.Find("Key2"));
+        }
+
         if (other.gameObject.CompareTag("Trap"))
         {
             DeathBySpikeSorce.clip = DeathBySpikeClip;
@@ -287,12 +292,34 @@ public class PlayerMovement5 : MonoBehaviour
             lavaPlatform.SetActive(true);
             GameObject.Find("LavaPLatformLeft (2)").GetComponent<Renderer>().enabled = true;
         }
-        
+
+        //Open Green gate
+        if (other.gameObject.name == "LavaKey")
+        {
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
+            Destroy(GameObject.Find("LavaKey"));
+            dBL5GT._isLevel5GreenDoorOpen = true;
+            rotatingPlatform.SetActive(true);
+            GameObject.Find("RotatingPlatform1").GetComponent<Renderer>().enabled = true;
+
+        }
+        //Open Yellow gate
+        if (other.gameObject.name == "YellowGateKey")
+        {
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
+            Destroy(GameObject.Find("YellowGateKey"));
+            dBL5YT._isLevel5YellowDoorOpen = true;
+        }
         if (other.gameObject.name == "EndGate2")
         {
             Destroy(GameObject.Find("EndGate2"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        }        
+        }
+
+        
+
     }
 
 
@@ -314,27 +341,9 @@ public class PlayerMovement5 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Open Green gate
-        if (other.gameObject.name == "LavaKey")
-        {
-            GreenKeyCollectAudioSource.clip = KeyCollectSound;
-            GreenKeyCollectAudioSource.Play();
-            Destroy(GameObject.Find("LavaKey"));
-            dBL5GT._isLevel5GreenDoorOpen = true;
-            rotatingPlatform.SetActive(true);
-            GameObject.Find("RotatingPlatform1").GetComponent<Renderer>().enabled = true;
-
-        }
-        //Open Yellow gate
-        if (other.gameObject.name == "YellowGateKey")
-        {
-            YellowKeyCollectAudioSource.clip = KeyCollectSound;
-            YellowKeyCollectAudioSource.Play();
-            Destroy(GameObject.Find("YellowGateKey"));
-            dBL5YT._isLevel5YellowDoorOpen = true;
-        }
         if (other.gameObject.tag.Equals("Zipline"))
         {
+
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
             GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = Color.green;
             ZiplinOnOffAudioSource.clip = ZiplineOnOffOpenSound;

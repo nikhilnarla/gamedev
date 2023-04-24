@@ -313,6 +313,8 @@ public class PlayerMovement7 : MonoBehaviour
             bridge3.SetActive(true);
 
             analyticsManager.SendEvent("LEVEL7 PLAYER COLLECTED GREEN GATE KEY  AND GREEN GATE IS OPENED");
+            
+
         }
 
         if (other.gameObject.name.Equals("Key2"))

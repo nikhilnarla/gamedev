@@ -193,6 +193,15 @@ public class PlayerMovement6 : MonoBehaviour
             speed = 5f;
         }
 
+
+        if (other.gameObject.name == "SuperPowerKey")
+        {
+            Destroy(GameObject.Find("SuperPowerKey"));
+            SpCollectorSourceSound.clip = SpCollectorSoundClip;
+            SpCollectorSourceSound.Play();
+            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER KEY TO ACCESS SUPER POWER");
+            Destroy(GameObject.Find("SuperPowerGate"));
+        }
         if (other.gameObject.name == "YellowTunnelEntry")
         {
             Destroy(GameObject.Find("YellowTunnelEntry"));
@@ -211,6 +220,29 @@ public class PlayerMovement6 : MonoBehaviour
         if(other.gameObject.name.Equals("BlindSpotExit")) {
             Destroy(GameObject.Find("BlindSpotExit"));
             tunnelDialogue.SetActive(false);
+        }
+
+        if (other.gameObject.name == "SuperKey")
+        {
+            Destroy(GameObject.Find("SuperKey"));
+               GunCollectorSourceSound.clip = GunCollectorSoundClip;
+                GunCollectorSourceSound.Play();
+            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER TO ACCESS GUN TO SHOOT");
+            showText = true;
+
+            shootDialogue.SetActive(true);
+
+            StartCoroutine(WaitAndMakeTextDisappear(5));
+        }
+        if (other.gameObject.name == "KeyReveal")
+        {
+            //Debug.Log("KR");
+            Destroy(GameObject.Find("KeyReveal"));
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
+            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER KEY TO REVEAL YELLOW GATE KEY ");
+            frozenKey.SetActive(true);
+            GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
         }
         if (other.gameObject.name == "EndGate1")
         {
@@ -249,6 +281,11 @@ public class PlayerMovement6 : MonoBehaviour
             Thread.Sleep(100);
         }
 
+        if(other.gameObject.name == "Key2")
+        {
+            Destroy(GameObject.Find("Key2"));
+        }
+
         if(other.gameObject.CompareTag("Trap"))
         {
             SceneManager.LoadScene("Level5");
@@ -261,44 +298,6 @@ public class PlayerMovement6 : MonoBehaviour
         {
             
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
-        }
-
-        if (other.gameObject.name == "SuperPowerKey")
-        {
-            Destroy(GameObject.Find("SuperPowerKey"));
-            SpCollectorSourceSound.clip = SpCollectorSoundClip;
-            SpCollectorSourceSound.Play();
-            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER KEY TO ACCESS SUPER POWER");
-            Destroy(GameObject.Find("SuperPowerGate"));
-        }
-
-        if (other.gameObject.name == "SuperKey")
-        {
-            Destroy(GameObject.Find("SuperKey"));
-               GunCollectorSourceSound.clip = GunCollectorSoundClip;
-                GunCollectorSourceSound.Play();
-            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER POWER TO ACCESS GUN TO SHOOT");
-            showText = true;
-
-            shootDialogue.SetActive(true);
-
-            StartCoroutine(WaitAndMakeTextDisappear(5));
-        }
-        
-        if (other.gameObject.name == "KeyReveal")
-        {
-            //Debug.Log("KR");
-            Destroy(GameObject.Find("KeyReveal"));
-            GreenKeyCollectAudioSource.clip = KeyCollectSound;
-            GreenKeyCollectAudioSource.Play();
-            analyticsManager.SendEvent("LEVEL6 PLAYER COLLECTED SUPER KEY TO REVEAL YELLOW GATE KEY ");
-            frozenKey.SetActive(true);
-            GameObject.Find("Gate2OpenKey").GetComponent<SpriteRenderer>().enabled = true;
-        }
-
-        if(other.gameObject.name == "Key2")
-        {
-            Destroy(GameObject.Find("Key2"));
         }
     }
 
