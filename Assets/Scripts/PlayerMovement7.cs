@@ -65,7 +65,7 @@ public class PlayerMovement7 : MonoBehaviour
     public AudioClip KeyCollectSound;
 
 
-        public AudioSource SpringAudioSource;
+    public AudioSource SpringAudioSource;
     public AudioClip SpringDoorOpenSound;
 
       public AudioSource ButtonAudioSource;
@@ -209,6 +209,8 @@ public class PlayerMovement7 : MonoBehaviour
 
         if (other.gameObject.tag.Equals("Trap"))
         {
+            SpikeSourceSound.clip = SpikeSoundClip;
+            SpikeSourceSound.Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             analyticsManager.SendEvent("LEVEL7 PLAYER GOT KILLED BY SPIKES");
         }
