@@ -7883,7 +7883,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.068
+  m_Volume: 0.071
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -24206,7 +24206,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.069
+  m_Volume: 0.071
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -24584,7 +24584,7 @@ PrefabInstance:
     - target: {fileID: 1027037799, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: LavaDeathSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: d75214b7539ad49d181be0b4c84dcc96, type: 3}
+      objectReference: {fileID: 8300000, guid: 0716022a808c24f3f9280dbcf2712796, type: 3}
     - target: {fileID: 1027037799, guid: 80f5c598f202b46949921a327e8cde92, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 200

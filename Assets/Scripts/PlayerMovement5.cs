@@ -42,8 +42,24 @@ public class PlayerMovement5 : MonoBehaviour
 
     public AudioSource LavaDeathSoundSorce;
     public AudioClip LavaDeathSoundClip;
+
+    public AudioSource DeathBySpikeSorce;
+    public AudioClip DeathBySpikeClip;
+
     public bool isLavaSoundPlayed = false;
 
+    public AudioSource GreenKeyCollectAudioSource;
+    public AudioSource YellowKeyCollectAudioSource;
+    public AudioClip KeyCollectSound;
+
+    public AudioSource JumpAudioSource;
+    public AudioClip JumpOpenSound;
+
+    public AudioSource LavaButtonAudioSource;
+    public AudioClip LavaButtonOpenSound;
+
+    public AudioSource ZiplinOnOffAudioSource;
+    public AudioClip ZiplineOnOffOpenSound;
     void Start()
     {
 
@@ -151,8 +167,12 @@ public class PlayerMovement5 : MonoBehaviour
         
         if (other.gameObject.name.Equals("Tile 2"))
         {
+            // JumpAudioSource.clip = JumpOpenSound;
+            // JumpAudioSource.Play();
             inMotion = true;
             target = other.gameObject.GetComponent<JumpingPadScript>().target;
+            JumpAudioSource.clip = JumpOpenSound;
+            JumpAudioSource.Play();
         }
 
 
@@ -253,12 +273,16 @@ public class PlayerMovement5 : MonoBehaviour
 
         if (other.gameObject.CompareTag("Trap"))
         {
+            DeathBySpikeSorce.clip = DeathBySpikeClip;
+            DeathBySpikeSorce.Play();
             SceneManager.LoadScene("Level5");
         }
         //Lava Key
         if (other.gameObject.name == "LavaButton")
         {
 
+            LavaButtonAudioSource.clip = LavaButtonOpenSound;
+            LavaButtonAudioSource.Play();
             Destroy(GameObject.Find("LavaPLatformLeftDisappearing"));
             Destroy(GameObject.Find("LavaPLatformRightDisappearing"));
             Destroy(GameObject.Find("LavaPLatformLeft (1)"));
@@ -272,6 +296,8 @@ public class PlayerMovement5 : MonoBehaviour
         //Open Green gate
         if (other.gameObject.name == "LavaKey")
         {
+            GreenKeyCollectAudioSource.clip = KeyCollectSound;
+            GreenKeyCollectAudioSource.Play();
             Destroy(GameObject.Find("LavaKey"));
             dBL5GT._isLevel5GreenDoorOpen = true;
             rotatingPlatform.SetActive(true);
@@ -281,6 +307,8 @@ public class PlayerMovement5 : MonoBehaviour
         //Open Yellow gate
         if (other.gameObject.name == "YellowGateKey")
         {
+            YellowKeyCollectAudioSource.clip = KeyCollectSound;
+            YellowKeyCollectAudioSource.Play();
             Destroy(GameObject.Find("YellowGateKey"));
             dBL5YT._isLevel5YellowDoorOpen = true;
         }
@@ -318,6 +346,8 @@ public class PlayerMovement5 : MonoBehaviour
 
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
             GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = Color.green;
+            ZiplinOnOffAudioSource.clip = ZiplineOnOffOpenSound;
+            ZiplinOnOffAudioSource.Play();
         }
     }
 
@@ -328,6 +358,8 @@ public class PlayerMovement5 : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             GameObject.Find("zipline-rope").GetComponent<SpriteRenderer>().material.color = new Color(0.823f, 0.706f, 0.549f);
+            ZiplinOnOffAudioSource.clip = ZiplineOnOffOpenSound;
+            ZiplinOnOffAudioSource.Play();
         }
     }
 
