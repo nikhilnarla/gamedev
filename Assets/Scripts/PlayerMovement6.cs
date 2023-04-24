@@ -114,7 +114,6 @@ public class PlayerMovement6 : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f; // x component of player's local scale
             transform.localScale = localScale;
-            
         }
     }
 
