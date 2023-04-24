@@ -10,7 +10,7 @@ public class Level7GreenBlock : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name.Equals("Ground"))
+        if(collision.gameObject.name.Equals("MiddlePlatform"))
         {
             dialogue.SetActive(true);
             StartCoroutine(WaitAndDisappear(3f));
@@ -20,7 +20,7 @@ public class Level7GreenBlock : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Ground"))
+        if (collision.gameObject.name.Equals("MiddlePlatform"))
         {
             dialogue.SetActive(false) ;
         }
