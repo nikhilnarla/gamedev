@@ -87,10 +87,12 @@ public class PlayerLevel1 : MonoBehaviour
         if (move > 0 && !isFacingRight) {
         
            Flip();
+        //    getKeyDialogue.SetActive(true);
         }
 
         if (move < 0 && isFacingRight) {
            Flip();
+        //    getKeyDialogue.SetActive(false);
         }
 
         if(inMotion){
@@ -382,8 +384,8 @@ public class PlayerLevel1 : MonoBehaviour
         keyRenderer2.enabled = val;
         keyRenderer2.GetComponent<BoxCollider2D>().enabled = val;
 
-        if(!isFacingRight)
-            getKeyDialogue.SetActive(val);
+  
+        // getKeyDialogue.SetActive(val);
     }
 
 
