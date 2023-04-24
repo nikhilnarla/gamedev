@@ -42,6 +42,10 @@ public class PlayerMovement5 : MonoBehaviour
 
     public AudioSource LavaDeathSoundSorce;
     public AudioClip LavaDeathSoundClip;
+
+    public AudioSource DeathBySpikeSorce;
+    public AudioClip DeathBySpikeClip;
+
     public bool isLavaSoundPlayed = false;
 
     public AudioSource GreenKeyCollectAudioSource;
@@ -269,6 +273,8 @@ public class PlayerMovement5 : MonoBehaviour
 
         if (other.gameObject.CompareTag("Trap"))
         {
+            DeathBySpikeSorce.clip = DeathBySpikeClip;
+            DeathBySpikeSorce.Play();
             SceneManager.LoadScene("Level5");
         }
         //Lava Key

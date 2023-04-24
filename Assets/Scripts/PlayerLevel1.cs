@@ -349,8 +349,6 @@ public class PlayerLevel1 : MonoBehaviour
     System.Collections.IEnumerator WaitCoroutineTunnelYellow()
     {
         yield return new WaitForSeconds(0.1f);
-        PlayerSpawnSourceSound.clip = PlayerSpawnClip;
-        PlayerSpawnSourceSound.Play();
         rb.gameObject.transform.position = Tunnel1SpawnPoint.position;
         analyticsManager.SendEvent("LEVEL1 PLAYER KILLED BY SPIKES IN YELLOW GATE TUNNEL AT POSITION:" + rb.position);
         flag = true;

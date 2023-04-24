@@ -1526,6 +1526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 1459165638}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &154207047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,6 +2088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &180741524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2726,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 32927130}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!4 &233654893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4611556207800502044, guid: b28c255843a0e4f3583c3eb9c964d83e,
@@ -4222,6 +4228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 210584347}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &407801771
 GameObject:
   m_ObjectHideFlags: 0
@@ -4624,7 +4632,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.082
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5166,6 +5174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &531069303
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,6 +5687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &551130108
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,6 +7115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 1504637712}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &729889245
 GameObject:
   m_ObjectHideFlags: 0
@@ -11751,6 +11765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 196804296}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &1075965287
 GameObject:
   m_ObjectHideFlags: 0
@@ -12385,6 +12401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &1128340588
 GameObject:
   m_ObjectHideFlags: 0
@@ -14813,6 +14831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &1299284794
 GameObject:
   m_ObjectHideFlags: 0
@@ -17971,7 +17991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618749057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.334007, y: -0.3600006, z: -10}
+  m_LocalPosition: {x: 34.01233, y: -0.3600006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18402,6 +18422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!50 &1695221932
 Rigidbody2D:
   serializedVersion: 4
@@ -21987,6 +22009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1 &2060729198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9220887411442697547, guid: a90407185c0b642ffbbbe92a0708a200,
@@ -22229,6 +22253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
   tarObj: {fileID: 0}
+  JumpingSoundSrc: {fileID: 0}
+  JumpingSound: {fileID: 0}
 --- !u!1001 &2135934964
 PrefabInstance:
   m_ObjectHideFlags: 0
