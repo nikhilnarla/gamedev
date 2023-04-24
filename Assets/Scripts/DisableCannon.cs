@@ -29,6 +29,10 @@ public class DisableCannon : MonoBehaviour
             CannonBase.GetComponent<Renderer>().material.color = Color.gray;
             CannonShooter.GetComponent<Renderer>().material.color = Color.gray;
             CannonAlarm.GetComponent<Renderer>().material.color = Color.gray;
+
+            // enable Collider2D components
+            CannonBase.GetComponent<Collider2D>().enabled = true;
+            CannonShooter.GetComponent<Collider2D>().enabled = true;
         }
 
     }
